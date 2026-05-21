@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+:root {
+	--background: #f5efe4;
+	--foreground: #1f2d24;
+	--card: rgba(255, 255, 255, 0.82);
+	--card-foreground: #1f2d24;
+	--popover: rgba(255, 255, 255, 0.92);
+	--popover-foreground: #1f2d24;
+	--primary: #22543d;
+	--primary-foreground: #f7f5ef;
+	--secondary: #e4dcc9;
+	--secondary-foreground: #2a241e;
+	--muted: #edf0e6;
+	--muted-foreground: #5c6458;
+	--border: rgba(31, 45, 36, 0.12);
+	--ring: rgba(34, 84, 61, 0.24);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
+	--font-sans: var(--font-body);
+	--font-display: var(--font-display);
+}
+
+* {
+	border-color: var(--border);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top left, rgba(244, 173, 66, 0.24), transparent 28%),
+		radial-gradient(circle at bottom right, rgba(34, 84, 61, 0.12), transparent 30%),
+		linear-gradient(180deg, #fbf7ef 0%, #f3ebdd 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display), sans-serif;
+	letter-spacing: -0.04em;
+}
+
+::selection {
+	background: rgba(34, 84, 61, 0.18);
+}

@@ -1,0 +1,307 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Organizer {
+  id            String        @id @default(cuid())
+  name          String
+  slug          String        @unique
+  websiteUrl    String
+  logoUrl       String?
+  description   String?
+  platformKey   String?
+  metadata      Json?
+  isActive      Boolean       @default(true)
+  sortOrder     Int           @default(0)
+  scrapeSources ScrapeSource[]
+  trekPackages TrekPackage[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@unique([name, websiteUrl])
+  @@index([isActive, sortOrder])
+  @@index([platformKey, isActive])
+}
+
+model Trek {
+  id             String          @id @default(cuid())
+  name           String
+  slug           String          @unique
+  state          String          @default("Maharashtra")
+  region         String?
+  durationDays   Int?
+  durationNights Int?
+  difficulty     DifficultyLevel @default(UNKNOWN)
+  summary        String?
+  heroImageUrl   String?
+  aliases        TrekAlias[]
+  trekPackages   TrekPackage[]
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@index([state, region, difficulty])
+  @@index([durationDays, durationNights])
+  @@unique([name, state])
+}
+
+model TrekAlias {
+  id        String   @id @default(cuid())
+  trekId     String
+  value      String   @unique
+  createdAt  DateTime @default(now())
+  trek       Trek     @relation(fields: [trekId], references: [id], onDelete: Cascade)
+
+  @@index([trekId])
+}
+
+model TrekPackage {
+  id                  String          @id @default(cuid())
+  organizerId         String
+  trekId              String
+  sourceUrl           String
+  externalPackageId   String?
+  title               String
+  slug                String
+  status              PackageStatus   @default(ACTIVE)
+  /// Cached current price for compare-table reads. Historical prices live in PriceHistory.
+  priceInr            Int?
+  priceText           String?
+  currencyCode        String          @default("INR")
+  durationText        String?
+  locationText        String?
+  /// Read-optimized copy of the earliest upcoming departure for sorting and filtering.
+  nextDepartureAt     DateTime?       @db.Date
+  transportType       TransportType   @default(UNKNOWN)
+  mealPlan            MealPlan        @default(UNKNOWN)
+  forestFeeStatus     InclusionStatus @default(UNKNOWN)
+  pickupLocations     String[]
+  rawPageText         String?
+  rawSnapshot         Json?
+  rawPriceText        String?
+  rawDurationText     String?
+  rawLocationText     String?
+  rawTransportText    String?
+  rawMealText         String?
+  rawForestFeeText    String?
+  rawPickupText       String?
+  rawDepartureText    String?
+  rawInclusionsText   String?
+  rawExclusionsText   String?
+  normalizedSnapshot  Json?
+  pageFingerprint     String?
+  sourceLastModified  DateTime?
+  publishedAt         DateTime?
+  firstSeenAt         DateTime        @default(now())
+  lastSeenAt          DateTime        @default(now())
+  lastChangedAt       DateTime        @default(now())
+  lastScrapedAt       DateTime        @default(now())
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  organizer           Organizer       @relation(fields: [organizerId], references: [id], onDelete: Cascade)
+  trek                Trek            @relation(fields: [trekId], references: [id], onDelete: Cascade)
+  departures          Departure[]
+  inclusions          Inclusion[]
+  priceHistory        PriceHistory[]
+
+  @@unique([organizerId, sourceUrl])
+  @@unique([organizerId, slug])
+  @@index([trekId, status, priceInr])
+  @@index([organizerId, status, lastScrapedAt])
+  @@index([transportType, mealPlan, forestFeeStatus])
+  @@index([nextDepartureAt, priceInr])
+  @@index([pageFingerprint])
+}
+
+model Departure {
+  id                 String           @id @default(cuid())
+  trekPackageId      String
+  /// Stable organizer-scoped identifier derived from an ISO date, booking token, or label.
+  departureKey       String
+  sourceUrl          String?
+  label              String
+  startDate          DateTime?        @db.Date
+  endDate            DateTime?        @db.Date
+  availabilityStatus DepartureStatus  @default(UNKNOWN)
+  seatsAvailable     Int?
+  priceInr           Int?
+  priceText          String?
+  currencyCode       String           @default("INR")
+  pickupLocation     String?
+  rawSnapshot        Json?
+  sourceLastModified DateTime?
+  lastSeenAt         DateTime         @default(now())
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  trekPackage        TrekPackage      @relation(fields: [trekPackageId], references: [id], onDelete: Cascade)
+  priceHistory       PriceHistory[]
+
+  @@unique([trekPackageId, departureKey])
+  @@index([trekPackageId, startDate])
+  @@index([startDate, availabilityStatus])
+  @@index([priceInr, startDate])
+}
+
+model Inclusion {
+  id            String                 @id @default(cuid())
+  trekPackageId String
+  code          String
+  label         String
+  category      InclusionCategory      @default(OTHER)
+  status        PackageInclusionStatus @default(INCLUDED)
+  details       String?
+  rawText       String?
+  sortOrder     Int                    @default(0)
+  isFilterable  Boolean                @default(true)
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+  trekPackage   TrekPackage            @relation(fields: [trekPackageId], references: [id], onDelete: Cascade)
+
+  @@unique([trekPackageId, code, status])
+  @@index([code, status])
+  @@index([category, status])
+  @@index([trekPackageId, sortOrder])
+}
+
+model PriceHistory {
+  id                String          @id @default(cuid())
+  trekPackageId     String
+  departureId       String?
+  capturedAt        DateTime        @default(now())
+  priceInr          Int?
+  priceText         String?
+  currencyCode      String          @default("INR")
+  sourceKind        PriceSourceKind @default(SCRAPE)
+  sourceFingerprint String?
+  changeReason      String?
+  rawSnapshot       Json?
+  trekPackage       TrekPackage     @relation(fields: [trekPackageId], references: [id], onDelete: Cascade)
+  departure         Departure?      @relation(fields: [departureId], references: [id], onDelete: SetNull)
+
+  @@index([trekPackageId, capturedAt])
+  @@index([departureId, capturedAt])
+  @@index([capturedAt, priceInr])
+  @@index([sourceFingerprint])
+}
+
+model ScrapeSource {
+  id             String        @id @default(cuid())
+  organizerId    String
+  label          String
+  sourceUrl      String
+  parserKey      String
+  crawlStrategy  CrawlStrategy @default(DETAIL_PAGE)
+  isActive       Boolean       @default(true)
+  lastSuccessAt  DateTime?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  organizer      Organizer     @relation(fields: [organizerId], references: [id], onDelete: Cascade)
+  scrapeRuns     ScrapeRun[]
+
+  @@unique([organizerId, sourceUrl])
+  @@unique([organizerId, label])
+  @@index([isActive, parserKey])
+}
+
+model ScrapeRun {
+  id                String       @id @default(cuid())
+  scrapeSourceId    String
+  status            ScrapeStatus @default(SUCCESS)
+  attemptCount      Int          @default(1)
+  packagesFound     Int          @default(0)
+  packagesUpserted  Int          @default(0)
+  errorMessage      String?
+  errorDetails      Json?
+  startedAt         DateTime     @default(now())
+  finishedAt        DateTime?
+  scrapeSource      ScrapeSource @relation(fields: [scrapeSourceId], references: [id], onDelete: Cascade)
+
+  @@index([scrapeSourceId, startedAt])
+  @@index([status, startedAt])
+}
+
+enum DifficultyLevel {
+  EASY
+  MODERATE
+  MODERATE_HARD
+  HARD
+  UNKNOWN
+}
+
+enum TransportType {
+  BUS
+  TRAIN
+  SELF_DRIVE
+  OWN_TRANSPORT
+  LOCAL_TRANSFER
+  NONE
+  MIXED
+  UNKNOWN
+}
+
+enum MealPlan {
+  INCLUDED
+  PARTIAL
+  NOT_INCLUDED
+  UNKNOWN
+}
+
+enum InclusionStatus {
+  INCLUDED
+  NOT_INCLUDED
+  UNKNOWN
+}
+
+enum PackageStatus {
+  ACTIVE
+  STALE
+  UNAVAILABLE
+}
+
+enum DepartureStatus {
+  AVAILABLE
+  SOLD_OUT
+  WAITLIST
+  ON_REQUEST
+  CANCELLED
+  UNKNOWN
+}
+
+enum InclusionCategory {
+  TRANSPORT
+  MEAL
+  STAY
+  ENTRY_FEE
+  GUIDE
+  PERMIT
+  SAFETY
+  RENTAL
+  OTHER
+}
+
+enum PackageInclusionStatus {
+  INCLUDED
+  EXCLUDED
+  OPTIONAL
+  UNKNOWN
+}
+
+enum PriceSourceKind {
+  SCRAPE
+  MANUAL
+  IMPORT
+}
+
+enum CrawlStrategy {
+  LISTING_PAGE
+  DETAIL_PAGE
+}
+
+enum ScrapeStatus {
+  SUCCESS
+  PARTIAL
+  FAILED
+}
