@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useState } from "react";
+import { useEffect, useState } from "react";
 import { ExternalLink, Filter, MapPin, TimerReset } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +21,7 @@ import {
   transportLabels,
 } from "@/lib/normalization/catalog";
 import type {
+  ComparisonFilters,
   ComparisonPackage,
   ComparisonTransportType,
   ListingCity,
@@ -32,6 +33,7 @@ type CityFilter = "ALL" | "MUMBAI" | "PUNE";
 
 type ComparisonTableProps = {
   packages: ComparisonPackage[];
+  filters: ComparisonFilters;
 };
 
 function sortPackages(packages: ComparisonPackage[], sortMode: SortMode) {
@@ -44,20 +46,28 @@ function sortPackages(packages: ComparisonPackage[], sortMode: SortMode) {
       return (right.priceInr ?? 0) - (left.priceInr ?? 0);
     }
 
-    return Date.parse(right.lastUpdatedAt) - Date.parse(left.lastUpdatedAt);
+    return right.updatedAtMs - left.updatedAtMs;
   });
 }
 
-export function ComparisonTable({ packages }: ComparisonTableProps) {
+export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
   const [transportFilter, setTransportFilter] = useState<ComparisonTransportType | "ALL">("ALL");
   const [mealFilter, setMealFilter] = useState<MealPlan | "ALL">("ALL");
   const [cityFilter, setCityFilter] = useState<CityFilter>("ALL");
   const [sortMode, setSortMode] = useState<SortMode>("price-asc");
   const [query, setQuery] = useState("");
-  const deferredQuery = useDeferredValue(query);
+  const [debouncedQuery, setDebouncedQuery] = useState("");
 
-  const availableTransports = [...new Set(packages.map((item) => item.transportType))];
-  const availableMeals = [...new Set(packages.map((item) => item.mealPlan))];
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      setDebouncedQuery(query.trim().toLowerCase());
+    }, 150);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [query]);
+
+  const availableTransports = filters.transportTypes;
+  const availableMeals = filters.mealPlans;
 
   function matchesCityFilter(listingCity: ListingCity, filter: CityFilter) {
     if (filter === "ALL") {
@@ -77,18 +87,7 @@ export function ComparisonTable({ packages }: ComparisonTableProps) {
       const matchesMeal = mealFilter === "ALL" || item.mealPlan === mealFilter;
       const matchesCity = matchesCityFilter(item.listingCity, cityFilter);
       const matchesQuery =
-        deferredQuery.trim().length === 0 ||
-        [
-          item.organizerName,
-          item.title,
-          item.mealsSummary,
-          item.staySummary,
-          ...item.inclusionHighlights,
-          ...item.pickupLocations,
-        ]
-          .join(" ")
-          .toLowerCase()
-          .includes(deferredQuery.toLowerCase());
+        debouncedQuery.length === 0 || item.searchText.includes(debouncedQuery);
 
       return matchesTransport && matchesMeal && matchesCity && matchesQuery;
     }),

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Clock3, IndianRupee, MapPinned, Trees } from "lucide-react";
 
-import { ComparisonTable } from "@/components/treks/comparison-table";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -11,13 +11,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getTrekComparison, getTrekSlugs } from "@/lib/data";
+import { getPrerenderTrekSlugs, getTrekComparison } from "@/lib/data";
 import { formatPriceRange, formatUpdatedAt } from "@/lib/format";
 import { difficultyLabels } from "@/lib/normalization/catalog";
 import { siteConfig } from "@/lib/site";
 
+const ComparisonTable = dynamic(
+  () => import("@/components/treks/comparison-table").then((module) => module.ComparisonTable),
+  {
+    loading: () => (
+      <div className="space-y-4 rounded-[2rem] border border-border/80 bg-card/80 p-6 shadow-[0_20px_60px_rgba(31,45,36,0.08)]">
+        <div className="h-7 w-48 animate-pulse rounded-full bg-secondary/70" />
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
+          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
+          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
+        </div>
+        <div className="h-72 animate-pulse rounded-[1.5rem] bg-secondary/60" />
+      </div>
+    ),
+  },
+);
+
 export async function generateStaticParams() {
-  const slugs = await getTrekSlugs();
+  const slugs = await getPrerenderTrekSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
@@ -145,7 +162,38 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[slug]
         </div>
       </section>
 
-      <ComparisonTable packages={comparison.packages} />
+      <section className="grid gap-5 md:grid-cols-4">
+        <Card>
+          <CardHeader>
+            <CardDescription>Lowest price</CardDescription>
+            <CardTitle>{formatPriceRange(comparison.summaryTable.lowestPrice, comparison.summaryTable.lowestPrice)}</CardTitle>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardDescription>Cheapest organizer</CardDescription>
+            <CardTitle className="text-2xl">
+              {comparison.summaryTable.cheapestOrganizerName ?? "Not priced yet"}
+            </CardTitle>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardDescription>Meals surfaced</CardDescription>
+            <CardTitle className="text-2xl">
+              {comparison.summaryTable.mealsSummary.slice(0, 2).join(", ") || "Not confirmed"}
+            </CardTitle>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardDescription>Organizer count</CardDescription>
+            <CardTitle>{comparison.summaryTable.organizerCount}</CardTitle>
+          </CardHeader>
+        </Card>
+      </section>
+
+      <ComparisonTable filters={comparison.filters} packages={comparison.packages} />
     </main>
   );
 }

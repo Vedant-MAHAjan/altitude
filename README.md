@@ -2,12 +2,20 @@
 
 MahaTrek Compare is a trek package comparison platform for Maharashtra treks. It combines an SEO-friendly Next.js frontend, a normalized Prisma data model, and Playwright scrapers that ingest organizer listings into a comparison-ready dataset.
 
+The public site now follows a snapshot-first delivery path:
+
+- scrapers write normalized rows to PostgreSQL
+- a snapshot generator writes lean JSON payloads to `public/snapshots`
+- GitHub Actions commits those snapshot files back to the repo
+- Vercel deploys the updated snapshot files and serves them from the CDN
+- the app falls back to Prisma only when snapshots are missing locally
+
 The repository is set up as a low-cost MVP:
 
 - frontend and API routes on Vercel
 - PostgreSQL on Neon
 - scheduled scraping on GitHub Actions
-- mostly static App Router pages with cache-based refreshes
+- mostly static App Router pages backed by cacheable snapshot JSON
 
 ## What the repo does
 
@@ -50,6 +58,7 @@ Three of those sites share a Vacation Labs structure, so the scraper system incl
 - App Router pages live in `src/app`
 - the homepage, trek pages, and organizer pages are built for SEO and static-first rendering
 - cached data helpers in `src/lib/data.ts` feed both pages and API routes
+- snapshot readers in `src/lib/catalog` let public pages avoid runtime DB reads when static files are present
 - the comparison UI uses normalized data so filters stay consistent across organizers
 
 Deeper frontend planning is documented in `docs/frontend-architecture.md`.
@@ -75,6 +84,20 @@ Important design choice:
 - `TrekPackage` keeps read-optimized fields such as `priceInr`, `transportType`, `mealPlan`, `forestFeeStatus`, `pickupLocations`, and `nextDepartureAt` so the comparison UI stays fast
 - raw scraped text and JSON snapshots are preserved so parsers can be improved without losing source fidelity
 
+### Snapshot-first delivery
+
+Static catalog files now live in `public/snapshots`.
+
+- `homepage.json`: homepage counters and featured trek summaries
+- `treks/index.json`: lightweight trek cards for `/treks`
+- `treks/search.json`: trek name + alias index for the universal search bar
+- `treks/[slug].json`: full comparison payload for an individual trek page
+- `organizers/index.json`: organizer cards for `/organizers`
+- `organizers/[slug].json`: full organizer detail payload
+- `manifest.json`: slug lists plus pre-render targets for dynamic routes
+
+These files are generated from the database after successful scrapes and are intentionally smaller than the raw Prisma graph. The app uses them first, then falls back to lean `select`-based Prisma queries only if snapshots are unavailable.
+
 ### Scrapers
 
 The scraper system lives in `src/scrapers`.
@@ -95,6 +118,8 @@ Deeper scraper design is documented in `src/scrapers/README.md`.
 │       └── scrape.yml
 ├── docs/
 │   └── frontend-architecture.md
+├── public/
+│   └── snapshots/
 ├── prisma/
 │   └── schema.prisma
 ├── prisma.config.ts
@@ -116,18 +141,6 @@ Deeper scraper design is documented in `src/scrapers/README.md`.
 └── README.md
 ```
 
-## Public route map
-
-- `/`: landing page
-- `/treks`: canonical trek listing page
-- `/treks/[slug]`: trek comparison page
-- `/organizers`: organizer listing page
-- `/organizers/[slug]`: organizer detail page
-- `/api/treks`: trek summaries API
-- `/api/treks/[slug]`: single trek comparison API
-- `/api/compare/[slug]`: comparison payload API
-- `/api/revalidate`: cache revalidation endpoint used after scraping
-
 ## Local development
 
 ### Prerequisites
@@ -141,13 +154,14 @@ Deeper scraper design is documented in `src/scrapers/README.md`.
 ```bash
 npm install
 cp .env.example .env
-npm run db:push
 npm run dev
 ```
 
 Open `http://localhost:3000`.
 
-Add a real `DATABASE_URL` to `.env` before starting the app. The repo no longer ships sample trek data, so an empty or missing database will render empty indexes until you sync live rows.
+That starts the static app shell without touching the database.
+
+Add a real `DATABASE_URL` to `.env` before running any database-backed command such as `db:sync` or `scrape`. The repo no longer ships sample trek data, so an empty or missing database will render empty indexes until you sync live rows.
 
 ### Local database workflow
 
@@ -155,13 +169,19 @@ If you want Prisma, persisted scrapes, and live comparison rows:
 
 1. Create a PostgreSQL database.
 2. Put the connection string in `.env` as `DATABASE_URL`.
-3. Apply the schema:
+3. Apply the schema only after `DATABASE_URL` is real:
 
 ```bash
-npm run db:push
+npm run db:sync
 ```
 
-4. Start the app:
+4. Refresh the static catalog snapshots if you changed DB rows or scraper output:
+
+```bash
+npm run snapshots:generate
+```
+
+5. Start the app:
 
 ```bash
 npm run dev
@@ -174,6 +194,9 @@ This repo uses `prisma.config.ts`, and Prisma CLI commands resolve `DATABASE_URL
 - `npm install` and `prisma generate` can still run without `DATABASE_URL` because the Prisma config falls back to a harmless local placeholder URL for client generation
 - the app data layer no longer falls back to sample rows, so `DATABASE_URL` is required if you want actual trek and organizer content
 - database commands such as `prisma db push` still need a real `DATABASE_URL` if you want schema changes to apply to an actual database
+- the `scripts/require-database-url.mjs` wrapper now rejects placeholder URLs before Prisma runs, so `db:sync`, `db:push`, and `scrape` fail fast with a clear message instead of attempting a network connection
+
+If you only want to start the UI, use `npm run dev` after copying `.env.example`. Save `db:sync` for when you have pasted a real Neon connection string into `.env`.
 
 If a database command fails, check that `DATABASE_URL` is set in your shell or `.env` file and that the target database is reachable.
 
@@ -191,6 +214,8 @@ npm run sync:live
 ```
 
 That command applies the Prisma schema and then runs all registered scrapers so the site starts serving live organizer data.
+
+Because `npm run scrape` now regenerates `public/snapshots`, `npm run sync:live` also refreshes the static catalog JSON used by the frontend.
 
 ## Environment variables
 
@@ -216,11 +241,14 @@ npm run build
 npm run start
 npm run lint
 npm run typecheck
+npm run db:sync
 npm run db:generate
 npm run db:push
+npm run snapshots:generate
 npm run scrape
 npm run scrape:dry
 npm run test:scrapers
+npm run verify:local
 npm run sync:live
 ```
 
@@ -271,7 +299,40 @@ Recommended local workflow:
 1. Start with `scrape:dry`
 2. Keep `--limit` low while testing selectors
 3. Move to `scrape` only after the dry-run output looks correct
-4. Use `npm run sync:live` once your Neon URL is configured and you want to refresh the full site dataset
+4. Run `npm run snapshots:generate` if you updated DB rows outside the scraper command
+5. Use `npm run sync:live` once your Neon URL is configured and you want to refresh the full site dataset
+
+## Repeatable verification routine
+
+Use this every time you touch schema, scraper output, or public UI behavior.
+
+### If DB schema changed
+
+```bash
+npm run db:sync
+npm run snapshots:generate
+npm run verify:local
+```
+
+### If scraper output or normalized fields changed
+
+```bash
+npm run scrape -- --organizer=trekhievers --limit=2
+npm run verify:local
+```
+
+### If only UI changed
+
+```bash
+npm run verify:local
+```
+
+### What `verify:local` proves
+
+- TypeScript still compiles
+- scraper regression tests still pass
+- Next.js can prerender the public routes from the current snapshot/data layer
+- dynamic route generation still works for the pre-rendered trek and organizer slugs
 
 ## Where to deploy
 
@@ -295,10 +356,10 @@ This is the setup the repo is already designed around.
 
 Create a Neon project and copy the `DATABASE_URL`.
 
-Apply the schema once:
+Apply the schema once, after replacing the placeholder value in `.env`:
 
 ```bash
-npm run db:push
+npm run db:sync
 ```
 
 ### 2. Web app deployment
@@ -344,7 +405,10 @@ What the workflow does:
 2. installs dependencies
 3. installs Playwright Chromium
 4. runs `npm run scrape`
-5. calls `/api/revalidate` so cached pages refresh after new data lands
+5. commits refreshed `public/snapshots` files if the static payload changed
+6. relies on the normal Vercel Git deployment to ship the new snapshot files to the CDN
+
+This flow keeps the public site static-first and avoids serving most public pages from live database queries.
 
 ## Comparison UI behavior
 
@@ -367,57 +431,6 @@ The frontend planning document also covers the TanStack Table refactor path, mob
 - `robots.ts` and `sitemap.ts` are included
 - trek and organizer pages use canonical slugs
 - the app is built to stay mostly static where possible
-- cached server helpers provide fresh-enough pages without turning every request dynamic
+- public routes prefer snapshot JSON and prerender popular trek and organizer pages ahead of time
+- cached server helpers only hit Prisma when snapshots are missing locally
 - timestamps are rendered as absolute times to stay compatible with cache-based prerendering
-
-## Notes about the current state of the project
-
-- the app already contains real pages for treks and organizers
-- the scraper system already has real organizer adapters
-- the Prisma schema already supports departures, inclusions, and historical pricing
-- the frontend architecture is documented, but some of the richer TanStack Table work is still an implementation path rather than a fully completed UI refactor
-
-## Troubleshooting
-
-### Playwright browser missing
-
-If a scraper fails with an error about `browserType.launch` or a missing executable, install Chromium locally:
-
-```bash
-npx playwright install chromium
-```
-
-### Prisma environment variable error
-
-If a database command fails because `DATABASE_URL` is missing or unreachable, set the variable in `.env` or export it in your shell.
-
-### No live data in the UI
-
-If the app runs but shows empty trek and organizer indexes:
-
-- verify `DATABASE_URL`
-- run `npm run db:push`
-- run at least one scraper against the database
-
-### Scrapers taking too long locally
-
-Use a bounded run:
-
-```bash
-npm run scrape:dry -- --organizer=trekhievers --limit=1
-```
-
-You can also reduce `SCRAPE_TOUR_LIMIT` in `.env`.
-
-## Recommended next steps after cloning
-
-1. Add a real `DATABASE_URL` and apply the schema.
-2. Install Playwright Chromium.
-3. Dry-run one organizer scraper.
-4. Deploy the web app to Vercel.
-5. Add GitHub secrets and enable the scrape workflow.
-
-## Additional docs
-
-- `docs/frontend-architecture.md`: route structure, component hierarchy, mobile behavior, SEO strategy, filtering approach
-- `src/scrapers/README.md`: scraper architecture, parsing strategy, normalization, organizer adapter pattern

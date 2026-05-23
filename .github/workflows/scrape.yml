@@ -9,7 +9,7 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout
@@ -38,13 +38,16 @@ jobs:
           SCRAPE_LOG_LEVEL: "info"
           SCRAPE_USER_AGENT: ${{ secrets.SCRAPE_USER_AGENT }}
 
-      - name: Revalidate cached pages
-        if: ${{ success() && secrets.VERCEL_REVALIDATE_URL != '' && secrets.CRON_REVALIDATE_SECRET != '' }}
+      - name: Commit refreshed static snapshots
+        if: ${{ success() }}
         run: |
-          curl --fail --show-error --silent \
-            -X POST "$VERCEL_REVALIDATE_URL" \
-            -H "Content-Type: application/json" \
-            -d "{\"secret\":\"$CRON_REVALIDATE_SECRET\"}"
-        env:
-          VERCEL_REVALIDATE_URL: ${{ secrets.VERCEL_REVALIDATE_URL }}
-          CRON_REVALIDATE_SECRET: ${{ secrets.CRON_REVALIDATE_SECRET }}
+          if git diff --quiet -- public/snapshots; then
+            echo "No snapshot changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/snapshots
+          git commit -m "chore: refresh static catalog snapshots"
+          git push

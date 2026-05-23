@@ -11,12 +11,16 @@ export async function GET(
     return Response.json({ error: "Not found" }, { status: 404 });
   }
 
-  return Response.json({
-    comparison,
-    filters: {
-      transportTypes: [...new Set(comparison.packages.map((item) => item.transportType))],
-      mealPlans: [...new Set(comparison.packages.map((item) => item.mealPlan))],
-      organizers: [...new Set(comparison.packages.map((item) => item.organizerSlug))],
+  return Response.json(
+    {
+      comparison,
+      filters: comparison.filters,
+      summaryTable: comparison.summaryTable,
     },
-  });
+    {
+      headers: {
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+      },
+    },
+  );
 }

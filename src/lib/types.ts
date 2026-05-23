@@ -23,12 +23,36 @@ export type MealPlan = "INCLUDED" | "PARTIAL" | "NOT_INCLUDED" | "UNKNOWN";
 
 export type InclusionStatus = "INCLUDED" | "NOT_INCLUDED" | "UNKNOWN";
 
+export type TrekSearchEntry = {
+  name: string;
+  slug: string;
+  aliases: string[];
+};
+
+export type ComparisonFilters = {
+  transportTypes: ComparisonTransportType[];
+  mealPlans: MealPlan[];
+  cities: Array<Exclude<ListingCity, "OTHER">>;
+  organizers: Array<{
+    name: string;
+    slug: string;
+  }>;
+};
+
+export type ComparisonSummaryTable = {
+  lowestPrice: number | null;
+  cheapestOrganizerName: string | null;
+  cheapestOrganizerSlug: string | null;
+  cheapestPackageTitle: string | null;
+  mealsSummary: string[];
+  organizerCount: number;
+};
+
 export type ComparisonPackage = {
   id: string;
   title: string;
   organizerName: string;
   organizerSlug: string;
-  organizerWebsiteUrl?: string;
   trekName?: string;
   trekSlug?: string;
   sourceUrl: string;
@@ -38,15 +62,13 @@ export type ComparisonPackage = {
   mealPlan: MealPlan;
   forestFeeStatus: InclusionStatus;
   listingCity: ListingCity;
-  mealsAvailable: boolean;
   mealsSummary: string | null;
-  stayIncluded: boolean;
   staySummary: string | null;
   inclusionHighlights: string[];
-  exclusionHighlights: string[];
-  transportSummary: string | null;
   pickupLocations: string[];
   lastUpdatedAt: string;
+  updatedAtMs: number;
+  searchText: string;
 };
 
 export type TrekSummary = {
@@ -65,6 +87,8 @@ export type TrekSummary = {
 };
 
 export type TrekComparison = TrekSummary & {
+  filters: ComparisonFilters;
+  summaryTable: ComparisonSummaryTable;
   packages: ComparisonPackage[];
 };
 
@@ -96,4 +120,14 @@ export type HomepageData = {
   packageCount: number;
   priceFloor: number | null;
   lastUpdatedAt: string | null;
+};
+
+export type SnapshotManifest = {
+  generatedAt: string;
+  trekSlugs: string[];
+  organizerSlugs: string[];
+  featuredTrekSlugs: string[];
+  featuredOrganizerSlugs: string[];
+  prerenderTrekSlugs: string[];
+  prerenderOrganizerSlugs: string[];
 };

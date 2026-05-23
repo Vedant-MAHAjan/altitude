@@ -5,13 +5,8 @@ import { ArrowUpRight, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
+import type { TrekSearchEntry } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-type TrekSearchEntry = {
-  name: string;
-  slug: string;
-  aliases: string[];
-};
 
 type UniversalTrekSearchProps = {
   treks: TrekSearchEntry[];

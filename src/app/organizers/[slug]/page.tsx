@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getOrganizerBySlug, getOrganizerSlugs } from "@/lib/data";
+import { getOrganizerBySlug, getPrerenderOrganizerSlugs } from "@/lib/data";
 import { formatCurrency, formatPriceRange, formatUpdatedAt } from "@/lib/format";
 import {
   mealPlanLabels,
@@ -21,7 +21,7 @@ import {
 import { siteConfig } from "@/lib/site";
 
 export async function generateStaticParams() {
-  const slugs = await getOrganizerSlugs();
+  const slugs = await getPrerenderOrganizerSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 

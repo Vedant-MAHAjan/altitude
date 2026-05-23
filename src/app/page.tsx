@@ -20,7 +20,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatCurrency, formatPriceRange, formatUpdatedAt } from "@/lib/format";
-import { getHomepageData, getOrganizerIndex } from "@/lib/data";
+import { getHomepageData } from "@/lib/data";
 
 const comparisonSignals = [
   {
@@ -71,10 +71,7 @@ const infraCards = [
 ];
 
 export default async function Home() {
-  const [homepageData, organizers] = await Promise.all([
-    getHomepageData(),
-    getOrganizerIndex(),
-  ]);
+  const homepageData = await getHomepageData();
 
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-16 px-6 py-12 md:py-16">
@@ -153,7 +150,7 @@ export default async function Home() {
               <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
                 Organizer coverage
               </div>
-              <div className="mt-2 font-display text-4xl">{organizers.length}</div>
+              <div className="mt-2 font-display text-4xl">{homepageData.organizerCount}</div>
             </div>
             <div className="rounded-3xl bg-white/10 p-5 sm:col-span-2">
               <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">

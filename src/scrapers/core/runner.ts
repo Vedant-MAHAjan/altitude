@@ -1,3 +1,4 @@
+import { generateStaticCatalogData } from "../../lib/catalog/generator";
 import { createLogger } from "./logger";
 import { normalizeScrapedPackage } from "./normalizer";
 import { persistPackages } from "./persist";
@@ -127,6 +128,7 @@ export async function runScrapers(
 
   if (!options.dryRun && results.some((result) => result.status === "success")) {
     await reconcileTrekCatalog(logger.child("reconcile"));
+    await generateStaticCatalogData(logger.child("snapshots"));
   }
 
   return results.sort((left, right) =>
