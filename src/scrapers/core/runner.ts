@@ -10,6 +10,21 @@ import type {
   ScraperRunResult,
 } from "../types";
 
+function resolveTourLimit(explicitLimit: number | null) {
+  if (explicitLimit) {
+    return explicitLimit;
+  }
+
+  const configuredLimit = process.env.SCRAPE_TOUR_LIMIT;
+
+  if (!configuredLimit) {
+    return null;
+  }
+
+  const parsedLimit = Number(configuredLimit);
+  return Number.isFinite(parsedLimit) && parsedLimit > 0 ? parsedLimit : null;
+}
+
 async function executeScraper(
   scraper: OrganizerScraper,
   options: ScraperRunOptions,
@@ -32,8 +47,7 @@ async function executeScraper(
             "MahaTrekCompareBot/0.1",
           now: new Date(),
           maxAttempts: 3,
-          maxToursPerSource:
-            options.limit ?? (Number(process.env.SCRAPE_TOUR_LIMIT ?? 6) || 6),
+          maxToursPerSource: resolveTourLimit(options.limit),
           navigationTimeoutMs: Number(process.env.SCRAPE_NAV_TIMEOUT_MS ?? 45_000),
           logger,
         }),
@@ -131,7 +145,40 @@ export async function runScrapers(
     await generateStaticCatalogData(logger.child("snapshots"));
   }
 
+  // Post-scrape coverage validation
+  validateCoverage(results, logger);
+
   return results.sort((left, right) =>
     left.organizerSlug.localeCompare(right.organizerSlug),
   );
+}
+
+/**
+ * Flags organizers whose scrape results look suspiciously thin.
+ * A minimum expected count per organizer can be configured via
+ * the SCRAPE_MIN_PACKAGES env variable (default: 3).
+ */
+function validateCoverage(
+  results: ScraperRunResult[],
+  logger: ReturnType<typeof createLogger>,
+) {
+  const minExpected = Number(process.env.SCRAPE_MIN_PACKAGES ?? 3) || 3;
+
+  for (const result of results) {
+    if (result.status === "failed") {
+      logger.error("Organizer scrape failed completely", {
+        organizer: result.organizerSlug,
+        error: result.error,
+      });
+      continue;
+    }
+
+    if (result.packagesFound < minExpected) {
+      logger.warn("Organizer yielded fewer packages than expected", {
+        organizer: result.organizerSlug,
+        packagesFound: result.packagesFound,
+        minExpected,
+      });
+    }
+  }
 }

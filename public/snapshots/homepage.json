@@ -6,30 +6,16 @@
       "departureCity": "MUMBAI",
       "routePath": "/treks/harishchandragad/mumbai",
       "availableVariants": [
+        "NIGHT_TREK",
+        "FIREFLIES",
         "CAMPING",
         "TREK_ONLY"
       ],
       "startingPrice": 699,
       "organizerCount": 4,
       "nextDepartureAt": null,
-      "packageCount": 10,
-      "updatedAt": "2026-05-25T05:23:27.348Z",
-      "summary": null
-    },
-    {
-      "destinationName": "Harishchandragad",
-      "destinationSlug": "harishchandragad",
-      "departureCity": "PUNE",
-      "routePath": "/treks/harishchandragad/pune",
-      "availableVariants": [
-        "CAMPING",
-        "TREK_ONLY"
-      ],
-      "startingPrice": 699,
-      "organizerCount": 3,
-      "nextDepartureAt": null,
-      "packageCount": 8,
-      "updatedAt": "2026-05-25T05:23:27.348Z",
+      "packageCount": 12,
+      "updatedAt": "2026-05-25T10:47:18.557Z",
       "summary": null
     },
     {
@@ -39,20 +25,39 @@
       "routePath": "/treks/kalsubai/mumbai",
       "availableVariants": [
         "NIGHT_TREK",
+        "FIREFLIES",
         "CAMPING",
         "TREK_ONLY"
       ],
       "startingPrice": 499,
       "organizerCount": 3,
       "nextDepartureAt": null,
-      "packageCount": 8,
-      "updatedAt": "2026-05-25T05:23:25.775Z",
+      "packageCount": 10,
+      "updatedAt": "2026-05-25T10:47:38.275Z",
+      "summary": null
+    },
+    {
+      "destinationName": "Rajmachi Fort",
+      "destinationSlug": "rajmachi-fort",
+      "departureCity": "MUMBAI",
+      "routePath": "/treks/rajmachi-fort/mumbai",
+      "availableVariants": [
+        "SUNRISE",
+        "FIREFLIES",
+        "CAMPING",
+        "TREK_ONLY"
+      ],
+      "startingPrice": 699,
+      "organizerCount": 3,
+      "nextDepartureAt": null,
+      "packageCount": 10,
+      "updatedAt": "2026-05-25T11:06:10.962Z",
       "summary": null
     }
   ],
-  "routeCount": 107,
+  "routeCount": 148,
   "organizerCount": 5,
-  "packageCount": 191,
+  "packageCount": 256,
   "priceFloor": 250,
-  "lastUpdatedAt": "2026-05-25T10:24:45.895Z"
+  "lastUpdatedAt": "2026-05-25T11:06:10.962Z"
 }

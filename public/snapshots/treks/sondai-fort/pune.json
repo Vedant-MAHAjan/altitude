@@ -4,18 +4,19 @@
   "departureCity": "PUNE",
   "routePath": "/treks/sondai-fort/pune",
   "summary": null,
-  "packageCount": 1,
+  "packageCount": 2,
   "organizerCount": 1,
   "startingPrice": 499,
   "priceMin": 499,
-  "priceMax": 499,
+  "priceMax": 999,
   "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN"
+      "TRAIN",
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -40,7 +41,8 @@
     "cheapestPackageTitle": "Sondai Night Trek",
     "mealsSummary": [
       "Breakfast",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Lunch"
     ],
     "organizerCount": 1,
     "variantCount": 1
@@ -52,9 +54,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
+      "packageCount": 2,
       "priceMin": 499,
-      "priceMax": 499
+      "priceMax": 999
     }
   ],
   "packages": [
@@ -88,7 +90,43 @@
       "lastUpdatedAt": "2026-05-21T13:45:59.795Z",
       "updatedAtMs": 1779371159795,
       "searchText": "bhatakna sondai night trek sondai fort trek mixed breakfast, tea and snacks breakfast, tea and snacks"
+    },
+    {
+      "id": "cmpl301dk00md1pnhv1bq7zol",
+      "title": "Corporate Special Sondai Monsoon Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sondai Fort",
+      "trekSlug": "sondai-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/corporate-special-sondai-monsoon-trek",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Chembur",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:46:38.840Z",
+      "updatedAtMs": 1779705998840,
+      "searchText": "bhatakna corporate special sondai monsoon trek sondai fort trek mixed breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay borivali chembur sion"
     }
   ],
-  "updatedAt": "2026-05-21T13:45:59.795Z"
+  "updatedAt": "2026-05-25T10:46:38.840Z"
 }

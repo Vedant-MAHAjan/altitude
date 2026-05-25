@@ -1,0 +1,72 @@
+{
+  "name": "Cycle Rental",
+  "slug": "cycle-rental",
+  "region": null,
+  "durationDays": null,
+  "durationNights": null,
+  "difficulty": "UNKNOWN",
+  "summary": null,
+  "packageCount": 1,
+  "organizerCount": 1,
+  "priceMin": 500,
+  "priceMax": 500,
+  "updatedAt": "2026-05-25T10:46:39.687Z",
+  "filters": {
+    "transportTypes": [
+      "NON_AC_BUS"
+    ],
+    "mealPlans": [
+      "UNKNOWN"
+    ],
+    "cities": [],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
+    "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 500,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Cycle Rental Mumbai",
+    "mealsSummary": [],
+    "organizerCount": 1,
+    "variantCount": 1
+  },
+  "packages": [
+    {
+      "id": "cmpl3021300mr1pnhy5w0z624",
+      "title": "Cycle Rental Mumbai",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Cycle Rental",
+      "trekSlug": "cycle-rental",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/cycle-rental-mumbai",
+      "priceInr": 500,
+      "priceText": "₹500",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "UNKNOWN",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": null,
+      "inclusionHighlights": [],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:46:39.687Z",
+      "updatedAtMs": 1779705999687,
+      "searchText": "bhatakna cycle rental mumbai cycle rental trek other"
+    }
+  ]
+}

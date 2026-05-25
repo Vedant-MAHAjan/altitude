@@ -82,6 +82,15 @@ export const unlimitedTrekersScraper: OrganizerScraper = {
       const limit = context.maxToursPerSource;
       const result = limit ? packages.slice(0, limit) : packages;
 
+      if (limit && packages.length > limit) {
+        context.logger.warn("Discovery truncated by tour limit", {
+          organizer: "unlimited-trekers",
+          totalAvailable: packages.length,
+          limit,
+          skipped: packages.length - limit,
+        });
+      }
+
       context.logger.info("Scraped Unlimited Trekers packages", {
         total: result.length,
       });

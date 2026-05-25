@@ -6,8 +6,8 @@
   "summary": null,
   "packageCount": 3,
   "organizerCount": 3,
-  "startingPrice": 499,
-  "priceMin": 499,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1099,
   "nextDepartureAt": null,
   "availableVariants": [
@@ -16,19 +16,20 @@
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
-      "INCLUDED",
-      "NOT_INCLUDED"
+      "NOT_INCLUDED",
+      "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "MIXED",
+      "PUNE"
     ],
     "variantTags": [
-      "NIGHT_TREK",
-      "TREK_ONLY"
+      "TREK_ONLY",
+      "NIGHT_TREK"
     ],
     "organizers": [
       {
@@ -46,10 +47,10 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 499,
-    "cheapestOrganizerName": "Bhatakna",
-    "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Harihar Fort Night Trek",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Harihar Fort Trek | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -60,16 +61,6 @@
   },
   "variantGroups": [
     {
-      "signature": "NIGHT_TREK",
-      "label": "Night trek",
-      "tags": [
-        "NIGHT_TREK"
-      ],
-      "packageCount": 1,
-      "priceMin": 499,
-      "priceMax": 499
-    },
-    {
       "signature": "TREK_ONLY",
       "label": "Trek",
       "tags": [
@@ -78,40 +69,19 @@
       "packageCount": 2,
       "priceMin": 699,
       "priceMax": 1099
+    },
+    {
+      "signature": "NIGHT_TREK",
+      "label": "Night trek",
+      "tags": [
+        "NIGHT_TREK"
+      ],
+      "packageCount": 1,
+      "priceMin": 799,
+      "priceMax": 799
     }
   ],
   "packages": [
-    {
-      "id": "cmpe5sgk701kw8knhhivng5se",
-      "title": "Harihar Fort Night Trek",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harihar Fort",
-      "trekSlug": "harihar-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/hariharfort",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK",
-      "variantLabel": "Night trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:28.379Z",
-      "updatedAtMs": 1779686608379,
-      "searchText": "bhatakna harihar fort night trek harihar fort night trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
     {
       "id": "cmpfjlz9201kfv2nhe8kjt38o",
       "title": "Harihar Fort Trek | Pune",
@@ -147,6 +117,42 @@
       "searchText": "trekhievers harihar fort trek | pune harihar fort trek mixed sion nashik nashik phata nirgudpada"
     },
     {
+      "id": "cmpl30sbn014a1pnh7lwplkbd",
+      "title": "Harihar Fort Night Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harihar Fort",
+      "trekSlug": "harihar-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harihar-fort-night-trek-pune-149624",
+      "priceInr": 799,
+      "priceText": "₹799",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Hotel stay"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata",
+        "Nirgudpada"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:47:13.763Z",
+      "updatedAtMs": 1779706033763,
+      "searchText": "bhatakna harihar fort night trek | pune harihar fort night trek pune breakfast, lunch hotel stay breakfast, lunch hotel stay nashik nashik phata nirgudpada"
+    },
+    {
       "id": "cmpfjydht00xtuonhnc65lhfo",
       "title": "Harihar Fort Trek | Rock-Cut Steps Adventure",
       "organizerName": "Treks and Trails India",
@@ -179,5 +185,5 @@
       "searchText": "treks and trails india harihar fort trek | rock-cut steps adventure harihar fort trek mixed breakfast, lunch, tea and snacks tent stay, homestay breakfast, lunch, tea and snacks tent stay, homestay"
     }
   ],
-  "updatedAt": "2026-05-25T05:23:28.379Z"
+  "updatedAt": "2026-05-25T10:47:13.763Z"
 }

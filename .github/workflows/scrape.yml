@@ -33,7 +33,6 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
           SCRAPE_CONCURRENCY: "2"
-          SCRAPE_TOUR_LIMIT: "8"
           SCRAPE_NAV_TIMEOUT_MS: "45000"
           SCRAPE_LOG_LEVEL: "info"
           SCRAPE_USER_AGENT: ${{ secrets.SCRAPE_USER_AGENT }}

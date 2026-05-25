@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 10,
+  "packageCount": 14,
   "organizerCount": 4,
   "priceMin": 699,
   "priceMax": 2299,
-  "updatedAt": "2026-05-25T05:23:27.348Z",
+  "updatedAt": "2026-05-25T10:47:18.557Z",
   "filters": {
     "transportTypes": [
       "TRAIN",
@@ -20,11 +20,15 @@
       "INCLUDED"
     ],
     "cities": [
-      "MIXED",
-      "MUMBAI"
+      "MUMBAI",
+      "PUNE",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY",
+      "FIREFLIES",
+      "SUNRISE",
+      "NIGHT_TREK",
       "CAMPING"
     ],
     "organizers": [
@@ -58,7 +62,7 @@
       "Dinner"
     ],
     "organizerCount": 4,
-    "variantCount": 2
+    "variantCount": 5
   },
   "packages": [
     {
@@ -75,7 +79,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MIXED",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "TREK_ONLY"
       ],
@@ -88,9 +92,75 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:26.557Z",
-      "updatedAtMs": 1779686606557,
-      "searchText": "bhatakna harishchandragad trek harishchandragad trek mixed breakfast, lunch breakfast, lunch"
+      "lastUpdatedAt": "2026-05-25T10:47:18.557Z",
+      "updatedAtMs": 1779706038557,
+      "searchText": "bhatakna harishchandragad trek harishchandragad trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl30t1i014q1pnh8fffszwn",
+      "title": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-fireflies-clouds-formation-trek-pune",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:47:14.694Z",
+      "updatedAtMs": 1779706034694,
+      "searchText": "bhatakna harishchandragad fireflies & clouds formation trek | pune harishchandragad fireflies pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpl30tr9015a1pnhcye2qgbt",
+      "title": "Harishchandragad Flowers Trek 2024",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-monsoon-trek-2024",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:47:15.621Z",
+      "updatedAtMs": 1779706035621,
+      "searchText": "bhatakna harishchandragad flowers trek 2024 harishchandragad trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
     },
     {
       "id": "cmpfjn24e01vwv2nh9vi1jf3g",
@@ -106,12 +176,12 @@
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
+      "listingCity": "PUNE",
       "variantTags": [
-        "TREK_ONLY"
+        "SUNRISE"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
+      "variantSignature": "SUNRISE",
+      "variantLabel": "Sunrise",
       "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
@@ -122,9 +192,9 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-21T13:45:49.694Z",
-      "updatedAtMs": 1779371149694,
-      "searchText": "bhatakna harishchandragad sunrise trek | pune harishchandragad trek mixed breakfast, lunch breakfast, lunch nashik nashik phata"
+      "lastUpdatedAt": "2026-05-25T10:47:17.633Z",
+      "updatedAtMs": 1779706037633,
+      "searchText": "bhatakna harishchandragad sunrise trek | pune harishchandragad sunrise pune breakfast, lunch breakfast, lunch nashik nashik phata"
     },
     {
       "id": "cmpe5r6a4004b8knhezr4sbmd",
@@ -158,6 +228,38 @@
       "searchText": "trekhievers harishchandragad cloud formation trek | mumbai harishchandragad trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
+      "id": "cmpl30ehr00ve1pnhcmyeelww",
+      "title": "Fireflies & Clouds special - Harishchandragad Night Trek 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-harishchandragad-night-trek",
+      "priceInr": 799,
+      "priceText": "₹799",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK",
+        "FIREFLIES"
+      ],
+      "variantSignature": "NIGHT_TREK__FIREFLIES",
+      "variantLabel": "Night trek + Fireflies",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:46:55.839Z",
+      "updatedAtMs": 1779706015839,
+      "searchText": "bhatakna fireflies & clouds special - harishchandragad night trek 2026 harishchandragad night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
       "id": "cmpe5sfna01kd8knha6ln4152",
       "title": "Harishchandragad Kokankada Trek & Camping",
       "organizerName": "Bhatakna",
@@ -171,7 +273,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "CAMPING"
       ],
@@ -185,9 +287,41 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:27.348Z",
-      "updatedAtMs": 1779686607348,
-      "searchText": "bhatakna harishchandragad kokankada trek & camping harishchandragad camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-05-25T10:47:16.550Z",
+      "updatedAtMs": 1779706036550,
+      "searchText": "bhatakna harishchandragad kokankada trek & camping harishchandragad camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpl2ztuf00hk1pnhkupvh3tx",
+      "title": "Camping behind Waterfall and Harishchandragad Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/camping-behind-waterfall-and-harishchandragad",
+      "priceInr": 1199,
+      "priceText": "Rs. 1199/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:46:29.079Z",
+      "updatedAtMs": 1779705989079,
+      "searchText": "bhatakna camping behind waterfall and harishchandragad trek harishchandragad camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
       "id": "cmpe5rfjn00m68knhdncw3gg9",

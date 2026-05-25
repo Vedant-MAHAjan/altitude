@@ -117,9 +117,20 @@ export const sahyadriTreksAndToursScraper: OrganizerScraper = {
         });
         const fallbackLinks =
           links.length > 0 ? [] : await collectButtonDrivenLinks(source.sourceUrl, context);
+        const allLinks = [...links, ...fallbackLinks];
         const limitedLinks = context.maxToursPerSource
-          ? [...links, ...fallbackLinks].slice(0, context.maxToursPerSource)
-          : [...links, ...fallbackLinks];
+          ? allLinks.slice(0, context.maxToursPerSource)
+          : allLinks;
+
+        if (context.maxToursPerSource && allLinks.length > context.maxToursPerSource) {
+          context.logger.warn("Discovery truncated by tour limit", {
+            organizer: "sahyadri-treks-and-tours",
+            source: source.label,
+            totalAvailable: allLinks.length,
+            limit: context.maxToursPerSource,
+            skipped: allLinks.length - context.maxToursPerSource,
+          });
+        }
 
         context.logger.info("Discovered organizer links", {
           organizer: "sahyadri-treks-and-tours",

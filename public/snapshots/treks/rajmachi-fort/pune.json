@@ -4,10 +4,10 @@
   "departureCity": "PUNE",
   "routePath": "/treks/rajmachi-fort/pune",
   "summary": null,
-  "packageCount": 7,
-  "organizerCount": 2,
-  "startingPrice": 1300,
-  "priceMin": 1300,
+  "packageCount": 9,
+  "organizerCount": 3,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1600,
   "nextDepartureAt": null,
   "availableVariants": [
@@ -20,8 +20,8 @@
       "TRAIN"
     ],
     "mealPlans": [
-      "NOT_INCLUDED",
-      "INCLUDED"
+      "INCLUDED",
+      "NOT_INCLUDED"
     ],
     "cities": [
       "MIXED"
@@ -33,6 +33,10 @@
     ],
     "organizers": [
       {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
         "name": "Trekhievers",
         "slug": "trekhievers"
       },
@@ -43,18 +47,18 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1300,
-    "cheapestOrganizerName": "Trekhievers",
-    "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Rajmachi Fireflies Trek | Pune",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Rajmachi Monsoon Trek",
     "mealsSummary": [
       "Breakfast",
       "Dinner",
       "Tea and snacks",
       "Lunch"
     ],
-    "organizerCount": 2,
-    "variantCount": 2
+    "organizerCount": 3,
+    "variantCount": 3
   },
   "variantGroups": [
     {
@@ -63,9 +67,19 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 6,
-      "priceMin": 1300,
+      "packageCount": 7,
+      "priceMin": 699,
       "priceMax": 1600
+    },
+    {
+      "signature": "CAMPING",
+      "label": "Camping",
+      "tags": [
+        "CAMPING"
+      ],
+      "packageCount": 1,
+      "priceMin": 999,
+      "priceMax": 999
     },
     {
       "signature": "SUNRISE__CAMPING",
@@ -80,6 +94,70 @@
     }
   ],
   "packages": [
+    {
+      "id": "cmpl3p5si001jq0nh0gc1rqvz",
+      "title": "Rajmachi Monsoon Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tour/rajmachi-monsoon-trek",
+      "priceInr": 699,
+      "priceText": "Rs. 699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T11:06:10.962Z",
+      "updatedAtMs": 1779707170962,
+      "searchText": "bhatakna rajmachi monsoon trek rajmachi fort trek mixed breakfast, dinner homestay breakfast, dinner homestay"
+    },
+    {
+      "id": "cmpl3p30h0004q0nh5qg8rj3s",
+      "title": "Rajmachi Camping | Bhatakna Tours & Travels",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/rajmachi-camping-bhatakna-tours-travels-136525",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T11:06:07.361Z",
+      "updatedAtMs": 1779707167361,
+      "searchText": "bhatakna rajmachi camping | bhatakna tours & travels rajmachi fort camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
     {
       "id": "cmpfjm0gc01mpv2nhq9vz5ra4",
       "title": "Rajmachi Fireflies Trek | Pune",
@@ -304,5 +382,5 @@
       "searchText": "treks and trails india rajmachi and kondhane caves trek rajmachi fort trek mixed breakfast, lunch, dinner dormitory stay, homestay breakfast, lunch, dinner dormitory stay, homestay"
     }
   ],
-  "updatedAt": "2026-05-25T05:22:51.524Z"
+  "updatedAt": "2026-05-25T11:06:10.962Z"
 }

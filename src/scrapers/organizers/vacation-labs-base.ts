@@ -55,6 +55,16 @@ export function createVacationLabsOrganizerScraper(
             ? links.slice(0, context.maxToursPerSource)
             : links;
 
+          if (context.maxToursPerSource && links.length > context.maxToursPerSource) {
+            context.logger.warn("Discovery truncated by tour limit", {
+              organizer: config.organizer.slug,
+              source: source.label,
+              totalAvailable: links.length,
+              limit: context.maxToursPerSource,
+              skipped: links.length - context.maxToursPerSource,
+            });
+          }
+
           context.logger.info("Discovered organizer links", {
             organizer: config.organizer.slug,
             source: source.label,

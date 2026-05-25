@@ -4,13 +4,14 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/garbett-plateau-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 799,
-  "priceMin": 799,
+  "packageCount": 3,
+  "organizerCount": 2,
+  "startingPrice": 499,
+  "priceMin": 499,
   "priceMax": 799,
   "nextDepartureAt": null,
   "availableVariants": [
+    "NIGHT_TREK",
     "TREK_ONLY"
   ],
   "filters": {
@@ -21,12 +22,18 @@
       "INCLUDED"
     ],
     "cities": [
+      "MUMBAI",
       "MIXED"
     ],
     "variantTags": [
+      "NIGHT_TREK",
       "TREK_ONLY"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -34,30 +41,103 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 799,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Garbett Plateau Trek | Garbett Point Trek",
+    "lowestPrice": 499,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Garbett Plateau Trek | Garbett Point Night Trek",
     "mealsSummary": [
       "Breakfast",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Lunch"
     ],
-    "organizerCount": 1,
-    "variantCount": 1
+    "organizerCount": 2,
+    "variantCount": 2
   },
   "variantGroups": [
+    {
+      "signature": "NIGHT_TREK",
+      "label": "Night trek",
+      "tags": [
+        "NIGHT_TREK"
+      ],
+      "packageCount": 1,
+      "priceMin": 499,
+      "priceMax": 499
+    },
     {
       "signature": "TREK_ONLY",
       "label": "Trek",
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
+      "packageCount": 2,
       "priceMin": 799,
       "priceMax": 799
     }
   ],
   "packages": [
+    {
+      "id": "cmpl30kfo00yl1pnhsknmyvtq",
+      "title": "Garbett Plateau Trek | Garbett Point Night Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Garbett Plateau Trek",
+      "trekSlug": "garbett-plateau-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/garbett-plateau-night-trek",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:47:03.540Z",
+      "updatedAtMs": 1779706023540,
+      "searchText": "bhatakna garbett plateau trek | garbett point night trek garbett plateau trek night trek mumbai breakfast, tea and snacks breakfast, tea and snacks"
+    },
+    {
+      "id": "cmpl30jma00y51pnhjd46ww21",
+      "title": "Garbett Plateau Monsoon Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Garbett Plateau Trek",
+      "trekSlug": "garbett-plateau-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/garbett-plateau-trek",
+      "priceInr": 799,
+      "priceText": "Rs. 799/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:47:02.482Z",
+      "updatedAtMs": 1779706022482,
+      "searchText": "bhatakna garbett plateau monsoon trek garbett plateau trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpfjq76m02h4v2nhzudd3d05",
       "title": "Garbett Plateau Trek | Garbett Point Trek",
@@ -91,5 +171,5 @@
       "searchText": "treks and trails india garbett plateau trek | garbett point trek garbett plateau trek trek mixed breakfast, tea and snacks tent stay, homestay breakfast, tea and snacks tent stay, homestay"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:48.873Z"
+  "updatedAt": "2026-05-25T10:47:03.540Z"
 }

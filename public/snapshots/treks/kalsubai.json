@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 8,
+  "packageCount": 10,
   "organizerCount": 3,
   "priceMin": 499,
   "priceMax": 1599,
-  "updatedAt": "2026-05-25T05:23:25.775Z",
+  "updatedAt": "2026-05-25T10:47:38.275Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS",
@@ -20,10 +20,12 @@
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "MIXED",
+      "MUMBAI"
     ],
     "variantTags": [
       "NIGHT_TREK",
+      "FIREFLIES",
       "TREK_ONLY",
       "CAMPING"
     ],
@@ -54,7 +56,7 @@
       "Dinner"
     ],
     "organizerCount": 3,
-    "variantCount": 3
+    "variantCount": 5
   },
   "packages": [
     {
@@ -122,6 +124,69 @@
       "lastUpdatedAt": "2026-05-25T05:23:22.192Z",
       "updatedAtMs": 1779686602192,
       "searchText": "bhatakna kalsubai night trek kalsubai night trek mixed breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl30dof00uw1pnhopl1q75m",
+      "title": "Fireflies & Clouds Special Kalsubai Night Trek 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-kalsubai-night-trek",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK",
+        "FIREFLIES"
+      ],
+      "variantSignature": "NIGHT_TREK__FIREFLIES",
+      "variantLabel": "Night trek + Fireflies",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:46:54.783Z",
+      "updatedAtMs": 1779706014783,
+      "searchText": "bhatakna fireflies & clouds special kalsubai night trek 2026 kalsubai night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl31b8j01fy1pnhtefvf8cp",
+      "title": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-fireflies-cloud-formation-trek-pune",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:47:38.275Z",
+      "updatedAtMs": 1779706058275,
+      "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies mixed breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpe5r48f00088knh8ijwsq5t",

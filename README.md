@@ -209,6 +209,8 @@ npm run scrape
 npm run dev
 ```
 
+`npm run scrape` now performs a full local refresh unless you intentionally cap it with `--limit=<n>` or `SCRAPE_TOUR_LIMIT`.
+
 4. Brand-new blank database, then full local live site:
 
 Use this only when `DATABASE_URL` points to a brand-new Neon project or branch with no existing trek tables or rows.
@@ -266,6 +268,8 @@ npm run dev
 npm run scrape
 npm run dev
 ```
+
+Use `npm run scrape -- --limit=20` only when you intentionally want a bounded test run instead of a full local refresh.
 
 3. Fresh or disposable database, create schema, scrape, then view the site:
 

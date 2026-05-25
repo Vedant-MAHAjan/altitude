@@ -34,7 +34,7 @@
 - Headless Chromium only.
 - Locale pinned to `en-IN` and timezone to `Asia/Kolkata`.
 - Navigation timeout comes from `SCRAPE_NAV_TIMEOUT_MS`.
-- `SCRAPE_TOUR_LIMIT` caps discovery per source so scheduled runs stay bounded.
+- `SCRAPE_TOUR_LIMIT` caps discovery per source only when you set it explicitly. CI uses it so scheduled runs stay bounded, but local `npm run scrape` is otherwise uncapped.
 - The workflow installs Chromium with `npx playwright install --with-deps chromium`.
 
 ## 4. Parsing strategy

@@ -1,0 +1,74 @@
+{
+  "name": "Bir Billing",
+  "slug": "bir-billing",
+  "region": null,
+  "durationDays": null,
+  "durationNights": null,
+  "difficulty": "UNKNOWN",
+  "summary": null,
+  "packageCount": 1,
+  "organizerCount": 1,
+  "priceMin": 7999,
+  "priceMax": 7999,
+  "updatedAt": "2026-05-25T10:46:25.157Z",
+  "filters": {
+    "transportTypes": [
+      "NON_AC_BUS"
+    ],
+    "mealPlans": [
+      "NOT_INCLUDED"
+    ],
+    "cities": [],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
+    "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 7999,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Bir Billing",
+    "mealsSummary": [],
+    "organizerCount": 1,
+    "variantCount": 1
+  },
+  "packages": [
+    {
+      "id": "cmpl2zqth00fd1pnhyu3wm4j2",
+      "title": "Bir Billing",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Bir Billing",
+      "trekSlug": "bir-billing",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/bir-billing",
+      "priceInr": 7999,
+      "priceText": "₹7,999",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:46:25.157Z",
+      "updatedAtMs": 1779705985157,
+      "searchText": "bhatakna bir billing bir billing trek other hotel stay hotel stay"
+    }
+  ]
+}
