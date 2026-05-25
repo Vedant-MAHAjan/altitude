@@ -10,7 +10,7 @@
   "organizerCount": 1,
   "priceMin": 1199,
   "priceMax": 1199,
-  "updatedAt": "2026-05-21T13:45:45.403Z",
+  "updatedAt": "2026-05-25T05:23:23.098Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS"
@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "CAMPING"
+    ],
     "organizers": [
       {
         "name": "Bhatakna",
@@ -36,7 +41,8 @@
       "Dinner",
       "Tea and snacks"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -46,13 +52,20 @@
       "organizerSlug": "bhatakna",
       "trekName": "Beach Camping Alibaug",
       "trekSlug": "beach-camping-alibaug",
+      "trekSummary": null,
       "sourceUrl": "https://www.bhatakna.com/tours/beach-camping-alibaug",
       "priceInr": 1199,
       "priceText": "₹1199/-",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -60,9 +73,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:45.403Z",
-      "updatedAtMs": 1779371145403,
-      "searchText": "bhatakna beach camping alibaug beach camping alibaug other breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-05-25T05:23:23.098Z",
+      "updatedAtMs": 1779686603098,
+      "searchText": "bhatakna beach camping alibaug beach camping alibaug camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     }
   ]
 }

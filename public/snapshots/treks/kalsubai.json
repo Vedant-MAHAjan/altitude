@@ -6,21 +6,27 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 6,
+  "packageCount": 8,
   "organizerCount": 3,
   "priceMin": 499,
-  "priceMax": 1399,
-  "updatedAt": "2026-05-21T13:53:32.070Z",
+  "priceMax": 1599,
+  "updatedAt": "2026-05-25T05:23:25.775Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS",
       "TRAIN"
     ],
     "mealPlans": [
-      "INCLUDED",
-      "NOT_INCLUDED"
+      "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "NIGHT_TREK",
+      "TREK_ONLY",
+      "CAMPING"
+    ],
     "organizers": [
       {
         "name": "Bhatakna",
@@ -44,9 +50,11 @@
     "mealsSummary": [
       "Breakfast",
       "Lunch",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Dinner"
     ],
-    "organizerCount": 3
+    "organizerCount": 3,
+    "variantCount": 3
   },
   "packages": [
     {
@@ -56,13 +64,20 @@
       "organizerSlug": "bhatakna",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-pune",
       "priceInr": 499,
       "priceText": "₹499",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -73,9 +88,9 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-05-21T13:45:48.044Z",
-      "updatedAtMs": 1779371148044,
-      "searchText": "bhatakna kalsubai night trek pune kalsubai other breakfast, lunch breakfast, lunch nashik nashik phata bari"
+      "lastUpdatedAt": "2026-05-25T05:23:25.775Z",
+      "updatedAtMs": 1779686605775,
+      "searchText": "bhatakna kalsubai night trek pune kalsubai night trek mixed breakfast, lunch breakfast, lunch nashik nashik phata bari"
     },
     {
       "id": "cmpe5sabm01gw8knh9i7fy94j",
@@ -84,22 +99,29 @@
       "organizerSlug": "bhatakna",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-night-trek",
       "priceInr": 499,
       "priceText": "₹499",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
+        "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:44.475Z",
-      "updatedAtMs": 1779371144475,
-      "searchText": "bhatakna kalsubai night trek kalsubai other breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "lastUpdatedAt": "2026-05-25T05:23:22.192Z",
+      "updatedAtMs": 1779686602192,
+      "searchText": "bhatakna kalsubai night trek kalsubai night trek mixed breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpe5r48f00088knh8ijwsq5t",
@@ -108,20 +130,61 @@
       "organizerSlug": "trekhievers",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-trek",
       "priceInr": 699,
       "priceText": "₹699",
       "transportType": "TRAIN",
-      "mealPlan": "NOT_INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": null,
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
-      "inclusionHighlights": [],
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:31.215Z",
-      "updatedAtMs": 1779371071215,
-      "searchText": "trekhievers kalsubai cloud formation trek | mumbai kalsubai other"
+      "lastUpdatedAt": "2026-05-25T05:22:38.393Z",
+      "updatedAtMs": 1779686558393,
+      "searchText": "trekhievers kalsubai cloud formation trek | mumbai kalsubai trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpe5sc5d01i08knhf8z2qnof",
+      "title": "Kalsubai Trekking & Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-camping",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T05:23:24.088Z",
+      "updatedAtMs": 1779686604088,
+      "searchText": "bhatakna kalsubai trekking & camping kalsubai camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpe5re1500ip8knhm6cddv1o",
@@ -130,25 +193,33 @@
       "organizerSlug": "trekhievers",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-pune",
       "priceInr": 1399,
       "priceText": "₹1,399",
       "transportType": "NON_AC_BUS",
-      "mealPlan": "NOT_INCLUDED",
+      "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": null,
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
-      "inclusionHighlights": [],
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
       "pickupLocations": [
-        "Sion",
         "Nashik",
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-05-21T13:44:50.570Z",
-      "updatedAtMs": 1779371090570,
-      "searchText": "trekhievers kalsubai cloud formation trek | pune kalsubai other sion nashik nashik phata bari"
+      "lastUpdatedAt": "2026-05-25T05:22:47.346Z",
+      "updatedAtMs": 1779686567346,
+      "searchText": "trekhievers kalsubai cloud formation trek | pune kalsubai trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     },
     {
       "id": "cmpe5reyi00j98knh2pz8plhi",
@@ -157,22 +228,29 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-highest-peak-of-maharashtra",
       "priceInr": 1399,
       "priceText": "₹1399",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:53:26.943Z",
-      "updatedAtMs": 1779371606943,
-      "searchText": "treks and trails india kalsubai trek | ac bus ₹1399 | kasara train ₹999 kalsubai other breakfast, lunch breakfast, lunch"
+      "lastUpdatedAt": "2026-05-25T05:22:51.345Z",
+      "updatedAtMs": 1779686571345,
+      "searchText": "treks and trails india kalsubai trek | ac bus ₹1399 | kasara train ₹999 kalsubai trek mixed breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpe5rk8b014d8knhu8sg0ny5",
@@ -181,23 +259,62 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Kalsubai",
       "trekSlug": "kalsubai",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-from-pune",
       "priceInr": 1399,
       "priceText": "Rs. 1,399/- per person",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay, Hotel stay, Dormitory stay, Homestay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
+        "Breakfast, Lunch",
         "Tent stay, Hotel stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:53:32.070Z",
-      "updatedAtMs": 1779371612070,
-      "searchText": "treks and trails india kalsubai trek from pune 2026 kalsubai other breakfast, lunch, tea and snacks tent stay, hotel stay, dormitory stay, homestay breakfast, lunch, tea and snacks tent stay, hotel stay, dormitory stay, homestay"
+      "lastUpdatedAt": "2026-05-25T05:22:57.887Z",
+      "updatedAtMs": 1779686577887,
+      "searchText": "treks and trails india kalsubai trek from pune 2026 kalsubai trek mixed breakfast, lunch tent stay, hotel stay, dormitory stay, homestay breakfast, lunch tent stay, hotel stay, dormitory stay, homestay"
+    },
+    {
+      "id": "cmpfjyf8m00ywuonh3legdenw",
+      "title": "Kalsubai Camping from Kasara",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-peak-camping-and-trekking",
+      "priceInr": 1599,
+      "priceText": "Rs. 1599/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:54:39.910Z",
+      "updatedAtMs": 1779371679910,
+      "searchText": "treks and trails india kalsubai camping from kasara kalsubai trek mixed breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
     }
   ]
 }

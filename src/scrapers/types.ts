@@ -2,6 +2,7 @@ import type {
   InclusionStatus,
   MealPlan,
   TransportType,
+  VariantTagCode,
 } from "../lib/types";
 
 export type JsonPrimitive = string | number | boolean | null;
@@ -42,6 +43,7 @@ export type RawScrapedPackage = {
   sourceUrl: string;
   canonicalTrekName?: string;
   canonicalTrekSlug?: string;
+  canonicalDestinationName?: string;
   priceText?: string | null;
   durationText?: string | null;
   locationText?: string | null;
@@ -65,6 +67,9 @@ export type NormalizedScrapedPackage = {
   sourceUrl: string;
   trekName: string;
   trekSlug: string;
+  variantTags: VariantTagCode[];
+  variantSignature: string;
+  variantLabel: string;
   priceInr: number | null;
   priceText: string | null;
   durationText: string | null;

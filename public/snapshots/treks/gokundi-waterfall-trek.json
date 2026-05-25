@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -35,7 +40,8 @@
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -45,13 +51,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Gokundi Waterfall Trek",
       "trekSlug": "gokundi-waterfall-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/gokundi-waterfall-trek",
       "priceInr": 1299,
       "priceText": "₹1,299",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -60,7 +73,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:54:24.352Z",
       "updatedAtMs": 1779371664352,
-      "searchText": "treks and trails india gokundi waterfall trek gokundi waterfall trek other breakfast, lunch breakfast, lunch"
+      "searchText": "treks and trails india gokundi waterfall trek gokundi waterfall trek trek mixed breakfast, lunch breakfast, lunch"
     }
   ]
 }

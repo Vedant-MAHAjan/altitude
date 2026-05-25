@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Bhatakna",
@@ -34,7 +39,8 @@
     "mealsSummary": [
       "Lunch"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -44,13 +50,20 @@
       "organizerSlug": "bhatakna",
       "trekName": "Spiti Valley Bliss In Budget",
       "trekSlug": "spiti-valley-bliss-in-budget",
+      "trekSummary": null,
       "sourceUrl": "https://www.bhatakna.com/tours/spiti-valley",
       "priceInr": 16499,
       "priceText": "₹16,499/-",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Lunch",
       "staySummary": "Hotel stay",
       "inclusionHighlights": [
@@ -60,7 +73,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:45:55.950Z",
       "updatedAtMs": 1779371155950,
-      "searchText": "bhatakna spiti valley bliss in budget spiti valley bliss in budget other lunch hotel stay lunch hotel stay"
+      "searchText": "bhatakna spiti valley bliss in budget spiti valley bliss in budget trek mixed lunch hotel stay lunch hotel stay"
     }
   ]
 }

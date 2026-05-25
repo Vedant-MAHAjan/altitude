@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -36,7 +41,8 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -46,13 +52,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Bhimashankar Trek Via Ganesh Ghat",
       "trekSlug": "bhimashankar-trek-via-ganesh-ghat",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/bhimashankar-trek-via-shidi-ghat",
       "priceInr": 1399,
       "priceText": "Rs. 1399/- per person",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -61,7 +74,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:54:00.646Z",
       "updatedAtMs": 1779371640646,
-      "searchText": "treks and trails india bhimashankar trek via ganesh ghat bhimashankar trek via ganesh ghat other breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "searchText": "treks and trails india bhimashankar trek via ganesh ghat bhimashankar trek via ganesh ghat trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     }
   ]
 }

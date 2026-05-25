@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -36,7 +41,8 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -46,13 +52,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Domzira Waterfall Trek",
       "trekSlug": "domzira-waterfall-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/domzira-waterfall-trek-cliff-jumping",
       "priceInr": 1299,
       "priceText": "Rs. 1299/- per person",
       "transportType": "AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -63,7 +76,7 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:54:36.582Z",
       "updatedAtMs": 1779371676582,
-      "searchText": "treks and trails india domzira waterfall trek | cliff jumping domzira waterfall trek other breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks sion"
+      "searchText": "treks and trails india domzira waterfall trek | cliff jumping domzira waterfall trek trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks sion"
     }
   ]
 }

@@ -10,7 +10,7 @@
   "organizerCount": 4,
   "priceMin": 499,
   "priceMax": 1099,
-  "updatedAt": "2026-05-21T13:54:37.649Z",
+  "updatedAt": "2026-05-25T05:23:28.379Z",
   "filters": {
     "transportTypes": [
       "TRAIN",
@@ -20,7 +20,14 @@
       "INCLUDED",
       "NOT_INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED",
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "NIGHT_TREK",
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Bhatakna",
@@ -50,7 +57,8 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 4
+    "organizerCount": 4,
+    "variantCount": 2
   },
   "packages": [
     {
@@ -60,44 +68,29 @@
       "organizerSlug": "bhatakna",
       "trekName": "Harihar Fort",
       "trekSlug": "harihar-fort",
+      "trekSummary": null,
       "sourceUrl": "https://www.bhatakna.com/tours/hariharfort",
       "priceInr": 499,
       "priceText": "₹499",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:50.507Z",
-      "updatedAtMs": 1779371150507,
-      "searchText": "bhatakna harihar fort night trek harihar fort other breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpe5r7vi007l8knhy7ms7w53",
-      "title": "Harihar Cloud Formation Trek | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Harihar Fort",
-      "trekSlug": "harihar-fort",
-      "sourceUrl": "https://www.trekhievers.com/tours/harihar-fort-trek-99675",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "NOT_INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": null,
-      "staySummary": null,
-      "inclusionHighlights": [],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:36.074Z",
-      "updatedAtMs": 1779371076074,
-      "searchText": "trekhievers harihar cloud formation trek | mumbai harihar fort other"
+      "lastUpdatedAt": "2026-05-25T05:23:28.379Z",
+      "updatedAtMs": 1779686608379,
+      "searchText": "bhatakna harihar fort night trek harihar fort night trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpfjlz9201kfv2nhe8kjt38o",
@@ -106,13 +99,20 @@
       "organizerSlug": "trekhievers",
       "trekName": "Harihar Fort",
       "trekSlug": "harihar-fort",
+      "trekSummary": null,
       "sourceUrl": "https://www.trekhievers.com/tours/harihar-fort-night-trek-pune-131999",
       "priceInr": 699,
       "priceText": "₹699",
       "transportType": "NON_AC_BUS",
       "mealPlan": "NOT_INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
@@ -124,7 +124,38 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:44:59.318Z",
       "updatedAtMs": 1779371099318,
-      "searchText": "trekhievers harihar fort trek | pune harihar fort other sion nashik nashik phata nirgudpada"
+      "searchText": "trekhievers harihar fort trek | pune harihar fort trek mixed sion nashik nashik phata nirgudpada"
+    },
+    {
+      "id": "cmpe5r7vi007l8knhy7ms7w53",
+      "title": "Harihar Cloud Formation Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Harihar Fort",
+      "trekSlug": "harihar-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/harihar-fort-trek-99675",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T05:22:41.834Z",
+      "updatedAtMs": 1779686561834,
+      "searchText": "trekhievers harihar cloud formation trek | mumbai harihar fort trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpfjydht00xtuonhnc65lhfo",
@@ -133,13 +164,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Harihar Fort",
       "trekSlug": "harihar-fort",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/harihar-fort-trek",
       "priceInr": 1099,
       "priceText": "Rs. 1099/- per person",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": "Tent stay, Homestay",
       "inclusionHighlights": [
@@ -149,7 +187,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:54:37.649Z",
       "updatedAtMs": 1779371677649,
-      "searchText": "treks and trails india harihar fort trek | rock-cut steps adventure harihar fort other breakfast, lunch, tea and snacks tent stay, homestay breakfast, lunch, tea and snacks tent stay, homestay"
+      "searchText": "treks and trails india harihar fort trek | rock-cut steps adventure harihar fort trek mixed breakfast, lunch, tea and snacks tent stay, homestay breakfast, lunch, tea and snacks tent stay, homestay"
     },
     {
       "id": "cmpe6nany0027z5nh2abkzygb",
@@ -158,13 +196,20 @@
       "organizerSlug": "durgvihar",
       "trekName": "Harihar Fort",
       "trekSlug": "harihar-fort",
+      "trekSummary": null,
       "sourceUrl": "https://durgvihar.in/trip/harihar-fort",
       "priceInr": null,
       "priceText": "rs 5",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -172,9 +217,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:16.889Z",
-      "updatedAtMs": 1779371056889,
-      "searchText": "durgvihar harihar fort harihar fort other breakfast, lunch tent stay breakfast, lunch tent stay"
+      "lastUpdatedAt": "2026-05-25T05:22:23.562Z",
+      "updatedAtMs": 1779686543562,
+      "searchText": "durgvihar harihar fort harihar fort trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
     }
   ]
 }

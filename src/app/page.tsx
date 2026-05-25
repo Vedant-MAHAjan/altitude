@@ -19,8 +19,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { formatCurrency, formatPriceRange, formatUpdatedAt } from "@/lib/format";
+import { formatCurrency, formatDateShort, formatUpdatedAt } from "@/lib/format";
 import { getHomepageData } from "@/lib/data";
+import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
 
 const comparisonSignals = [
   {
@@ -78,11 +79,11 @@ export default async function Home() {
       <section className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div className="space-y-6">
           <Badge className="w-fit" variant="outline">
-            Maharashtra trek package comparison MVP
+            Maharashtra trek route comparison MVP
           </Badge>
           <div className="space-y-4">
             <h1 className="max-w-4xl text-5xl leading-none sm:text-6xl lg:text-7xl">
-              Compare trek organizers with structured, static-first comparison pages.
+              Compare trek destinations by departure city with structured, static-first route pages.
             </h1>
             <p className="max-w-2xl text-lg text-muted-foreground">
               This starter is shaped for a zero-cost stack: Next.js on Vercel,
@@ -94,7 +95,7 @@ export default async function Home() {
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild size="lg">
               <Link href="/treks">
-                Explore treks
+                Explore routes
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -107,9 +108,9 @@ export default async function Home() {
             <Card className="bg-primary text-primary-foreground">
               <CardHeader>
                 <CardDescription className="text-primary-foreground/70">
-                  Treks tracked
+                  Routes tracked
                 </CardDescription>
-                <CardTitle className="text-4xl">{homepageData.trekCount}</CardTitle>
+                <CardTitle className="text-4xl">{homepageData.routeCount}</CardTitle>
               </CardHeader>
             </Card>
             <Card>
@@ -168,48 +169,67 @@ export default async function Home() {
       <section className="space-y-6">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-3xl">Featured comparison pages</h2>
+            <h2 className="text-3xl">Featured destination routes</h2>
             <p className="mt-2 text-muted-foreground">
-              Each trek page groups organizer packages into a shared comparison surface.
+              Each route page groups organizer packages by destination and departure city.
             </p>
           </div>
           <Button asChild variant="ghost">
-            <Link href="/treks">See all treks</Link>
+            <Link href="/treks">See all routes</Link>
           </Button>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-3">
-          {homepageData.featuredTreks.map((trek) => (
-            <Card key={trek.slug}>
+          {homepageData.featuredDestinations.map((route) => (
+            <Card key={route.routePath}>
               <CardHeader>
                 <div className="flex items-center justify-between gap-4">
-                  <Badge variant="outline">{trek.region ?? "Maharashtra"}</Badge>
-                  <span className="text-sm text-muted-foreground">
-                    {trek.packageCount} packages
-                  </span>
+                  <Badge variant="outline">{departureCityLabels[route.departureCity]}</Badge>
+                  <span className="text-sm text-muted-foreground">{route.packageCount} packages</span>
                 </div>
-                <CardTitle>{trek.name}</CardTitle>
-                <CardDescription>{trek.summary}</CardDescription>
+                <CardTitle>{route.destinationName}</CardTitle>
+                <CardDescription>
+                  {route.summary ?? "Destination-first comparison route"}
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {route.availableVariants.map((tag) => (
+                    <Badge key={tag} variant="secondary">
+                      {variantTagLabels[tag]}
+                    </Badge>
+                  ))}
+                </div>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="rounded-2xl bg-white/70 p-4">
                     <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                      Price band
+                      Starting price
                     </div>
                     <div className="mt-2 font-semibold">
-                      {formatPriceRange(trek.priceMin, trek.priceMax)}
+                      {formatCurrency(route.startingPrice)}
                     </div>
+                  </div>
+                  <div className="rounded-2xl bg-white/70 p-4">
+                    <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
+                      Next departure
+                    </div>
+                    <div className="mt-2 font-semibold">{formatDateShort(route.nextDepartureAt)}</div>
+                  </div>
+                  <div className="rounded-2xl bg-white/70 p-4">
+                    <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
+                      Organizers
+                    </div>
+                    <div className="mt-2 font-semibold">{route.organizerCount}</div>
                   </div>
                   <div className="rounded-2xl bg-white/70 p-4">
                     <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                       Freshness
                     </div>
-                    <div className="mt-2 font-semibold">{formatUpdatedAt(trek.updatedAt)}</div>
+                    <div className="mt-2 font-semibold">{formatUpdatedAt(route.updatedAt)}</div>
                   </div>
                 </div>
                 <Button asChild className="w-full" variant="outline">
-                  <Link href={`/treks/${trek.slug}` as Route}>Open comparison</Link>
+                  <Link href={route.routePath as Route}>Open route</Link>
                 </Button>
               </CardContent>
             </Card>

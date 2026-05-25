@@ -19,7 +19,8 @@ The repository is set up as a low-cost MVP:
 
 ## What the repo does
 
-- Publishes SEO-friendly trek comparison pages at `/treks/[slug]`
+- Publishes SEO-friendly trek comparison pages at `/treks/[destination]/[city]`
+- Keeps legacy `/treks/[slug]` pages as compatibility fallbacks
 - Publishes organizer profile pages at `/organizers/[slug]`
 - Compares organizer packages by price, transport, meals, forest-fee handling, pickup points, and freshness
 - Stores normalized trek data plus raw scraped text for debugging and parser iteration
@@ -88,10 +89,11 @@ Important design choice:
 
 Static catalog files now live in `public/snapshots`.
 
-- `homepage.json`: homepage counters and featured trek summaries
-- `treks/index.json`: lightweight trek cards for `/treks`
+- `homepage.json`: homepage counters and featured destination-route summaries
+- `treks/index.json`: lightweight destination-route cards for `/treks`
 - `treks/search.json`: trek name + alias index for the universal search bar
-- `treks/[slug].json`: full comparison payload for an individual trek page
+- `treks/[destination]/[city].json`: full comparison payload for a destination-city route page
+- `treks/[slug].json`: legacy trek comparison payload for compatibility
 - `organizers/index.json`: organizer cards for `/organizers`
 - `organizers/[slug].json`: full organizer detail payload
 - `manifest.json`: slug lists plus pre-render targets for dynamic routes
@@ -159,33 +161,113 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-That starts the static app shell without touching the database.
+That starts the snapshot-backed app shell without touching the database.
 
-Add a real `DATABASE_URL` to `.env` before running any database-backed command such as `db:sync` or `scrape`. The repo no longer ships sample trek data, so an empty or missing database will render empty indexes until you sync live rows.
+Add a real `DATABASE_URL` to `.env` before running any database-backed command such as `db:push`, `snapshots:generate`, or `scrape`. The repo no longer ships sample trek data, so an empty or missing database will render empty indexes until you load live rows.
 
-### Local database workflow
+### How to view the live site
 
-If you want Prisma, persisted scrapes, and live comparison rows:
+Every command set below ends with the site running at `http://localhost:3000`.
 
-1. Create a PostgreSQL database.
-2. Put the connection string in `.env` as `DATABASE_URL`.
-3. Apply the schema only after `DATABASE_URL` is real:
+1. Snapshot-backed UI only:
 
 ```bash
-npm run db:sync
+npm install
+cp .env.example .env
+npm run dev
 ```
 
-4. Refresh the static catalog snapshots if you changed DB rows or scraper output:
+2. Latest UI with the current data already stored in your database:
+
+Run:
+
+```bash
+npm install
+cp .env.example .env
+```
+
+Then edit `.env` and set a real `DATABASE_URL`, then run:
 
 ```bash
 npm run snapshots:generate
-```
-
-5. Start the app:
-
-```bash
 npm run dev
 ```
+
+3. Latest UI with the latest scraper/backend refresh written into your database:
+
+Run:
+
+```bash
+npm install
+cp .env.example .env
+```
+
+Then edit `.env` and set a real `DATABASE_URL`, then run:
+
+```bash
+npm run scrape
+npm run dev
+```
+
+4. Brand-new blank database, then full local live site:
+
+Run:
+
+```bash
+npm install
+cp .env.example .env
+```
+
+Then edit `.env` and set a real `DATABASE_URL`, then run:
+
+```bash
+npm run db:generate
+npm run db:push
+npm run scrape
+npm run dev
+```
+
+Do not use `npm run sync:live` for normal local viewing. It runs `db:push` before `scrape`, and against an existing Neon database it can stop on destructive Prisma prompts.
+
+5. Production-like local smoke test:
+
+```bash
+npm install
+cp .env.example .env
+npm run build
+npm run start
+```
+
+### Local database workflow
+
+These command sets assume `.env` already contains a real `DATABASE_URL`.
+
+Use these exact database-backed command sets:
+
+1. Existing database, no scrape, just rebuild snapshots and view the site:
+
+```bash
+npm run snapshots:generate
+npm run dev
+```
+
+2. Existing database, refresh live rows from scrapers, then view the site:
+
+```bash
+npm run scrape
+npm run dev
+```
+
+3. Fresh or disposable database, create schema, scrape, then view the site:
+
+```bash
+npm run db:generate
+npm run db:push
+npm run scrape
+npm run dev
+```
+
+If `db:push` reports drop warnings, stop and use a fresh Neon branch or disposable database instead of accepting the prompt blindly.
 
 ### Important Prisma note
 
@@ -194,9 +276,11 @@ This repo uses `prisma.config.ts`, and Prisma CLI commands resolve `DATABASE_URL
 - `npm install` and `prisma generate` can still run without `DATABASE_URL` because the Prisma config falls back to a harmless local placeholder URL for client generation
 - the app data layer no longer falls back to sample rows, so `DATABASE_URL` is required if you want actual trek and organizer content
 - database commands such as `prisma db push` still need a real `DATABASE_URL` if you want schema changes to apply to an actual database
-- the `scripts/require-database-url.mjs` wrapper now rejects placeholder URLs before Prisma runs, so `db:sync`, `db:push`, and `scrape` fail fast with a clear message instead of attempting a network connection
+- `db:sync` is a schema administration command, not the default startup path; use it only when you expect Prisma to apply the current schema to a database you control
+- `sync:live` is a fresh-database shortcut for `db:sync` followed by `scrape`; it is not the normal command for viewing the site against an existing Neon database
+- the `scripts/require-database-url.mjs` wrapper now rejects placeholder URLs before Prisma runs, so `db:push`, `snapshots:generate`, `scrape`, and `sync:live` fail fast with a clear message instead of attempting a network connection
 
-If you only want to start the UI, use `npm run dev` after copying `.env.example`. Save `db:sync` for when you have pasted a real Neon connection string into `.env`.
+If you only want to start the UI, use `npm run dev` after copying `.env.example`.
 
 If a database command fails, check that `DATABASE_URL` is set in your shell or `.env` file and that the target database is reachable.
 
@@ -207,15 +291,23 @@ If you want a zero-cost live database, use Neon free tier:
 1. Create a Neon project.
 2. Copy the pooled connection string.
 3. Paste it into `.env` as `DATABASE_URL`.
-4. Run:
+4. For an existing Neon database that already has data you want to keep, run:
 
 ```bash
-npm run sync:live
+npm run scrape
+npm run dev
 ```
 
-That command applies the Prisma schema and then runs all registered scrapers so the site starts serving live organizer data.
+5. For a fresh blank Neon database, run:
 
-Because `npm run scrape` now regenerates `public/snapshots`, `npm run sync:live` also refreshes the static catalog JSON used by the frontend.
+```bash
+npm run db:generate
+npm run db:push
+npm run scrape
+npm run dev
+```
+
+`npm run scrape` regenerates `public/snapshots`, so you do not need to run `npm run snapshots:generate` afterward unless you changed database rows outside the scraper flow.
 
 ## Environment variables
 
@@ -241,7 +333,6 @@ npm run build
 npm run start
 npm run lint
 npm run typecheck
-npm run db:sync
 npm run db:generate
 npm run db:push
 npm run snapshots:generate
@@ -249,6 +340,17 @@ npm run scrape
 npm run scrape:dry
 npm run test:scrapers
 npm run verify:local
+```
+
+Schema admin only:
+
+```bash
+npm run db:sync
+```
+
+Fresh database only:
+
+```bash
 npm run sync:live
 ```
 
@@ -300,7 +402,7 @@ Recommended local workflow:
 2. Keep `--limit` low while testing selectors
 3. Move to `scrape` only after the dry-run output looks correct
 4. Run `npm run snapshots:generate` if you updated DB rows outside the scraper command
-5. Use `npm run sync:live` once your Neon URL is configured and you want to refresh the full site dataset
+5. Use `npm run scrape` for the normal local live-data refresh path
 
 ## Repeatable verification routine
 
@@ -309,10 +411,13 @@ Use this every time you touch schema, scraper output, or public UI behavior.
 ### If DB schema changed
 
 ```bash
-npm run db:sync
+npm run db:generate
+npm run db:push
 npm run snapshots:generate
 npm run verify:local
 ```
+
+If `db:push` shows drop warnings, stop and apply the schema on a fresh Neon branch or disposable database instead of accepting the prompt.
 
 ### If scraper output or normalized fields changed
 
@@ -332,7 +437,7 @@ npm run verify:local
 - TypeScript still compiles
 - scraper regression tests still pass
 - Next.js can prerender the public routes from the current snapshot/data layer
-- dynamic route generation still works for the pre-rendered trek and organizer slugs
+- dynamic route generation still works for the pre-rendered destination-city and organizer routes
 
 ## Where to deploy
 
@@ -356,11 +461,14 @@ This is the setup the repo is already designed around.
 
 Create a Neon project and copy the `DATABASE_URL`.
 
-Apply the schema once, after replacing the placeholder value in `.env`:
+Apply the schema once, after replacing the placeholder value in `.env` and before running any live scrape:
 
 ```bash
-npm run db:sync
+npm run db:generate
+npm run db:push
 ```
+
+If Prisma reports drop warnings, use a fresh Neon branch or a migration path instead of accepting the prompt blindly.
 
 ### 2. Web app deployment
 

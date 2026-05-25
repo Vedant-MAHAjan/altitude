@@ -10,7 +10,7 @@
   "organizerCount": 2,
   "priceMin": 2000,
   "priceMax": 2000,
-  "updatedAt": "2026-05-21T13:47:38.573Z",
+  "updatedAt": "2026-05-25T05:24:52.021Z",
   "filters": {
     "transportTypes": [
       "TRAIN"
@@ -18,7 +18,13 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED",
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Durgvihar",
@@ -37,11 +43,12 @@
     "cheapestPackageTitle": "Alang-Madan-Kulang (AMK) Trek 2026",
     "mealsSummary": [
       "Breakfast",
-      "Lunch",
       "Dinner",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Lunch"
     ],
-    "organizerCount": 2
+    "organizerCount": 2,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -51,23 +58,30 @@
       "organizerSlug": "sahyadri-treks-and-tours",
       "trekName": "Alang Madan Kulang",
       "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
       "sourceUrl": "https://sahyadritreksandtours.com/trek/alang-madan-kulang-trek-2025",
       "priceInr": 2000,
       "priceText": "₹2000",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Breakfast, Dinner, Tea and snacks",
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:47:38.573Z",
-      "updatedAtMs": 1779371258573,
-      "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang other breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-05-25T05:24:52.021Z",
+      "updatedAtMs": 1779686692021,
+      "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang trek mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpfjl3cd001cv2nhmo4yg1uk",
@@ -76,13 +90,20 @@
       "organizerSlug": "durgvihar",
       "trekName": "Alang Madan Kulang",
       "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
       "sourceUrl": "https://durgvihar.in/trip/alang-madan-kulang",
       "priceInr": null,
       "priceText": "rs 5",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch, Dinner",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -92,7 +113,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:44:17.965Z",
       "updatedAtMs": 1779371057965,
-      "searchText": "durgvihar alang madan kulang alang madan kulang other breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+      "searchText": "durgvihar alang madan kulang alang madan kulang trek mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     }
   ]
 }

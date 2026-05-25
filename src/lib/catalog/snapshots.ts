@@ -2,6 +2,8 @@ import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import type {
+  DestinationCityComparison,
+  DestinationCitySummary,
   HomepageData,
   OrganizerDetail,
   OrganizerSummary,
@@ -44,7 +46,13 @@ export async function readHomepageSnapshot() {
 }
 
 export async function readTreksIndexSnapshot() {
-  return readJsonFile<TrekSummary[]>(path.join("treks", "index.json"));
+  return readJsonFile<DestinationCitySummary[]>(path.join("treks", "index.json"));
+}
+
+export async function readDestinationCityComparisonSnapshot(destinationSlug: string, city: string) {
+  return readJsonFile<DestinationCityComparison>(
+    path.join("treks", destinationSlug, `${city}.json`),
+  );
 }
 
 export async function readTrekComparisonSnapshot(slug: string) {
@@ -73,9 +81,14 @@ export async function writeCatalogSnapshots(payload: CatalogSnapshotPayload) {
 
   await writeJsonFile("homepage.json", payload.homepage);
   await writeJsonFile("manifest.json", payload.manifest);
-  await writeJsonFile(path.join("treks", "index.json"), payload.treks);
+  await writeJsonFile(path.join("treks", "index.json"), payload.destinationCards);
   await writeJsonFile(path.join("treks", "search.json"), payload.search);
   await writeJsonFile(path.join("organizers", "index.json"), payload.organizers);
+
+  for (const [routePath, destinationComparison] of Object.entries(payload.destinationDetails)) {
+    const relativePath = routePath.replace(/^\//, "");
+    await writeJsonFile(`${relativePath}.json`, destinationComparison);
+  }
 
   for (const [slug, trek] of Object.entries(payload.trekDetails)) {
     await writeJsonFile(path.join("treks", `${slug}.json`), trek);

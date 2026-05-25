@@ -102,18 +102,23 @@ export async function reconcileTrekCatalog(logger?: ScraperLogger) {
     }
 
     for (const aliasValue of canonical.aliasValues) {
-      await prisma.trekAlias.upsert({
+      const updated = await prisma.trekAlias.updateMany({
         where: {
           value: aliasValue,
         },
-        update: {
+        data: {
           trekId: targetTrekId,
-        },
-        create: {
-          trekId: targetTrekId,
-          value: aliasValue,
         },
       });
+
+      if (updated.count === 0) {
+        await prisma.trekAlias.create({
+          data: {
+            trekId: targetTrekId,
+            value: aliasValue,
+          },
+        });
+      }
     }
   }
 

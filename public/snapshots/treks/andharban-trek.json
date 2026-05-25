@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -35,7 +40,8 @@
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -45,13 +51,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Andharban Trek",
       "trekSlug": "andharban-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/andharban-monsoon-trek",
       "priceInr": 1699,
       "priceText": "₹1,699 per person",
       "transportType": "AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -65,7 +78,7 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:53:54.673Z",
       "updatedAtMs": 1779371634673,
-      "searchText": "treks and trails india andharban trek 2026 | monsoon trek andharban trek other breakfast, lunch breakfast, lunch dadar chembur sion lonavala"
+      "searchText": "treks and trails india andharban trek 2026 | monsoon trek andharban trek trek mixed breakfast, lunch breakfast, lunch dadar chembur sion lonavala"
     },
     {
       "id": "cmpfjxr9900khuonhi1okuqmn",
@@ -74,13 +87,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Andharban Trek",
       "trekSlug": "andharban-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/andharban-trek",
       "priceInr": 1699,
       "priceText": "₹1,699 per person",
       "transportType": "AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -94,7 +114,7 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:54:08.829Z",
       "updatedAtMs": 1779371648829,
-      "searchText": "treks and trails india andharban trek 2026 | monsoon trek andharban trek other breakfast, lunch breakfast, lunch dadar chembur sion lonavala"
+      "searchText": "treks and trails india andharban trek 2026 | monsoon trek andharban trek trek mixed breakfast, lunch breakfast, lunch dadar chembur sion lonavala"
     }
   ]
 }

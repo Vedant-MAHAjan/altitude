@@ -1,51 +1,58 @@
 {
-  "featuredTreks": [
+  "featuredDestinations": [
     {
-      "name": "Harishchandragad",
-      "slug": "harishchandragad",
-      "region": null,
-      "durationDays": null,
-      "durationNights": null,
-      "difficulty": "UNKNOWN",
-      "summary": null,
-      "packageCount": 7,
+      "destinationName": "Harishchandragad",
+      "destinationSlug": "harishchandragad",
+      "departureCity": "MUMBAI",
+      "routePath": "/treks/harishchandragad/mumbai",
+      "availableVariants": [
+        "CAMPING",
+        "TREK_ONLY"
+      ],
+      "startingPrice": 699,
       "organizerCount": 4,
-      "priceMin": 699,
-      "priceMax": 1449,
-      "updatedAt": "2026-05-21T13:53:36.265Z"
+      "nextDepartureAt": null,
+      "packageCount": 10,
+      "updatedAt": "2026-05-25T05:23:27.348Z",
+      "summary": null
     },
     {
-      "name": "Kalsubai",
-      "slug": "kalsubai",
-      "region": null,
-      "durationDays": null,
-      "durationNights": null,
-      "difficulty": "UNKNOWN",
-      "summary": null,
-      "packageCount": 6,
+      "destinationName": "Harishchandragad",
+      "destinationSlug": "harishchandragad",
+      "departureCity": "PUNE",
+      "routePath": "/treks/harishchandragad/pune",
+      "availableVariants": [
+        "CAMPING",
+        "TREK_ONLY"
+      ],
+      "startingPrice": 699,
       "organizerCount": 3,
-      "priceMin": 499,
-      "priceMax": 1399,
-      "updatedAt": "2026-05-21T13:53:32.070Z"
+      "nextDepartureAt": null,
+      "packageCount": 8,
+      "updatedAt": "2026-05-25T05:23:27.348Z",
+      "summary": null
     },
     {
-      "name": "Harihar Fort",
-      "slug": "harihar-fort",
-      "region": null,
-      "durationDays": null,
-      "durationNights": null,
-      "difficulty": "UNKNOWN",
-      "summary": null,
-      "packageCount": 5,
-      "organizerCount": 4,
-      "priceMin": 499,
-      "priceMax": 1099,
-      "updatedAt": "2026-05-21T13:54:37.649Z"
+      "destinationName": "Kalsubai",
+      "destinationSlug": "kalsubai",
+      "departureCity": "MUMBAI",
+      "routePath": "/treks/kalsubai/mumbai",
+      "availableVariants": [
+        "NIGHT_TREK",
+        "CAMPING",
+        "TREK_ONLY"
+      ],
+      "startingPrice": 499,
+      "organizerCount": 3,
+      "nextDepartureAt": null,
+      "packageCount": 8,
+      "updatedAt": "2026-05-25T05:23:25.775Z",
+      "summary": null
     }
   ],
+  "routeCount": 103,
   "organizerCount": 5,
-  "trekCount": 65,
-  "packageCount": 104,
+  "packageCount": 180,
   "priceFloor": 250,
-  "lastUpdatedAt": "2026-05-21T13:54:46.923Z"
+  "lastUpdatedAt": "2026-05-25T05:24:52.021Z"
 }

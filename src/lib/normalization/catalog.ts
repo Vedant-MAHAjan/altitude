@@ -2,9 +2,11 @@ import type {
   ComparisonTransportType,
   DifficultyLevel,
   InclusionStatus,
+  DepartureCityCode,
   ListingCity,
   MealPlan,
   TransportType,
+  VariantTagCode,
 } from "@/lib/types";
 
 type Rule<T extends string> = {
@@ -36,6 +38,19 @@ export const listingCityLabels: Record<ListingCity, string> = {
   PUNE: "Pune",
   MIXED: "Mumbai + Pune",
   OTHER: "Other",
+};
+
+export const departureCityLabels: Record<DepartureCityCode, string> = {
+  MUMBAI: "Mumbai",
+  PUNE: "Pune",
+};
+
+export const variantTagLabels: Record<VariantTagCode, string> = {
+  TREK_ONLY: "Trek",
+  CAMPING: "Camping",
+  SUNRISE: "Sunrise",
+  NIGHT_TREK: "Night trek",
+  FIREFLIES: "Fireflies",
 };
 
 export const difficultyLabels: Record<DifficultyLevel, string> = {

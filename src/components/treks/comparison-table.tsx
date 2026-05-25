@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, Filter, MapPin, TimerReset } from "lucide-react";
+import { ExternalLink, Filter, TimerReset } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -16,8 +16,8 @@ import {
 } from "@/components/ui/table";
 import { formatCurrency, formatUpdatedAt } from "@/lib/format";
 import {
-  listingCityLabels,
   mealPlanLabels,
+  variantTagLabels,
   transportLabels,
 } from "@/lib/normalization/catalog";
 import type {
@@ -26,15 +26,31 @@ import type {
   ComparisonTransportType,
   ListingCity,
   MealPlan,
+  VariantTagCode,
 } from "@/lib/types";
 
 type SortMode = "price-asc" | "price-desc" | "updated-desc";
 type CityFilter = "ALL" | "MUMBAI" | "PUNE";
+type VariantFilter = "ALL" | VariantTagCode;
 
 type ComparisonTableProps = {
   packages: ComparisonPackage[];
   filters: ComparisonFilters;
+  showCityFilter?: boolean;
 };
+
+function coerceVariantTags(value: VariantTagCode[] | string[] | null | undefined) {
+  const tags = (value ?? []).filter(
+    (tag): tag is VariantTagCode =>
+      tag === "TREK_ONLY" ||
+      tag === "CAMPING" ||
+      tag === "SUNRISE" ||
+      tag === "NIGHT_TREK" ||
+      tag === "FIREFLIES",
+  );
+
+  return tags.length > 0 ? tags : (["TREK_ONLY"] as VariantTagCode[]);
+}
 
 function sortPackages(packages: ComparisonPackage[], sortMode: SortMode) {
   return [...packages].sort((left, right) => {
@@ -50,10 +66,11 @@ function sortPackages(packages: ComparisonPackage[], sortMode: SortMode) {
   });
 }
 
-export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
+export function ComparisonTable({ packages, filters, showCityFilter = true }: ComparisonTableProps) {
   const [transportFilter, setTransportFilter] = useState<ComparisonTransportType | "ALL">("ALL");
   const [mealFilter, setMealFilter] = useState<MealPlan | "ALL">("ALL");
   const [cityFilter, setCityFilter] = useState<CityFilter>("ALL");
+  const [variantFilter, setVariantFilter] = useState<VariantFilter>("ALL");
   const [sortMode, setSortMode] = useState<SortMode>("price-asc");
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -68,6 +85,7 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
 
   const availableTransports = filters.transportTypes;
   const availableMeals = filters.mealPlans;
+  const availableVariants = coerceVariantTags(filters.variantTags);
 
   function matchesCityFilter(listingCity: ListingCity, filter: CityFilter) {
     if (filter === "ALL") {
@@ -85,11 +103,13 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
     packages.filter((item) => {
       const matchesTransport = transportFilter === "ALL" || item.transportType === transportFilter;
       const matchesMeal = mealFilter === "ALL" || item.mealPlan === mealFilter;
-      const matchesCity = matchesCityFilter(item.listingCity, cityFilter);
+      const matchesCity = showCityFilter ? matchesCityFilter(item.listingCity, cityFilter) : true;
+      const itemVariantTags = coerceVariantTags(item.variantTags);
+      const matchesVariant = variantFilter === "ALL" || itemVariantTags.includes(variantFilter);
       const matchesQuery =
         debouncedQuery.length === 0 || item.searchText.includes(debouncedQuery);
 
-      return matchesTransport && matchesMeal && matchesCity && matchesQuery;
+      return matchesTransport && matchesMeal && matchesCity && matchesVariant && matchesQuery;
     }),
     sortMode,
   );
@@ -112,31 +132,33 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
               Split Mumbai and Pune treks first, then filter by transport, meals, and concrete inclusion summaries.
             </p>
           </div>
-          <div className="grid w-full gap-3 md:max-w-3xl md:grid-cols-4">
-            <div className="flex h-11 gap-2 rounded-2xl border border-border bg-white/80 p-1">
-              {([
-                ["ALL", "All treks"],
-                ["MUMBAI", "Mumbai"],
-                ["PUNE", "Pune"],
-              ] as const).map(([value, label]) => (
-                <button
-                  className={`flex-1 rounded-xl px-3 text-sm font-medium transition ${
-                    cityFilter === value
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                  key={value}
-                  onClick={() => setCityFilter(value)}
-                  type="button"
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="grid w-full gap-3 md:max-w-4xl md:grid-cols-5">
+            {showCityFilter ? (
+              <div className="flex h-11 gap-2 rounded-2xl border border-border bg-white/80 p-1 md:col-span-2">
+                {([
+                  ["ALL", "All cities"],
+                  ["MUMBAI", "Mumbai"],
+                  ["PUNE", "Pune"],
+                ] as const).map(([value, label]) => (
+                  <button
+                    className={`flex-1 rounded-xl px-3 text-sm font-medium transition ${
+                      cityFilter === value
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                    key={value}
+                    onClick={() => setCityFilter(value)}
+                    type="button"
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            ) : null}
             <input
               className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none ring-0 placeholder:text-muted-foreground focus:border-primary"
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search organizer, pickup, or city"
+              placeholder="Search organizer, package, or city"
               value={query}
             />
             <select
@@ -162,6 +184,18 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
               {availableMeals.map((item) => (
                 <option key={item} value={item}>
                   {mealPlanLabels[item]}
+                </option>
+              ))}
+            </select>
+            <select
+              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none focus:border-primary"
+              onChange={(event) => setVariantFilter(event.target.value as VariantFilter)}
+              value={variantFilter}
+            >
+              <option value="ALL">All variants</option>
+              {availableVariants.map((item) => (
+                <option key={item} value={item}>
+                  {variantTagLabels[item]}
                 </option>
               ))}
             </select>
@@ -211,7 +245,6 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
                 <TableHead>Price</TableHead>
                 <TableHead>Transport</TableHead>
                 <TableHead>Meals</TableHead>
-                <TableHead className="min-w-52">Pickup points</TableHead>
                 <TableHead>Updated</TableHead>
                 <TableHead className="text-right">Source</TableHead>
               </TableRow>
@@ -221,30 +254,9 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
                 <TableRow key={item.id}>
                   <TableCell>
                     <div className="font-semibold">{item.organizerName}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{item.organizerSlug}</div>
                   </TableCell>
                   <TableCell>
-                    <div className="mb-2 flex flex-wrap gap-2">
-                      {item.listingCity !== "OTHER" ? (
-                        <Badge variant="secondary">{listingCityLabels[item.listingCity]}</Badge>
-                      ) : null}
-                    </div>
                     <div className="font-medium">{item.title}</div>
-                    {item.trekName ? (
-                      <div className="mt-1 text-xs text-muted-foreground">{item.trekName}</div>
-                    ) : null}
-                    {item.inclusionHighlights.length > 0 ? (
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {item.inclusionHighlights.slice(0, 2).map((highlight) => (
-                          <span
-                            className="rounded-full bg-primary/10 px-3 py-1 text-[11px] font-medium text-primary"
-                            key={highlight}
-                          >
-                            {highlight}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
                   </TableCell>
                   <TableCell className="font-semibold">{formatCurrency(item.priceInr)}</TableCell>
                   <TableCell>
@@ -255,25 +267,6 @@ export function ComparisonTable({ packages, filters }: ComparisonTableProps) {
                     {item.mealsSummary ? (
                       <div className="mt-2 text-xs text-muted-foreground">{item.mealsSummary}</div>
                     ) : null}
-                  </TableCell>
-                  <TableCell>
-                    <div className="flex flex-wrap gap-2">
-                      {item.pickupLocations.length ? (
-                        item.pickupLocations.map((location) => (
-                          <span
-                            className="inline-flex items-center gap-1 rounded-full bg-white/70 px-3 py-1 text-xs"
-                            key={location}
-                          >
-                            <MapPin className="h-3 w-3 text-primary" />
-                            {location}
-                          </span>
-                        ))
-                      ) : item.transportType === "TRAIN" ? (
-                        <span className="text-sm text-muted-foreground">Train stops are standardized</span>
-                      ) : (
-                        <span className="text-sm text-muted-foreground">Pickup info not normalized yet</span>
-                      )}
-                    </div>
                   </TableCell>
                   <TableCell className="text-muted-foreground">
                     {formatUpdatedAt(item.lastUpdatedAt)}

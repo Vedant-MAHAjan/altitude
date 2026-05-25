@@ -9,6 +9,15 @@ export type ComparisonTransportType = "AC_BUS" | "NON_AC_BUS" | "TRAIN";
 
 export type ListingCity = "MUMBAI" | "PUNE" | "MIXED" | "OTHER";
 
+export type DepartureCityCode = "MUMBAI" | "PUNE";
+
+export type VariantTagCode =
+  | "TREK_ONLY"
+  | "CAMPING"
+  | "SUNRISE"
+  | "NIGHT_TREK"
+  | "FIREFLIES";
+
 export type TransportType =
   | "BUS"
   | "TRAIN"
@@ -29,10 +38,45 @@ export type TrekSearchEntry = {
   aliases: string[];
 };
 
+export type DestinationCitySummary = {
+  destinationName: string;
+  destinationSlug: string;
+  departureCity: DepartureCityCode;
+  routePath: string;
+  availableVariants: VariantTagCode[];
+  startingPrice: number | null;
+  organizerCount: number;
+  nextDepartureAt: string | null;
+  packageCount: number;
+  updatedAt: string | null;
+  summary: string | null;
+};
+
+export type DestinationCityComparison = {
+  destinationName: string;
+  destinationSlug: string;
+  departureCity: DepartureCityCode;
+  routePath: string;
+  summary: string | null;
+  packageCount: number;
+  organizerCount: number;
+  startingPrice: number | null;
+  priceMin: number | null;
+  priceMax: number | null;
+  nextDepartureAt: string | null;
+  availableVariants: VariantTagCode[];
+  filters: ComparisonFilters;
+  summaryTable: ComparisonSummaryTable;
+  variantGroups: VariantGroupSummary[];
+  packages: ComparisonPackage[];
+  updatedAt: string | null;
+};
+
 export type ComparisonFilters = {
   transportTypes: ComparisonTransportType[];
   mealPlans: MealPlan[];
   cities: Array<Exclude<ListingCity, "OTHER">>;
+  variantTags: VariantTagCode[];
   organizers: Array<{
     name: string;
     slug: string;
@@ -46,6 +90,16 @@ export type ComparisonSummaryTable = {
   cheapestPackageTitle: string | null;
   mealsSummary: string[];
   organizerCount: number;
+  variantCount: number;
+};
+
+export type VariantGroupSummary = {
+  signature: string;
+  label: string;
+  tags: VariantTagCode[];
+  packageCount: number;
+  priceMin: number | null;
+  priceMax: number | null;
 };
 
 export type ComparisonPackage = {
@@ -55,6 +109,7 @@ export type ComparisonPackage = {
   organizerSlug: string;
   trekName?: string;
   trekSlug?: string;
+  trekSummary?: string | null;
   sourceUrl: string;
   priceInr: number | null;
   priceText: string | null;
@@ -62,6 +117,10 @@ export type ComparisonPackage = {
   mealPlan: MealPlan;
   forestFeeStatus: InclusionStatus;
   listingCity: ListingCity;
+  variantTags: VariantTagCode[];
+  variantSignature: string;
+  variantLabel: string;
+  nextDepartureAt: string | null;
   mealsSummary: string | null;
   staySummary: string | null;
   inclusionHighlights: string[];
@@ -114,9 +173,9 @@ export type OrganizerDetail = OrganizerSummary & {
 };
 
 export type HomepageData = {
-  featuredTreks: TrekSummary[];
+  featuredDestinations: DestinationCitySummary[];
+  routeCount: number;
   organizerCount: number;
-  trekCount: number;
   packageCount: number;
   priceFloor: number | null;
   lastUpdatedAt: string | null;
@@ -125,9 +184,12 @@ export type HomepageData = {
 export type SnapshotManifest = {
   generatedAt: string;
   trekSlugs: string[];
+  destinationRoutePaths: string[];
   organizerSlugs: string[];
   featuredTrekSlugs: string[];
+  featuredDestinationRoutePaths: string[];
   featuredOrganizerSlugs: string[];
   prerenderTrekSlugs: string[];
+  prerenderDestinationRoutePaths: string[];
   prerenderOrganizerSlugs: string[];
 };

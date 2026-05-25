@@ -18,7 +18,12 @@
     "mealPlans": [
       "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -35,7 +40,8 @@
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -45,13 +51,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Tandulwadi Fort Trek",
       "trekSlug": "tandulwadi-fort-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/tandulwadi-fort-trek",
       "priceInr": 799,
       "priceText": "Rs. 799/- per person",
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "OTHER",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -60,7 +73,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:53:50.219Z",
       "updatedAtMs": 1779371630219,
-      "searchText": "treks and trails india tandulwadi fort trek | one day trek mumbai tandulwadi fort trek other breakfast, lunch breakfast, lunch"
+      "searchText": "treks and trails india tandulwadi fort trek | one day trek mumbai tandulwadi fort trek trek mumbai breakfast, lunch breakfast, lunch"
     }
   ]
 }

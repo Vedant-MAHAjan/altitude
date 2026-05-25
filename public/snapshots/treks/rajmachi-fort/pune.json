@@ -1,0 +1,308 @@
+{
+  "destinationName": "Rajmachi Fort",
+  "destinationSlug": "rajmachi-fort",
+  "departureCity": "PUNE",
+  "routePath": "/treks/rajmachi-fort/pune",
+  "summary": null,
+  "packageCount": 7,
+  "organizerCount": 2,
+  "startingPrice": 1300,
+  "priceMin": 1300,
+  "priceMax": 1600,
+  "nextDepartureAt": null,
+  "availableVariants": [
+    "SUNRISE",
+    "CAMPING",
+    "TREK_ONLY"
+  ],
+  "filters": {
+    "transportTypes": [
+      "TRAIN"
+    ],
+    "mealPlans": [
+      "NOT_INCLUDED",
+      "INCLUDED"
+    ],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY",
+      "CAMPING",
+      "SUNRISE"
+    ],
+    "organizers": [
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 1300,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Rajmachi Fireflies Trek | Pune",
+    "mealsSummary": [
+      "Breakfast",
+      "Dinner",
+      "Tea and snacks",
+      "Lunch"
+    ],
+    "organizerCount": 2,
+    "variantCount": 2
+  },
+  "variantGroups": [
+    {
+      "signature": "TREK_ONLY",
+      "label": "Trek",
+      "tags": [
+        "TREK_ONLY"
+      ],
+      "packageCount": 6,
+      "priceMin": 1300,
+      "priceMax": 1600
+    },
+    {
+      "signature": "SUNRISE__CAMPING",
+      "label": "Sunrise + Camping",
+      "tags": [
+        "CAMPING",
+        "SUNRISE"
+      ],
+      "packageCount": 1,
+      "priceMin": 1499,
+      "priceMax": 1499
+    }
+  ],
+  "packages": [
+    {
+      "id": "cmpfjm0gc01mpv2nhq9vz5ra4",
+      "title": "Rajmachi Fireflies Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/rajmachi-fireflies-pune",
+      "priceInr": 1300,
+      "priceText": "₹1,300",
+      "transportType": "TRAIN",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:45:00.876Z",
+      "updatedAtMs": 1779371100876,
+      "searchText": "trekhievers rajmachi fireflies trek | pune rajmachi fort trek mixed tent stay tent stay"
+    },
+    {
+      "id": "cmpfjlnhy00qev2nhn4sphuf7",
+      "title": "Rajmachi Fireflies Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/rajmachi",
+      "priceInr": 1499,
+      "priceText": "₹1,499",
+      "transportType": "TRAIN",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:44:44.086Z",
+      "updatedAtMs": 1779371084086,
+      "searchText": "trekhievers rajmachi fireflies trek | mumbai rajmachi fort trek mixed tent stay tent stay"
+    },
+    {
+      "id": "cmpe5riay00td8knh8ppjkeka",
+      "title": "Rajamchi Sunrise Trek & Camping | Lonavala",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/rajmachi-trek",
+      "priceInr": 1499,
+      "priceText": "₹1,499 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "CAMPING",
+        "SUNRISE"
+      ],
+      "variantSignature": "SUNRISE__CAMPING",
+      "variantLabel": "Sunrise + Camping",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T05:22:51.524Z",
+      "updatedAtMs": 1779686571524,
+      "searchText": "trekhievers rajamchi sunrise trek & camping | lonavala rajmachi fort sunrise + camping mixed breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
+    },
+    {
+      "id": "cmpfjyahw00vpuonh9y8ikn7a",
+      "title": "Rajmachi Fireflies Camping Trek 2026 | Fireflies near Mumbai Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/rajmachi-fireflies-trek-2026",
+      "priceInr": 1599,
+      "priceText": "₹1,599",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:54:33.764Z",
+      "updatedAtMs": 1779371673764,
+      "searchText": "treks and trails india rajmachi fireflies camping trek 2026 | fireflies near mumbai pune rajmachi fort trek mixed breakfast, dinner tent stay, homestay breakfast, dinner tent stay, homestay"
+    },
+    {
+      "id": "cmpfjyb9700w9uonh3uqbxjjn",
+      "title": "Rajmachi Camping | From Lonavala",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/rajmachi-camping",
+      "priceInr": 1599,
+      "priceText": "Rs. 1599/-",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay, Hotel stay, Dormitory stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay, Hotel stay, Dormitory stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:54:34.747Z",
+      "updatedAtMs": 1779371674747,
+      "searchText": "treks and trails india rajmachi camping | from lonavala rajmachi fort trek mixed breakfast, dinner tent stay, hotel stay, dormitory stay, homestay breakfast, dinner tent stay, hotel stay, dormitory stay, homestay"
+    },
+    {
+      "id": "cmpfjpx6c02b9v2nhwflyfcyf",
+      "title": "Rajmachi Fort Trek Camping 2026",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/rajmachi-fort-trek-2026",
+      "priceInr": 1599,
+      "priceText": "₹1,599",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:53:38.706Z",
+      "updatedAtMs": 1779371618706,
+      "searchText": "treks and trails india rajmachi fort trek camping 2026 rajmachi fort trek mixed breakfast, dinner tent stay, homestay breakfast, dinner tent stay, homestay"
+    },
+    {
+      "id": "cmpfjqe9z02krv2nhto8tmlwh",
+      "title": "Rajmachi and Kondhane Caves Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Rajmachi Fort",
+      "trekSlug": "rajmachi-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/rajmachi-and-kondhane-caves-trek",
+      "priceInr": 1600,
+      "priceText": "Rs 1600/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Dormitory stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Dormitory stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:53:55.586Z",
+      "updatedAtMs": 1779371635586,
+      "searchText": "treks and trails india rajmachi and kondhane caves trek rajmachi fort trek mixed breakfast, lunch, dinner dormitory stay, homestay breakfast, lunch, dinner dormitory stay, homestay"
+    }
+  ],
+  "updatedAt": "2026-05-25T05:22:51.524Z"
+}

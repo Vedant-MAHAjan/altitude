@@ -1,5 +1,5 @@
 {
-  "name": "Kothaligad Trek - Peth Fort Trek",
+  "name": "Kothaligad Trek Peth Fort Trek",
   "slug": "kothaligad-trek-peth-fort-trek",
   "region": null,
   "durationDays": null,
@@ -18,7 +18,12 @@
     "mealPlans": [
       "PARTIAL"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Treks and Trails India",
@@ -34,7 +39,8 @@
     "mealsSummary": [
       "Breakfast"
     ],
-    "organizerCount": 1
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -42,15 +48,22 @@
       "title": "Kothaligad Trek - Peth Fort Trek",
       "organizerName": "Treks and Trails India",
       "organizerSlug": "treks-and-trails-india",
-      "trekName": "Kothaligad Trek - Peth Fort Trek",
+      "trekName": "Kothaligad Trek Peth Fort Trek",
       "trekSlug": "kothaligad-trek-peth-fort-trek",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/kothaligad-trek-peth-fort-trek",
       "priceInr": 999,
       "priceText": "Rs. 999/- per person",
       "transportType": "TRAIN",
       "mealPlan": "PARTIAL",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast",
       "staySummary": null,
       "inclusionHighlights": [
@@ -59,7 +72,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:54:03.248Z",
       "updatedAtMs": 1779371643248,
-      "searchText": "treks and trails india kothaligad trek - peth fort trek kothaligad trek - peth fort trek other breakfast breakfast"
+      "searchText": "treks and trails india kothaligad trek - peth fort trek kothaligad trek peth fort trek trek mixed breakfast breakfast"
     }
   ]
 }

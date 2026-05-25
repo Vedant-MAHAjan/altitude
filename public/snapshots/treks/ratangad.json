@@ -10,17 +10,22 @@
   "organizerCount": 3,
   "priceMin": 899,
   "priceMax": 1399,
-  "updatedAt": "2026-05-21T13:54:04.183Z",
+  "updatedAt": "2026-05-25T05:22:53.936Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS",
       "TRAIN"
     ],
     "mealPlans": [
-      "INCLUDED",
-      "NOT_INCLUDED"
+      "INCLUDED"
     ],
-    "cities": [],
+    "cities": [
+      "MIXED",
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
     "organizers": [
       {
         "name": "Durgvihar",
@@ -43,9 +48,11 @@
     "cheapestPackageTitle": "Ratangad Fort Trek 2025 | Monsoon Trek from Mumbai and Pune",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 3
+    "organizerCount": 3,
+    "variantCount": 1
   },
   "packages": [
     {
@@ -55,13 +62,20 @@
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Ratangad",
       "trekSlug": "ratangad",
+      "trekSummary": null,
       "sourceUrl": "https://www.treksandtrails.org/tours/ratangad-fort-trek",
       "priceInr": 899,
       "priceText": "₹899",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "OTHER",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -73,7 +87,7 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:54:04.183Z",
       "updatedAtMs": 1779371644183,
-      "searchText": "treks and trails india ratangad fort trek 2025 | monsoon trek from mumbai and pune ratangad other breakfast, lunch tent stay breakfast, lunch tent stay thane"
+      "searchText": "treks and trails india ratangad fort trek 2025 | monsoon trek from mumbai and pune ratangad trek mixed breakfast, lunch tent stay breakfast, lunch tent stay thane"
     },
     {
       "id": "cmpe5rkjz014k8knhdpmozuba",
@@ -82,20 +96,29 @@
       "organizerSlug": "trekhievers",
       "trekName": "Ratangad",
       "trekSlug": "ratangad",
+      "trekSummary": null,
       "sourceUrl": "https://www.trekhievers.com/tours/ratangad-trek-mumbai",
       "priceInr": 1399,
       "priceText": "₹1,399",
       "transportType": "TRAIN",
-      "mealPlan": "NOT_INCLUDED",
+      "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
-      "mealsSummary": null,
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
-      "inclusionHighlights": [],
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:42.159Z",
-      "updatedAtMs": 1779371082159,
-      "searchText": "trekhievers ratangad cloud formation trek | mumbai ratangad other"
+      "lastUpdatedAt": "2026-05-25T05:22:53.936Z",
+      "updatedAtMs": 1779686573936,
+      "searchText": "trekhievers ratangad cloud formation trek | mumbai ratangad trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpfjl6qb003wv2nhlbkzl5pu",
@@ -104,13 +127,20 @@
       "organizerSlug": "durgvihar",
       "trekName": "Ratangad",
       "trekSlug": "ratangad",
+      "trekSummary": null,
       "sourceUrl": "https://durgvihar.in/trip/ratangad-fort",
       "priceInr": null,
       "priceText": "rs 5",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "OTHER",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -123,7 +153,7 @@
       ],
       "lastUpdatedAt": "2026-05-21T13:44:22.355Z",
       "updatedAtMs": 1779371062355,
-      "searchText": "durgvihar ratangad fort ratangad other breakfast, lunch breakfast, lunch dadar sion nashik"
+      "searchText": "durgvihar ratangad fort ratangad trek mumbai breakfast, lunch breakfast, lunch dadar sion nashik"
     }
   ]
 }

@@ -1,4 +1,8 @@
 import { normalizeWhitespace } from "@/lib/normalization/extractors";
+import {
+  buildVariantLabel,
+  buildVariantSignature,
+} from "@/lib/normalization/trek-identity";
 import type {
   ComparisonFilters,
   ComparisonPackage,
@@ -7,14 +11,19 @@ import type {
   DifficultyLevel,
   HomepageData,
   InclusionStatus,
+  DepartureCityCode,
   ListingCity,
   MealPlan,
   OrganizerDetail,
   OrganizerSummary,
   SnapshotManifest,
+  DestinationCityComparison,
+  DestinationCitySummary,
   TrekComparison,
   TrekSearchEntry,
   TrekSummary,
+  VariantGroupSummary,
+  VariantTagCode,
 } from "@/lib/types";
 
 type DerivedDisplayDetails = {
@@ -47,6 +56,7 @@ export type PackageProjection = {
   sourceUrl: string;
   priceInr: number | null;
   priceText: string | null;
+  nextDepartureAt: Date | null;
   transportType: string;
   rawTransportText: string | null;
   rawPickupText: string | null;
@@ -54,6 +64,7 @@ export type PackageProjection = {
   rawInclusionsText: string | null;
   mealPlan: string;
   forestFeeStatus: string;
+  rawSnapshot: unknown | null;
   normalizedSnapshot: unknown | null;
   pickupLocations: string[];
   lastScrapedAt: Date;
@@ -64,6 +75,8 @@ export type PackageProjection = {
 export type CatalogSnapshotPayload = {
   homepage: HomepageData;
   treks: TrekSummary[];
+  destinationCards: DestinationCitySummary[];
+  destinationDetails: Record<string, DestinationCityComparison>;
   organizers: OrganizerSummary[];
   trekDetails: Record<string, TrekComparison>;
   organizerDetails: Record<string, OrganizerDetail>;
@@ -91,13 +104,137 @@ function uniqueValues<T>(values: T[]) {
   return [...new Set(values)];
 }
 
-function deriveListingCity(normalizedSnapshot: unknown): ListingCity {
+function readVariantTags(normalizedSnapshot: unknown): VariantTagCode[] {
   const snapshot = isRecord(normalizedSnapshot) ? normalizedSnapshot : null;
-  const sourceLabel = snapshot ? readString(snapshot.sourceLabel) : null;
-  const sourceText = normalizeWhitespace(sourceLabel).toLowerCase();
+  const tags = readStringArray(snapshot?.variantTags).filter((item): item is VariantTagCode =>
+    item === "TREK_ONLY" ||
+    item === "CAMPING" ||
+    item === "SUNRISE" ||
+    item === "NIGHT_TREK" ||
+    item === "FIREFLIES",
+  );
 
-  const hasMumbai = /\bmumbai\b/.test(sourceText);
-  const hasPune = /\bpune\b/.test(sourceText);
+  return tags.length > 0 ? tags : (["TREK_ONLY"] as VariantTagCode[]);
+}
+
+function cityToRouteSegment(city: DepartureCityCode) {
+  return city.toLowerCase();
+}
+
+function matchesDepartureCity(listingCity: ListingCity, city: DepartureCityCode) {
+  return city === "MUMBAI"
+    ? listingCity === "MUMBAI" || listingCity === "MIXED"
+    : listingCity === "PUNE" || listingCity === "MIXED";
+}
+
+function buildVariantGroupSummary(packages: ComparisonPackage[]): VariantGroupSummary[] {
+  const groups = new Map<string, VariantGroupSummary & { packageIds: string[] }>();
+
+  for (const item of packages) {
+    const existing = groups.get(item.variantSignature);
+
+    if (existing) {
+      existing.packageCount += 1;
+      existing.packageIds.push(item.id);
+      existing.priceMin =
+        existing.priceMin === null
+          ? item.priceInr
+          : item.priceInr === null
+            ? existing.priceMin
+            : Math.min(existing.priceMin, item.priceInr);
+      existing.priceMax =
+        existing.priceMax === null
+          ? item.priceInr
+          : item.priceInr === null
+            ? existing.priceMax
+            : Math.max(existing.priceMax, item.priceInr);
+      continue;
+    }
+
+    groups.set(item.variantSignature, {
+      signature: item.variantSignature,
+      label: item.variantLabel,
+      tags: item.variantTags,
+      packageCount: 1,
+      priceMin: item.priceInr,
+      priceMax: item.priceInr,
+      packageIds: [item.id],
+    });
+  }
+
+  return [...groups.values()]
+    .map(({ packageIds, ...summary }) => summary)
+    .sort((left, right) => (left.priceMin ?? Number.MAX_SAFE_INTEGER) - (right.priceMin ?? Number.MAX_SAFE_INTEGER) || left.label.localeCompare(right.label));
+}
+
+function buildCityDestinationGroups(packages: ComparisonPackage[]) {
+  const destinationGroups = new Map<
+    string,
+    {
+      trekName: string;
+      trekSlug: string;
+      trekSummary: string | null;
+      routePath: string;
+      city: DepartureCityCode;
+      packages: ComparisonPackage[];
+    }
+  >();
+
+  for (const city of ["MUMBAI", "PUNE"] as const) {
+    for (const item of packages) {
+      if (!item.trekSlug || !item.trekName || !matchesDepartureCity(item.listingCity, city)) {
+        continue;
+      }
+
+      const key = `${item.trekSlug}:${city}`;
+      const existing = destinationGroups.get(key);
+
+      if (existing) {
+        existing.packages.push(item);
+        continue;
+      }
+
+      destinationGroups.set(key, {
+        trekName: item.trekName,
+        trekSlug: item.trekSlug,
+        trekSummary: item.trekSummary ?? null,
+        routePath: `/treks/${item.trekSlug}/${cityToRouteSegment(city)}`,
+        city,
+        packages: [item],
+      });
+    }
+  }
+
+  return [...destinationGroups.values()];
+}
+
+function deriveListingCity(input: {
+  normalizedSnapshot: unknown;
+  rawSnapshot: unknown;
+  transportSignals: string;
+  pickupLocations: string[];
+}): ListingCity {
+  const snapshot = isRecord(input.normalizedSnapshot) ? input.normalizedSnapshot : null;
+  const rawSnapshot = isRecord(input.rawSnapshot) ? input.rawSnapshot : null;
+  const sourceText = normalizeWhitespace(
+    [
+      snapshot ? readString(snapshot.sourceLabel) : null,
+      rawSnapshot ? readString(rawSnapshot.sourceLabel) : null,
+      input.transportSignals,
+      ...input.pickupLocations,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  ).toLowerCase();
+
+  const hasMumbai =
+    /\b(mumbai|csmt|byculla|borivali|dadar|kurla|ghatkopar|thane|mulund|dombivali|kalyan|panvel|chembur|sion|kasara)\b/.test(
+      sourceText,
+    );
+  const hasPune =
+    /\b(pune|shivajinagar|swargate|wakad|hinjawadi|hinjewadi|nigdi|pimpri|chinchwad|nashik phata)\b/.test(
+      sourceText,
+    );
 
   if (hasMumbai && hasPune) {
     return "MIXED";
@@ -114,13 +251,18 @@ function deriveListingCity(normalizedSnapshot: unknown): ListingCity {
   return "OTHER";
 }
 
-function readDerivedDisplayDetails(normalizedSnapshot: unknown): DerivedDisplayDetails {
-  const snapshot = isRecord(normalizedSnapshot) ? normalizedSnapshot : null;
+function readDerivedDisplayDetails(input: {
+  normalizedSnapshot: unknown;
+  rawSnapshot: unknown;
+  transportSignals: string;
+  pickupLocations: string[];
+}): DerivedDisplayDetails {
+  const snapshot = isRecord(input.normalizedSnapshot) ? input.normalizedSnapshot : null;
   const pipeline = snapshot && isRecord(snapshot.pipeline) ? snapshot.pipeline : null;
   const derived = pipeline && isRecord(pipeline.derived) ? pipeline.derived : null;
 
   return {
-    listingCity: deriveListingCity(snapshot),
+    listingCity: deriveListingCity(input),
     mealsSummary: readString(derived?.mealsSummary),
     staySummary: readString(derived?.staySummary),
     inclusionHighlights: readStringArray(derived?.inclusionHighlights),
@@ -152,6 +294,7 @@ function buildSearchText(input: {
   organizerName: string;
   title: string;
   trekName?: string;
+  variantLabel?: string | null;
   listingCity: ListingCity;
   mealsSummary: string | null;
   staySummary: string | null;
@@ -163,6 +306,7 @@ function buildSearchText(input: {
       input.organizerName,
       input.title,
       input.trekName,
+      input.variantLabel,
       input.listingCity,
       input.mealsSummary,
       input.staySummary,
@@ -224,6 +368,7 @@ function buildComparisonFilters(packages: ComparisonPackage[]): ComparisonFilter
         .map((item) => item.listingCity)
         .filter((item): item is Exclude<ListingCity, "OTHER"> => item !== "OTHER"),
     ),
+    variantTags: uniqueValues(packages.flatMap((item) => item.variantTags)),
     organizers: [...new Map(packages.map((item) => [item.organizerSlug, {
       name: item.organizerName,
       slug: item.organizerSlug,
@@ -250,6 +395,7 @@ function buildComparisonSummaryTable(packages: ComparisonPackage[]): ComparisonS
     cheapestPackageTitle: cheapestPackage?.title ?? null,
     mealsSummary,
     organizerCount: new Set(packages.map((item) => item.organizerSlug)).size,
+    variantCount: new Set(packages.map((item) => item.variantSignature)).size,
   };
 }
 
@@ -263,9 +409,21 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
   ]
     .filter(Boolean)
     .join(" ");
-  const derivedDetails = readDerivedDisplayDetails(record.normalizedSnapshot);
+  const derivedDetails = readDerivedDisplayDetails({
+    normalizedSnapshot: record.normalizedSnapshot,
+    rawSnapshot: record.rawSnapshot,
+    transportSignals,
+    pickupLocations: record.pickupLocations,
+  });
   const transportType = toComparisonTransportType(record.transportType, transportSignals);
   const lastUpdatedAt = record.lastScrapedAt.toISOString();
+  const variantTags = readVariantTags(record.normalizedSnapshot);
+  const variantSignature =
+    readString(isRecord(record.normalizedSnapshot) ? record.normalizedSnapshot.variantSignature : null) ??
+    buildVariantSignature(variantTags);
+  const variantLabel =
+    readString(isRecord(record.normalizedSnapshot) ? record.normalizedSnapshot.variantLabel : null) ??
+    buildVariantLabel(variantTags);
 
   return {
     id: record.id,
@@ -274,6 +432,7 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
     organizerSlug: record.organizer.slug,
     trekName: record.trek?.name,
     trekSlug: record.trek?.slug,
+    trekSummary: record.trek?.summary ?? null,
     sourceUrl: record.sourceUrl,
     priceInr: record.priceInr,
     priceText: record.priceText,
@@ -281,6 +440,10 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
     mealPlan: record.mealPlan as MealPlan,
     forestFeeStatus: record.forestFeeStatus as InclusionStatus,
     listingCity: derivedDetails.listingCity,
+    variantTags,
+    variantSignature,
+    variantLabel,
+    nextDepartureAt: record.nextDepartureAt ? record.nextDepartureAt.toISOString() : null,
     mealsSummary: derivedDetails.mealsSummary,
     staySummary: derivedDetails.staySummary,
     inclusionHighlights: derivedDetails.inclusionHighlights,
@@ -292,6 +455,7 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
       title: record.title,
       trekName: record.trek?.name,
       listingCity: derivedDetails.listingCity,
+      variantLabel,
       mealsSummary: derivedDetails.mealsSummary,
       staySummary: derivedDetails.staySummary,
       inclusionHighlights: derivedDetails.inclusionHighlights,
@@ -394,23 +558,95 @@ export function buildOrganizerDetail(
   };
 }
 
+function buildDestinationCitySummary(
+  group: ReturnType<typeof buildCityDestinationGroups>[number],
+): DestinationCitySummary {
+  const packages = sortPackages(group.packages);
+  const prices = priceRange(packages);
+  const nextDepartureAt = [...packages]
+    .map((item) => item.nextDepartureAt)
+    .filter((value): value is string => Boolean(value))
+    .sort((left, right) => Date.parse(left) - Date.parse(right))[0] ?? null;
+  const availableVariants = uniqueValues(packages.flatMap((item) => item.variantTags)).sort(
+    (left, right) => {
+      const order: VariantTagCode[] = ["SUNRISE", "NIGHT_TREK", "FIREFLIES", "CAMPING", "TREK_ONLY"];
+
+      return order.indexOf(left) - order.indexOf(right);
+    },
+  );
+
+  return {
+    destinationName: group.trekName,
+    destinationSlug: group.trekSlug,
+    departureCity: group.city,
+    routePath: group.routePath,
+    availableVariants,
+    startingPrice: prices.min,
+    organizerCount: new Set(packages.map((item) => item.organizerSlug)).size,
+    nextDepartureAt,
+    packageCount: packages.length,
+    updatedAt: maxUpdatedAt(packages.map((item) => item.lastUpdatedAt)),
+    summary: group.trekSummary,
+  };
+}
+
+export function buildDestinationCityComparison(
+  group: ReturnType<typeof buildCityDestinationGroups>[number],
+): DestinationCityComparison {
+  const packages = sortPackages(group.packages);
+  const prices = priceRange(packages);
+  const nextDepartureAt = [...packages]
+    .map((item) => item.nextDepartureAt)
+    .filter((value): value is string => Boolean(value))
+    .sort((left, right) => Date.parse(left) - Date.parse(right))[0] ?? null;
+
+  return {
+    destinationName: group.trekName,
+    destinationSlug: group.trekSlug,
+    departureCity: group.city,
+    routePath: group.routePath,
+    summary: group.trekSummary,
+    packageCount: packages.length,
+    organizerCount: new Set(packages.map((item) => item.organizerSlug)).size,
+    startingPrice: prices.min,
+    priceMin: prices.min,
+    priceMax: prices.max,
+    nextDepartureAt,
+    availableVariants: uniqueValues(packages.flatMap((item) => item.variantTags)).sort((left, right) => {
+      const order: VariantTagCode[] = ["SUNRISE", "NIGHT_TREK", "FIREFLIES", "CAMPING", "TREK_ONLY"];
+
+      return order.indexOf(left) - order.indexOf(right);
+    }),
+    filters: buildComparisonFilters(packages),
+    summaryTable: buildComparisonSummaryTable(packages),
+    variantGroups: buildVariantGroupSummary(packages),
+    packages,
+    updatedAt: maxUpdatedAt(packages.map((item) => item.lastUpdatedAt)),
+  };
+}
+
 export function buildHomepageData(
-  treks: TrekSummary[],
+  destinationCards: DestinationCitySummary[],
   organizers: OrganizerSummary[],
 ): HomepageData {
   return {
-    featuredTreks: [...treks]
-      .sort((left, right) => right.packageCount - left.packageCount || left.name.localeCompare(right.name))
+    featuredDestinations: [...destinationCards]
+      .sort(
+        (left, right) =>
+          right.packageCount - left.packageCount ||
+          left.destinationName.localeCompare(right.destinationName) ||
+          left.departureCity.localeCompare(right.departureCity),
+      )
       .slice(0, 3),
+    routeCount: destinationCards.length,
     organizerCount: organizers.length,
-    trekCount: treks.length,
-    packageCount: treks.reduce((count, item) => count + item.packageCount, 0),
-    priceFloor: treks
-      .map((item) => item.priceMin)
+    packageCount: destinationCards.reduce((count, item) => count + item.packageCount, 0),
+    priceFloor: destinationCards
+      .map((item) => item.startingPrice)
       .filter((item): item is number => item !== null)
       .sort((left, right) => left - right)[0] ?? null,
     lastUpdatedAt: maxUpdatedAt([
-      ...treks.map((item) => item.updatedAt),
+      ...destinationCards.map((item) => item.updatedAt),
       ...organizers.map((item) => item.updatedAt),
     ]),
   };
@@ -431,18 +667,28 @@ export function buildTrekSearchEntries(
 }
 
 export function buildSnapshotManifest(
-  treks: TrekSummary[],
+  legacyTreks: TrekSummary[],
+  destinationCards: DestinationCitySummary[],
   organizers: OrganizerSummary[],
   generatedAt: string,
 ): SnapshotManifest {
-  const trekSlugs = treks.map((item) => item.slug);
+  const trekSlugs = legacyTreks.map((item) => item.slug);
+  const destinationRoutePaths = destinationCards.map((item) => item.routePath);
   const organizerSlugs = organizers.map((item) => item.slug);
-  const popularTreks = [...treks].sort(
+  const popularTreks = [...legacyTreks].sort(
     (left, right) =>
       right.packageCount - left.packageCount ||
       (Date.parse(right.updatedAt ?? "1970-01-01T00:00:00.000Z") -
         Date.parse(left.updatedAt ?? "1970-01-01T00:00:00.000Z")) ||
       left.name.localeCompare(right.name),
+  );
+  const popularDestinationCards = [...destinationCards].sort(
+    (left, right) =>
+      right.packageCount - left.packageCount ||
+      (Date.parse(right.updatedAt ?? "1970-01-01T00:00:00.000Z") -
+        Date.parse(left.updatedAt ?? "1970-01-01T00:00:00.000Z")) ||
+      left.destinationName.localeCompare(right.destinationName) ||
+      left.departureCity.localeCompare(right.departureCity),
   );
   const popularOrganizers = [...organizers].sort(
     (left, right) =>
@@ -455,10 +701,13 @@ export function buildSnapshotManifest(
   return {
     generatedAt,
     trekSlugs,
+    destinationRoutePaths,
     organizerSlugs,
     featuredTrekSlugs: popularTreks.slice(0, 6).map((item) => item.slug),
+    featuredDestinationRoutePaths: popularDestinationCards.slice(0, 6).map((item) => item.routePath),
     featuredOrganizerSlugs: popularOrganizers.slice(0, 6).map((item) => item.slug),
     prerenderTrekSlugs: popularTreks.slice(0, 24).map((item) => item.slug),
+    prerenderDestinationRoutePaths: popularDestinationCards.slice(0, 24).map((item) => item.routePath),
     prerenderOrganizerSlugs: popularOrganizers.slice(0, 16).map((item) => item.slug),
   };
 }
@@ -470,6 +719,7 @@ export function buildCatalogSnapshotPayload(params: {
 }): CatalogSnapshotPayload {
   const trekGroups = new Map<string, { trek: TrekProjection; packages: PackageProjection[] }>();
   const organizerGroups = new Map<string, { organizer: OrganizerProjection; packages: PackageProjection[] }>();
+  const comparisonPackages = params.packages.map((item) => toComparisonPackage(item));
 
   for (const packageRecord of params.packages) {
     if (packageRecord.trek) {
@@ -488,6 +738,8 @@ export function buildCatalogSnapshotPayload(params: {
     organizerGroup.packages.push(packageRecord);
     organizerGroups.set(packageRecord.organizer.slug, organizerGroup);
   }
+
+  const destinationGroups = buildCityDestinationGroups(comparisonPackages);
 
   const trekDetails = Object.fromEntries(
     [...trekGroups.values()]
@@ -511,16 +763,31 @@ export function buildCatalogSnapshotPayload(params: {
   const organizers = Object.values(organizerDetails)
     .map(summarizeOrganizer)
     .sort((left, right) => left.name.localeCompare(right.name));
-  const homepage = buildHomepageData(treks, organizers);
+  const destinationCards = destinationGroups
+    .map(buildDestinationCitySummary)
+    .sort(
+      (left, right) =>
+        right.packageCount - left.packageCount ||
+        left.destinationName.localeCompare(right.destinationName) ||
+        left.departureCity.localeCompare(right.departureCity),
+    );
+  const destinationDetails = Object.fromEntries(
+    destinationGroups
+      .map((group) => [group.routePath, buildDestinationCityComparison(group)] as const)
+      .sort(([leftPath], [rightPath]) => leftPath.localeCompare(rightPath)),
+  ) as Record<string, DestinationCityComparison>;
+  const homepage = buildHomepageData(destinationCards, organizers);
   const generatedAt = params.generatedAt ?? new Date().toISOString();
 
   return {
     homepage,
     treks,
+    destinationCards,
+    destinationDetails,
     organizers,
     trekDetails,
     organizerDetails,
     search: params.search,
-    manifest: buildSnapshotManifest(treks, organizers, generatedAt),
+    manifest: buildSnapshotManifest(treks, destinationCards, organizers, generatedAt),
   };
 }

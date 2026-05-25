@@ -28,9 +28,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 0.85,
     },
-    ...treks.map((trek) => ({
-      url: `${siteConfig.url}/treks/${trek.slug}`,
-      lastModified: trek.updatedAt ? new Date(trek.updatedAt) : new Date(),
+    ...treks.map((route) => ({
+      url: `${siteConfig.url}${route.routePath}`,
+      lastModified: route.updatedAt ? new Date(route.updatedAt) : new Date(),
       changeFrequency: "daily" as const,
       priority: 0.8,
     })),

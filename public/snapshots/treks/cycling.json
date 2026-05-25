@@ -1,0 +1,116 @@
+{
+  "name": "Cycling",
+  "slug": "cycling",
+  "region": null,
+  "durationDays": null,
+  "durationNights": null,
+  "difficulty": "UNKNOWN",
+  "summary": null,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "priceMin": 250,
+  "priceMax": 250,
+  "updatedAt": "2026-05-25T05:23:21.286Z",
+  "filters": {
+    "transportTypes": [
+      "NON_AC_BUS",
+      "TRAIN"
+    ],
+    "mealPlans": [
+      "INCLUDED"
+    ],
+    "cities": [
+      "MIXED"
+    ],
+    "variantTags": [
+      "NIGHT_TREK",
+      "TREK_ONLY"
+    ],
+    "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 250,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Mumbai Midnight Cycling",
+    "mealsSummary": [
+      "Tea and snacks"
+    ],
+    "organizerCount": 2,
+    "variantCount": 2
+  },
+  "packages": [
+    {
+      "id": "cmpe5s9cl01gg8knhtxpbjgii",
+      "title": "Mumbai Midnight Cycling",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Cycling",
+      "trekSlug": "cycling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/mumbai-midnight-cycling",
+      "priceInr": 250,
+      "priceText": "₹250",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T05:23:21.286Z",
+      "updatedAtMs": 1779686601286,
+      "searchText": "bhatakna mumbai midnight cycling cycling night trek mixed tea and snacks tea and snacks"
+    },
+    {
+      "id": "cmpfjy0uf00qcuonhaku3jsju",
+      "title": "Mumbai Midnight Cycling 2026",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Cycling",
+      "trekSlug": "cycling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/mumbai-midnight-cycling-sobo-circuit",
+      "priceInr": null,
+      "priceText": "rs,",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Tea and snacks",
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-21T13:54:21.255Z",
+      "updatedAtMs": 1779371661255,
+      "searchText": "treks and trails india mumbai midnight cycling 2026 cycling trek mixed tea and snacks hotel stay tea and snacks hotel stay"
+    }
+  ]
+}

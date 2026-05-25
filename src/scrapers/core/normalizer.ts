@@ -5,7 +5,11 @@ import {
   extractPriceInr,
   normalizeWhitespace,
 } from "../../lib/normalization/extractors";
-import { getCanonicalTrekIdentity } from "../../lib/normalization/trek-identity";
+import {
+  buildVariantLabel,
+  buildVariantSignature,
+  getCanonicalTrekIdentity,
+} from "../../lib/normalization/trek-identity";
 import { buildLayeredPipeline } from "./layered-pipeline";
 import { validateNormalizedPackage } from "./schema";
 import type {
@@ -44,17 +48,14 @@ function normalizeDepartureDates(values: RawScrapedPackage["departureDates"]): D
 export function normalizeScrapedPackage(
   rawPackage: RawScrapedPackage,
 ): NormalizedScrapedPackage {
-  const canonicalIdentity =
-    rawPackage.canonicalTrekName || rawPackage.canonicalTrekSlug
-      ? {
-          trekName: rawPackage.canonicalTrekName ?? normalizeWhitespace(rawPackage.title),
-          trekSlug:
-            rawPackage.canonicalTrekSlug ??
-            getCanonicalTrekIdentity(
-              rawPackage.canonicalTrekName ?? rawPackage.title,
-            ).trekSlug,
-        }
-      : getCanonicalTrekIdentity(rawPackage.title);
+  const canonicalIdentity = getCanonicalTrekIdentity(
+    rawPackage.canonicalTrekName ?? rawPackage.title,
+    rawPackage.canonicalTrekName ?? null,
+  );
+  const trekSlug = rawPackage.canonicalTrekSlug ?? canonicalIdentity.trekSlug;
+  const variantTags = canonicalIdentity.variantTags;
+  const variantSignature = buildVariantSignature(variantTags);
+  const variantLabel = buildVariantLabel(variantTags);
   const trekName = canonicalIdentity.trekName;
   const layeredPipeline = buildLayeredPipeline(rawPackage);
   const mealText = layeredPipeline.sections.meals;
@@ -75,7 +76,10 @@ export function normalizeScrapedPackage(
   const pickupLocations =
     transportType === "TRAIN" ? [] : extractPickupLocations(pickupSource);
   const normalizedSnapshot = {
-    trekSlug: canonicalIdentity.trekSlug,
+    trekSlug,
+    variantTags,
+    variantSignature,
+    variantLabel,
     priceInr: extractPriceInr(rawPackage.priceText),
     durationText: normalizeWhitespace(rawPackage.durationText) || null,
     locationText: normalizeWhitespace(rawPackage.locationText) || null,
@@ -93,7 +97,10 @@ export function normalizeScrapedPackage(
     title: normalizeWhitespace(rawPackage.title),
     sourceUrl: rawPackage.sourceUrl,
     trekName,
-    trekSlug: canonicalIdentity.trekSlug,
+    trekSlug,
+    variantTags,
+    variantSignature,
+    variantLabel,
     priceInr: normalizedSnapshot.priceInr,
     priceText: normalizeWhitespace(rawPackage.priceText) || null,
     durationText: normalizedSnapshot.durationText,

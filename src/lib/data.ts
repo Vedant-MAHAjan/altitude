@@ -4,6 +4,7 @@ import { cacheLife, cacheTag } from "next/cache";
 
 import {
   buildCatalogSnapshotPayload,
+  buildDestinationCityComparison,
   buildOrganizerDetail,
   buildTrekComparison,
   buildTrekSearchEntries,
@@ -15,6 +16,7 @@ import {
   readTrekSearchEntries,
 } from "@/lib/catalog/queries";
 import {
+  readDestinationCityComparisonSnapshot,
   readHomepageSnapshot,
   readOrganizerDetailSnapshot,
   readOrganizerIndexSnapshot,
@@ -24,7 +26,16 @@ import {
   readTreksIndexSnapshot,
 } from "@/lib/catalog/snapshots";
 import { getPrismaClient } from "@/lib/prisma";
+import {
+  buildVariantLabel,
+  buildVariantSignature,
+  getCanonicalTrekIdentity,
+} from "@/lib/normalization/trek-identity";
 import type {
+  ComparisonPackage,
+  DepartureCityCode,
+  DestinationCityComparison,
+  DestinationCitySummary,
   HomepageData,
   OrganizerDetail,
   OrganizerSummary,
@@ -32,6 +43,7 @@ import type {
   TrekComparison,
   TrekSearchEntry,
   TrekSummary,
+  VariantTagCode,
 } from "@/lib/types";
 
 function applyCatalogCache(tags: string[]) {
@@ -58,6 +70,59 @@ function applySearchCache(tags: string[]) {
   }
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function synthesizeDestinationRoutePaths(slugs: string[]) {
+  return slugs.flatMap((slug) => [`/treks/${slug}/mumbai`, `/treks/${slug}/pune`]);
+}
+
+function normalizeManifestSnapshot(snapshot: SnapshotManifest | null): SnapshotManifest | null {
+  if (!snapshot) {
+    return null;
+  }
+
+  const trekSlugs = Array.isArray(snapshot.trekSlugs) ? snapshot.trekSlugs : [];
+  const featuredTrekSlugs = Array.isArray(snapshot.featuredTrekSlugs) ? snapshot.featuredTrekSlugs : [];
+  const prerenderTrekSlugs = Array.isArray(snapshot.prerenderTrekSlugs) ? snapshot.prerenderTrekSlugs : [];
+
+  return {
+    ...snapshot,
+    destinationRoutePaths:
+      Array.isArray(snapshot.destinationRoutePaths) && snapshot.destinationRoutePaths.length > 0
+        ? snapshot.destinationRoutePaths
+        : synthesizeDestinationRoutePaths(trekSlugs),
+    featuredDestinationRoutePaths:
+      Array.isArray(snapshot.featuredDestinationRoutePaths) &&
+      snapshot.featuredDestinationRoutePaths.length > 0
+        ? snapshot.featuredDestinationRoutePaths
+        : synthesizeDestinationRoutePaths(featuredTrekSlugs),
+    prerenderDestinationRoutePaths:
+      Array.isArray(snapshot.prerenderDestinationRoutePaths) &&
+      snapshot.prerenderDestinationRoutePaths.length > 0
+        ? snapshot.prerenderDestinationRoutePaths
+        : synthesizeDestinationRoutePaths(prerenderTrekSlugs),
+  };
+}
+
+function isDestinationCitySummary(value: unknown): value is DestinationCitySummary {
+  return (
+    isRecord(value) &&
+    typeof value.routePath === "string" &&
+    typeof value.destinationName === "string" &&
+    typeof value.departureCity === "string"
+  );
+}
+
+function isDestinationCitySummaryArray(value: unknown): value is DestinationCitySummary[] {
+  return Array.isArray(value) && value.every(isDestinationCitySummary);
+}
+
+function isHomepageData(value: unknown): value is HomepageData {
+  return isRecord(value) && Array.isArray(value.featuredDestinations) && typeof value.routeCount === "number";
+}
+
 async function getCachedCatalogFallback() {
   "use cache";
 
@@ -68,22 +133,27 @@ async function getCachedCatalogFallback() {
   if (!prisma) {
     return {
       homepage: {
-        featuredTreks: [],
+        featuredDestinations: [],
+        routeCount: 0,
         organizerCount: 0,
-        trekCount: 0,
         packageCount: 0,
         priceFloor: null,
         lastUpdatedAt: null,
       } satisfies HomepageData,
       treks: [] as TrekSummary[],
+      destinationCards: [] as DestinationCitySummary[],
+      destinationDetails: {} as Record<string, DestinationCityComparison>,
       organizers: [] as OrganizerSummary[],
       manifest: {
         generatedAt: new Date(0).toISOString(),
         trekSlugs: [],
+        destinationRoutePaths: [],
         organizerSlugs: [],
         featuredTrekSlugs: [],
+        featuredDestinationRoutePaths: [],
         featuredOrganizerSlugs: [],
         prerenderTrekSlugs: [],
+        prerenderDestinationRoutePaths: [],
         prerenderOrganizerSlugs: [],
       } satisfies SnapshotManifest,
     };
@@ -99,6 +169,8 @@ async function getCachedCatalogFallback() {
     return {
       homepage: payload.homepage,
       treks: payload.treks,
+      destinationCards: payload.destinationCards,
+      destinationDetails: payload.destinationDetails,
       organizers: payload.organizers,
       manifest: payload.manifest,
     };
@@ -107,22 +179,27 @@ async function getCachedCatalogFallback() {
 
     return {
       homepage: {
-        featuredTreks: [],
+        featuredDestinations: [],
+        routeCount: 0,
         organizerCount: 0,
-        trekCount: 0,
         packageCount: 0,
         priceFloor: null,
         lastUpdatedAt: null,
       } satisfies HomepageData,
       treks: [] as TrekSummary[],
+      destinationCards: [] as DestinationCitySummary[],
+      destinationDetails: {} as Record<string, DestinationCityComparison>,
       organizers: [] as OrganizerSummary[],
       manifest: {
         generatedAt: new Date(0).toISOString(),
         trekSlugs: [],
+        destinationRoutePaths: [],
         organizerSlugs: [],
         featuredTrekSlugs: [],
+        featuredDestinationRoutePaths: [],
         featuredOrganizerSlugs: [],
         prerenderTrekSlugs: [],
+        prerenderDestinationRoutePaths: [],
         prerenderOrganizerSlugs: [],
       } satisfies SnapshotManifest,
     };
@@ -137,7 +214,7 @@ async function getCachedSnapshotManifest() {
   const snapshot = await readSnapshotManifest();
 
   if (snapshot) {
-    return snapshot;
+    return normalizeManifestSnapshot(snapshot) ?? (await getCachedCatalogFallback()).manifest;
   }
 
   return (await getCachedCatalogFallback()).manifest;
@@ -150,11 +227,89 @@ async function getCachedTreksIndex() {
 
   const snapshot = await readTreksIndexSnapshot();
 
+  if (isDestinationCitySummaryArray(snapshot)) {
+    return snapshot;
+  }
+
+  return (await getCachedCatalogFallback()).destinationCards;
+}
+
+async function getCachedDestinationCityComparison(destinationSlug: string, city: string) {
+  "use cache";
+
+  applyCatalogCache(["catalog", "treks", `destination:${destinationSlug}:${city}`]);
+
+  const snapshot = await readDestinationCityComparisonSnapshot(destinationSlug, city);
+
   if (snapshot) {
     return snapshot;
   }
 
-  return (await getCachedCatalogFallback()).treks;
+  const fallback = await getCachedCatalogFallback();
+
+  const destinationRoutePath = `/treks/${destinationSlug}/${city}`;
+
+  if (fallback.destinationDetails[destinationRoutePath]) {
+    return fallback.destinationDetails[destinationRoutePath];
+  }
+
+  const legacyComparison = await getCachedTrekComparison(destinationSlug);
+
+  if (!legacyComparison) {
+    return null;
+  }
+
+  return buildDestinationCityComparisonFromLegacy(legacyComparison, city);
+}
+
+function matchesDepartureCity(listingCity: string, city: DepartureCityCode) {
+  if (city === "MUMBAI") {
+    return listingCity === "MUMBAI" || listingCity === "MIXED";
+  }
+
+  return listingCity === "PUNE" || listingCity === "MIXED";
+}
+
+function coerceComparisonPackage(item: ComparisonPackage): ComparisonPackage {
+  const fallbackIdentity = getCanonicalTrekIdentity(item.title, item.trekName ?? null);
+  const variantTags =
+    Array.isArray(item.variantTags) && item.variantTags.length > 0
+      ? (item.variantTags as VariantTagCode[])
+      : fallbackIdentity.variantTags;
+  const variantSignature = item.variantSignature || buildVariantSignature(variantTags);
+  const variantLabel = item.variantLabel || buildVariantLabel(variantTags);
+
+  return {
+    ...item,
+    variantTags,
+    variantSignature,
+    variantLabel,
+    nextDepartureAt: item.nextDepartureAt ?? null,
+    trekSummary: item.trekSummary ?? null,
+  };
+}
+
+function buildDestinationCityComparisonFromLegacy(
+  comparison: TrekComparison,
+  city: string,
+): DestinationCityComparison | null {
+  const cityCode = city.toUpperCase() as DepartureCityCode;
+  const packages = comparison.packages
+    .filter((item) => matchesDepartureCity(item.listingCity, cityCode))
+    .map(coerceComparisonPackage);
+
+  if (packages.length === 0) {
+    return null;
+  }
+
+  return buildDestinationCityComparison({
+    trekName: comparison.name,
+    trekSlug: comparison.slug,
+    trekSummary: comparison.summary ?? null,
+    routePath: `/treks/${comparison.slug}/${city}`,
+    city: cityCode,
+    packages,
+  });
 }
 
 async function getCachedHomepageData() {
@@ -164,7 +319,7 @@ async function getCachedHomepageData() {
 
   const snapshot = await readHomepageSnapshot();
 
-  if (snapshot) {
+  if (isHomepageData(snapshot)) {
     return snapshot;
   }
 
@@ -285,14 +440,32 @@ export async function getTrekComparison(slug: string) {
   return getCachedTrekComparison(slug);
 }
 
+export async function getDestinationCityIndex() {
+  return getCachedTreksIndex();
+}
+
+export async function getDestinationCityComparison(destinationSlug: string, city: string) {
+  return getCachedDestinationCityComparison(destinationSlug, city);
+}
+
 export async function getTrekSlugs() {
   const manifest = await getCachedSnapshotManifest();
   return manifest.trekSlugs;
 }
 
+export async function getDestinationRoutePaths() {
+  const manifest = await getCachedSnapshotManifest();
+  return manifest.destinationRoutePaths;
+}
+
 export async function getPrerenderTrekSlugs() {
   const manifest = await getCachedSnapshotManifest();
   return manifest.prerenderTrekSlugs;
+}
+
+export async function getPrerenderDestinationRoutePaths() {
+  const manifest = await getCachedSnapshotManifest();
+  return manifest.prerenderDestinationRoutePaths;
 }
 
 export async function getOrganizerIndex() {
