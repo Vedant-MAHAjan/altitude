@@ -7,9 +7,11 @@ import {
   normalizeWhitespace,
   slugify,
 } from "../../lib/normalization/extractors";
+import { validatePackageForPersistence } from "./validate";
 import type {
   NormalizedScrapedPackage,
   OrganizerScraper,
+  ScraperLogger,
 } from "../types";
 
 function parseDateOnly(value: string | null | undefined) {
@@ -335,6 +337,7 @@ export async function persistPackages(
   scraper: OrganizerScraper,
   packages: NormalizedScrapedPackage[],
   dryRun: boolean,
+  logger?: ScraperLogger,
 ) {
   const prisma = getPrismaClient();
 
@@ -423,6 +426,25 @@ export async function persistPackages(
 
   try {
     for (const packageRow of packages) {
+      // Post-scrape validation
+      const validation = validatePackageForPersistence(packageRow);
+
+      if (validation.warnings.length > 0) {
+        logger?.warn("Package validation warnings", {
+          sourceUrl: packageRow.sourceUrl,
+          title: packageRow.title,
+          warnings: validation.warnings,
+        });
+      }
+
+      if (!validation.valid) {
+        logger?.error("Package validation failed — marking needsReview", {
+          sourceUrl: packageRow.sourceUrl,
+          title: packageRow.title,
+          errors: validation.errors,
+        });
+      }
+
       const trek = await prisma.trek.upsert({
         where: {
           slug: packageRow.trekSlug,
@@ -496,6 +518,7 @@ export async function persistPackages(
           rawExclusionsText: packageRow.rawExclusionsText,
           normalizedSnapshot: packageRow.normalizedSnapshot,
           pageFingerprint: packageRow.pageFingerprint,
+          needsReview: !validation.valid,
           lastSeenAt: new Date(),
           lastScrapedAt: new Date(),
           lastChangedAt: packageChanged ? new Date() : undefined,
@@ -531,6 +554,7 @@ export async function persistPackages(
           rawExclusionsText: packageRow.rawExclusionsText,
           normalizedSnapshot: packageRow.normalizedSnapshot,
           pageFingerprint: packageRow.pageFingerprint,
+          needsReview: !validation.valid,
         },
       });
 

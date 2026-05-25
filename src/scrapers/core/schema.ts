@@ -51,6 +51,7 @@ export const normalizedScrapedPackageSchema = z.object({
   rawExclusionsText: z.string().nullable(),
   normalizedSnapshot: z.record(z.string(), z.any()),
   pageFingerprint: z.string().min(1),
+  scrapeWarnings: z.array(z.string()),
 });
 
 export function validateNormalizedPackage<T>(value: T) {

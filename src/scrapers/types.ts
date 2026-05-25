@@ -60,6 +60,8 @@ export type RawScrapedPackage = {
   departureDates?: RawDepartureDate[];
   pageText?: string | null;
   rawSnapshot?: Record<string, JsonValue>;
+  /** Warnings collected during scraping (e.g. PRICE_MISMATCH). Flows into validation. */
+  _scrapeWarnings?: string[];
 };
 
 export type NormalizedScrapedPackage = {
@@ -95,6 +97,8 @@ export type NormalizedScrapedPackage = {
   rawExclusionsText: string | null;
   normalizedSnapshot: Record<string, JsonValue>;
   pageFingerprint: string;
+  /** Warnings collected during scraping that flow into post-scrape validation. */
+  scrapeWarnings: string[];
 };
 
 export type CrawlStrategy = "LISTING_PAGE" | "DETAIL_PAGE";

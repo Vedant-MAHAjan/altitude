@@ -70,6 +70,7 @@ model TrekPackage {
   /// Cached current price for compare-table reads. Historical prices live in PriceHistory.
   priceInr            Int?
   priceText           String?
+  needsReview         Boolean         @default(false)
   currencyCode        String          @default("INR")
   durationText        String?
   locationText        String?

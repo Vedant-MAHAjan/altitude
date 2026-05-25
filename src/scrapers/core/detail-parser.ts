@@ -185,9 +185,9 @@ export async function parseTourDetailPage(
   const detailPriceText = extractFirstPriceText(mergeText(costText, pageText));
   const detailPrice = parsePriceNumeric(detailPriceText);
   const listingPrice = parsePriceNumeric(options.listingPriceText);
+  const scrapeWarnings: string[] = [];
 
   if (
-    options.logger &&
     detailPrice &&
     listingPrice &&
     detailPrice !== listingPrice
@@ -195,7 +195,10 @@ export async function parseTourDetailPage(
     const deviation = Math.abs(detailPrice - listingPrice) / listingPrice;
 
     if (deviation > 0.2) {
-      options.logger.warn("PRICE_MISMATCH", {
+      const warning = `PRICE_MISMATCH: listing=${options.listingPriceText} (${listingPrice}) vs detail=${detailPriceText} (${detailPrice}), deviation=${Math.round(deviation * 100)}%`;
+      scrapeWarnings.push(warning);
+
+      options.logger?.warn("PRICE_MISMATCH", {
         sourceUrl: options.pageUrl,
         listingPrice,
         listingPriceText: options.listingPriceText,
@@ -245,5 +248,6 @@ export async function parseTourDetailPage(
         highlightsText,
       },
     },
+    _scrapeWarnings: scrapeWarnings.length > 0 ? scrapeWarnings : undefined,
   };
 }

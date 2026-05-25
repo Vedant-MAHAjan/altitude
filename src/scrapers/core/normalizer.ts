@@ -131,5 +131,6 @@ export function normalizeScrapedPackage(
       ...normalizedSnapshot,
       rawSnapshot: rawPackage.rawSnapshot ?? null,
     }),
+    scrapeWarnings: rawPackage._scrapeWarnings ?? [],
   });
 }

@@ -61,6 +61,7 @@ async function executeScraper(
       scraper,
       normalizedPackages,
       options.dryRun,
+      logger,
     );
 
     logger.info("Finished organizer scrape", {
