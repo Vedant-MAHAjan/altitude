@@ -1,5 +1,5 @@
 import { gotoAndSettle, withChromiumPage } from "../core/browser";
-import { collectTourLinks } from "../core/content";
+import { collectTourLinksWithPrices } from "../core/content";
 import { withRetry } from "../core/retry";
 import type { OrganizerDetailParser } from "./parsers/shared";
 import type {
@@ -27,11 +27,11 @@ export function createVacationLabsOrganizerScraper(
     sources: config.sources,
     async scrape(context) {
       return withChromiumPage(context.userAgent, async (page) => {
-        const discoveredLinks: string[] = [];
+        const discoveredLinks: Array<{ url: string; listingPriceText: string | null }> = [];
 
         for (const source of config.sources) {
           if (source.crawlStrategy === "DETAIL_PAGE") {
-            discoveredLinks.push(source.sourceUrl);
+            discoveredLinks.push({ url: source.sourceUrl, listingPriceText: null });
             continue;
           }
 
@@ -50,18 +50,18 @@ export function createVacationLabsOrganizerScraper(
             },
           );
 
-          const links = await collectTourLinks(page, source.sourceUrl);
+          const linksWithPrices = await collectTourLinksWithPrices(page, source.sourceUrl);
           const limitedLinks = context.maxToursPerSource
-            ? links.slice(0, context.maxToursPerSource)
-            : links;
+            ? linksWithPrices.slice(0, context.maxToursPerSource)
+            : linksWithPrices;
 
-          if (context.maxToursPerSource && links.length > context.maxToursPerSource) {
+          if (context.maxToursPerSource && linksWithPrices.length > context.maxToursPerSource) {
             context.logger.warn("Discovery truncated by tour limit", {
               organizer: config.organizer.slug,
               source: source.label,
-              totalAvailable: links.length,
+              totalAvailable: linksWithPrices.length,
               limit: context.maxToursPerSource,
-              skipped: links.length - context.maxToursPerSource,
+              skipped: linksWithPrices.length - context.maxToursPerSource,
             });
           }
 
@@ -74,29 +74,41 @@ export function createVacationLabsOrganizerScraper(
           discoveredLinks.push(...limitedLinks);
         }
 
-        const uniqueLinks = [...new Set(discoveredLinks)];
+        // Deduplicate by URL, keeping first occurrence's price
+        const seen = new Set<string>();
+        const uniqueLinks: Array<{ url: string; listingPriceText: string | null }> = [];
+
+        for (const link of discoveredLinks) {
+          if (!seen.has(link.url)) {
+            seen.add(link.url);
+            uniqueLinks.push(link);
+          }
+        }
+
         const packages: RawScrapedPackage[] = [];
   let skippedPackages = 0;
 
         for (const link of uniqueLinks) {
           const source =
             config.sources.find((candidate) =>
-              link.startsWith(candidate.sourceUrl),
+              link.url.startsWith(candidate.sourceUrl),
             ) ?? config.sources[0];
 
           const rawPackage = await withRetry(
             async () => {
               await gotoAndSettle(
                 page,
-                link,
+                link.url,
                 context.logger,
                 context.navigationTimeoutMs,
               );
 
               return config.parsePackage({
                 page,
-                pageUrl: link,
+                pageUrl: link.url,
                 source,
+                listingPriceText: link.listingPriceText,
+                logger: context.logger,
               });
             },
             {

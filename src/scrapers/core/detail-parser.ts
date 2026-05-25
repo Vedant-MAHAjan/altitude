@@ -14,7 +14,7 @@ import {
   getPageText,
   uniqueStrings,
 } from "./content";
-import type { RawScrapedPackage, ScraperSource } from "../types";
+import type { RawScrapedPackage, ScraperLogger, ScraperSource } from "../types";
 
 type ParseTourDetailPageOptions = {
   page: Page;
@@ -22,7 +22,71 @@ type ParseTourDetailPageOptions = {
   source: ScraperSource;
   platform: string;
   titleSelectors?: string[];
+  /** Price text extracted from the listing/card page, used for cross-reference. */
+  listingPriceText?: string | null;
+  /** Logger instance for diagnostic warnings (e.g. PRICE_MISMATCH). */
+  logger?: ScraperLogger;
 };
+
+// ---------------------------------------------------------------------------
+// Accordion expansion
+// ---------------------------------------------------------------------------
+
+/**
+ * Expand collapsed accordion sections on Vacation Labs (and similar) pages.
+ * Silently skips if no accordions are found.
+ */
+async function expandCollapsedAccordions(page: Page): Promise<void> {
+  // Strategy 1: aria-expanded="false" buttons/triggers
+  const ariaCollapsed = page.locator(
+    '[aria-expanded="false"]:is(button, [role="button"], .accordion-toggle, .panel-heading a, [data-toggle="collapse"])',
+  );
+  const ariaCount = await ariaCollapsed.count().catch(() => 0);
+
+  for (let i = 0; i < ariaCount; i++) {
+    await ariaCollapsed.nth(i).click({ timeout: 2000 }).catch(() => {});
+  }
+
+  // Strategy 2: Vacation Labs specific — collapsed panels with .panel-collapse:not(.in)
+  const vlPanels = page.locator(".panel-collapse:not(.in)");
+  const vlCount = await vlPanels.count().catch(() => 0);
+
+  if (vlCount > 0) {
+    // Click the sibling heading toggles
+    const vlToggles = page.locator(
+      '.panel-heading a.collapsed, .panel-heading [data-toggle="collapse"]',
+    );
+    const toggleCount = await vlToggles.count().catch(() => 0);
+
+    for (let i = 0; i < toggleCount; i++) {
+      await vlToggles.nth(i).click({ timeout: 2000 }).catch(() => {});
+    }
+  }
+
+  // Strategy 3: Generic details/summary elements that are closed
+  const closedDetails = page.locator("details:not([open])");
+  const detailsCount = await closedDetails.count().catch(() => 0);
+
+  for (let i = 0; i < detailsCount; i++) {
+    await closedDetails.nth(i).locator("summary").click({ timeout: 2000 }).catch(() => {});
+  }
+
+  // Brief settle after expansion clicks
+  if (ariaCount > 0 || vlCount > 0 || detailsCount > 0) {
+    await page.waitForTimeout(500);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Price cross-reference
+// ---------------------------------------------------------------------------
+
+function parsePriceNumeric(priceText: string | null | undefined): number | null {
+  if (!priceText) return null;
+  const digits = priceText.replace(/[^\d]/g, "");
+  const value = Number(digits);
+  return Number.isFinite(value) && value > 0 ? value : null;
+}
 
 function mergeText(...values: Array<string | null | undefined>) {
   const merged = uniqueStrings(values.flatMap((value) => (value ? [value] : []))).join("\n");
@@ -32,6 +96,9 @@ function mergeText(...values: Array<string | null | undefined>) {
 export async function parseTourDetailPage(
   options: ParseTourDetailPageOptions,
 ): Promise<RawScrapedPackage> {
+  // Expand any collapsed accordions before reading page text
+  await expandCollapsedAccordions(options.page);
+
   const pageText = await getPageText(options.page);
   const title =
     (await getFirstText(options.page, options.titleSelectors ?? ["h1", "main h1"])) ??
@@ -114,12 +181,37 @@ export async function parseTourDetailPage(
     ...extractPickupLines(otherInformationText),
   );
 
+  // Price cross-reference: detail page price is canonical
+  const detailPriceText = extractFirstPriceText(mergeText(costText, pageText));
+  const detailPrice = parsePriceNumeric(detailPriceText);
+  const listingPrice = parsePriceNumeric(options.listingPriceText);
+
+  if (
+    options.logger &&
+    detailPrice &&
+    listingPrice &&
+    detailPrice !== listingPrice
+  ) {
+    const deviation = Math.abs(detailPrice - listingPrice) / listingPrice;
+
+    if (deviation > 0.2) {
+      options.logger.warn("PRICE_MISMATCH", {
+        sourceUrl: options.pageUrl,
+        listingPrice,
+        listingPriceText: options.listingPriceText,
+        detailPrice,
+        detailPriceText,
+        deviationPercent: Math.round(deviation * 100),
+      });
+    }
+  }
+
   return {
     title,
     sourceUrl: options.pageUrl,
     canonicalTrekName: options.source.canonicalTrekName,
     canonicalTrekSlug: options.source.canonicalTrekSlug,
-    priceText: extractFirstPriceText(mergeText(costText, pageText)),
+    priceText: detailPriceText,
     durationText: extractDurationText(mergeText(basicInfoText, itineraryText, pageText)),
     locationText: extractLocationText(pageText),
     transportText,

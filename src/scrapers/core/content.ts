@@ -108,6 +108,78 @@ export async function collectTourLinks(page: Page, baseUrl: string) {
   });
 }
 
+export type TourLinkWithPrice = {
+  url: string;
+  listingPriceText: string | null;
+};
+
+/**
+ * Collect tour links from listing page cards along with their displayed price text.
+ * Falls back to null price if no price is found on the card.
+ */
+export async function collectTourLinksWithPrices(
+  page: Page,
+  baseUrl: string,
+): Promise<TourLinkWithPrice[]> {
+  const baseHost = new URL(baseUrl).hostname.replace(/^www\./i, "");
+  const tourPattern = /\/tours\/[^/]+/i;
+  const excludePatterns = [/\/itineraries\//i, /\/blog\//i];
+  const pricePattern = /(?:₹|Rs\.?|INR)\s*[\d,]+/i;
+
+  // Evaluate cards in-page to extract both href and closest price text
+  const cardData = await page.evaluate(
+    ({ priceRe }) => {
+      const anchors = Array.from(document.querySelectorAll("a[href]"));
+      const results: Array<{ href: string; priceText: string | null }> = [];
+
+      for (const anchor of anchors) {
+        const href = anchor.getAttribute("href");
+
+        if (!href) continue;
+
+        // Look for price in the card/parent container
+        const card =
+          anchor.closest(".tour-card, .card, .listing-item, [class*='tour'], article") ??
+          anchor.parentElement;
+        const cardText = card?.textContent ?? "";
+        const match = cardText.match(new RegExp(priceRe, "i"));
+
+        results.push({
+          href,
+          priceText: match ? match[0].trim() : null,
+        });
+      }
+
+      return results;
+    },
+    { priceRe: pricePattern.source },
+  );
+
+  // Filter and deduplicate
+  const seen = new Set<string>();
+  const links: TourLinkWithPrice[] = [];
+
+  for (const { href, priceText } of cardData) {
+    const absolute = absoluteUrl(baseUrl, href);
+
+    if (!absolute) continue;
+
+    const url = new URL(absolute);
+    const host = url.hostname.replace(/^www\./i, "");
+    const path = url.pathname;
+
+    if (host !== baseHost) continue;
+    if (!tourPattern.test(path)) continue;
+    if (excludePatterns.some((p) => p.test(path))) continue;
+    if (seen.has(absolute)) continue;
+
+    seen.add(absolute);
+    links.push({ url: absolute, listingPriceText: priceText });
+  }
+
+  return links;
+}
+
 type LinkCollectorOptions = {
   includePathPatterns: RegExp[];
   excludePathPatterns?: RegExp[];
