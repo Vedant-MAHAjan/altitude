@@ -1,9 +1,8 @@
-import { createLogger } from "@/scrapers/core/logger";
-
 import { generateStaticCatalogData } from "@/lib/catalog/generator";
+import { createCatalogLogger } from "@/lib/catalog/logger";
 
 async function main() {
-  await generateStaticCatalogData(createLogger("catalog:snapshots"));
+  await generateStaticCatalogData(createCatalogLogger("catalog:snapshots"));
 }
 
 main().catch((error) => {

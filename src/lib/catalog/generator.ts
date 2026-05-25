@@ -1,7 +1,6 @@
-import type { ScraperLogger } from "@/scrapers/types";
-
 import { getPrismaClient } from "@/lib/prisma";
 import { buildCatalogSnapshotPayload, buildTrekSearchEntries } from "@/lib/catalog/builders";
+import type { CatalogLogger } from "@/lib/catalog/logger";
 import {
   readAllActivePackageProjections,
   readTrekSearchEntries,
@@ -15,7 +14,7 @@ type SnapshotGenerationResult = {
   packageCount: number;
 };
 
-function createNoopLogger(): ScraperLogger {
+function createNoopLogger(): CatalogLogger {
   return {
     child() {
       return createNoopLogger();
@@ -28,7 +27,7 @@ function createNoopLogger(): ScraperLogger {
 }
 
 export async function generateStaticCatalogData(
-  logger: ScraperLogger = createNoopLogger(),
+  logger: CatalogLogger = createNoopLogger(),
 ): Promise<SnapshotGenerationResult> {
   const prisma = getPrismaClient();
 
