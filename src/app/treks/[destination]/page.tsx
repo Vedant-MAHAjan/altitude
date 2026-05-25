@@ -65,10 +65,7 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
       {/* Hero banner */}
-      <section className="glass relative overflow-hidden rounded-3xl p-8 md:p-12">
-        {/* Ambient glow */}
-        <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-primary/10 blur-[80px]" />
-        <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-accent/[0.06] blur-[60px]" />
+      <section className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm ring-1 ring-border md:p-12">
 
         <div className="relative">
           <div className="flex flex-wrap items-center gap-2">
@@ -139,7 +136,7 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
 
 function SummaryCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="glass rounded-2xl p-5 transition-all duration-300 hover:border-primary/20 hover:shadow-[0_0_20px_rgba(52,211,153,0.06)]">
+    <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-border transition-all duration-300 hover:shadow-md hover:ring-primary/30">
       <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{label}</div>
       <div className="mt-1.5 font-display text-lg font-bold text-foreground">{value}</div>
     </div>

@@ -74,7 +74,7 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
 
   return (
     <div className="relative w-full max-w-lg" ref={containerRef}>
-      <div className="flex items-center rounded-xl border border-border/50 bg-secondary/50 transition-all focus-within:border-primary/30 focus-within:bg-secondary focus-within:shadow-[0_0_20px_rgba(52,211,153,0.08)]">
+      <div className="flex items-center rounded-xl border border-border bg-white transition-all focus-within:border-primary/40 focus-within:shadow-sm">
         <Search className="ml-3 h-4 w-4 shrink-0 text-muted-foreground" />
         <input
           aria-label="Search treks"
@@ -94,7 +94,7 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
 
       {/* Dropdown */}
       {isOpen && matches.length > 0 && (
-        <div className="glass-strong absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.3)]">
+        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-border">
           <ul className="py-1.5">
             {matches.map((trek, idx) => (
               <li key={trek.slug}>

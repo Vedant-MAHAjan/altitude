@@ -50,3 +50,14 @@ jobs:
           git add public/snapshots
           git commit -m "chore: refresh static catalog snapshots"
           git push
+
+      - name: Trigger ISR revalidation on Vercel
+        if: ${{ success() && env.VERCEL_REVALIDATE_URL != '' }}
+        run: |
+          curl -sf -X POST "$VERCEL_REVALIDATE_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"secret\": \"$CRON_REVALIDATE_SECRET\"}" \
+            || echo "Revalidation request failed (non-fatal)"
+        env:
+          VERCEL_REVALIDATE_URL: ${{ secrets.VERCEL_REVALIDATE_URL }}
+          CRON_REVALIDATE_SECRET: ${{ secrets.CRON_REVALIDATE_SECRET }}

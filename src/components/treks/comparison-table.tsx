@@ -119,7 +119,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
     <div className="space-y-5">
       {/* Sticky filter bar */}
       <div className="sticky top-[73px] z-30 -mx-1 px-1">
-        <div className="glass-strong overflow-hidden rounded-2xl">
+        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border">
           {/* Filter header */}
           <button
             className="flex w-full items-center justify-between px-5 py-3.5 text-left"
@@ -224,11 +224,11 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
       </div>
 
       {/* Table */}
-      <div className="glass overflow-hidden rounded-2xl">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="border-border/30 bg-secondary/30">
+              <TableRow className="border-border bg-muted/50">
                 <TableHead className="min-w-44 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Organizer</TableHead>
                 <TableHead className="min-w-52 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Package</TableHead>
                 <TableHead className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Price</TableHead>

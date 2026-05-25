@@ -10,10 +10,10 @@ export async function SiteHeader() {
   const treks = await getTrekSearchIndex();
 
   return (
-    <header className="glass-strong sticky top-0 z-50">
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-6 py-3.5">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-6 py-3">
         <Link className="flex shrink-0 items-center gap-2.5" href="/">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/20 text-primary shadow-[0_0_20px_rgba(52,211,153,0.15)]">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <Mountain className="h-4 w-4" />
           </div>
           <span className="hidden font-display text-base font-bold tracking-tight text-foreground sm:inline">

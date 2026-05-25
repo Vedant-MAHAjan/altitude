@@ -114,8 +114,7 @@ export default async function DestinationCityPage({
       </div>
 
       {/* Hero section */}
-      <section className="glass relative overflow-hidden rounded-3xl p-8 md:p-12">
-        <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-primary/10 blur-[80px]" />
+      <section className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-sm ring-1 ring-border md:p-12">
         <div className="relative">
           <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
             {comparison.destinationName}

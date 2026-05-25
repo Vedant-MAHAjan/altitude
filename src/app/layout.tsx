@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Playfair_Display, Caveat } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -7,16 +7,22 @@ import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const bodyFont = Inter({
+const bodyFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
 });
 
-const displayFont = Space_Grotesk({
+const displayFont = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "700"],
+  weight: ["500", "700", "900"],
+});
+
+const editorialFont = Caveat({
+  subsets: ["latin"],
+  variable: "--font-editorial",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -50,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${bodyFont.variable} ${displayFont.variable}`} lang="en" data-scroll-behavior="smooth">
-      <body className="font-sans text-foreground antialiased">
+    <html className={`${bodyFont.variable} ${displayFont.variable} ${editorialFont.variable}`} lang="en" data-scroll-behavior="smooth">
+      <body className="font-sans text-foreground antialiased paper-texture">
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <div className="flex-1">{children}</div>

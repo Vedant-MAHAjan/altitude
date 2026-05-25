@@ -82,7 +82,7 @@ export function HeroSearch({ treks }: HeroSearchProps) {
       animate="visible"
       transition={{ ...defaultTransition, delay: 0.35 }}
     >
-      <div className="glass relative flex items-center overflow-hidden rounded-2xl transition-shadow duration-300 focus-within:shadow-[0_0_30px_rgba(52,211,153,0.1)] focus-within:border-primary/30">
+      <div className="relative flex items-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border transition-shadow duration-300 focus-within:shadow-md focus-within:ring-primary/40">
         <Search className="ml-5 h-5 w-5 shrink-0 text-muted-foreground" />
         <input
           aria-label="Search treks"
@@ -99,7 +99,7 @@ export function HeroSearch({ treks }: HeroSearchProps) {
           value={query}
         />
         <button
-          className="mr-2 flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-medium text-primary-foreground shadow-[0_0_15px_rgba(52,211,153,0.2)] transition-all hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(52,211,153,0.3)] active:scale-95 md:mr-3 md:h-11 md:px-5"
+          className="mr-2 flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90 active:scale-95 md:mr-3 md:h-11 md:px-5"
           onClick={() => {
             if (matches[0]) navigateToTrek(matches[0].slug);
             else {
@@ -117,7 +117,7 @@ export function HeroSearch({ treks }: HeroSearchProps) {
       {/* Dropdown */}
       {isOpen && matches.length > 0 && (
         <motion.div
-          className="glass-strong absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.3)]"
+          className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-border"
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}

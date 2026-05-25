@@ -1,6 +1,6 @@
 export function TrekCardSkeleton() {
   return (
-    <div className="glass overflow-hidden rounded-3xl p-1">
+    <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border p-1">
       <div className="skeleton h-32 rounded-2xl" />
       <div className="space-y-3 px-4 pb-4 pt-4">
         <div className="skeleton h-6 w-3/4 rounded-lg" />

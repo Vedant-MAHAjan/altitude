@@ -1,0 +1,8 @@
+# Exclude from Vercel deployment artifact
+docs/
+scripts/
+src/scrapers/
+*.test.ts
+*.test.tsx
+CLAUDE.md
+AGENTS.md

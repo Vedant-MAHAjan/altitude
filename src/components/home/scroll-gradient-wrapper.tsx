@@ -1,7 +1,6 @@
 "use client";
 
-import { ScrollGradient } from "@/components/ui/atmosphere";
-
+/** No-op: scroll gradient removed in outdoor magazine redesign */
 export function ScrollGradientWrapper() {
-  return <ScrollGradient />;
+  return null;
 }

@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { BarChart3, Clock, IndianRupee, Layers, Shield, Zap } from "lucide-react";
 
-import { staggerContainer, fadeUp, defaultTransition, cinematicReveal, cinematicTransition } from "@/lib/motion";
+import { TerrainDivider } from "@/components/ui/atmosphere";
+import { staggerContainer, fadeUp, defaultTransition } from "@/lib/motion";
 
 const features = [
   {
@@ -46,25 +47,23 @@ const features = [
 
 export function ValueProps() {
   return (
-    <section className="relative border-t border-border/30">
-      {/* Top glow line */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+    <section className="relative bg-secondary/40">
+      {/* Ridge terrain top */}
+      <div className="text-secondary/40">
+        <TerrainDivider variant="ridge" />
+      </div>
 
       <motion.div
-        className="mx-auto max-w-7xl px-6 py-20 md:py-32"
+        className="mx-auto max-w-7xl px-6 py-16 md:py-24"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        <motion.div
-          className="text-center"
-          variants={cinematicReveal}
-          transition={cinematicTransition}
-        >
-          <h2 className="font-display text-3xl font-bold md:text-5xl">
+        <motion.div className="text-center" variants={fadeUp} transition={defaultTransition}>
+          <h2 className="font-display text-3xl font-bold text-foreground md:text-5xl">
             Built for trekkers,{" "}
-            <span className="text-muted-foreground/40">not tourists</span>
+            <span className="text-muted-foreground">not tourists</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             We compare what actually matters when you&apos;re choosing between five organizers running the same trail.
@@ -75,15 +74,12 @@ export function ValueProps() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="glass group relative overflow-hidden rounded-2xl p-6 transition-all duration-500 hover:border-primary/20 hover:shadow-[0_0_30px_rgba(52,211,153,0.06)]"
+              className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-border transition-all duration-300 hover:shadow-md hover:ring-primary/30"
               variants={fadeUp}
               transition={{ ...defaultTransition, delay: index * 0.06 }}
             >
-              {/* Hover glow */}
-              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/[0.04] opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-
               <div className="relative">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(52,211,153,0.15)]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary/15">
                   <feature.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-display text-lg font-semibold text-foreground">
@@ -92,7 +88,7 @@ export function ValueProps() {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {feature.description}
                 </p>
-                <p className="mt-2 text-xs italic text-primary/50">
+                <p className="mt-2 font-editorial text-xs text-accent/80 italic">
                   {feature.quip}
                 </p>
               </div>
