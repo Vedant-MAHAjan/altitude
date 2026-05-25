@@ -3,16 +3,22 @@
   "slug": "bhatakna",
   "websiteUrl": "https://www.bhatakna.com",
   "description": "Vacation Labs based organizer with trip calendar, fireflies trek collection, and detailed itinerary pages.",
-  "packageCount": 17,
-  "activeTreks": 13,
+  "packageCount": 22,
+  "activeTreks": 18,
   "priceMin": 250,
-  "priceMax": 16499,
+  "priceMax": 39499,
   "pickupLocations": [
     "Nashik",
     "Nashik Phata",
-    "Bari"
+    "Bari",
+    "Borivali",
+    "Ghatkopar",
+    "Thane",
+    "Kalyan",
+    "Chembur",
+    "Sion"
   ],
-  "updatedAt": "2026-05-25T05:23:28.379Z",
+  "updatedAt": "2026-05-25T10:23:18.003Z",
   "treks": [
     {
       "name": "Cycling",
@@ -47,8 +53,16 @@
       "slug": "beach-camping-alibaug"
     },
     {
+      "name": "Aadrai Jungle Trek",
+      "slug": "aadrai-jungle-trek"
+    },
+    {
       "name": "Vasota Jungle",
       "slug": "vasota-jungle"
+    },
+    {
+      "name": "Alang Madan Kulang",
+      "slug": "alang-madan-kulang"
     },
     {
       "name": "Hampi Backpacking",
@@ -65,6 +79,18 @@
     {
       "name": "Spiti Valley Bliss In Budget",
       "slug": "spiti-valley-bliss-in-budget"
+    },
+    {
+      "name": "7 Days Leh Ladakh With Turtuk Village",
+      "slug": "7-days-leh-ladakh-with-turtuk-village"
+    },
+    {
+      "name": "10 Days Srinagar Leh Manali Bike",
+      "slug": "10-days-srinagar-leh-manali-bike"
+    },
+    {
+      "name": "10 Days Delhi Leh Ladhak Delhi With Umling La Hanle",
+      "slug": "10-days-delhi-leh-ladhak-delhi-with-umling-la-hanle"
     }
   ],
   "packages": [
@@ -82,7 +108,7 @@
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "NIGHT_TREK"
       ],
@@ -95,9 +121,9 @@
         "Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:21.286Z",
-      "updatedAtMs": 1779686601286,
-      "searchText": "bhatakna mumbai midnight cycling cycling night trek mixed tea and snacks tea and snacks"
+      "lastUpdatedAt": "2026-05-25T10:23:11.009Z",
+      "updatedAtMs": 1779704591009,
+      "searchText": "bhatakna mumbai midnight cycling cycling night trek mumbai tea and snacks tea and snacks"
     },
     {
       "id": "cmpe5sdxp01jb8knhl10igr7g",
@@ -453,6 +479,44 @@
       "searchText": "bhatakna beach camping alibaug beach camping alibaug camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
+      "id": "cmpl1kql0007f1wnhnt5kex68",
+      "title": "Aadrai Jungle Trek Corporate Special",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Aadrai Jungle Trek",
+      "trekSlug": "aadrai-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/aadrai-jungle-trek-corporate-special-119692",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Ghatkopar",
+        "Thane",
+        "Kalyan",
+        "Chembur",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:23:18.003Z",
+      "updatedAtMs": 1779704598003,
+      "searchText": "bhatakna aadrai jungle trek corporate special aadrai jungle trek trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion"
+    },
+    {
       "id": "cmpe5sd2e01ir8knhed3zep44",
       "title": "Vasota Jungle Trek With camping pune",
       "organizerName": "Bhatakna",
@@ -483,6 +547,37 @@
       "lastUpdatedAt": "2026-05-25T05:23:24.981Z",
       "updatedAtMs": 1779686604981,
       "searchText": "bhatakna vasota jungle trek with camping pune vasota jungle camping mixed breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "cmpl1kpcv00631wnhw65jmvat",
+      "title": "AMK - Alang Madan Kulang Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Alang Madan Kulang",
+      "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/alang-madan-kulang-trek",
+      "priceInr": 2600,
+      "priceText": "₹2,600",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:23:16.494Z",
+      "updatedAtMs": 1779704596494,
+      "searchText": "bhatakna amk - alang madan kulang trek alang madan kulang trek mumbai breakfast, lunch, dinner, tea and snacks breakfast, lunch, dinner, tea and snacks"
     },
     {
       "id": "cmpfjn63g01z8v2nhtuct7fkt",
@@ -608,6 +703,97 @@
       "lastUpdatedAt": "2026-05-21T13:45:55.950Z",
       "updatedAtMs": 1779371155950,
       "searchText": "bhatakna spiti valley bliss in budget spiti valley bliss in budget trek mixed lunch hotel stay lunch hotel stay"
+    },
+    {
+      "id": "cmpl1ko9g004x1wnhdbguamjx",
+      "title": "7 Days Leh Ladakh Tour Package With Turtuk Village",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "7 Days Leh Ladakh With Turtuk Village",
+      "trekSlug": "7-days-leh-ladakh-with-turtuk-village",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/leh-to-leh-6n-turtuk-nubra-pangong",
+      "priceInr": 23999,
+      "priceText": "₹23,999",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:23:15.114Z",
+      "updatedAtMs": 1779704595114,
+      "searchText": "bhatakna 7 days leh ladakh tour package with turtuk village 7 days leh ladakh with turtuk village trek other hotel stay hotel stay"
+    },
+    {
+      "id": "cmpl1knk3003n1wnhq96e9q3o",
+      "title": "10 Days Srinagar Leh Manali Bike Trip",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "10 Days Srinagar Leh Manali Bike",
+      "trekSlug": "10-days-srinagar-leh-manali-bike",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/srinagar-leh-manali",
+      "priceInr": 37999,
+      "priceText": "₹ 37,999/-",
+      "transportType": "AC_BUS",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": null,
+      "inclusionHighlights": [],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:23:14.277Z",
+      "updatedAtMs": 1779704594277,
+      "searchText": "bhatakna 10 days srinagar leh manali bike trip 10 days srinagar leh manali bike trek other"
+    },
+    {
+      "id": "cmpl1km5m00201wnh6gnlffpq",
+      "title": "10 Days Delhi Leh Ladhak Delhi with Umling La & Hanle",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "10 Days Delhi Leh Ladhak Delhi With Umling La Hanle",
+      "trekSlug": "10-days-delhi-leh-ladhak-delhi-with-umling-la-hanle",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/11-days-delhi-leh-ladakh",
+      "priceInr": 39499,
+      "priceText": "₹39,499",
+      "transportType": "AC_BUS",
+      "mealPlan": "NOT_INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": null,
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:23:12.203Z",
+      "updatedAtMs": 1779704592203,
+      "searchText": "bhatakna 10 days delhi leh ladhak delhi with umling la & hanle 10 days delhi leh ladhak delhi with umling la hanle trek other tent stay tent stay"
     }
   ]
 }

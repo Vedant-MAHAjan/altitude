@@ -52,13 +52,10 @@ export default function RootLayout({
   return (
     <html className={`${bodyFont.variable} ${displayFont.variable}`} lang="en">
       <body className="font-sans text-foreground antialiased">
-        <div className="relative min-h-screen overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(244,173,66,0.24),transparent_32%),radial-gradient(circle_at_top_right,rgba(34,84,61,0.15),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.76),rgba(255,255,255,0.34))]" />
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <div className="flex-1">{children}</div>
-            <SiteFooter />
-          </div>
+        <div className="relative flex min-h-screen flex-col">
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
         </div>
       </body>
     </html>

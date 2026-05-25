@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import { Clock3, IndianRupee, MapPinned, Trees } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { getPrerenderTrekSlugs, getTrekComparison } from "@/lib/data";
-import { formatPriceRange, formatUpdatedAt } from "@/lib/format";
+import { formatPriceRange } from "@/lib/format";
 import { difficultyLabels } from "@/lib/normalization/catalog";
 import { siteConfig } from "@/lib/site";
 
@@ -20,14 +12,9 @@ const ComparisonTable = dynamic(
   () => import("@/components/treks/comparison-table").then((module) => module.ComparisonTable),
   {
     loading: () => (
-      <div className="space-y-4 rounded-[2rem] border border-border/80 bg-card/80 p-6 shadow-[0_20px_60px_rgba(31,45,36,0.08)]">
-        <div className="h-7 w-48 animate-pulse rounded-full bg-secondary/70" />
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
-          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
-          <div className="h-24 animate-pulse rounded-3xl bg-secondary/70" />
-        </div>
-        <div className="h-72 animate-pulse rounded-[1.5rem] bg-secondary/60" />
+      <div className="space-y-4">
+        <div className="h-14 animate-pulse rounded-2xl bg-muted/60" />
+        <div className="h-72 animate-pulse rounded-2xl bg-muted/40" />
       </div>
     ),
   },
@@ -77,123 +64,81 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
 
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
-      <section className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-        <Card className="overflow-hidden border-none bg-[linear-gradient(145deg,rgba(34,84,61,0.96),rgba(53,110,82,0.88))] text-primary-foreground shadow-[0_30px_90px_rgba(34,84,61,0.22)]">
-          <CardHeader className="space-y-4">
-            <div className="flex flex-wrap items-center gap-3">
-              <Badge className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground" variant="outline">
-                {difficultyLabels[comparison.difficulty]}
-              </Badge>
-              <Badge className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground" variant="outline">
-                {comparison.region ?? "Maharashtra"}
-              </Badge>
-            </div>
-            <CardTitle className="text-4xl sm:text-5xl">{comparison.name}</CardTitle>
-            <CardDescription className="max-w-3xl text-primary-foreground/70">
+      {/* Hero banner */}
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-700/70 p-8 text-primary-foreground shadow-[0_16px_48px_rgba(27,67,50,0.18)] md:p-12">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-60" />
+        <div className="relative">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className="border-white/20 bg-white/10 text-white" variant="outline">
+              {difficultyLabels[comparison.difficulty]}
+            </Badge>
+            <Badge className="border-white/20 bg-white/10 text-white" variant="outline">
+              {comparison.region ?? "Maharashtra"}
+            </Badge>
+          </div>
+          <h1 className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+            {comparison.name}
+          </h1>
+          {comparison.summary && (
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
               {comparison.summary}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl bg-white/10 p-5">
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                Price range
-              </div>
-              <div className="mt-2 font-display text-3xl">
+            </p>
+          )}
+
+          {/* Stats row */}
+          <div className="mt-8 flex flex-wrap gap-6 md:gap-10">
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Price range</div>
+              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
                 {formatPriceRange(comparison.priceMin, comparison.priceMax)}
               </div>
             </div>
-            <div className="rounded-3xl bg-white/10 p-5">
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                Active organizers
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Organizers</div>
+              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
+                {comparison.organizerCount}
               </div>
-              <div className="mt-2 font-display text-3xl">{comparison.organizerCount}</div>
             </div>
-            <div className="rounded-3xl bg-white/10 p-5">
-              <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                Package rows
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Packages</div>
+              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
+                {comparison.packageCount}
               </div>
-              <div className="mt-2 font-display text-3xl">{comparison.packageCount}</div>
             </div>
-          </CardContent>
-        </Card>
-
-        <div className="grid gap-5">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <IndianRupee className="h-5 w-5 text-primary" />
-                Comparison scope
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3 text-sm text-muted-foreground">
-              <p>Price, transport, meals, pickup points, and update freshness.</p>
-              <p>Raw scraped text is preserved in the database; filters operate on normalized enum fields.</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="grid gap-4 p-6 sm:grid-cols-3">
-              <div>
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                  <Clock3 className="h-3 w-3" />
-                  Last updated
-                </div>
-                <div className="mt-2 font-medium">{formatUpdatedAt(comparison.updatedAt)}</div>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                  <MapPinned className="h-3 w-3" />
-                  Pickup coverage
-                </div>
-                <div className="mt-2 font-medium">
-                  {new Set(comparison.packages.flatMap((item) => item.pickupLocations)).size} normalized pickup points
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                  <Trees className="h-3 w-3" />
-                  Train listings
-                </div>
-                <div className="mt-2 font-medium">
-                  {comparison.packages.filter((item) => item.transportType === "TRAIN").length} train-led packages
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          </div>
         </div>
       </section>
 
-      <section className="grid gap-5 md:grid-cols-4">
-        <Card>
-          <CardHeader>
-            <CardDescription>Lowest price</CardDescription>
-            <CardTitle>{formatPriceRange(comparison.summaryTable.lowestPrice, comparison.summaryTable.lowestPrice)}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Cheapest organizer</CardDescription>
-            <CardTitle className="text-2xl">
-              {comparison.summaryTable.cheapestOrganizerName ?? "Not priced yet"}
-            </CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Meals surfaced</CardDescription>
-            <CardTitle className="text-2xl">
-              {comparison.summaryTable.mealsSummary.slice(0, 2).join(", ") || "Not confirmed"}
-            </CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Organizer count</CardDescription>
-            <CardTitle>{comparison.summaryTable.organizerCount}</CardTitle>
-          </CardHeader>
-        </Card>
+      {/* Quick summary cards */}
+      <section className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <SummaryCard
+          label="Lowest price"
+          value={formatPriceRange(comparison.summaryTable.lowestPrice, comparison.summaryTable.lowestPrice)}
+        />
+        <SummaryCard
+          label="Best value from"
+          value={comparison.summaryTable.cheapestOrganizerName ?? "Not priced"}
+        />
+        <SummaryCard
+          label="Meals"
+          value={comparison.summaryTable.mealsSummary.slice(0, 2).join(", ") || "Check listing"}
+        />
+        <SummaryCard
+          label="Organizers"
+          value={String(comparison.summaryTable.organizerCount)}
+        />
       </section>
 
       <ComparisonTable filters={comparison.filters} packages={comparison.packages} />
     </main>
+  );
+}
+
+function SummaryCard({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-2xl border border-border/50 bg-white/70 p-5 backdrop-blur-sm">
+      <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{label}</div>
+      <div className="mt-1.5 font-display text-lg font-bold text-foreground">{value}</div>
+    </div>
   );
 }

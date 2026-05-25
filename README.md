@@ -211,6 +211,8 @@ npm run dev
 
 4. Brand-new blank database, then full local live site:
 
+Use this only when `DATABASE_URL` points to a brand-new Neon project or branch with no existing trek tables or rows.
+
 Run:
 
 ```bash
@@ -223,6 +225,13 @@ Then edit `.env` and set a real `DATABASE_URL`, then run:
 ```bash
 npm run db:generate
 npm run db:push
+npm run scrape
+npm run dev
+```
+
+If `npm run db:push` shows drop warnings like dropping `Trek.location`, `TrekAlias.normalizedValue`, `TrekPackageVariant`, or `VariantTag`, stop immediately. That means the database is not blank. Do not continue with `db:push` on that database. Use the existing-database flow instead:
+
+```bash
 npm run scrape
 npm run dev
 ```
@@ -269,6 +278,13 @@ npm run dev
 
 If `db:push` reports drop warnings, stop and use a fresh Neon branch or disposable database instead of accepting the prompt blindly.
 
+If the database already contains trek data, do not run `db:push`. Use this instead:
+
+```bash
+npm run scrape
+npm run dev
+```
+
 ### Important Prisma note
 
 This repo uses `prisma.config.ts`, and Prisma CLI commands resolve `DATABASE_URL` from that config. That means:
@@ -303,6 +319,13 @@ npm run dev
 ```bash
 npm run db:generate
 npm run db:push
+npm run scrape
+npm run dev
+```
+
+If `db:push` shows destructive warnings, you are not on a fresh blank Neon database. Stop and switch to:
+
+```bash
 npm run scrape
 npm run dev
 ```

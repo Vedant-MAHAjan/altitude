@@ -1,12 +1,10 @@
 "use client";
 
 import { startTransition, useDeferredValue, useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { Button } from "@/components/ui/button";
 import type { TrekSearchEntry } from "@/lib/types";
-import { cn } from "@/lib/utils";
 
 type UniversalTrekSearchProps = {
   treks: TrekSearchEntry[];
@@ -21,6 +19,7 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
   const deferredQuery = useDeferredValue(query);
   const normalizedQuery = normalizeSearchTerm(deferredQuery);
 
@@ -29,10 +28,8 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
         [trek.name, ...trek.aliases].some((value) =>
           normalizeSearchTerm(value).includes(normalizedQuery),
         ),
-      )
+      ).slice(0, 8)
     : [];
-
-  const visibleMatches = matches.slice(0, 8);
 
   useEffect(() => {
     function handlePointerDown(event: MouseEvent) {
@@ -49,104 +46,76 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
     startTransition(() => {
       router.push(`/treks/${slug}`);
     });
-
     setIsOpen(false);
     setQuery("");
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    if (!normalizedQuery) {
-      startTransition(() => {
-        router.push("/treks");
-      });
+  function handleKeyDown(event: React.KeyboardEvent) {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setFocusedIndex((prev) => Math.min(prev + 1, matches.length - 1));
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setFocusedIndex((prev) => Math.max(prev - 1, -1));
+    } else if (event.key === "Enter") {
+      event.preventDefault();
+      if (focusedIndex >= 0 && matches[focusedIndex]) {
+        navigateToTrek(matches[focusedIndex].slug);
+      } else if (matches[0]) {
+        navigateToTrek(matches[0].slug);
+      } else {
+        startTransition(() => router.push("/treks"));
+        setIsOpen(false);
+      }
+    } else if (event.key === "Escape") {
       setIsOpen(false);
-      return;
     }
-
-    const exactMatch = treks.find((trek) => {
-      const searchTerms = [trek.name, ...trek.aliases].map(normalizeSearchTerm);
-      return searchTerms.includes(normalizedQuery);
-    });
-
-    const fallbackMatch = visibleMatches[0];
-    const target = exactMatch ?? fallbackMatch;
-
-    if (target) {
-      navigateToTrek(target.slug);
-      return;
-    }
-
-    setIsOpen(false);
   }
 
   return (
-    <div className="relative w-full" ref={containerRef}>
-      <form
-        className="flex items-center gap-3 rounded-[1.75rem] border border-border/70 bg-white/80 p-2 shadow-[0_12px_36px_rgba(31,45,36,0.08)]"
-        onSubmit={handleSubmit}
-      >
-        <div className="flex min-w-0 flex-1 items-center gap-3 rounded-[1.1rem] px-3 py-2">
-          <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
-          <input
-            aria-label="Search all treks"
-            className="min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
-            onChange={(event) => setQuery(event.target.value)}
-            onFocus={() => setIsOpen(true)}
-            placeholder="Search all treks, forts, waterfalls, and camping variants"
-            type="search"
-            value={query}
-          />
-        </div>
-        <Button size="sm" type="submit" variant="outline">
-          Search
-        </Button>
-      </form>
+    <div className="relative w-full max-w-lg" ref={containerRef}>
+      <div className="flex items-center rounded-xl border border-border/60 bg-muted/30 transition-all focus-within:border-primary/20 focus-within:bg-white focus-within:shadow-[0_4px_16px_rgba(27,67,50,0.08)]">
+        <Search className="ml-3 h-4 w-4 shrink-0 text-muted-foreground" />
+        <input
+          aria-label="Search treks"
+          className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-foreground outline-none placeholder:text-muted-foreground"
+          onChange={(event) => {
+            setQuery(event.target.value);
+            setIsOpen(true);
+            setFocusedIndex(-1);
+          }}
+          onFocus={() => setIsOpen(true)}
+          onKeyDown={handleKeyDown}
+          placeholder="Search treks..."
+          type="search"
+          value={query}
+        />
+      </div>
 
-      {isOpen && normalizedQuery ? (
-        <div className="absolute inset-x-0 top-[calc(100%+0.75rem)] z-50 overflow-hidden rounded-[1.75rem] border border-border/70 bg-white/95 shadow-[0_20px_50px_rgba(31,45,36,0.14)] backdrop-blur-xl">
-          <div className="border-b border-border/60 px-4 py-3 text-xs uppercase tracking-[0.24em] text-muted-foreground">
-            {matches.length} matching trek{matches.length === 1 ? "" : "s"}
-          </div>
-          <div className="max-h-80 overflow-y-auto p-2">
-            {visibleMatches.length > 0 ? (
-              visibleMatches.map((trek) => {
-                const matchingAlias = trek.aliases.find((value) =>
-                  normalizeSearchTerm(value).includes(normalizedQuery),
-                );
-
-                return (
-                  <button
-                    className={cn(
-                      "flex w-full items-center justify-between gap-4 rounded-[1.25rem] px-4 py-3 text-left transition hover:bg-secondary/70",
-                      matchingAlias && matchingAlias !== trek.name ? "items-start" : "items-center",
-                    )}
-                    key={trek.slug}
-                    onClick={() => navigateToTrek(trek.slug)}
-                    onMouseDown={(event) => event.preventDefault()}
-                    type="button"
-                  >
-                    <div className="min-w-0">
-                      <div className="truncate font-medium text-foreground">{trek.name}</div>
-                      {matchingAlias && matchingAlias !== trek.name ? (
-                        <div className="mt-1 truncate text-xs text-muted-foreground">
-                          Matched via {matchingAlias}
-                        </div>
-                      ) : null}
-                    </div>
-                    <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground" />
-                  </button>
-                );
-              })
-            ) : (
-              <div className="px-4 py-6 text-sm text-muted-foreground">
-                No trek cards match that search yet.
-              </div>
-            )}
-          </div>
+      {/* Dropdown */}
+      {isOpen && matches.length > 0 && (
+        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl border border-border/50 bg-white/95 shadow-[0_12px_40px_rgba(0,0,0,0.1)] backdrop-blur-xl">
+          <ul className="py-1.5">
+            {matches.map((trek, idx) => (
+              <li key={trek.slug}>
+                <button
+                  className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition-colors ${
+                    idx === focusedIndex
+                      ? "bg-primary/5 text-primary"
+                      : "text-foreground hover:bg-muted/50"
+                  }`}
+                  onClick={() => navigateToTrek(trek.slug)}
+                  onMouseEnter={() => setFocusedIndex(idx)}
+                  type="button"
+                >
+                  <span className="font-medium">{trek.name}</span>
+                  <ArrowRight className="h-3 w-3 text-muted-foreground" />
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
-      ) : null}
+      )}
     </div>
   );
 }

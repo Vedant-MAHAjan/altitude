@@ -1,23 +1,17 @@
-import type { Metadata, Route } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CalendarDays, MapPinned, Mountain, TimerReset } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { ComparisonTable } from "@/components/treks/comparison-table";
 import {
+  getCitiesForDestination,
   getDestinationCityComparison,
   getPrerenderDestinationRoutePaths,
 } from "@/lib/data";
-import { formatCurrency, formatDateShort, formatUpdatedAt } from "@/lib/format";
+import { formatCurrency, formatDateShort } from "@/lib/format";
 import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
 
 function parseRoutePath(routePath: string) {
@@ -70,186 +64,149 @@ export default async function DestinationCityPage({
   params: Promise<{ destination: string; city: string }>;
 }) {
   const { destination, city } = await params;
-  const comparison = await getDestinationCityComparison(destination, city);
+  const [comparison, availableCities] = await Promise.all([
+    getDestinationCityComparison(destination, city),
+    getCitiesForDestination(destination),
+  ]);
 
   if (!comparison) {
     notFound();
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-12 md:py-16">
-      <section className="space-y-6">
-        <div className="flex flex-wrap items-center gap-3">
-          <Button asChild variant="ghost">
-            <Link href="/treks" className="gap-2">
-              <ArrowLeft className="h-4 w-4" />
-              Back to routes
-            </Link>
-          </Button>
-          <Badge variant="outline">{departureCityLabels[comparison.departureCity]}</Badge>
-          <Badge variant="secondary">{comparison.packageCount} packages</Badge>
-        </div>
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
+      {/* Back nav + city toggle */}
+      <div className="flex flex-wrap items-center gap-3">
+        <Button asChild variant="ghost" size="sm" className="rounded-xl">
+          <Link href="/treks" className="gap-2">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            All routes
+          </Link>
+        </Button>
 
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-          <div className="space-y-4">
-            <h1 className="text-5xl leading-none sm:text-6xl">
-              {comparison.destinationName} from {departureCityLabels[comparison.departureCity]}
-            </h1>
-            <p className="max-w-3xl text-lg text-muted-foreground">
-              {comparison.summary ?? "Destination-first comparison for this departure city."}
+        {availableCities.length > 1 && (
+          <div className="flex h-9 items-center gap-0.5 rounded-xl border border-border/60 bg-muted/30 p-0.5">
+            {availableCities.map((c) => {
+              const cityCode = c.toUpperCase() as "MUMBAI" | "PUNE";
+              const isActive = c === city;
+              return (
+                <Link
+                  key={c}
+                  href={`/treks/${destination}/${c}`}
+                  className={`rounded-lg px-3 py-1 text-xs font-medium transition-all ${
+                    isActive
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {departureCityLabels[cityCode]}
+                </Link>
+              );
+            })}
+          </div>
+        )}
+
+        {availableCities.length <= 1 && (
+          <Badge variant="outline" className="rounded-full">
+            {departureCityLabels[comparison.departureCity]}
+          </Badge>
+        )}
+      </div>
+
+      {/* Hero section */}
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-700/70 p-8 text-primary-foreground shadow-[0_16px_48px_rgba(27,67,50,0.18)] md:p-12">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-60" />
+        <div className="relative">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+            {comparison.destinationName}
+          </h1>
+          <p className="mt-2 text-sm text-white/60">
+            from {departureCityLabels[comparison.departureCity]}
+          </p>
+          {comparison.summary && (
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
+              {comparison.summary}
             </p>
-            <div className="flex flex-wrap gap-2">
-              {comparison.availableVariants.map((tag) => (
-                <Badge key={tag} variant="outline">
-                  {variantTagLabels[tag]}
-                </Badge>
-              ))}
-            </div>
+          )}
+
+          {/* Variant tags */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            {comparison.availableVariants.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur"
+              >
+                {variantTagLabels[tag]}
+              </span>
+            ))}
           </div>
 
-          <Card className="border-none bg-[linear-gradient(145deg,rgba(34,84,61,0.96),rgba(53,110,82,0.88))] text-primary-foreground shadow-[0_30px_90px_rgba(34,84,61,0.22)]">
-            <CardHeader className="space-y-4">
-              <Badge className="w-fit border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground" variant="outline">
-                Snapshot
-              </Badge>
-              <CardTitle className="text-3xl leading-tight">One destination, one city, all live organizer options.</CardTitle>
-              <CardDescription className="text-primary-foreground/70">
-                Last structured update: {formatUpdatedAt(comparison.updatedAt)}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl bg-white/10 p-5">
-                <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                  Starting price
-                </div>
-                <div className="mt-2 font-display text-4xl">{formatCurrency(comparison.startingPrice)}</div>
+          {/* Stats */}
+          <div className="mt-8 flex flex-wrap gap-6 md:gap-10">
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">From</div>
+              <div className="mt-1 font-display text-xl font-bold">
+                {formatCurrency(comparison.startingPrice)}
               </div>
-              <div className="rounded-3xl bg-white/10 p-5">
-                <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                  Next departure
-                </div>
-                <div className="mt-2 font-display text-4xl">{formatDateShort(comparison.nextDepartureAt)}</div>
+            </div>
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Next departure</div>
+              <div className="mt-1 font-display text-xl font-bold">
+                {formatDateShort(comparison.nextDepartureAt)}
               </div>
-              <div className="rounded-3xl bg-white/10 p-5">
-                <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                  Organizers
-                </div>
-                <div className="mt-2 font-display text-4xl">{comparison.organizerCount}</div>
-              </div>
-              <div className="rounded-3xl bg-white/10 p-5">
-                <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/60">
-                  Variants
-                </div>
-                <div className="mt-2 font-display text-4xl">{comparison.availableVariants.length}</div>
-              </div>
-            </CardContent>
-          </Card>
+            </div>
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Organizers</div>
+              <div className="mt-1 font-display text-xl font-bold">{comparison.organizerCount}</div>
+            </div>
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-white/50">Packages</div>
+              <div className="mt-1 font-display text-xl font-bold">{comparison.packageCount}</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="grid gap-5 lg:grid-cols-3">
-        {comparison.variantGroups.map((group) => (
-          <Card key={group.signature}>
-            <CardHeader>
-              <div className="flex items-center justify-between gap-3">
-                <Badge variant="secondary">{group.label}</Badge>
-                <span className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-                  {group.packageCount} packages
+      {/* Variant groups */}
+      {comparison.variantGroups.length > 1 && (
+        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {comparison.variantGroups.map((group) => (
+            <div
+              key={group.signature}
+              className="rounded-2xl border border-border/50 bg-white/70 p-5 backdrop-blur-sm"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <Badge variant="secondary" className="rounded-full text-[11px]">
+                  {group.label}
+                </Badge>
+                <span className="text-xs text-muted-foreground">
+                  {group.packageCount} pkgs
                 </span>
               </div>
-              <CardTitle className="text-2xl">Variant group</CardTitle>
-              <CardDescription>
-                Packages with the same variant stack and similar delivery shape.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl bg-white/70 p-4">
-                <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Price floor</div>
-                <div className="mt-2 font-semibold">{formatCurrency(group.priceMin)}</div>
+              <div className="mt-3 flex gap-4 text-sm">
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Floor</div>
+                  <div className="font-semibold">{formatCurrency(group.priceMin)}</div>
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Ceiling</div>
+                  <div className="font-semibold">{formatCurrency(group.priceMax)}</div>
+                </div>
               </div>
-              <div className="rounded-2xl bg-white/70 p-4">
-                <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Price ceiling</div>
-                <div className="mt-2 font-semibold">{formatCurrency(group.priceMax)}</div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
-
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <Card>
-          <CardHeader>
-            <CardDescription>Packages</CardDescription>
-            <CardTitle className="text-4xl">{comparison.packageCount}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Organizers</CardDescription>
-            <CardTitle className="text-4xl">{comparison.organizerCount}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Starting price</CardDescription>
-            <CardTitle className="text-4xl">{formatCurrency(comparison.startingPrice)}</CardTitle>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardDescription>Next departure</CardDescription>
-            <CardTitle className="text-4xl">{formatDateShort(comparison.nextDepartureAt)}</CardTitle>
-          </CardHeader>
-        </Card>
-      </section>
-
-      <section className="grid gap-4 sm:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground">
-              <MapPinned className="h-4 w-4" />
-              Route
             </div>
-            <CardTitle className="text-2xl">{comparison.destinationName}</CardTitle>
-            <CardDescription>{departureCityLabels[comparison.departureCity]}</CardDescription>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground">
-              <Mountain className="h-4 w-4" />
-              Variants
-            </div>
-            <CardTitle className="text-2xl">{comparison.availableVariants.length}</CardTitle>
-            <CardDescription>{comparison.availableVariants.map((tag) => variantTagLabels[tag]).join(", ")}</CardDescription>
-          </CardHeader>
-        </Card>
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground">
-              <CalendarDays className="h-4 w-4" />
-              Freshness
-            </div>
-            <CardTitle className="text-2xl">{formatUpdatedAt(comparison.updatedAt)}</CardTitle>
-            <CardDescription>Snapshot-driven comparison page</CardDescription>
-          </CardHeader>
-        </Card>
-      </section>
+          ))}
+        </section>
+      )}
 
+      {/* Comparison table */}
       <section className="space-y-4">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="text-3xl">Organizer comparison table</h2>
-            <p className="mt-2 max-w-3xl text-muted-foreground">
-              Filter transport, meal plans, and variant stacks while keeping the city fixed to this route.
-            </p>
-          </div>
-          <Button asChild variant="outline">
-            <Link href={comparison.routePath as Route}>
-              Open route snapshot
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </Button>
+        <div>
+          <h2 className="font-display text-2xl font-bold">
+            Compare packages
+          </h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Filter by transport, meals, or variant — city is fixed to {departureCityLabels[comparison.departureCity]}.
+          </p>
         </div>
 
         <ComparisonTable packages={comparison.packages} filters={comparison.filters} showCityFilter={false} />

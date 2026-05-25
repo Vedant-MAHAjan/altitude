@@ -458,6 +458,14 @@ export async function getDestinationRoutePaths() {
   return manifest.destinationRoutePaths;
 }
 
+export async function getCitiesForDestination(destinationSlug: string) {
+  const manifest = await getCachedSnapshotManifest();
+  const prefix = `/treks/${destinationSlug}/`;
+  return manifest.destinationRoutePaths
+    .filter((routePath) => routePath.startsWith(prefix))
+    .map((routePath) => routePath.slice(prefix.length));
+}
+
 export async function getPrerenderTrekSlugs() {
   const manifest = await getCachedSnapshotManifest();
   return manifest.prerenderTrekSlugs;

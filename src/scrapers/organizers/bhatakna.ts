@@ -12,14 +12,8 @@ export const bhataknaScraper = createVacationLabsOrganizerScraper({
   parsePackage: parseBhataknaDetailPage,
   sources: [
     {
-      label: "Treks and camping Mumbai Pune",
-      sourceUrl: "https://www.bhatakna.com/collections/treks-camping-mumbai-pune",
-      parserKey: "bhatakna:v2",
-      crawlStrategy: "LISTING_PAGE",
-    },
-    {
-      label: "Night treks and camping",
-      sourceUrl: "https://www.bhatakna.com/collections/night-treks-camping-near-mumbai",
+      label: "Sitemap (all tours)",
+      sourceUrl: "https://www.bhatakna.com/sitemap",
       parserKey: "bhatakna:v2",
       crawlStrategy: "LISTING_PAGE",
     },

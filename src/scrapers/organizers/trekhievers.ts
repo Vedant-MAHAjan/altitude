@@ -12,14 +12,8 @@ export const trekhieversScraper = createVacationLabsOrganizerScraper({
   parsePackage: parseTrekhieversDetailPage,
   sources: [
     {
-      label: "Mumbai treks",
-      sourceUrl: "https://www.trekhievers.com/collections/treks-in-mumbai",
-      parserKey: "trekhievers:v2",
-      crawlStrategy: "LISTING_PAGE",
-    },
-    {
-      label: "Pune treks",
-      sourceUrl: "https://www.trekhievers.com/collections/treks-in-pune",
+      label: "Sitemap (all tours)",
+      sourceUrl: "https://www.trekhievers.com/sitemap",
       parserKey: "trekhievers:v2",
       crawlStrategy: "LISTING_PAGE",
     },

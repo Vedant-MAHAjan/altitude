@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, Filter, TimerReset } from "lucide-react";
+import { ExternalLink, Filter, SlidersHorizontal } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -25,7 +24,6 @@ import type {
   ComparisonPackage,
   ComparisonTransportType,
   ListingCity,
-  MealPlan,
   VariantTagCode,
 } from "@/lib/types";
 
@@ -68,12 +66,12 @@ function sortPackages(packages: ComparisonPackage[], sortMode: SortMode) {
 
 export function ComparisonTable({ packages, filters, showCityFilter = true }: ComparisonTableProps) {
   const [transportFilter, setTransportFilter] = useState<ComparisonTransportType | "ALL">("ALL");
-  const [mealFilter, setMealFilter] = useState<MealPlan | "ALL">("ALL");
   const [cityFilter, setCityFilter] = useState<CityFilter>("ALL");
   const [variantFilter, setVariantFilter] = useState<VariantFilter>("ALL");
   const [sortMode, setSortMode] = useState<SortMode>("price-asc");
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [filtersOpen, setFiltersOpen] = useState(true);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -84,7 +82,6 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
   }, [query]);
 
   const availableTransports = filters.transportTypes;
-  const availableMeals = filters.mealPlans;
   const availableVariants = coerceVariantTags(filters.variantTags);
 
   function matchesCityFilter(listingCity: ListingCity, filter: CityFilter) {
@@ -102,14 +99,13 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
   const visiblePackages = sortPackages(
     packages.filter((item) => {
       const matchesTransport = transportFilter === "ALL" || item.transportType === transportFilter;
-      const matchesMeal = mealFilter === "ALL" || item.mealPlan === mealFilter;
       const matchesCity = showCityFilter ? matchesCityFilter(item.listingCity, cityFilter) : true;
       const itemVariantTags = coerceVariantTags(item.variantTags);
       const matchesVariant = variantFilter === "ALL" || itemVariantTags.includes(variantFilter);
       const matchesQuery =
         debouncedQuery.length === 0 || item.searchText.includes(debouncedQuery);
 
-      return matchesTransport && matchesMeal && matchesCity && matchesVariant && matchesQuery;
+      return matchesTransport && matchesCity && matchesVariant && matchesQuery;
     }),
     sortMode,
   );
@@ -120,176 +116,199 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
     .sort((left, right) => left - right)[0] ?? null;
 
   return (
-    <div className="space-y-6">
-      <Card className="overflow-hidden">
-        <CardHeader className="gap-4 border-b border-border/70 md:flex-row md:items-end md:justify-between">
-          <div>
-            <CardTitle className="flex items-center gap-2 text-2xl">
-              <Filter className="h-5 w-5 text-primary" />
-              Filters and sorting
-            </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Split Mumbai and Pune treks first, then filter by transport, meals, and concrete inclusion summaries.
-            </p>
-          </div>
-          <div className="grid w-full gap-3 md:max-w-4xl md:grid-cols-5">
-            {showCityFilter ? (
-              <div className="flex h-11 gap-2 rounded-2xl border border-border bg-white/80 p-1 md:col-span-2">
-                {([
-                  ["ALL", "All cities"],
-                  ["MUMBAI", "Mumbai"],
-                  ["PUNE", "Pune"],
-                ] as const).map(([value, label]) => (
-                  <button
-                    className={`flex-1 rounded-xl px-3 text-sm font-medium transition ${
-                      cityFilter === value
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                    key={value}
-                    onClick={() => setCityFilter(value)}
-                    type="button"
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            ) : null}
-            <input
-              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none ring-0 placeholder:text-muted-foreground focus:border-primary"
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search organizer, package, or city"
-              value={query}
-            />
-            <select
-              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none focus:border-primary"
-              onChange={(event) =>
-                setTransportFilter(event.target.value as ComparisonTransportType | "ALL")
-              }
-              value={transportFilter}
-            >
-              <option value="ALL">All transport</option>
-              {availableTransports.map((item) => (
-                <option key={item} value={item}>
-                  {transportLabels[item]}
-                </option>
-              ))}
-            </select>
-            <select
-              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none focus:border-primary"
-              onChange={(event) => setMealFilter(event.target.value as MealPlan | "ALL")}
-              value={mealFilter}
-            >
-              <option value="ALL">All meal plans</option>
-              {availableMeals.map((item) => (
-                <option key={item} value={item}>
-                  {mealPlanLabels[item]}
-                </option>
-              ))}
-            </select>
-            <select
-              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none focus:border-primary"
-              onChange={(event) => setVariantFilter(event.target.value as VariantFilter)}
-              value={variantFilter}
-            >
-              <option value="ALL">All variants</option>
-              {availableVariants.map((item) => (
-                <option key={item} value={item}>
-                  {variantTagLabels[item]}
-                </option>
-              ))}
-            </select>
-            <select
-              className="h-11 rounded-2xl border border-border bg-white/80 px-4 text-sm outline-none focus:border-primary"
-              onChange={(event) => setSortMode(event.target.value as SortMode)}
-              value={sortMode}
-            >
-              <option value="price-asc">Price: low to high</option>
-              <option value="price-desc">Price: high to low</option>
-              <option value="updated-desc">Most recently updated</option>
-            </select>
-          </div>
-        </CardHeader>
-        <CardContent className="grid gap-4 pt-6 md:grid-cols-3">
-          <div className="rounded-3xl bg-primary px-5 py-4 text-primary-foreground">
-            <div className="text-xs uppercase tracking-[0.24em] text-primary-foreground/70">
-              Visible packages
+    <div className="space-y-5">
+      {/* Sticky filter bar */}
+      <div className="sticky top-[73px] z-30 -mx-1 px-1">
+        <div className="overflow-hidden rounded-2xl border border-border/50 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+          {/* Filter header */}
+          <button
+            className="flex w-full items-center justify-between px-5 py-3.5 text-left"
+            onClick={() => setFiltersOpen(!filtersOpen)}
+            type="button"
+          >
+            <div className="flex items-center gap-2.5">
+              <SlidersHorizontal className="h-4 w-4 text-primary" />
+              <span className="text-sm font-semibold">Filters</span>
+              <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                {visiblePackages.length} results
+              </span>
+              {cheapest !== null && (
+                <span className="hidden rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent sm:inline">
+                  from {formatCurrency(cheapest)}
+                </span>
+              )}
             </div>
-            <div className="mt-2 font-display text-4xl">{visiblePackages.length}</div>
-          </div>
-          <div className="rounded-3xl bg-white/70 px-5 py-4">
-            <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-              Cheapest visible price
-            </div>
-            <div className="mt-2 font-display text-4xl">{formatCurrency(cheapest)}</div>
-          </div>
-          <div className="rounded-3xl bg-white/70 px-5 py-4">
-            <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
-              Freshness signal
-            </div>
-            <div className="mt-2 flex items-center gap-2 font-medium">
-              <TimerReset className="h-4 w-4 text-primary" />
-              {visiblePackages[0] ? formatUpdatedAt(visiblePackages[0].lastUpdatedAt) : "No results"}
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+            <Filter className={`h-4 w-4 text-muted-foreground transition-transform ${filtersOpen ? "rotate-180" : ""}`} />
+          </button>
 
-      <div className="overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 shadow-[0_20px_60px_rgba(31,45,36,0.08)] backdrop-blur">
+          {/* Filter controls */}
+          {filtersOpen && (
+            <div className="border-t border-border/50 px-5 py-4">
+              <div className="flex flex-wrap items-center gap-3">
+                {/* Search */}
+                <input
+                  className="h-9 min-w-[180px] flex-1 rounded-xl border border-border/60 bg-muted/30 px-3.5 text-sm outline-none placeholder:text-muted-foreground focus:border-primary/30 focus:bg-white"
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Search organizer or package..."
+                  value={query}
+                />
+
+                {/* City filter */}
+                {showCityFilter && (
+                  <div className="flex h-9 items-center gap-0.5 rounded-xl border border-border/60 bg-muted/30 p-0.5">
+                    {([
+                      ["ALL", "All"],
+                      ["MUMBAI", "Mumbai"],
+                      ["PUNE", "Pune"],
+                    ] as const).map(([value, label]) => (
+                      <button
+                        className={`rounded-lg px-3 py-1 text-xs font-medium transition-all ${
+                          cityFilter === value
+                            ? "bg-primary text-primary-foreground shadow-sm"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                        key={value}
+                        onClick={() => setCityFilter(value)}
+                        type="button"
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Transport */}
+                <select
+                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  onChange={(event) =>
+                    setTransportFilter(event.target.value as ComparisonTransportType | "ALL")
+                  }
+                  value={transportFilter}
+                >
+                  <option value="ALL">All transport</option>
+                  {availableTransports.map((item) => (
+                    <option key={item} value={item}>
+                      {transportLabels[item]}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Variant */}
+                <select
+                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  onChange={(event) => setVariantFilter(event.target.value as VariantFilter)}
+                  value={variantFilter}
+                >
+                  <option value="ALL">All variants</option>
+                  {availableVariants.map((item) => (
+                    <option key={item} value={item}>
+                      {variantTagLabels[item]}
+                    </option>
+                  ))}
+                </select>
+
+                {/* Sort */}
+                <select
+                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  onChange={(event) => setSortMode(event.target.value as SortMode)}
+                  value={sortMode}
+                >
+                  <option value="price-asc">Price ↑</option>
+                  <option value="price-desc">Price ↓</option>
+                  <option value="updated-desc">Recently updated</option>
+                </select>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Table */}
+      <div className="overflow-hidden rounded-2xl border border-border/50 bg-white/80 shadow-[0_2px_16px_rgba(0,0,0,0.03)] backdrop-blur-sm">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow>
-                <TableHead className="min-w-48">Organizer</TableHead>
-                <TableHead className="min-w-56">Package</TableHead>
-                <TableHead>Price</TableHead>
-                <TableHead>Transport</TableHead>
-                <TableHead>Meals</TableHead>
-                <TableHead>Updated</TableHead>
-                <TableHead className="text-right">Source</TableHead>
+              <TableRow className="border-border/50 bg-muted/30">
+                <TableHead className="min-w-44 text-xs font-semibold uppercase tracking-wider">Organizer</TableHead>
+                <TableHead className="min-w-52 text-xs font-semibold uppercase tracking-wider">Package</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider">Price</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider">Transport</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider">Meals</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider">Updated</TableHead>
+                <TableHead className="text-right text-xs font-semibold uppercase tracking-wider">Link</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {visiblePackages.map((item) => (
-                <TableRow key={item.id}>
-                  <TableCell>
-                    <div className="font-semibold">{item.organizerName}</div>
-                  </TableCell>
-                  <TableCell>
-                    <div className="font-medium">{item.title}</div>
-                  </TableCell>
-                  <TableCell className="font-semibold">{formatCurrency(item.priceInr)}</TableCell>
-                  <TableCell>
-                    <Badge variant="outline">{transportLabels[item.transportType]}</Badge>
-                  </TableCell>
-                  <TableCell>
-                    <Badge variant="secondary">{mealPlanLabels[item.mealPlan]}</Badge>
-                    {item.mealsSummary ? (
-                      <div className="mt-2 text-xs text-muted-foreground">{item.mealsSummary}</div>
-                    ) : null}
-                  </TableCell>
-                  <TableCell className="text-muted-foreground">
-                    {formatUpdatedAt(item.lastUpdatedAt)}
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <Button asChild size="sm" variant="ghost">
-                      <a href={item.sourceUrl} rel="noreferrer" target="_blank">
-                        <ExternalLink className="h-4 w-4" />
-                        Open
-                      </a>
-                    </Button>
-                  </TableCell>
-                </TableRow>
-              ))}
+              {visiblePackages.map((item) => {
+                const isCheapest = cheapest !== null && item.priceInr === cheapest;
+                return (
+                  <TableRow
+                    key={item.id}
+                    className={`border-border/30 transition-colors hover:bg-primary/[0.02] ${isCheapest ? "bg-emerald-50/40" : ""}`}
+                  >
+                    <TableCell>
+                      <div className="font-semibold text-foreground">{item.organizerName}</div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="font-medium text-foreground">{item.title}</div>
+                      <div className="mt-0.5 flex flex-wrap gap-1">
+                        {coerceVariantTags(item.variantTags).map((tag) => (
+                          <span key={tag} className="rounded bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+                            {variantTagLabels[tag]}
+                          </span>
+                        ))}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <span className={`font-display text-base font-bold ${isCheapest ? "text-emerald-700" : "text-foreground"}`}>
+                        {formatCurrency(item.priceInr)}
+                      </span>
+                      {isCheapest && (
+                        <div className="mt-0.5 text-[10px] font-medium uppercase text-emerald-600">
+                          Best price
+                        </div>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant="outline" className="rounded-lg text-[11px]">
+                        {transportLabels[item.transportType]}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      {item.mealPlan !== "UNKNOWN" ? (
+                        <Badge variant="secondary" className="rounded-lg text-[11px]">
+                          {mealPlanLabels[item.mealPlan]}
+                        </Badge>
+                      ) : null}
+                      {item.mealsSummary ? (
+                        <div className={`${item.mealPlan !== "UNKNOWN" ? "mt-1 " : ""}max-w-[140px] text-[11px] leading-tight text-muted-foreground`}>
+                          {item.mealsSummary}
+                        </div>
+                      ) : null}
+                    </TableCell>
+                    <TableCell className="text-xs text-muted-foreground">
+                      {formatUpdatedAt(item.lastUpdatedAt)}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      <Button asChild size="sm" variant="ghost" className="h-8 rounded-lg px-3">
+                        <a href={item.sourceUrl} rel="noreferrer" target="_blank">
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          <span className="ml-1.5 text-xs">Visit</span>
+                        </a>
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
             </TableBody>
           </Table>
         </div>
 
-        {visiblePackages.length === 0 ? (
-          <div className="border-t border-border/80 px-6 py-8 text-sm text-muted-foreground">
-            No packages match the current filters. Reset the filter bar to inspect all normalized rows.
+        {visiblePackages.length === 0 && (
+          <div className="px-6 py-10 text-center text-sm text-muted-foreground">
+            No packages match your filters. Try broadening your search.
           </div>
-        ) : null}
+        )}
       </div>
     </div>
   );

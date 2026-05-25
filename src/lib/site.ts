@@ -6,6 +6,5 @@ export const siteConfig = {
   navItems: [
     { href: "/treks", label: "Treks" },
     { href: "/organizers", label: "Organizers" },
-    { href: "/api/treks", label: "API" },
   ],
 } as const;

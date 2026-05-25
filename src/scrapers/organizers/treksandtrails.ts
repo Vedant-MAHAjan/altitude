@@ -13,14 +13,8 @@ export const treksAndTrailsScraper = createVacationLabsOrganizerScraper({
   parsePackage: parseTreksAndTrailsDetailPage,
   sources: [
     {
-      label: "Maharashtra treks",
-      sourceUrl: "https://www.treksandtrails.org/collections/maharashtra-treks",
-      parserKey: "treksandtrails:v2",
-      crawlStrategy: "LISTING_PAGE",
-    },
-    {
-      label: "Upcoming events",
-      sourceUrl: "https://www.treksandtrails.org/collections/upcoming-events",
+      label: "Sitemap (all tours)",
+      sourceUrl: "https://www.treksandtrails.org/sitemap",
       parserKey: "treksandtrails:v2",
       crawlStrategy: "LISTING_PAGE",
     },

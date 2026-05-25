@@ -4,29 +4,40 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/aadrai-jungle-trek/mumbai",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 1,
+  "packageCount": 5,
+  "organizerCount": 3,
   "startingPrice": 799,
   "priceMin": 799,
-  "priceMax": 799,
+  "priceMax": 1399,
   "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN"
+      "TRAIN",
+      "NON_AC_BUS",
+      "AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "MIXED",
+      "MUMBAI"
     ],
     "variantTags": [
       "TREK_ONLY"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -40,9 +51,10 @@
     "cheapestPackageTitle": "Aadrai Jungle Trek - The Unexplored Jungle Trek",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 3,
     "variantCount": 1
   },
   "variantGroups": [
@@ -52,9 +64,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 2,
+      "packageCount": 5,
       "priceMin": 799,
-      "priceMax": 799
+      "priceMax": 1399
     }
   ],
   "packages": [
@@ -85,8 +97,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:40.856Z",
-      "updatedAtMs": 1779371680856,
+      "lastUpdatedAt": "2026-05-25T10:23:02.988Z",
+      "updatedAtMs": 1779704582988,
       "searchText": "treks and trails india aadrai jungle trek - the unexplored jungle trek aadrai jungle trek trek mixed breakfast, lunch breakfast, lunch"
     },
     {
@@ -116,10 +128,116 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:46.923Z",
-      "updatedAtMs": 1779371686923,
+      "lastUpdatedAt": "2026-05-25T10:23:05.747Z",
+      "updatedAtMs": 1779704585747,
       "searchText": "treks and trails india aadrai jungle trek pune aadrai jungle trek trek mixed breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl1kql0007f1wnhnt5kex68",
+      "title": "Aadrai Jungle Trek Corporate Special",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Aadrai Jungle Trek",
+      "trekSlug": "aadrai-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/aadrai-jungle-trek-corporate-special-119692",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Ghatkopar",
+        "Thane",
+        "Kalyan",
+        "Chembur",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:23:18.003Z",
+      "updatedAtMs": 1779704598003,
+      "searchText": "bhatakna aadrai jungle trek corporate special aadrai jungle trek trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion"
+    },
+    {
+      "id": "cmpl25d0s0025fpnh50tdhimt",
+      "title": "Aadrai Jungle Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Aadrai Jungle Trek",
+      "trekSlug": "aadrai-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/aadrai",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Thane",
+        "Kalyan",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-05-25T10:22:47.596Z",
+      "updatedAtMs": 1779704567596,
+      "searchText": "trekhievers aadrai jungle trek | mumbai aadrai jungle trek trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
+    },
+    {
+      "id": "cmpl25e1g0034fpnh99mi7kso",
+      "title": "Aadrai Jungle Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Aadrai Jungle Trek",
+      "trekSlug": "aadrai-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/aadrai-pune",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:22:48.916Z",
+      "updatedAtMs": 1779704568916,
+      "searchText": "trekhievers aadrai jungle trek | pune aadrai jungle trek trek mixed breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     }
   ],
-  "updatedAt": "2026-05-21T13:54:46.923Z"
+  "updatedAt": "2026-05-25T10:23:18.003Z"
 }

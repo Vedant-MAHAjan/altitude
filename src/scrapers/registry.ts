@@ -4,6 +4,7 @@ import { durgviharScraper } from "./organizers/durgvihar";
 import { sahyadriTreksAndToursScraper } from "./organizers/sahyadritreksandtours";
 import { trekhieversScraper } from "./organizers/trekhievers";
 import { treksAndTrailsScraper } from "./organizers/treksandtrails";
+import { unlimitedTrekersScraper } from "./organizers/unlimited-trekers";
 
 export const registeredScrapers: OrganizerScraper[] = [
 	durgviharScraper,
@@ -11,4 +12,5 @@ export const registeredScrapers: OrganizerScraper[] = [
 	treksAndTrailsScraper,
 	bhataknaScraper,
 	sahyadriTreksAndToursScraper,
+	unlimitedTrekersScraper,
 ];

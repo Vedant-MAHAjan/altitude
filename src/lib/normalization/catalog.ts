@@ -24,13 +24,13 @@ export const mealPlanLabels: Record<MealPlan, string> = {
   INCLUDED: "Included",
   PARTIAL: "Partial",
   NOT_INCLUDED: "Not included",
-  UNKNOWN: "Unknown",
+  UNKNOWN: "Not confirmed",
 };
 
 export const inclusionLabels: Record<InclusionStatus, string> = {
   INCLUDED: "Included",
   NOT_INCLUDED: "Excluded",
-  UNKNOWN: "Unknown",
+  UNKNOWN: "Not confirmed",
 };
 
 export const listingCityLabels: Record<ListingCity, string> = {
@@ -58,7 +58,7 @@ export const difficultyLabels: Record<DifficultyLevel, string> = {
   MODERATE: "Moderate",
   MODERATE_HARD: "Moderate hard",
   HARD: "Hard",
-  UNKNOWN: "Unknown",
+  UNKNOWN: "Unrated",
 };
 
 export const transportRules: Rule<TransportType>[] = [
