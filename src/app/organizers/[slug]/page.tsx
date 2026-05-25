@@ -87,13 +87,13 @@ export default async function OrganizerDetailPage(
                 {formatPriceRange(organizer.priceMin, organizer.priceMax)}
               </div>
             </div>
-            <div className="rounded-3xl bg-white/70 p-5">
+            <div className="rounded-3xl bg-secondary/50 p-5">
               <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                 Last updated
               </div>
               <div className="mt-2 font-medium">{formatUpdatedAt(organizer.updatedAt)}</div>
             </div>
-            <div className="rounded-3xl bg-white/70 p-5">
+            <div className="rounded-3xl bg-secondary/50 p-5">
               <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                 Pickup points
               </div>
@@ -135,19 +135,19 @@ export default async function OrganizerDetailPage(
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl bg-white/70 p-4">
+                <div className="rounded-2xl bg-secondary/50 p-4">
                   <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                     Transport
                   </div>
                   <div className="mt-2 font-medium">{transportLabels[item.transportType]}</div>
                 </div>
-                <div className="rounded-2xl bg-white/70 p-4">
+                <div className="rounded-2xl bg-secondary/50 p-4">
                   <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                     Meals
                   </div>
                   <div className="mt-2 font-medium">{mealPlanLabels[item.mealPlan]}</div>
                 </div>
-                <div className="rounded-2xl bg-white/70 p-4">
+                <div className="rounded-2xl bg-secondary/50 p-4">
                   <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground">
                     Stay
                   </div>
@@ -168,14 +168,14 @@ export default async function OrganizerDetailPage(
                 </div>
               ) : null}
 
-              <div className="rounded-2xl border border-border/70 bg-white/60 p-4">
+              <div className="rounded-2xl border border-border/30 bg-secondary/30 p-4">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-muted-foreground">
                   <TimerReset className="h-3 w-3" />
                   Pickup locations
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {item.pickupLocations.map((location) => (
-                    <span className="rounded-full bg-white/80 px-3 py-1 text-xs" key={location}>
+                    <span className="rounded-full bg-secondary px-3 py-1 text-xs" key={location}>
                       {location}
                     </span>
                   ))}

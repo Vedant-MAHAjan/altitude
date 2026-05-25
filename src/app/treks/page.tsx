@@ -18,7 +18,7 @@ export default async function TreksPage() {
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-12 md:py-16">
       <section className="space-y-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-primary">
+        <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary">
           All routes
         </span>
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">

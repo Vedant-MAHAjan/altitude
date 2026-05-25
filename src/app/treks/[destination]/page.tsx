@@ -65,22 +65,25 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
       {/* Hero banner */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-700/70 p-8 text-primary-foreground shadow-[0_16px_48px_rgba(27,67,50,0.18)] md:p-12">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-60" />
+      <section className="glass relative overflow-hidden rounded-3xl p-8 md:p-12">
+        {/* Ambient glow */}
+        <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-primary/10 blur-[80px]" />
+        <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-accent/[0.06] blur-[60px]" />
+
         <div className="relative">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge className="border-white/20 bg-white/10 text-white" variant="outline">
+            <Badge className="border-primary/20 bg-primary/10 text-primary" variant="outline">
               {difficultyLabels[comparison.difficulty]}
             </Badge>
-            <Badge className="border-white/20 bg-white/10 text-white" variant="outline">
+            <Badge className="border-border/50 bg-secondary/50 text-muted-foreground" variant="outline">
               {comparison.region ?? "Maharashtra"}
             </Badge>
           </div>
-          <h1 className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h1 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
             {comparison.name}
           </h1>
           {comparison.summary && (
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
               {comparison.summary}
             </p>
           )}
@@ -88,20 +91,20 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
           {/* Stats row */}
           <div className="mt-8 flex flex-wrap gap-6 md:gap-10">
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Price range</div>
-              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Price range</div>
+              <div className="mt-1 font-display text-xl font-bold text-primary md:text-2xl">
                 {formatPriceRange(comparison.priceMin, comparison.priceMax)}
               </div>
             </div>
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Organizers</div>
-              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Organizers</div>
+              <div className="mt-1 font-display text-xl font-bold text-foreground md:text-2xl">
                 {comparison.organizerCount}
               </div>
             </div>
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Packages</div>
-              <div className="mt-1 font-display text-xl font-bold md:text-2xl">
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Packages</div>
+              <div className="mt-1 font-display text-xl font-bold text-foreground md:text-2xl">
                 {comparison.packageCount}
               </div>
             </div>
@@ -136,7 +139,7 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
 
 function SummaryCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-border/50 bg-white/70 p-5 backdrop-blur-sm">
+    <div className="glass rounded-2xl p-5 transition-all duration-300 hover:border-primary/20 hover:shadow-[0_0_20px_rgba(52,211,153,0.06)]">
       <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{label}</div>
       <div className="mt-1.5 font-display text-lg font-bold text-foreground">{value}</div>
     </div>

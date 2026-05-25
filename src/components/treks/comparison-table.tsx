@@ -119,7 +119,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
     <div className="space-y-5">
       {/* Sticky filter bar */}
       <div className="sticky top-[73px] z-30 -mx-1 px-1">
-        <div className="overflow-hidden rounded-2xl border border-border/50 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+        <div className="glass-strong overflow-hidden rounded-2xl">
           {/* Filter header */}
           <button
             className="flex w-full items-center justify-between px-5 py-3.5 text-left"
@@ -128,7 +128,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
           >
             <div className="flex items-center gap-2.5">
               <SlidersHorizontal className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold">Filters</span>
+              <span className="text-sm font-semibold text-foreground">Filters</span>
               <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                 {visiblePackages.length} results
               </span>
@@ -143,11 +143,11 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
 
           {/* Filter controls */}
           {filtersOpen && (
-            <div className="border-t border-border/50 px-5 py-4">
+            <div className="border-t border-border/30 px-5 py-4">
               <div className="flex flex-wrap items-center gap-3">
                 {/* Search */}
                 <input
-                  className="h-9 min-w-[180px] flex-1 rounded-xl border border-border/60 bg-muted/30 px-3.5 text-sm outline-none placeholder:text-muted-foreground focus:border-primary/30 focus:bg-white"
+                  className="h-9 min-w-[180px] flex-1 rounded-xl border border-border/50 bg-secondary/50 px-3.5 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:border-primary/30 focus:bg-secondary"
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search organizer or package..."
                   value={query}
@@ -155,7 +155,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
 
                 {/* City filter */}
                 {showCityFilter && (
-                  <div className="flex h-9 items-center gap-0.5 rounded-xl border border-border/60 bg-muted/30 p-0.5">
+                  <div className="flex h-9 items-center gap-0.5 rounded-xl border border-border/50 bg-secondary/50 p-0.5">
                     {([
                       ["ALL", "All"],
                       ["MUMBAI", "Mumbai"],
@@ -179,7 +179,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
 
                 {/* Transport */}
                 <select
-                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  className="h-9 rounded-xl border border-border/50 bg-secondary/50 px-3 text-xs font-medium text-foreground outline-none focus:border-primary/30"
                   onChange={(event) =>
                     setTransportFilter(event.target.value as ComparisonTransportType | "ALL")
                   }
@@ -195,7 +195,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
 
                 {/* Variant */}
                 <select
-                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  className="h-9 rounded-xl border border-border/50 bg-secondary/50 px-3 text-xs font-medium text-foreground outline-none focus:border-primary/30"
                   onChange={(event) => setVariantFilter(event.target.value as VariantFilter)}
                   value={variantFilter}
                 >
@@ -209,7 +209,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
 
                 {/* Sort */}
                 <select
-                  className="h-9 rounded-xl border border-border/60 bg-muted/30 px-3 text-xs font-medium outline-none focus:border-primary/30"
+                  className="h-9 rounded-xl border border-border/50 bg-secondary/50 px-3 text-xs font-medium text-foreground outline-none focus:border-primary/30"
                   onChange={(event) => setSortMode(event.target.value as SortMode)}
                   value={sortMode}
                 >
@@ -224,18 +224,18 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
       </div>
 
       {/* Table */}
-      <div className="overflow-hidden rounded-2xl border border-border/50 bg-white/80 shadow-[0_2px_16px_rgba(0,0,0,0.03)] backdrop-blur-sm">
+      <div className="glass overflow-hidden rounded-2xl">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="border-border/50 bg-muted/30">
-                <TableHead className="min-w-44 text-xs font-semibold uppercase tracking-wider">Organizer</TableHead>
-                <TableHead className="min-w-52 text-xs font-semibold uppercase tracking-wider">Package</TableHead>
-                <TableHead className="text-xs font-semibold uppercase tracking-wider">Price</TableHead>
-                <TableHead className="text-xs font-semibold uppercase tracking-wider">Transport</TableHead>
-                <TableHead className="text-xs font-semibold uppercase tracking-wider">Meals</TableHead>
-                <TableHead className="text-xs font-semibold uppercase tracking-wider">Updated</TableHead>
-                <TableHead className="text-right text-xs font-semibold uppercase tracking-wider">Link</TableHead>
+              <TableRow className="border-border/30 bg-secondary/30">
+                <TableHead className="min-w-44 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Organizer</TableHead>
+                <TableHead className="min-w-52 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Package</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Price</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Transport</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Meals</TableHead>
+                <TableHead className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Updated</TableHead>
+                <TableHead className="text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground">Link</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -244,7 +244,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
                 return (
                   <TableRow
                     key={item.id}
-                    className={`border-border/30 transition-colors hover:bg-primary/[0.02] ${isCheapest ? "bg-emerald-50/40" : ""}`}
+                    className={`border-border/20 transition-colors hover:bg-primary/[0.03] ${isCheapest ? "bg-primary/[0.04]" : ""}`}
                   >
                     <TableCell>
                       <div className="font-semibold text-foreground">{item.organizerName}</div>
@@ -253,18 +253,18 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
                       <div className="font-medium text-foreground">{item.title}</div>
                       <div className="mt-0.5 flex flex-wrap gap-1">
                         {coerceVariantTags(item.variantTags).map((tag) => (
-                          <span key={tag} className="rounded bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+                          <span key={tag} className="rounded bg-secondary px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
                             {variantTagLabels[tag]}
                           </span>
                         ))}
                       </div>
                     </TableCell>
                     <TableCell>
-                      <span className={`font-display text-base font-bold ${isCheapest ? "text-emerald-700" : "text-foreground"}`}>
+                      <span className={`font-display text-base font-bold ${isCheapest ? "text-primary" : "text-foreground"}`}>
                         {formatCurrency(item.priceInr)}
                       </span>
                       {isCheapest && (
-                        <div className="mt-0.5 text-[10px] font-medium uppercase text-emerald-600">
+                        <div className="mt-0.5 text-[10px] font-medium uppercase text-primary/80">
                           Best price
                         </div>
                       )}

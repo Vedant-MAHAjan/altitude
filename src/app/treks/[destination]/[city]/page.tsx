@@ -114,17 +114,17 @@ export default async function DestinationCityPage({
       </div>
 
       {/* Hero section */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/95 via-primary/80 to-emerald-700/70 p-8 text-primary-foreground shadow-[0_16px_48px_rgba(27,67,50,0.18)] md:p-12">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-60" />
+      <section className="glass relative overflow-hidden rounded-3xl p-8 md:p-12">
+        <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-primary/10 blur-[80px]" />
         <div className="relative">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
             {comparison.destinationName}
           </h1>
-          <p className="mt-2 text-sm text-white/60">
+          <p className="mt-2 text-sm text-muted-foreground">
             from {departureCityLabels[comparison.departureCity]}
           </p>
           {comparison.summary && (
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
               {comparison.summary}
             </p>
           )}
@@ -134,7 +134,7 @@ export default async function DestinationCityPage({
             {comparison.availableVariants.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur"
+                className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary backdrop-blur"
               >
                 {variantTagLabels[tag]}
               </span>
@@ -144,24 +144,24 @@ export default async function DestinationCityPage({
           {/* Stats */}
           <div className="mt-8 flex flex-wrap gap-6 md:gap-10">
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">From</div>
-              <div className="mt-1 font-display text-xl font-bold">
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">From</div>
+              <div className="mt-1 font-display text-xl font-bold text-primary">
                 {formatCurrency(comparison.startingPrice)}
               </div>
             </div>
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Next departure</div>
-              <div className="mt-1 font-display text-xl font-bold">
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Next departure</div>
+              <div className="mt-1 font-display text-xl font-bold text-foreground">
                 {formatDateShort(comparison.nextDepartureAt)}
               </div>
             </div>
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Organizers</div>
-              <div className="mt-1 font-display text-xl font-bold">{comparison.organizerCount}</div>
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Organizers</div>
+              <div className="mt-1 font-display text-xl font-bold text-foreground">{comparison.organizerCount}</div>
             </div>
             <div>
-              <div className="text-[11px] uppercase tracking-wider text-white/50">Packages</div>
-              <div className="mt-1 font-display text-xl font-bold">{comparison.packageCount}</div>
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Packages</div>
+              <div className="mt-1 font-display text-xl font-bold text-foreground">{comparison.packageCount}</div>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default async function DestinationCityPage({
           {comparison.variantGroups.map((group) => (
             <div
               key={group.signature}
-              className="rounded-2xl border border-border/50 bg-white/70 p-5 backdrop-blur-sm"
+              className="rounded-2xl border border-border/30 bg-secondary/50 p-5 backdrop-blur-sm"
             >
               <div className="flex items-center justify-between gap-2">
                 <Badge variant="secondary" className="rounded-full text-[11px]">

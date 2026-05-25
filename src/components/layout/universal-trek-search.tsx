@@ -74,7 +74,7 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
 
   return (
     <div className="relative w-full max-w-lg" ref={containerRef}>
-      <div className="flex items-center rounded-xl border border-border/60 bg-muted/30 transition-all focus-within:border-primary/20 focus-within:bg-white focus-within:shadow-[0_4px_16px_rgba(27,67,50,0.08)]">
+      <div className="flex items-center rounded-xl border border-border/50 bg-secondary/50 transition-all focus-within:border-primary/30 focus-within:bg-secondary focus-within:shadow-[0_0_20px_rgba(52,211,153,0.08)]">
         <Search className="ml-3 h-4 w-4 shrink-0 text-muted-foreground" />
         <input
           aria-label="Search treks"
@@ -94,15 +94,15 @@ export function UniversalTrekSearch({ treks }: UniversalTrekSearchProps) {
 
       {/* Dropdown */}
       {isOpen && matches.length > 0 && (
-        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl border border-border/50 bg-white/95 shadow-[0_12px_40px_rgba(0,0,0,0.1)] backdrop-blur-xl">
+        <div className="glass-strong absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.3)]">
           <ul className="py-1.5">
             {matches.map((trek, idx) => (
               <li key={trek.slug}>
                 <button
                   className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition-colors ${
                     idx === focusedIndex
-                      ? "bg-primary/5 text-primary"
-                      : "text-foreground hover:bg-muted/50"
+                      ? "bg-primary/10 text-primary"
+                      : "text-foreground hover:bg-primary/5"
                   }`}
                   onClick={() => navigateToTrek(trek.slug)}
                   onMouseEnter={() => setFocusedIndex(idx)}

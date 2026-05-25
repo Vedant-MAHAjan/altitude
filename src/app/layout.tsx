@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const bodyFont = IBM_Plex_Sans({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${bodyFont.variable} ${displayFont.variable}`} lang="en">
+    <html className={`${bodyFont.variable} ${displayFont.variable}`} lang="en" data-scroll-behavior="smooth">
       <body className="font-sans text-foreground antialiased">
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />

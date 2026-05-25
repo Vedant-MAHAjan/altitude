@@ -20,7 +20,7 @@ export default async function OrganizersPage() {
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-12 md:py-16">
       <section className="space-y-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-primary">
+        <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary">
           Organizers
         </span>
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">
@@ -35,7 +35,7 @@ export default async function OrganizersPage() {
         {organizers.map((organizer) => (
           <div
             key={organizer.slug}
-            className="group overflow-hidden rounded-2xl border border-border/50 bg-white/80 p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] backdrop-blur-sm transition-all duration-300 hover:border-primary/20 hover:shadow-[0_8px_32px_rgba(27,67,50,0.08)] hover:-translate-y-0.5"
+            className="glass group overflow-hidden rounded-2xl p-5 transition-all duration-300 hover:border-primary/20 hover:shadow-[0_0_30px_rgba(52,211,153,0.06)] hover:-translate-y-0.5"
           >
             <Link href={`/organizers/${organizer.slug}` as Route} className="block">
               <div className="flex items-center justify-between gap-2">
