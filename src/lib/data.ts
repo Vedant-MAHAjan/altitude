@@ -13,6 +13,7 @@ import {
   readActivePackagesForOrganizer,
   readActivePackagesForTrek,
   readAllActivePackageProjections,
+  readAllPendingOrganizerTrekPairs,
   readTrekSearchEntries,
 } from "@/lib/catalog/queries";
 import {
@@ -160,10 +161,14 @@ async function getCachedCatalogFallback() {
   }
 
   try {
-    const packages = await readAllActivePackageProjections(prisma);
+    const [packages, pendingOrganizers] = await Promise.all([
+      readAllActivePackageProjections(prisma),
+      readAllPendingOrganizerTrekPairs(prisma),
+    ]);
     const payload = buildCatalogSnapshotPayload({
       packages,
       search: [],
+      pendingOrganizers,
     });
 
     return {

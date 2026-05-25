@@ -3,6 +3,7 @@ import { buildCatalogSnapshotPayload, buildTrekSearchEntries } from "@/lib/catal
 import type { CatalogLogger } from "@/lib/catalog/logger";
 import {
   readAllActivePackageProjections,
+  readAllPendingOrganizerTrekPairs,
   readTrekSearchEntries,
 } from "@/lib/catalog/queries";
 import { writeCatalogSnapshots } from "@/lib/catalog/snapshots";
@@ -37,14 +38,16 @@ export async function generateStaticCatalogData(
 
   logger.info("Generating static catalog snapshots");
 
-  const [packages, searchRecords] = await Promise.all([
+  const [packages, searchRecords, pendingOrganizers] = await Promise.all([
     readAllActivePackageProjections(prisma),
     readTrekSearchEntries(prisma),
+    readAllPendingOrganizerTrekPairs(prisma),
   ]);
   const generatedAt = new Date().toISOString();
   const payload = buildCatalogSnapshotPayload({
     packages,
     search: buildTrekSearchEntries(searchRecords),
+    pendingOrganizers,
     generatedAt,
   });
 

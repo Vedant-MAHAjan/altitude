@@ -464,6 +464,48 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
   };
 }
 
+export type PendingOrganizerEntry = {
+  organizerName: string;
+  organizerSlug: string;
+  organizerWebsiteUrl: string;
+  trekSlug: string;
+  trekName: string;
+};
+
+export function buildPendingPlaceholderRow(
+  entry: PendingOrganizerEntry,
+): ComparisonPackage {
+  return {
+    id: `pending:${entry.organizerSlug}:${entry.trekSlug}`,
+    title: "Data under review",
+    organizerName: entry.organizerName,
+    organizerSlug: entry.organizerSlug,
+    trekName: entry.trekName,
+    trekSlug: entry.trekSlug,
+    trekSummary: null,
+    sourceUrl: entry.organizerWebsiteUrl,
+    priceInr: null,
+    priceText: null,
+    transportType: "NON_AC_BUS",
+    mealPlan: "UNKNOWN",
+    forestFeeStatus: "UNKNOWN",
+    listingCity: "OTHER",
+    variantTags: ["TREK_ONLY"],
+    variantSignature: "TREK_ONLY",
+    variantLabel: "Trek Only",
+    nextDepartureAt: null,
+    mealsSummary: null,
+    staySummary: null,
+    inclusionHighlights: [],
+    pickupLocations: [],
+    lastUpdatedAt: new Date().toISOString(),
+    updatedAtMs: Date.now(),
+    searchText: `${entry.organizerName} ${entry.trekName}`.toLowerCase(),
+    isPending: true,
+    organizerWebsiteUrl: entry.organizerWebsiteUrl,
+  };
+}
+
 export function summarizeTrek(comparison: TrekComparison): TrekSummary {
   return {
     name: comparison.name,
@@ -715,6 +757,7 @@ export function buildSnapshotManifest(
 export function buildCatalogSnapshotPayload(params: {
   packages: PackageProjection[];
   search: TrekSearchEntry[];
+  pendingOrganizers?: PendingOrganizerEntry[];
   generatedAt?: string;
 }): CatalogSnapshotPayload {
   const trekGroups = new Map<string, { trek: TrekProjection; packages: PackageProjection[] }>();
@@ -776,6 +819,27 @@ export function buildCatalogSnapshotPayload(params: {
       .map((group) => [group.routePath, buildDestinationCityComparison(group)] as const)
       .sort(([leftPath], [rightPath]) => leftPath.localeCompare(rightPath)),
   ) as Record<string, DestinationCityComparison>;
+
+  // Inject pending organizer placeholder rows into destination details
+  if (params.pendingOrganizers && params.pendingOrganizers.length > 0) {
+    for (const entry of params.pendingOrganizers) {
+      const placeholder = buildPendingPlaceholderRow(entry);
+
+      // Add to all destination/city routes that match this trek
+      for (const [routePath, detail] of Object.entries(destinationDetails)) {
+        if (detail.destinationSlug === entry.trekSlug) {
+          detail.packages.push(placeholder);
+        }
+      }
+
+      // Also add to trek details
+      const trekDetail = trekDetails[entry.trekSlug];
+      if (trekDetail) {
+        trekDetail.packages.push(placeholder);
+      }
+    }
+  }
+
   const homepage = buildHomepageData(destinationCards, organizers);
   const generatedAt = params.generatedAt ?? new Date().toISOString();
 

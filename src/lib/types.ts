@@ -128,6 +128,10 @@ export type ComparisonPackage = {
   lastUpdatedAt: string;
   updatedAtMs: number;
   searchText: string;
+  /** When true, this row is a placeholder for an organizer whose data is under review. */
+  isPending?: boolean;
+  /** Direct website URL for the organizer (used in pending placeholder rows). */
+  organizerWebsiteUrl?: string;
 };
 
 export type TrekSummary = {

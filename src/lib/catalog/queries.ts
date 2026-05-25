@@ -89,6 +89,7 @@ export async function readAllActivePackageProjections(prisma: PrismaClient) {
   const rows = await prisma.trekPackage.findMany({
     where: {
       status: "ACTIVE",
+      needsReview: false,
     },
     select: activePackageSelect,
   });
@@ -100,6 +101,7 @@ export async function readActivePackagesForTrek(prisma: PrismaClient, slug: stri
   const rows = await prisma.trekPackage.findMany({
     where: {
       status: "ACTIVE",
+      needsReview: false,
       trek: {
         slug,
       },
@@ -114,6 +116,7 @@ export async function readActivePackagesForOrganizer(prisma: PrismaClient, slug:
   const rows = await prisma.trekPackage.findMany({
     where: {
       status: "ACTIVE",
+      needsReview: false,
       organizer: {
         slug,
       },
@@ -155,4 +158,150 @@ export async function readTrekSearchEntries(prisma: PrismaClient): Promise<TrekS
     slug: trek.slug,
     aliases: trek.aliases.map((alias) => alias.value),
   }));
+}
+
+export type PendingOrganizerForTrek = {
+  organizerName: string;
+  organizerSlug: string;
+  organizerWebsiteUrl: string;
+  trekSlug: string;
+  trekName: string;
+};
+
+/**
+ * Find organizers that have packages for a given trek but ALL those packages are needsReview: true.
+ * These organizers should show as "data pending" placeholder rows.
+ */
+export async function readPendingOrganizersForTrek(
+  prisma: PrismaClient,
+  trekSlug: string,
+): Promise<PendingOrganizerForTrek[]> {
+  // Organizers with at least one needsReview package for this trek
+  const organizersWithReviewPackages = await prisma.trekPackage.findMany({
+    where: {
+      status: "ACTIVE",
+      needsReview: true,
+      trek: { slug: trekSlug },
+    },
+    select: {
+      organizer: {
+        select: { name: true, slug: true, websiteUrl: true },
+      },
+      trek: {
+        select: { name: true, slug: true },
+      },
+    },
+    distinct: ["organizerId"],
+  });
+
+  // Filter out organizers that also have valid (non-review) packages
+  const organizersWithValidPackages = await prisma.trekPackage.findMany({
+    where: {
+      status: "ACTIVE",
+      needsReview: false,
+      trek: { slug: trekSlug },
+    },
+    select: { organizerId: true },
+    distinct: ["organizerId"],
+  });
+
+  const validOrganizerIds = new Set(
+    organizersWithValidPackages.map((r) => r.organizerId),
+  );
+
+  // We need organizerId to filter — re-query with it
+  const reviewRows = await prisma.trekPackage.findMany({
+    where: {
+      status: "ACTIVE",
+      needsReview: true,
+      trek: { slug: trekSlug },
+    },
+    select: {
+      organizerId: true,
+      organizer: {
+        select: { name: true, slug: true, websiteUrl: true },
+      },
+      trek: {
+        select: { name: true, slug: true },
+      },
+    },
+    distinct: ["organizerId"],
+  });
+
+  return reviewRows
+    .filter((row) => !validOrganizerIds.has(row.organizerId))
+    .map((row) => ({
+      organizerName: row.organizer.name,
+      organizerSlug: row.organizer.slug,
+      organizerWebsiteUrl: row.organizer.websiteUrl,
+      trekSlug: row.trek.slug,
+      trekName: row.trek.name,
+    }));
+}
+
+/**
+ * Read all pending organizer/trek pairs across the whole catalog.
+ * Used by the snapshot generator to include placeholder data.
+ */
+export async function readAllPendingOrganizerTrekPairs(
+  prisma: PrismaClient,
+): Promise<PendingOrganizerForTrek[]> {
+  // All organizer+trek combinations where every package is needsReview
+  const reviewRows = await prisma.trekPackage.groupBy({
+    by: ["organizerId", "trekId"],
+    where: {
+      status: "ACTIVE",
+      needsReview: true,
+    },
+  });
+
+  const validRows = await prisma.trekPackage.groupBy({
+    by: ["organizerId", "trekId"],
+    where: {
+      status: "ACTIVE",
+      needsReview: false,
+    },
+  });
+
+  const validKeys = new Set(
+    validRows.map((r) => `${r.organizerId}:${r.trekId}`),
+  );
+
+  const pendingKeys = reviewRows.filter(
+    (r) => !validKeys.has(`${r.organizerId}:${r.trekId}`),
+  );
+
+  if (pendingKeys.length === 0) {
+    return [];
+  }
+
+  // Fetch organizer and trek details for pending pairs
+  const results: PendingOrganizerForTrek[] = [];
+
+  for (const key of pendingKeys) {
+    const row = await prisma.trekPackage.findFirst({
+      where: {
+        organizerId: key.organizerId,
+        trekId: key.trekId,
+        status: "ACTIVE",
+        needsReview: true,
+      },
+      select: {
+        organizer: { select: { name: true, slug: true, websiteUrl: true } },
+        trek: { select: { name: true, slug: true } },
+      },
+    });
+
+    if (row) {
+      results.push({
+        organizerName: row.organizer.name,
+        organizerSlug: row.organizer.slug,
+        organizerWebsiteUrl: row.organizer.websiteUrl,
+        trekSlug: row.trek.slug,
+        trekName: row.trek.name,
+      });
+    }
+  }
+
+  return results;
 }

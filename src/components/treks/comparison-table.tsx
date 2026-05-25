@@ -241,6 +241,35 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
             <TableBody>
               {visiblePackages.map((item) => {
                 const isCheapest = cheapest !== null && item.priceInr === cheapest;
+
+                if (item.isPending) {
+                  return (
+                    <TableRow
+                      key={item.id}
+                      className="border-border/20 opacity-50"
+                    >
+                      <TableCell>
+                        <div className="font-semibold text-foreground">{item.organizerName}</div>
+                      </TableCell>
+                      <TableCell>
+                        <div className="font-medium text-muted-foreground italic">Data under review</div>
+                      </TableCell>
+                      <TableCell colSpan={4} className="text-center text-sm text-muted-foreground">
+                        <a
+                          href={item.organizerWebsiteUrl ?? item.sourceUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                          className="inline-flex items-center gap-1 underline underline-offset-2 hover:text-foreground"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          Check organizer website
+                        </a>
+                      </TableCell>
+                      <TableCell />
+                    </TableRow>
+                  );
+                }
+
                 return (
                   <TableRow
                     key={item.id}
