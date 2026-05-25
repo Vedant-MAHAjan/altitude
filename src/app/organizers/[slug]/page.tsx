@@ -14,11 +14,11 @@ import {
 } from "@/components/ui/card";
 import { getOrganizerBySlug, getPrerenderOrganizerSlugs } from "@/lib/data";
 import { formatCurrency, formatPriceRange, formatUpdatedAt } from "@/lib/format";
+import { buildMetadata } from "@/lib/metadata";
 import {
   mealPlanLabels,
   transportLabels,
 } from "@/lib/normalization/catalog";
-import { siteConfig } from "@/lib/site";
 
 export async function generateStaticParams() {
   const slugs = await getPrerenderOrganizerSlugs();
@@ -37,21 +37,11 @@ export async function generateMetadata(
     };
   }
 
-  const title = `${organizer.name} organizer profile`;
-  const description = `Review ${organizer.name} package coverage, price band, pickup locations, and concise meal or stay summaries.`;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `/organizers/${organizer.slug}`,
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${siteConfig.url}/organizers/${organizer.slug}`,
-    },
-  };
+  return buildMetadata({
+    title: `${organizer.name} organizer profile`,
+    description: `Review ${organizer.name} package coverage, price band, pickup locations, and concise meal or stay summaries.`,
+    path: `/organizers/${organizer.slug}`,
+  });
 }
 
 export default async function OrganizerDetailPage(

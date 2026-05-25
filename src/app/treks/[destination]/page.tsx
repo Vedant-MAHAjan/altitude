@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { getPrerenderTrekSlugs, getTrekComparison } from "@/lib/data";
 import { formatPriceRange } from "@/lib/format";
+import { buildMetadata } from "@/lib/metadata";
 import { difficultyLabels } from "@/lib/normalization/catalog";
-import { siteConfig } from "@/lib/site";
 
 const ComparisonTable = dynamic(
   () => import("@/components/treks/comparison-table").then((module) => module.ComparisonTable),
@@ -37,21 +37,11 @@ export async function generateMetadata(
     };
   }
 
-  const title = `${comparison.name} comparison`;
-  const description = `Compare ${comparison.name} trek packages across ${comparison.organizerCount} organizers by price, transport, meals, and pickup points.`;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `/treks/${comparison.slug}`,
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${siteConfig.url}/treks/${comparison.slug}`,
-    },
-  };
+  return buildMetadata({
+    title: `${comparison.name} comparison`,
+    description: `Compare ${comparison.name} trek packages across ${comparison.organizerCount} organizers by price, transport, meals, and pickup points.`,
+    path: `/treks/${comparison.slug}`,
+  });
 }
 
 export default async function TrekComparisonPage(props: PageProps<"/treks/[destination]">) {

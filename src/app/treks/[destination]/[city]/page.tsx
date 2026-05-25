@@ -12,6 +12,7 @@ import {
   getPrerenderDestinationRoutePaths,
 } from "@/lib/data";
 import { formatCurrency, formatDateShort } from "@/lib/format";
+import { buildMetadata } from "@/lib/metadata";
 import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
 
 function parseRoutePath(routePath: string) {
@@ -47,15 +48,13 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  return buildMetadata({
     title: `${comparison.destinationName} ${departureCityLabels[comparison.departureCity]} Trek Comparison`,
     description: comparison.summary
       ? `${comparison.summary} Compare organizers, variants, and pricing for ${comparison.destinationName} from ${departureCityLabels[comparison.departureCity]}.`
       : `Compare organizers, variants, and pricing for ${comparison.destinationName} from ${departureCityLabels[comparison.departureCity]}.`,
-    alternates: {
-      canonical: comparison.routePath,
-    },
-  };
+    path: comparison.routePath,
+  });
 }
 
 export default async function DestinationCityPage({
@@ -73,8 +72,37 @@ export default async function DestinationCityPage({
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${comparison.destinationName} trek packages from ${departureCityLabels[comparison.departureCity]}`,
+    numberOfItems: comparison.packages.length,
+    itemListElement: comparison.packages.map((pkg, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: `${pkg.organizerName} – ${comparison.destinationName}`,
+        offers: {
+          "@type": "Offer",
+          price: pkg.priceInr ?? 0,
+          priceCurrency: "INR",
+          url: pkg.sourceUrl,
+          availability: pkg.isPending
+            ? "https://schema.org/OutOfStock"
+            : "https://schema.org/InStock",
+        },
+      },
+    })),
+  };
+
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:py-16">
       {/* Back nav + city toggle */}
       <div className="flex flex-wrap items-center gap-3">
         <Button asChild variant="ghost" size="sm" className="rounded-xl">
@@ -211,5 +239,6 @@ export default async function DestinationCityPage({
         <ComparisonTable packages={comparison.packages} filters={comparison.filters} showCityFilter={false} />
       </section>
     </main>
+    </>
   );
 }

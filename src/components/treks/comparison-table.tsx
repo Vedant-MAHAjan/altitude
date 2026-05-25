@@ -27,6 +27,9 @@ import type {
   VariantTagCode,
 } from "@/lib/types";
 
+/** Threshold in milliseconds after which a package's data is considered stale (72 hours). */
+const STALE_THRESHOLD_MS = 72 * 60 * 60 * 1000;
+
 type SortMode = "price-asc" | "price-desc" | "updated-desc";
 type CityFilter = "ALL" | "MUMBAI" | "PUNE";
 type VariantFilter = "ALL" | VariantTagCode;
@@ -316,7 +319,19 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
                       ) : null}
                     </TableCell>
                     <TableCell className="text-xs text-muted-foreground">
-                      {formatUpdatedAt(item.lastUpdatedAt)}
+                      <span
+                        title={
+                          Date.now() - item.updatedAtMs > STALE_THRESHOLD_MS
+                            ? `Data may be outdated — last checked ${formatUpdatedAt(item.lastUpdatedAt)}`
+                            : undefined
+                        }
+                        className="inline-flex items-center gap-1"
+                      >
+                        {Date.now() - item.updatedAtMs > STALE_THRESHOLD_MS && (
+                          <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-amber-400" />
+                        )}
+                        {formatUpdatedAt(item.lastUpdatedAt)}
+                      </span>
                     </TableCell>
                     <TableCell className="text-right">
                       <Button asChild size="sm" variant="ghost" className="h-8 rounded-lg px-3">
@@ -339,6 +354,10 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
           </div>
         )}
       </div>
+
+      <p className="mt-3 px-1 text-xs leading-relaxed text-muted-foreground/70">
+        Prices and availability are scraped from organizer websites and may not reflect real-time changes. Always confirm before booking.
+      </p>
     </div>
   );
 }

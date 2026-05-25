@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 
 import { TrekCard } from "@/components/treks/trek-card";
 import { getDestinationCityIndex } from "@/lib/data";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Destination Routes",
   description:
     "Browse cached Maharashtra trek comparison pages grouped by destination and departure city.",
-  alternates: {
-    canonical: "/treks",
-  },
-};
+  path: "/treks",
+});
 
 export default async function TreksPage() {
   const routes = await getDestinationCityIndex();

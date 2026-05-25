@@ -4,15 +4,14 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { getOrganizerIndex } from "@/lib/data";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Organizer Coverage",
   description:
     "Browse trekking organizers tracked by the Maharashtra trek comparison MVP.",
-  alternates: {
-    canonical: "/organizers",
-  },
-};
+  path: "/organizers",
+});
 
 export default async function OrganizersPage() {
   const organizers = await getOrganizerIndex();
