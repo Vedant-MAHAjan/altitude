@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { TrekCard } from "@/components/treks/trek-card";
+import { TrekRouteList } from "@/components/treks/trek-route-list";
 import { getDestinationCityIndex } from "@/lib/data";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -29,22 +29,7 @@ export default async function TreksPage() {
         </p>
       </section>
 
-      <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {routes.map((route, index) => (
-          <TrekCard
-            key={route.routePath}
-            destinationName={route.destinationName}
-            routePath={route.routePath}
-            departureCity={route.departureCity}
-            startingPrice={route.startingPrice}
-            organizerCount={route.organizerCount}
-            nextDepartureAt={route.nextDepartureAt}
-            availableVariants={route.availableVariants}
-            packageCount={route.packageCount}
-            index={index}
-          />
-        ))}
-      </section>
+      <TrekRouteList routes={routes} />
     </main>
   );
 }

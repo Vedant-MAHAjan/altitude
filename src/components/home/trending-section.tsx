@@ -62,6 +62,7 @@ export function TrendingSection({ routes }: TrendingSectionProps) {
               <TrekCard
                 key={route.routePath}
                 destinationName={route.destinationName}
+                destinationSlug={route.destinationSlug}
                 routePath={route.routePath}
                 departureCity={route.departureCity}
                 startingPrice={route.startingPrice}

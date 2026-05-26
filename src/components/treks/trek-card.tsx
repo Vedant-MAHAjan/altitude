@@ -7,13 +7,14 @@ import { Calendar, MapPin, Users } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { formatCurrency, formatDateShort } from "@/lib/format";
-import { getStaticTrekLabel } from "@/lib/microcopy";
 import { fadeUp, defaultTransition } from "@/lib/motion";
 import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
+import { getTaglineForSlug } from "@/lib/taglines";
 import type { DepartureCityCode, VariantTagCode } from "@/lib/types";
 
 type TrekCardProps = {
   destinationName: string;
+  destinationSlug: string;
   routePath: string;
   departureCity: DepartureCityCode;
   startingPrice: number | null;
@@ -26,6 +27,7 @@ type TrekCardProps = {
 
 export function TrekCard({
   destinationName,
+  destinationSlug,
   routePath,
   departureCity,
   startingPrice,
@@ -68,7 +70,7 @@ export function TrekCard({
               {destinationName}
             </h3>
             <p className="mt-1 font-editorial text-xs text-muted-foreground/70 italic">
-              {getStaticTrekLabel(index)}
+              {getTaglineForSlug(destinationSlug)}
             </p>
           </div>
 
