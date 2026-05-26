@@ -17,7 +17,7 @@ export async function SiteHeader() {
             <Mountain className="h-4 w-4" />
           </div>
           <span className="hidden font-display text-base font-bold tracking-tight text-foreground sm:inline">
-            MahaTrek
+            {siteConfig.name}
           </span>
         </Link>
 

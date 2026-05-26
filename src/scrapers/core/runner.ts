@@ -1,5 +1,6 @@
 import { generateStaticCatalogData } from "../../lib/catalog/generator";
 import { getPrismaClient } from "../../lib/prisma";
+import { siteConfig } from "../../lib/site";
 import { createLogger } from "./logger";
 import { normalizeScrapedPackage } from "./normalizer";
 import { persistPackages } from "./persist";
@@ -48,9 +49,7 @@ async function executeScraper(
       () =>
         scraper.scrape({
           dryRun: options.dryRun,
-          userAgent:
-            process.env.SCRAPE_USER_AGENT ??
-            "MahaTrekCompareBot/0.1",
+          userAgent: siteConfig.botUserAgent,
           now: new Date(),
           maxAttempts: 3,
           maxToursPerSource: resolveTourLimit(options.limit),

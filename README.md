@@ -1,6 +1,6 @@
-# MahaTrek Compare
+# Altitude
 
-MahaTrek Compare is a trek package comparison platform for Maharashtra treks. It combines an SEO-friendly Next.js frontend, a normalized Prisma data model, and Playwright scrapers that ingest organizer listings into a comparison-ready dataset.
+Altitude is a trek package comparison platform for Maharashtra treks. It combines an SEO-friendly Next.js frontend, a normalized Prisma data model, and Playwright scrapers that ingest organizer listings into a comparison-ready dataset.
 
 The public site now follows a snapshot-first delivery path:
 

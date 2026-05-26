@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Mountain } from "lucide-react";
 
 import { PineCluster } from "@/components/ui/atmosphere";
+import { siteConfig } from "@/lib/site";
 
 const footerQuips = [
   "Clouds > visibility.",
@@ -30,7 +31,7 @@ export function SiteFooter() {
             <Mountain className="h-3.5 w-3.5" />
           </div>
           <div>
-            <div className="font-display text-sm font-semibold text-foreground">MahaTrek</div>
+            <div className="font-display text-sm font-semibold text-foreground">{siteConfig.name}</div>
             <div className="font-editorial text-xs text-muted-foreground/70 italic">
               {quip}
             </div>
