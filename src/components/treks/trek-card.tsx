@@ -3,10 +3,10 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users } from "lucide-react";
+import { MapPin, Users } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import { formatCurrency, formatDateShort } from "@/lib/format";
+import { formatCurrency } from "@/lib/format";
 import { fadeUp, defaultTransition } from "@/lib/motion";
 import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
 import { getTaglineForSlug } from "@/lib/taglines";
@@ -19,7 +19,6 @@ type TrekCardProps = {
   departureCity: DepartureCityCode;
   startingPrice: number | null;
   organizerCount: number;
-  nextDepartureAt: string | null;
   availableVariants: VariantTagCode[];
   packageCount: number;
   index: number;
@@ -32,7 +31,6 @@ export function TrekCard({
   departureCity,
   startingPrice,
   organizerCount,
-  nextDepartureAt,
   availableVariants,
   packageCount,
   index,
@@ -69,7 +67,7 @@ export function TrekCard({
             <h3 className="font-display text-lg font-bold leading-tight text-foreground transition-colors group-hover:text-primary">
               {destinationName}
             </h3>
-            <p className="mt-1 font-editorial text-xs text-muted-foreground/70 italic">
+            <p className="mt-1 font-editorial text-sm text-muted-foreground/70 italic">
               {getTaglineForSlug(destinationSlug)}
             </p>
           </div>
@@ -96,7 +94,7 @@ export function TrekCard({
           </div>
 
           {/* Stats row — journal entry style */}
-          <div className="relative mt-4 grid grid-cols-3 gap-2 rounded-xl bg-muted/60 p-3">
+          <div className="relative mt-4 grid grid-cols-2 gap-2 rounded-xl bg-muted/60 p-3">
             <div>
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
                 From
@@ -111,15 +109,6 @@ export function TrekCard({
               </div>
               <div className="mt-0.5 font-display text-sm font-bold text-foreground">
                 {packageCount}
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-                <Calendar className="h-2.5 w-2.5" />
-                Next
-              </div>
-              <div className="mt-0.5 text-xs font-semibold text-foreground">
-                {formatDateShort(nextDepartureAt)}
               </div>
             </div>
           </div>

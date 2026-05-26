@@ -1,7 +1,6 @@
 import type { Page } from "playwright";
 
 import { normalizeWhitespace } from "../../lib/normalization/extractors";
-import type { DepartureDate } from "../types";
 
 const SECTION_BOUNDARIES = [
   /^overview$/i,
@@ -302,72 +301,6 @@ export function extractLocationText(text: string | null | undefined) {
 
   const match = (text ?? "").match(/(?:|Location\s*:?|Destination\s*:?)([^\n₹]{3,80})/i);
   return normalizeWhitespace(match?.[1]) || null;
-}
-
-export function extractDepartureDateLabels(text: string | null | undefined) {
-  const values = new Set<string>();
-  const sourceText = text ?? "";
-
-  for (const match of sourceText.matchAll(/\b\d{1,2}\s+[A-Z][a-z]{2,8}\b/g)) {
-    values.add(match[0]);
-  }
-
-  for (const match of sourceText.matchAll(/\bEvery\s+(?:Friday|Saturday|Sunday|Weekend)\b/gi)) {
-    values.add(normalizeWhitespace(match[0]));
-  }
-
-  if (/available on request/i.test(sourceText)) {
-    values.add("Available on request");
-  }
-
-  return [...values];
-}
-
-export async function extractDepartureDatesFromBookingLinks(
-  page: Page,
-  pageUrl: string,
-): Promise<DepartureDate[]> {
-  const anchors = await page
-    .locator('a[href*="departure_date="]')
-    .evaluateAll((elements) =>
-      elements.map((element) => ({
-        href: element.getAttribute("href"),
-        text: (element.textContent ?? "").replace(/\s+/g, " ").trim(),
-      })),
-    );
-
-  return anchors
-    .map((anchor) => {
-      const url = absoluteUrl(pageUrl, anchor.href);
-      const isoDate = url ? new URL(url).searchParams.get("departure_date") : null;
-      const label = normalizeWhitespace(anchor.text.split("|")[0]) || isoDate || "";
-      const availability =
-        normalizeWhitespace(
-          anchor.text.match(/(?:Available|Sold\s*Out|Waitlist|On\s*Request)/i)?.[0],
-        ) || null;
-      const priceText = extractFirstPriceText(anchor.text);
-
-      if (!label) {
-        return null;
-      }
-
-      return {
-        label,
-        isoDate,
-        availability,
-        priceText,
-      } satisfies DepartureDate;
-    })
-    .filter((value): value is DepartureDate => value !== null);
-}
-
-export function buildDepartureDatesFromText(text: string | null | undefined) {
-  return extractDepartureDateLabels(text).map((label) => ({
-    label,
-    isoDate: null,
-    availability: /available on request/i.test(label) ? "Available on request" : null,
-    priceText: null,
-  }));
 }
 
 export function extractPickupLines(text: string | null | undefined) {

@@ -13,7 +13,6 @@ type RouteCardData = {
   departureCity: DepartureCityCode;
   startingPrice: number | null;
   organizerCount: number;
-  nextDepartureAt: string | null;
   availableVariants: VariantTagCode[];
   packageCount: number;
 };
@@ -139,7 +138,6 @@ export function TrekRouteList({ routes }: TrekRouteListProps) {
                 departureCity={route.departureCity}
                 startingPrice={route.startingPrice}
                 organizerCount={route.organizerCount}
-                nextDepartureAt={route.nextDepartureAt}
                 availableVariants={route.availableVariants}
                 packageCount={route.packageCount}
                 index={index}

@@ -46,7 +46,6 @@ export type DestinationCitySummary = {
   availableVariants: VariantTagCode[];
   startingPrice: number | null;
   organizerCount: number;
-  nextDepartureAt: string | null;
   packageCount: number;
   updatedAt: string | null;
   summary: string | null;
@@ -63,7 +62,6 @@ export type DestinationCityComparison = {
   startingPrice: number | null;
   priceMin: number | null;
   priceMax: number | null;
-  nextDepartureAt: string | null;
   availableVariants: VariantTagCode[];
   filters: ComparisonFilters;
   summaryTable: ComparisonSummaryTable;
@@ -102,11 +100,6 @@ export type VariantGroupSummary = {
   priceMax: number | null;
 };
 
-export type ComparisonDepartureDate = {
-  label: string;
-  isoDate: string | null;
-};
-
 export type ComparisonPackage = {
   id: string;
   title: string;
@@ -125,8 +118,6 @@ export type ComparisonPackage = {
   variantTags: VariantTagCode[];
   variantSignature: string;
   variantLabel: string;
-  nextDepartureAt: string | null;
-  departureDates: ComparisonDepartureDate[];
   mealsSummary: string | null;
   staySummary: string | null;
   inclusionHighlights: string[];

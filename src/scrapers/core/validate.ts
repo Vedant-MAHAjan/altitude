@@ -34,18 +34,6 @@ export function validatePackageForPersistence(
     warnings.push("pickupLocations is empty (some treks may genuinely have no pickup)");
   }
 
-  const nextDeparture = pkg.departureDates.find((d) => d.isoDate);
-
-  if (nextDeparture?.isoDate) {
-    const departureDate = new Date(`${nextDeparture.isoDate}T00:00:00.000Z`);
-
-    if (!Number.isNaN(departureDate.getTime()) && departureDate < new Date()) {
-      warnings.push(
-        `nextDepartureAt is in the past: ${nextDeparture.isoDate}`,
-      );
-    }
-  }
-
   return {
     valid: errors.length === 0,
     warnings,

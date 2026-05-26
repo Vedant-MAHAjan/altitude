@@ -44,7 +44,7 @@ export function TrendingSection({ routes }: TrendingSectionProps) {
                 Where everyone&apos;s headed
               </h2>
               <p className="mt-3 max-w-lg text-muted-foreground">
-                The most compared routes this season — sorted by organizer count and upcoming departures.
+                The most compared routes this season — sorted by organizer coverage and active packages.
               </p>
             </div>
             <Link
@@ -67,7 +67,6 @@ export function TrendingSection({ routes }: TrendingSectionProps) {
                 departureCity={route.departureCity}
                 startingPrice={route.startingPrice}
                 organizerCount={route.organizerCount}
-                nextDepartureAt={route.nextDepartureAt}
                 availableVariants={route.availableVariants}
                 packageCount={route.packageCount}
                 index={index}

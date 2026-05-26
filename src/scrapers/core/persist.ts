@@ -3,7 +3,6 @@ import { createHash } from "node:crypto";
 
 import { getPrismaClient } from "../../lib/prisma";
 import {
-  extractPriceInr,
   normalizeWhitespace,
   slugify,
 } from "../../lib/normalization/extractors";
@@ -90,56 +89,6 @@ function logAliasReview(
   );
 }
 
-function parseDateOnly(value: string | null | undefined) {
-  const normalized = normalizeWhitespace(value);
-
-  if (!normalized) {
-    return null;
-  }
-
-  const date = new Date(`${normalized}T00:00:00.000Z`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
-
-function nextDepartureAt(packageRow: NormalizedScrapedPackage) {
-  const values = packageRow.departureDates
-    .map((item) => parseDateOnly(item.isoDate))
-    .filter((item): item is Date => item !== null)
-    .sort((left, right) => left.getTime() - right.getTime());
-
-  return values[0] ?? null;
-}
-
-function inferDepartureStatus(value: string | null | undefined) {
-  const normalized = normalizeWhitespace(value).toLowerCase();
-
-  if (!normalized) {
-    return "UNKNOWN" as const;
-  }
-
-  if (normalized.includes("sold out")) {
-    return "SOLD_OUT" as const;
-  }
-
-  if (normalized.includes("waitlist")) {
-    return "WAITLIST" as const;
-  }
-
-  if (normalized.includes("on request") || normalized.includes("request")) {
-    return "ON_REQUEST" as const;
-  }
-
-  if (normalized.includes("cancel")) {
-    return "CANCELLED" as const;
-  }
-
-  if (normalized.includes("available")) {
-    return "AVAILABLE" as const;
-  }
-
-  return "UNKNOWN" as const;
-}
-
 function inferInclusionCategory(value: string) {
   const normalized = normalizeWhitespace(value).toLowerCase();
 
@@ -176,13 +125,6 @@ function inferInclusionCategory(value: string) {
   }
 
   return "OTHER" as const;
-}
-
-function buildDepartureKey(
-  departure: NormalizedScrapedPackage["departureDates"][number],
-) {
-  const labelSlug = slugify(departure.label || "departure");
-  return departure.isoDate ? `${departure.isoDate}:${labelSlug}` : labelSlug;
 }
 
 function buildPackageSlug(
@@ -299,113 +241,14 @@ async function recordPackagePriceHistory(
   });
 }
 
-async function syncDepartures(
+async function clearDepartures(
   prisma: NonNullable<ReturnType<typeof getPrismaClient>>,
   trekPackageId: string,
-  packageRow: NormalizedScrapedPackage,
 ) {
-  const activeDepartureKeys: string[] = [];
-
-  for (const departure of packageRow.departureDates) {
-    const departureKey = buildDepartureKey(departure);
-    activeDepartureKeys.push(departureKey);
-
-    const departurePriceInr = extractPriceInr(departure.priceText);
-    const persistedDeparture = await prisma.departure.upsert({
-      where: {
-        trekPackageId_departureKey: {
-          trekPackageId,
-          departureKey,
-        },
-      },
-      update: {
-        sourceUrl: packageRow.sourceUrl,
-        label: departure.label,
-        startDate: parseDateOnly(departure.isoDate),
-        availabilityStatus: inferDepartureStatus(departure.availability),
-        priceInr: departurePriceInr,
-        priceText: departure.priceText,
-        currencyCode: "INR",
-        pickupLocation: packageRow.pickupLocations[0] ?? null,
-        rawSnapshot: {
-          isoDate: departure.isoDate,
-          availability: departure.availability,
-          priceText: departure.priceText,
-        },
-        lastSeenAt: new Date(),
-      },
-      create: {
-        trekPackageId,
-        departureKey,
-        sourceUrl: packageRow.sourceUrl,
-        label: departure.label,
-        startDate: parseDateOnly(departure.isoDate),
-        availabilityStatus: inferDepartureStatus(departure.availability),
-        priceInr: departurePriceInr,
-        priceText: departure.priceText,
-        currencyCode: "INR",
-        pickupLocation: packageRow.pickupLocations[0] ?? null,
-        rawSnapshot: {
-          isoDate: departure.isoDate,
-          availability: departure.availability,
-          priceText: departure.priceText,
-        },
-      },
-      select: {
-        id: true,
-      },
-    });
-
-    if (departurePriceInr !== null || departure.priceText) {
-      const latestDeparturePrice = await prisma.priceHistory.findFirst({
-        where: {
-          departureId: persistedDeparture.id,
-        },
-        orderBy: {
-          capturedAt: "desc",
-        },
-        select: {
-          priceInr: true,
-          priceText: true,
-        },
-      });
-
-      const shouldCreateHistory =
-        !latestDeparturePrice ||
-        latestDeparturePrice.priceInr !== departurePriceInr ||
-        latestDeparturePrice.priceText !== departure.priceText;
-
-      if (shouldCreateHistory) {
-        await prisma.priceHistory.create({
-          data: {
-            trekPackageId,
-            departureId: persistedDeparture.id,
-            priceInr: departurePriceInr,
-            priceText: departure.priceText,
-            currencyCode: "INR",
-            sourceKind: "SCRAPE",
-            rawSnapshot: {
-              isoDate: departure.isoDate,
-              availability: departure.availability,
-              priceText: departure.priceText,
-            },
-          },
-        });
-      }
-    }
-  }
-
   await prisma.departure.deleteMany({
-    where: activeDepartureKeys.length > 0
-      ? {
-          trekPackageId,
-          departureKey: {
-            notIn: activeDepartureKeys,
-          },
-        }
-      : {
-          trekPackageId,
-        },
+    where: {
+      trekPackageId,
+    },
   });
 }
 
@@ -746,7 +589,7 @@ export async function persistPackages(
           currencyCode: "INR",
           durationText: packageRow.durationText,
           locationText: packageRow.locationText,
-          nextDepartureAt: nextDepartureAt(packageRow),
+          nextDepartureAt: null,
           transportType: packageRow.transportType,
           mealPlan: packageRow.mealPlan,
           forestFeeStatus: packageRow.forestFeeStatus,
@@ -782,7 +625,7 @@ export async function persistPackages(
           currencyCode: "INR",
           durationText: packageRow.durationText,
           locationText: packageRow.locationText,
-          nextDepartureAt: nextDepartureAt(packageRow),
+          nextDepartureAt: null,
           transportType: packageRow.transportType,
           mealPlan: packageRow.mealPlan,
           forestFeeStatus: packageRow.forestFeeStatus,
@@ -805,7 +648,7 @@ export async function persistPackages(
         },
       });
 
-      await syncDepartures(livePrisma, persistedPackage.id, packageRow);
+      await clearDepartures(livePrisma, persistedPackage.id);
       await syncInclusions(livePrisma, persistedPackage.id, packageRow);
       await recordPackagePriceHistory(livePrisma, persistedPackage.id, packageRow);
 

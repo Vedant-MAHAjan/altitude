@@ -8,22 +8,21 @@ import {
   buildVariantSignature,
 } from "@/lib/normalization/trek-identity";
 import type {
-  ComparisonDepartureDate,
   ComparisonFilters,
   ComparisonPackage,
   ComparisonSummaryTable,
   ComparisonTransportType,
+  DepartureCityCode,
+  DestinationCityComparison,
+  DestinationCitySummary,
   DifficultyLevel,
   HomepageData,
   InclusionStatus,
-  DepartureCityCode,
   ListingCity,
   MealPlan,
   OrganizerDetail,
   OrganizerSummary,
   SnapshotManifest,
-  DestinationCityComparison,
-  DestinationCitySummary,
   TrekComparison,
   TrekSearchEntry,
   TrekSummary,
@@ -61,7 +60,6 @@ export type PackageProjection = {
   sourceUrl: string;
   priceInr: number | null;
   priceText: string | null;
-  nextDepartureAt: Date | null;
   transportType: string;
   rawTransportText: string | null;
   rawPickupText: string | null;
@@ -120,33 +118,6 @@ function readVariantTags(normalizedSnapshot: unknown): VariantTagCode[] {
   );
 
   return tags.length > 0 ? tags : (["TREK_ONLY"] as VariantTagCode[]);
-}
-
-function readDepartureDates(normalizedSnapshot: unknown): ComparisonDepartureDate[] {
-  const snapshot = isRecord(normalizedSnapshot) ? normalizedSnapshot : null;
-
-  if (!Array.isArray(snapshot?.departureDates)) {
-    return [];
-  }
-
-  return snapshot.departureDates
-    .map((item) => {
-      if (!isRecord(item)) {
-        return null;
-      }
-
-      const label = readString(item.label);
-
-      if (!label) {
-        return null;
-      }
-
-      return {
-        label,
-        isoDate: readString(item.isoDate),
-      };
-    })
-    .filter((item): item is ComparisonDepartureDate => item !== null);
 }
 
 function cityToRouteSegment(city: DepartureCityCode) {
@@ -458,8 +429,6 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
     variantTags,
     variantSignature,
     variantLabel,
-    nextDepartureAt: record.nextDepartureAt ? record.nextDepartureAt.toISOString() : null,
-    departureDates: readDepartureDates(record.normalizedSnapshot),
     mealsSummary: derivedDetails.mealsSummary,
     staySummary: derivedDetails.staySummary,
     inclusionHighlights: derivedDetails.inclusionHighlights,
@@ -509,8 +478,6 @@ export function buildPendingPlaceholderRow(
     variantTags: ["TREK_ONLY"],
     variantSignature: "TREK_ONLY",
     variantLabel: "Trek Only",
-    nextDepartureAt: null,
-    departureDates: [],
     mealsSummary: null,
     staySummary: null,
     inclusionHighlights: [],
@@ -622,10 +589,6 @@ function buildDestinationCitySummary(
 ): DestinationCitySummary {
   const packages = sortPackages(group.packages);
   const prices = priceRange(packages);
-  const nextDepartureAt = [...packages]
-    .map((item) => item.nextDepartureAt)
-    .filter((value): value is string => Boolean(value))
-    .sort((left, right) => Date.parse(left) - Date.parse(right))[0] ?? null;
   const availableVariants = uniqueValues(packages.flatMap((item) => item.variantTags)).sort(
     (left, right) => {
       const order: VariantTagCode[] = ["SUNRISE", "NIGHT_TREK", "FIREFLIES", "CAMPING", "TREK_ONLY"];
@@ -642,7 +605,6 @@ function buildDestinationCitySummary(
     availableVariants,
     startingPrice: prices.min,
     organizerCount: new Set(packages.map((item) => item.organizerSlug)).size,
-    nextDepartureAt,
     packageCount: packages.length,
     updatedAt: maxUpdatedAt(packages.map((item) => item.lastUpdatedAt)),
     summary: group.trekSummary,
@@ -654,10 +616,6 @@ export function buildDestinationCityComparison(
 ): DestinationCityComparison {
   const packages = sortPackages(group.packages);
   const prices = priceRange(packages);
-  const nextDepartureAt = [...packages]
-    .map((item) => item.nextDepartureAt)
-    .filter((value): value is string => Boolean(value))
-    .sort((left, right) => Date.parse(left) - Date.parse(right))[0] ?? null;
 
   return {
     destinationName: group.trekName,
@@ -670,7 +628,6 @@ export function buildDestinationCityComparison(
     startingPrice: prices.min,
     priceMin: prices.min,
     priceMax: prices.max,
-    nextDepartureAt,
     availableVariants: uniqueValues(packages.flatMap((item) => item.variantTags)).sort((left, right) => {
       const order: VariantTagCode[] = ["SUNRISE", "NIGHT_TREK", "FIREFLIES", "CAMPING", "TREK_ONLY"];
 

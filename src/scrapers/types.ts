@@ -26,20 +26,6 @@ export type ScraperLogger = {
   error(message: string, meta?: LogMeta): void;
 };
 
-export type RawDepartureDate = {
-  label: string;
-  isoDate?: string | null;
-  availability?: string | null;
-  priceText?: string | null;
-};
-
-export type DepartureDate = {
-  label: string;
-  isoDate: string | null;
-  availability: string | null;
-  priceText: string | null;
-};
-
 export type RawScrapedPackage = {
   title: string;
   sourceUrl: string;
@@ -59,7 +45,6 @@ export type RawScrapedPackage = {
   inclusions?: string[];
   exclusions?: string[];
   pickupPoints?: string[];
-  departureDates?: RawDepartureDate[];
   pageText?: string | null;
   rawSnapshot?: Record<string, JsonValue>;
   /** Warnings collected during scraping (e.g. PRICE_MISMATCH). Flows into validation. */
@@ -85,7 +70,6 @@ export type NormalizedScrapedPackage = {
   mealPlan: MealPlan;
   forestFeeStatus: InclusionStatus;
   pickupLocations: string[];
-  departureDates: DepartureDate[];
   inclusions: string[];
   exclusions: string[];
   rawPageText: string | null;

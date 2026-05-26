@@ -1,8 +1,6 @@
 import type { Page } from "playwright";
 
 import {
-  buildDepartureDatesFromText,
-  extractDepartureDatesFromBookingLinks,
   extractDurationText,
   extractFirstPriceText,
   extractListItems,
@@ -137,13 +135,6 @@ export async function parseTourDetailPage(
   const quickInformationText = extractSection(pageText, [/^quick information$/i]);
   const batchesText = extractSection(pageText, [/^batches\s*:?$/i, /^dates and rates$/i]);
   const highlightsText = extractSection(pageText, [/^highlights$/i]);
-  const departureDates = await extractDepartureDatesFromBookingLinks(
-    options.page,
-    options.pageUrl,
-  );
-  const fallbackDepartureDates = buildDepartureDatesFromText(
-    mergeText(batchesText, itineraryText, pageText),
-  );
   const transportText = mergeText(
     ...findLines(
       mergeText(
@@ -227,7 +218,6 @@ export async function parseTourDetailPage(
     inclusions: extractListItems(inclusionText),
     exclusions: extractListItems(exclusionText),
     pickupPoints: extractPickupLines(mergeText(pickupText, itineraryText)),
-    departureDates: departureDates.length > 0 ? departureDates : fallbackDepartureDates,
     pageText,
     rawSnapshot: {
       platform: options.platform,

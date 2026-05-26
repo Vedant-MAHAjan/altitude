@@ -11,7 +11,7 @@ import {
   getDestinationCityComparison,
   getPrerenderDestinationRoutePaths,
 } from "@/lib/data";
-import { formatCurrency, formatDateShort } from "@/lib/format";
+import { formatCurrency } from "@/lib/format";
 import { buildMetadata } from "@/lib/metadata";
 import { departureCityLabels, variantTagLabels } from "@/lib/normalization/catalog";
 
@@ -174,12 +174,6 @@ export default async function DestinationCityPage({
               <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">From</div>
               <div className="mt-1 font-display text-xl font-bold text-primary">
                 {formatCurrency(comparison.startingPrice)}
-              </div>
-            </div>
-            <div>
-              <div className="text-[11px] uppercase tracking-wider text-muted-foreground/60">Next departure</div>
-              <div className="mt-1 font-display text-xl font-bold text-foreground">
-                {formatDateShort(comparison.nextDepartureAt)}
               </div>
             </div>
             <div>

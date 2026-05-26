@@ -32,14 +32,6 @@ export function formatUpdatedAt(value: string | null) {
   return format(new Date(value), "dd MMM yyyy, h:mm a");
 }
 
-export function formatDateShort(value: string | null) {
-  if (!value) {
-    return "Check listing";
-  }
-
-  return format(new Date(value), "dd MMM yyyy");
-}
-
 export function formatUpdatedFromNow(value: string | null) {
   if (!value) {
     return "Awaiting first scrape";

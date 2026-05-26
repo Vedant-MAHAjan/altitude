@@ -19,7 +19,7 @@
 - `core/browser.ts`: Chromium setup plus a `gotoAndSettle` helper for scheduled runs.
 - `core/retry.ts`: exponential backoff for brittle pages.
 - `core/logger.ts`: structured JSON logging for local runs and GitHub Actions.
-- `core/content.ts`: shared text extraction, section parsing, link discovery, and departure-date helpers.
+- `core/content.ts`: shared text extraction, section parsing, and link discovery helpers.
 - `core/detail-parser.ts`: common tour-detail parser that extracts raw sections from a detail page.
 - `core/raw-section-extraction.ts`: builds the raw section map used by the layered pipeline.
 - `core/token-normalizer.ts`: converts raw section lines into normalized transport, meal, and stay tokens.
@@ -51,7 +51,7 @@
   - `What is included in the tour`
   - `What is NOT included in the tour`
   - `Pickup point`
-- Extract departure dates from booking links first, then fall back to text patterns.
+- Extract shared detail-page sections for price, transport, pickup, inclusions, exclusions, and itinerary text.
 
 ### Durgvihar
 
@@ -82,7 +82,6 @@ The normalized output always includes:
 - `transportType`
 - `mealPlan`
 - `pickupLocations`
-- `departureDates`
 - `inclusions`
 - `exclusions`
 

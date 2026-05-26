@@ -1,12 +1,5 @@
 import { z } from "zod";
 
-const departureDateSchema = z.object({
-  label: z.string().min(1),
-  isoDate: z.string().nullable(),
-  availability: z.string().nullable(),
-  priceText: z.string().nullable(),
-});
-
 export const normalizedScrapedPackageSchema = z.object({
   title: z.string().min(1),
   sourceUrl: z.string().url(),
@@ -37,7 +30,6 @@ export const normalizedScrapedPackageSchema = z.object({
   mealPlan: z.enum(["INCLUDED", "PARTIAL", "NOT_INCLUDED", "UNKNOWN"]),
   forestFeeStatus: z.enum(["INCLUDED", "NOT_INCLUDED", "UNKNOWN"]),
   pickupLocations: z.array(z.string()),
-  departureDates: z.array(departureDateSchema),
   inclusions: z.array(z.string()),
   exclusions: z.array(z.string()),
   rawPageText: z.string().nullable(),

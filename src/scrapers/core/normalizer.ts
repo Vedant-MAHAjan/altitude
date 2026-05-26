@@ -14,7 +14,6 @@ import {
 import { buildLayeredPipeline } from "./layered-pipeline";
 import { validateNormalizedPackage } from "./schema";
 import type {
-  DepartureDate,
   NormalizedScrapedPackage,
   RawScrapedPackage,
   ScraperLogger,
@@ -31,25 +30,6 @@ function createFingerprint(payload: Record<string, unknown>) {
 
 function normalizeList(values: string[] | undefined) {
   return [...new Set((values ?? []).map((value) => normalizeWhitespace(value)).filter(Boolean))];
-}
-
-function normalizeDepartureDates(values: RawScrapedPackage["departureDates"]): DepartureDate[] {
-  const dates = (values ?? [])
-    .map((value) => ({
-      label: normalizeWhitespace(value.label),
-      isoDate: normalizeWhitespace(value.isoDate) || null,
-      availability: normalizeWhitespace(value.availability) || null,
-      priceText: normalizeWhitespace(value.priceText) || null,
-    }))
-    .filter((value) => value.label);
-
-  const uniqueByKey = new Map<string, DepartureDate>();
-
-  for (const value of dates) {
-    uniqueByKey.set(`${value.label}:${value.isoDate ?? ""}`, value);
-  }
-
-  return [...uniqueByKey.values()];
 }
 
 export function normalizeScrapedPackage(
@@ -77,7 +57,6 @@ export function normalizeScrapedPackage(
   ]
     .filter(Boolean)
     .join(" ");
-  const departureDates = normalizeDepartureDates(rawPackage.departureDates);
   const inclusions = normalizeList(rawPackage.inclusions);
   const exclusions = normalizeList(rawPackage.exclusions);
   const transportType = layeredPipeline.derived.transportType;
@@ -101,7 +80,6 @@ export function normalizeScrapedPackage(
     mealPlan: layeredPipeline.derived.mealPlan,
     forestFeeStatus: layeredPipeline.derived.forestFeeStatus,
     pickupLocations,
-    departureDates,
     inclusions,
     exclusions,
     pipeline: layeredPipeline,
@@ -136,7 +114,6 @@ export function normalizeScrapedPackage(
     mealPlan: normalizedSnapshot.mealPlan,
     forestFeeStatus: normalizedSnapshot.forestFeeStatus,
     pickupLocations: normalizedSnapshot.pickupLocations,
-    departureDates,
     inclusions,
     exclusions,
     rawPageText: normalizeWhitespace(rawPackage.pageText) || null,

@@ -289,7 +289,6 @@ function coerceComparisonPackage(item: ComparisonPackage): ComparisonPackage {
     variantTags,
     variantSignature,
     variantLabel,
-    nextDepartureAt: item.nextDepartureAt ?? null,
     trekSummary: item.trekSummary ?? null,
   };
 }

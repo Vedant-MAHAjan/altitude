@@ -69,7 +69,7 @@ export function HeroSection({ routeCount, organizerCount, priceFloor }: HeroStat
         >
           Stop tab-hopping between organizers. We scrape, normalize, and stack
           every Maharashtra trek package side-by-side — price, transport, meals,
-          departure dates.{" "}
+          and route details.{" "}
           <span className="font-editorial text-accent text-xl">No marketing fluff.</span>
         </motion.p>
 
