@@ -62,7 +62,12 @@ async function executeScraper(
         minDelayMs: 600,
       },
     );
-    const normalizedPackages = rawPackages.map(normalizeScrapedPackage);
+    const normalizedPackages = rawPackages.map((rawPackage) =>
+      normalizeScrapedPackage(rawPackage, {
+        organizerSlug: scraper.organizer.slug,
+        logger,
+      }),
+    );
     const packagesUpserted = await persistPackages(
       scraper,
       normalizedPackages,

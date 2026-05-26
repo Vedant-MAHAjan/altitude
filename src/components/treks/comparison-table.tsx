@@ -1,7 +1,7 @@
 "use client";
 
 import { format } from "date-fns";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import {
   CalendarDays,
   ChevronDown,
@@ -136,24 +136,51 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
     return listingCity === "PUNE" || listingCity === "MIXED";
   }
 
-  const visiblePackages = sortPackages(
-    packages.filter((item) => {
-      const matchesTransport = transportFilter === "ALL" || item.transportType === transportFilter;
-      const matchesCity = showCityFilter ? matchesCityFilter(item.listingCity, cityFilter) : true;
-      const itemVariantTags = coerceVariantTags(item.variantTags);
-      const matchesVariant = variantFilter === "ALL" || itemVariantTags.includes(variantFilter);
-      const matchesQuery =
-        debouncedQuery.length === 0 || item.searchText.includes(debouncedQuery);
+  const visiblePackages = useMemo(
+    () =>
+      sortPackages(
+        packages.filter((item) => {
+          const matchesTransport = transportFilter === "ALL" || item.transportType === transportFilter;
+          const matchesCity = showCityFilter ? matchesCityFilter(item.listingCity, cityFilter) : true;
+          const itemVariantTags = coerceVariantTags(item.variantTags);
+          const matchesVariant = variantFilter === "ALL" || itemVariantTags.includes(variantFilter);
+          const matchesQuery =
+            debouncedQuery.length === 0 || item.searchText.includes(debouncedQuery);
 
-      return matchesTransport && matchesCity && matchesVariant && matchesQuery;
-    }),
-    sortMode,
+          return matchesTransport && matchesCity && matchesVariant && matchesQuery;
+        }),
+        sortMode,
+      ),
+    [
+      cityFilter,
+      debouncedQuery,
+      packages,
+      showCityFilter,
+      sortMode,
+      transportFilter,
+      variantFilter,
+    ],
   );
 
-  const cheapest = visiblePackages
-    .map((item) => item.priceInr)
-    .filter((item): item is number => item !== null)
-    .sort((left, right) => left - right)[0] ?? null;
+  const lowestPricePackage = useMemo(() => {
+    const pricedPackages = visiblePackages.filter(
+      (item): item is ComparisonPackage & { priceInr: number } => item.priceInr !== null,
+    );
+
+    if (pricedPackages.length === 0) {
+      return null;
+    }
+
+    return [...pricedPackages].sort((left, right) => {
+      if (left.priceInr !== right.priceInr) {
+        return left.priceInr - right.priceInr;
+      }
+
+      return right.updatedAtMs - left.updatedAtMs;
+    })[0] ?? null;
+  }, [visiblePackages]);
+
+  const lowestPrice = lowestPricePackage?.priceInr ?? null;
 
   useEffect(() => {
     if (expandedPackageId && !visiblePackages.some((item) => item.id === expandedPackageId)) {
@@ -182,9 +209,9 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
               <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                 {visiblePackages.length} results
               </span>
-              {cheapest !== null && (
+              {lowestPrice !== null && (
                 <span className="hidden rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent sm:inline">
-                  from {formatCurrency(cheapest)}
+                  from {formatCurrency(lowestPrice)}
                 </span>
               )}
             </div>
@@ -291,7 +318,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
             </TableHeader>
             <TableBody>
               {visiblePackages.map((item) => {
-                const isCheapest = cheapest !== null && item.priceInr === cheapest;
+                const isLowestPrice = lowestPricePackage?.id === item.id;
                 const isExpanded = expandedPackageId === item.id;
 
                 if (item.isPending) {
@@ -329,7 +356,7 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
                   <Fragment key={item.id}>
                     <TableRow
                       aria-expanded={isExpanded}
-                      className={`border-border/20 cursor-pointer transition-colors hover:bg-primary/[0.03] ${isCheapest ? "bg-primary/[0.04]" : ""} ${isExpanded ? "bg-primary/[0.05]" : ""}`}
+                      className={`border-border/20 cursor-pointer transition-colors hover:bg-primary/[0.03] ${isLowestPrice ? "bg-primary/[0.04]" : ""} ${isExpanded ? "bg-primary/[0.05]" : ""}`}
                       onClick={() => toggleExpandedRow(item.id)}
                       onKeyDown={(event) => {
                         if (event.key === "Enter" || event.key === " ") {
@@ -358,12 +385,12 @@ export function ComparisonTable({ packages, filters, showCityFilter = true }: Co
                         </div>
                       </TableCell>
                       <TableCell>
-                        <span className={`font-display text-base font-bold ${isCheapest ? "text-primary" : "text-foreground"}`}>
+                        <span className={`font-display text-base font-bold ${isLowestPrice ? "text-primary" : "text-foreground"}`}>
                           {formatCurrency(item.priceInr)}
                         </span>
-                        {isCheapest && (
+                        {isLowestPrice && (
                           <div className="mt-0.5 text-[10px] font-medium uppercase text-primary/80">
-                            Best price
+                            Lowest price
                           </div>
                         )}
                       </TableCell>

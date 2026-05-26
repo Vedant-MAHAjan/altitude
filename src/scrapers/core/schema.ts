@@ -13,6 +13,8 @@ export const normalizedScrapedPackageSchema = z.object({
   sourceTrekName: z.string().min(1),
   trekName: z.string().min(1),
   trekSlug: z.string().min(1),
+  listingCity: z.enum(["MUMBAI", "PUNE", "MIXED", "OTHER"]),
+  citySource: z.enum(["title", "pickup", "organizer-default", "unknown"]),
   variantTags: z.array(
     z.enum(["TREK_ONLY", "CAMPING", "SUNRISE", "NIGHT_TREK", "FIREFLIES"]),
   ),

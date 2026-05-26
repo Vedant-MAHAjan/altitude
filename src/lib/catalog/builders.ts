@@ -1,5 +1,9 @@
 import { normalizeWhitespace } from "@/lib/normalization/extractors";
 import {
+  coerceListingCity,
+  resolveDepartureCityAssignment,
+} from "@/lib/normalization/departure-city";
+import {
   buildVariantLabel,
   buildVariantSignature,
 } from "@/lib/normalization/trek-identity";
@@ -237,49 +241,30 @@ function buildCityDestinationGroups(packages: ComparisonPackage[]) {
 }
 
 function deriveListingCity(input: {
+  title: string;
+  organizerSlug: string;
   normalizedSnapshot: unknown;
   rawSnapshot: unknown;
   transportSignals: string;
   pickupLocations: string[];
 }): ListingCity {
   const snapshot = isRecord(input.normalizedSnapshot) ? input.normalizedSnapshot : null;
-  const rawSnapshot = isRecord(input.rawSnapshot) ? input.rawSnapshot : null;
-  const sourceText = normalizeWhitespace(
-    [
-      snapshot ? readString(snapshot.sourceLabel) : null,
-      rawSnapshot ? readString(rawSnapshot.sourceLabel) : null,
-      input.transportSignals,
-      ...input.pickupLocations,
-    ]
-      .filter(Boolean)
-      .join(" "),
-  ).toLowerCase();
+  const storedListingCity = coerceListingCity(snapshot?.listingCity);
 
-  const hasMumbai =
-    /\b(mumbai|csmt|byculla|borivali|dadar|kurla|ghatkopar|thane|mulund|dombivali|kalyan|panvel|chembur|sion|kasara)\b/.test(
-      sourceText,
-    );
-  const hasPune =
-    /\b(pune|shivajinagar|swargate|wakad|hinjawadi|hinjewadi|nigdi|pimpri|chinchwad|nashik phata)\b/.test(
-      sourceText,
-    );
-
-  if (hasMumbai && hasPune) {
-    return "MIXED";
+  if (storedListingCity) {
+    return storedListingCity;
   }
 
-  if (hasMumbai) {
-    return "MUMBAI";
-  }
-
-  if (hasPune) {
-    return "PUNE";
-  }
-
-  return "OTHER";
+  return resolveDepartureCityAssignment({
+    title: input.title,
+    pickupLocations: input.pickupLocations,
+    organizerSlug: input.organizerSlug,
+  }).listingCity;
 }
 
 function readDerivedDisplayDetails(input: {
+  title: string;
+  organizerSlug: string;
   normalizedSnapshot: unknown;
   rawSnapshot: unknown;
   transportSignals: string;
@@ -438,6 +423,8 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
     .filter(Boolean)
     .join(" ");
   const derivedDetails = readDerivedDisplayDetails({
+    title: record.title,
+    organizerSlug: record.organizer.slug,
     normalizedSnapshot: record.normalizedSnapshot,
     rawSnapshot: record.rawSnapshot,
     transportSignals,

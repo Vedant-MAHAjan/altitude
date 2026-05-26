@@ -5,6 +5,7 @@ import {
   extractPriceInr,
   normalizeWhitespace,
 } from "../../lib/normalization/extractors";
+import { resolveDepartureCityAssignment } from "../../lib/normalization/departure-city";
 import {
   buildVariantLabel,
   buildVariantSignature,
@@ -16,7 +17,13 @@ import type {
   DepartureDate,
   NormalizedScrapedPackage,
   RawScrapedPackage,
+  ScraperLogger,
 } from "../types";
+
+type NormalizationOptions = {
+  organizerSlug?: string | null;
+  logger?: ScraperLogger;
+};
 
 function createFingerprint(payload: Record<string, unknown>) {
   return createHash("sha1").update(JSON.stringify(payload)).digest("hex");
@@ -47,6 +54,7 @@ function normalizeDepartureDates(values: RawScrapedPackage["departureDates"]): D
 
 export function normalizeScrapedPackage(
   rawPackage: RawScrapedPackage,
+  options: NormalizationOptions = {},
 ): NormalizedScrapedPackage {
   const canonicalIdentity = getCanonicalTrekIdentity(
     rawPackage.canonicalTrekName ?? rawPackage.title,
@@ -73,10 +81,16 @@ export function normalizeScrapedPackage(
   const inclusions = normalizeList(rawPackage.inclusions);
   const exclusions = normalizeList(rawPackage.exclusions);
   const transportType = layeredPipeline.derived.transportType;
-  const pickupLocations =
-    transportType === "TRAIN" ? [] : extractPickupLocations(pickupSource);
+  const extractedPickupLocations = extractPickupLocations(pickupSource);
+  const pickupLocations = transportType === "TRAIN" ? [] : extractedPickupLocations;
+  const cityAssignment = resolveDepartureCityAssignment({
+    title: rawPackage.title,
+    pickupLocations: extractedPickupLocations,
+    organizerSlug: options.organizerSlug,
+  });
   const normalizedSnapshot = {
     trekSlug,
+    listingCity: cityAssignment.listingCity,
     variantTags,
     variantSignature,
     variantLabel,
@@ -93,6 +107,15 @@ export function normalizeScrapedPackage(
     pipeline: layeredPipeline,
   };
 
+  options.logger?.info("Resolved package departure city", {
+    organizer: options.organizerSlug ?? null,
+    title: rawPackage.title,
+    sourceUrl: rawPackage.sourceUrl,
+    listingCity: cityAssignment.listingCity,
+    citySource: cityAssignment.citySource,
+    matchedCity: cityAssignment.matchedCity,
+  });
+
   return validateNormalizedPackage({
     title: normalizeWhitespace(rawPackage.title),
     sourceUrl: rawPackage.sourceUrl,
@@ -100,6 +123,8 @@ export function normalizeScrapedPackage(
       normalizeWhitespace(rawPackage.canonicalTrekName ?? rawPackage.title) || trekName,
     trekName,
     trekSlug,
+    listingCity: cityAssignment.listingCity,
+    citySource: cityAssignment.citySource,
     variantTags,
     variantSignature,
     variantLabel,

@@ -1,9 +1,11 @@
 import type {
   InclusionStatus,
+  ListingCity,
   MealPlan,
   TransportType,
   VariantTagCode,
 } from "../lib/types";
+import type { DepartureCitySource } from "../lib/normalization/departure-city";
 
 export type JsonPrimitive = string | number | boolean | null;
 
@@ -70,6 +72,8 @@ export type NormalizedScrapedPackage = {
   sourceTrekName: string;
   trekName: string;
   trekSlug: string;
+  listingCity: ListingCity;
+  citySource: DepartureCitySource;
   variantTags: VariantTagCode[];
   variantSignature: string;
   variantLabel: string;

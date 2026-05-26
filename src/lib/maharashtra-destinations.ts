@@ -3,6 +3,16 @@ import { normalizeSlug } from "@/lib/normalize-slug";
 export const TREK_REGION_MAHARASHTRA = "maharashtra" as const;
 export const TREK_REGION_OTHER = "other" as const;
 
+export const KNOWN_DEPARTURE_CITIES = [
+  "Mumbai",
+  "Pune",
+  "Nashik",
+  "Aurangabad",
+  "Nagpur",
+  "Thane",
+  "Navi Mumbai",
+] as const;
+
 export const MAHARASHTRA_DESTINATIONS: string[] = [...new Set([
   "sahyadri",
   "western ghats",

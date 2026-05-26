@@ -11,6 +11,7 @@ import {
   classifyTrekRegion,
   TREK_REGION_MAHARASHTRA,
 } from "../../lib/maharashtra-destinations";
+import { coerceListingCity } from "../../lib/normalization/departure-city";
 import { normalizeSlug, slugSimilarity } from "../../lib/normalize-slug";
 import { validatePackageForPersistence } from "./validate";
 import {
@@ -692,8 +693,31 @@ export async function persistPackages(
           id: true,
           slug: true,
           pageFingerprint: true,
+          normalizedSnapshot: true,
         },
       });
+
+      const previousListingCity = coerceListingCity(
+        typeof existingPackage?.normalizedSnapshot === "object" &&
+          existingPackage?.normalizedSnapshot !== null &&
+          !Array.isArray(existingPackage.normalizedSnapshot)
+          ? (existingPackage.normalizedSnapshot as Record<string, unknown>).listingCity
+          : null,
+      );
+
+      if (
+        previousListingCity &&
+        previousListingCity !== packageRow.listingCity
+      ) {
+        logger?.info("Package departure city reassigned", {
+          organizer: scraper.organizer.slug,
+          title: packageRow.title,
+          sourceUrl: packageRow.sourceUrl,
+          previousCity: previousListingCity,
+          nextCity: packageRow.listingCity,
+          citySource: packageRow.citySource,
+        });
+      }
 
       const packageSlug = buildPackageSlug(
         packageRow.title,
