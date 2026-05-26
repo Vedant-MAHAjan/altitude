@@ -96,6 +96,8 @@ export function normalizeScrapedPackage(
   return validateNormalizedPackage({
     title: normalizeWhitespace(rawPackage.title),
     sourceUrl: rawPackage.sourceUrl,
+    sourceTrekName:
+      normalizeWhitespace(rawPackage.canonicalTrekName ?? rawPackage.title) || trekName,
     trekName,
     trekSlug,
     variantTags,

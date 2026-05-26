@@ -11,7 +11,7 @@ type TrekPackageWithTrek = {
     name: string;
     slug: string;
     state: string;
-    region: string | null;
+    region: string;
     durationDays: number | null;
     durationNights: number | null;
     difficulty: "EASY" | "MODERATE" | "MODERATE_HARD" | "HARD" | "UNKNOWN";

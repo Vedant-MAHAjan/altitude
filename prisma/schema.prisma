@@ -32,7 +32,7 @@ model Trek {
   name           String
   slug           String          @unique
   state          String          @default("Maharashtra")
-  region         String?
+  region         String          @default("maharashtra")
   durationDays   Int?
   durationNights Int?
   difficulty     DifficultyLevel @default(UNKNOWN)

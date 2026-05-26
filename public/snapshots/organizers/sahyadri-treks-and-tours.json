@@ -3,9 +3,9 @@
   "slug": "sahyadri-treks-and-tours",
   "websiteUrl": "https://sahyadritreksandtours.com",
   "description": "Sahyadri Treks and Tours runs a custom Next.js storefront with trek pages under /treks/.",
-  "packageCount": 5,
-  "activeTreks": 5,
-  "priceMin": 700,
+  "packageCount": 4,
+  "activeTreks": 4,
+  "priceMin": 999,
   "priceMax": 2800,
   "pickupLocations": [
     "Dadar",
@@ -15,12 +15,8 @@
     "Nashik",
     "Nashik Phata"
   ],
-  "updatedAt": "2026-05-25T10:24:45.895Z",
+  "updatedAt": "2026-05-26T06:24:17.743Z",
   "treks": [
-    {
-      "name": "Shitkada Waterfall Rappelling",
-      "slug": "shitkada-waterfall-rappelling"
-    },
     {
       "name": "Hadsar Fort Trekking & Khunti Climbing",
       "slug": "hadsar-fort-trekking-khunti-climbing"
@@ -39,38 +35,6 @@
     }
   ],
   "packages": [
-    {
-      "id": "cmpe6pmjp000q4nnhvaa4maow",
-      "title": "Shitkada Waterfall Rappelling 2026",
-      "organizerName": "Sahyadri Treks and Tours",
-      "organizerSlug": "sahyadri-treks-and-tours",
-      "trekName": "Shitkada Waterfall Rappelling",
-      "trekSlug": "shitkada-waterfall-rappelling",
-      "trekSummary": null,
-      "sourceUrl": "https://sahyadritreksandtours.com/trek/shitkada-rappelling-2025",
-      "priceInr": 700,
-      "priceText": "₹700",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:24:43.019Z",
-      "updatedAtMs": 1779704683019,
-      "searchText": "sahyadri treks and tours shitkada waterfall rappelling 2026 shitkada waterfall rappelling trek mixed breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
-    },
     {
       "id": "cmpe6pocq00214nnh89ah310f",
       "title": "Hadsar Fort Trekking & Khunti Climbing 2026",
@@ -92,6 +56,28 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "2 Mumbai",
+          "isoDate": null
+        },
+        {
+          "label": "7 Pune",
+          "isoDate": null
+        },
+        {
+          "label": "1 Day",
+          "isoDate": null
+        },
+        {
+          "label": "12 Detailed",
+          "isoDate": null
+        },
+        {
+          "label": "3 Litres",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -105,8 +91,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-25T10:24:45.017Z",
-      "updatedAtMs": 1779704685017,
+      "lastUpdatedAt": "2026-05-26T06:24:16.403Z",
+      "updatedAtMs": 1779776656403,
       "searchText": "sahyadri treks and tours hadsar fort trekking & khunti climbing 2026 hadsar fort trekking & khunti climbing trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks dadar thane kalyan sion nashik nashik phata"
     },
     {
@@ -130,14 +116,48 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "2 Mumbai",
+          "isoDate": null
+        },
+        {
+          "label": "7 Pune",
+          "isoDate": null
+        },
+        {
+          "label": "1 Day",
+          "isoDate": null
+        },
+        {
+          "label": "1 Night",
+          "isoDate": null
+        },
+        {
+          "label": "13 Detailed",
+          "isoDate": null
+        },
+        {
+          "label": "1 Tea",
+          "isoDate": null
+        },
+        {
+          "label": "1 Breakfast",
+          "isoDate": null
+        },
+        {
+          "label": "1 Lunch",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:24:43.955Z",
-      "updatedAtMs": 1779704683955,
+      "lastUpdatedAt": "2026-05-26T06:24:15.102Z",
+      "updatedAtMs": 1779776655102,
       "searchText": "sahyadri treks and tours bhairavgad climbing & rappelling 2025 bhairavgad climbing & rappelling trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -161,6 +181,40 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "2 Pune",
+          "isoDate": null
+        },
+        {
+          "label": "5 Mumbai",
+          "isoDate": null
+        },
+        {
+          "label": "6 Board",
+          "isoDate": null
+        },
+        {
+          "label": "2 Days",
+          "isoDate": null
+        },
+        {
+          "label": "30 Video",
+          "isoDate": null
+        },
+        {
+          "label": "2 Lunches",
+          "isoDate": null
+        },
+        {
+          "label": "1 Dinner",
+          "isoDate": null
+        },
+        {
+          "label": "3 Litres",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -168,8 +222,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:24:45.895Z",
-      "updatedAtMs": 1779704685895,
+      "lastUpdatedAt": "2026-05-26T06:24:17.743Z",
+      "updatedAtMs": 1779776657743,
       "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang trek mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -193,14 +247,36 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "2 Mumbai",
+          "isoDate": null
+        },
+        {
+          "label": "7 Pune",
+          "isoDate": null
+        },
+        {
+          "label": "1 Days",
+          "isoDate": null
+        },
+        {
+          "label": "60 Form",
+          "isoDate": null
+        },
+        {
+          "label": "20 Video",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:24:41.951Z",
-      "updatedAtMs": 1779704681951,
+      "lastUpdatedAt": "2026-05-26T06:24:12.688Z",
+      "updatedAtMs": 1779776652688,
       "searchText": "sahyadri treks and tours jivdhan-vanarlingi valley crossing & rappelling 2026 jivdhan-vanarlingi valley crossing & rappelling trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     }
   ]

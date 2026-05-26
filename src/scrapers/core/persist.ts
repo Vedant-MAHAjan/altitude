@@ -7,12 +7,87 @@ import {
   normalizeWhitespace,
   slugify,
 } from "../../lib/normalization/extractors";
+import {
+  classifyTrekRegion,
+  TREK_REGION_MAHARASHTRA,
+} from "../../lib/maharashtra-destinations";
+import { normalizeSlug, slugSimilarity } from "../../lib/normalize-slug";
 import { validatePackageForPersistence } from "./validate";
+import {
+  createEmptyTrekAliasCache,
+  rememberCanonicalTrek,
+  rememberTrekAlias,
+  resolveCanonicalTrek,
+  type TrekAliasCache,
+} from "./trek-alias-resolver";
 import type {
   NormalizedScrapedPackage,
   OrganizerScraper,
   ScraperLogger,
 } from "../types";
+
+function toDisplayTrekName(slug: string, fallback: string) {
+  const fromSlug = slug
+    .split("-")
+    .filter(Boolean)
+    .map((token) => token[0]?.toUpperCase() + token.slice(1))
+    .join(" ");
+
+  return fromSlug || fallback;
+}
+
+function inferCanonicalTrekIdentity(
+  packageRow: NormalizedScrapedPackage,
+  sourceTrekName: string,
+  normalizedSourceSlug: string,
+) {
+  const usesExistingCanonicalIdentity =
+    packageRow.trekSlug !== normalizedSourceSlug ||
+    normalizeWhitespace(packageRow.trekName).toLowerCase() !==
+      normalizeWhitespace(sourceTrekName).toLowerCase();
+
+  if (usesExistingCanonicalIdentity) {
+    return {
+      canonicalSlug: packageRow.trekSlug,
+      canonicalName: packageRow.trekName,
+      similarity: slugSimilarity(normalizedSourceSlug, packageRow.trekSlug),
+      shouldLogAlias:
+        normalizeWhitespace(sourceTrekName).toLowerCase() !==
+        normalizeWhitespace(packageRow.trekName).toLowerCase(),
+    };
+  }
+
+  const canonicalSlug = normalizedSourceSlug || packageRow.trekSlug;
+
+  return {
+    canonicalSlug,
+    canonicalName: toDisplayTrekName(canonicalSlug, packageRow.trekName),
+    similarity: 1,
+    shouldLogAlias: false,
+  };
+}
+
+function logAliasMatch(
+  logger: ScraperLogger | undefined,
+  rawName: string,
+  canonicalSlug: string,
+  similarity: number,
+) {
+  logger?.info(
+    `[alias] "${rawName}" → canonical "${canonicalSlug}" (similarity: ${similarity.toFixed(2)})`,
+  );
+}
+
+function logAliasReview(
+  logger: ScraperLogger | undefined,
+  rawName: string,
+  similarSlug: string,
+  similarity: number,
+) {
+  logger?.warn(
+    `[alias:review] "${rawName}" → new trek created, but similar to "${similarSlug}" (similarity: ${similarity.toFixed(2)}) — consider merging`,
+  );
+}
 
 function parseDateOnly(value: string | null | undefined) {
   const normalized = normalizeWhitespace(value);
@@ -338,20 +413,83 @@ export async function persistPackages(
   packages: NormalizedScrapedPackage[],
   dryRun: boolean,
   logger?: ScraperLogger,
+  trekAliasCache: TrekAliasCache = createEmptyTrekAliasCache(),
 ) {
   const prisma = getPrismaClient();
 
-  if (dryRun) {
-    return packages.length;
-  }
-
-  if (!prisma) {
+  if (!dryRun && !prisma) {
     throw new Error(
       "DATABASE_URL is not set. Live scraping requires a PostgreSQL database. Use a Neon connection string for zero-cost deployment.",
     );
   }
 
-  const organizer = await prisma.organizer.upsert({
+  if (dryRun) {
+    for (const packageRow of packages) {
+      const sourceTrekName = normalizeWhitespace(
+        packageRow.sourceTrekName || packageRow.trekName || packageRow.title,
+      );
+      const trekRegion = classifyTrekRegion(sourceTrekName || packageRow.trekName);
+
+      if (trekRegion !== TREK_REGION_MAHARASHTRA) {
+        continue;
+      }
+
+      const resolution = resolveCanonicalTrek(trekAliasCache, sourceTrekName);
+
+      if (resolution.canonicalTrek) {
+        const rawNameChanged =
+          normalizeWhitespace(sourceTrekName).toLowerCase() !==
+          normalizeWhitespace(resolution.canonicalTrek.name).toLowerCase();
+
+        if (rawNameChanged) {
+          logAliasMatch(logger, sourceTrekName, resolution.canonicalTrek.slug, resolution.similarity);
+        }
+
+        rememberTrekAlias(trekAliasCache, sourceTrekName, resolution.canonicalTrek);
+        continue;
+      }
+
+      if (resolution.reviewCandidate) {
+        logAliasReview(
+          logger,
+          sourceTrekName,
+          resolution.reviewCandidate.slug,
+          resolution.similarity,
+        );
+      }
+
+      const inferredCanonical = inferCanonicalTrekIdentity(
+        packageRow,
+        sourceTrekName,
+        resolution.normalizedSlug || packageRow.trekSlug,
+      );
+
+      if (inferredCanonical.shouldLogAlias) {
+        logAliasMatch(
+          logger,
+          sourceTrekName,
+          inferredCanonical.canonicalSlug,
+          inferredCanonical.similarity,
+        );
+      }
+
+      const dryRunTrek = {
+        id: `dry:${inferredCanonical.canonicalSlug}`,
+        name: inferredCanonical.canonicalName,
+        slug: inferredCanonical.canonicalSlug,
+        region: trekRegion,
+      };
+
+      rememberCanonicalTrek(trekAliasCache, dryRunTrek);
+      rememberTrekAlias(trekAliasCache, sourceTrekName, dryRunTrek);
+    }
+
+    return packages.length;
+  }
+
+  const livePrisma = prisma!;
+
+  const organizer = await livePrisma.organizer.upsert({
     where: {
       slug: scraper.organizer.slug,
     },
@@ -380,7 +518,7 @@ export async function persistPackages(
   let primarySourceId: string | null = null;
 
   for (const source of scraper.sources) {
-    const persistedSource = await prisma.scrapeSource.upsert({
+    const persistedSource = await livePrisma.scrapeSource.upsert({
       where: {
         organizerId_sourceUrl: {
           organizerId: organizer.id,
@@ -410,7 +548,7 @@ export async function persistPackages(
   }
 
   const scrapeRun = primarySourceId
-    ? await prisma.scrapeRun.create({
+    ? await livePrisma.scrapeRun.create({
         data: {
           scrapeSourceId: primarySourceId,
           status: "SUCCESS",
@@ -445,20 +583,105 @@ export async function persistPackages(
         });
       }
 
-      const trek = await prisma.trek.upsert({
-        where: {
-          slug: packageRow.trekSlug,
-        },
-        update: {
-          name: packageRow.trekName,
-        },
-        create: {
-          name: packageRow.trekName,
-          slug: packageRow.trekSlug,
-        },
-      });
+      const sourceTrekName = normalizeWhitespace(
+        packageRow.sourceTrekName || packageRow.trekName || packageRow.title,
+      );
+      const trekRegion = classifyTrekRegion(sourceTrekName || packageRow.trekName);
+      const normalizedCanonicalSlug = normalizeSlug(sourceTrekName || packageRow.trekName);
+      const resolution =
+        trekRegion === TREK_REGION_MAHARASHTRA
+          ? resolveCanonicalTrek(trekAliasCache, sourceTrekName)
+          : null;
 
-      const existingPackage = await prisma.trekPackage.findUnique({
+      let trek: { id: string; name: string; slug: string; region: string } | null =
+        resolution?.canonicalTrek
+          ? {
+              id: resolution.canonicalTrek.id,
+              name: resolution.canonicalTrek.name,
+              slug: resolution.canonicalTrek.slug,
+              region: resolution.canonicalTrek.region,
+            }
+          : null;
+
+      if (trek && normalizeWhitespace(sourceTrekName).toLowerCase() !== normalizeWhitespace(trek.name).toLowerCase()) {
+        logAliasMatch(logger, sourceTrekName, trek.slug, resolution?.similarity ?? 1);
+      }
+
+      if (!trek) {
+        if (resolution?.reviewCandidate) {
+          logAliasReview(
+            logger,
+            sourceTrekName,
+            resolution.reviewCandidate.slug,
+            resolution.similarity,
+          );
+        }
+
+        const inferredCanonical = inferCanonicalTrekIdentity(
+          packageRow,
+          sourceTrekName,
+          normalizedCanonicalSlug || packageRow.trekSlug,
+        );
+
+        if (inferredCanonical.shouldLogAlias) {
+          logAliasMatch(
+            logger,
+            sourceTrekName,
+            inferredCanonical.canonicalSlug,
+            inferredCanonical.similarity,
+          );
+        }
+
+        const canonicalSlug = inferredCanonical.canonicalSlug;
+        const canonicalName = inferredCanonical.canonicalName;
+        const persistedTrek = await livePrisma.trek.upsert({
+          where: {
+            slug: canonicalSlug,
+          },
+          update: {
+            name: canonicalName,
+            region: trekRegion,
+          },
+          create: {
+            name: canonicalName,
+            slug: canonicalSlug,
+            region: trekRegion,
+          },
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            region: true,
+          },
+        });
+
+        trek = persistedTrek;
+      }
+
+      if (!trek) {
+        throw new Error(`Failed to resolve canonical trek for ${sourceTrekName}`);
+      }
+
+      if (trekRegion === TREK_REGION_MAHARASHTRA) {
+        rememberCanonicalTrek(trekAliasCache, trek);
+
+        await livePrisma.trekAlias.upsert({
+          where: {
+            value: sourceTrekName,
+          },
+          update: {
+            trekId: trek.id,
+          },
+          create: {
+            trekId: trek.id,
+            value: sourceTrekName,
+          },
+        });
+
+        rememberTrekAlias(trekAliasCache, sourceTrekName, trek);
+      }
+
+      const existingPackage = await livePrisma.trekPackage.findUnique({
         where: {
           organizerId_sourceUrl: {
             organizerId: organizer.id,
@@ -481,7 +704,7 @@ export async function persistPackages(
       const packageChanged =
         existingPackage?.pageFingerprint !== packageRow.pageFingerprint;
 
-      const persistedPackage = await prisma.trekPackage.upsert({
+      const persistedPackage = await livePrisma.trekPackage.upsert({
         where: {
           organizerId_sourceUrl: {
             organizerId: organizer.id,
@@ -558,15 +781,15 @@ export async function persistPackages(
         },
       });
 
-      await syncDepartures(prisma, persistedPackage.id, packageRow);
-      await syncInclusions(prisma, persistedPackage.id, packageRow);
-      await recordPackagePriceHistory(prisma, persistedPackage.id, packageRow);
+      await syncDepartures(livePrisma, persistedPackage.id, packageRow);
+      await syncInclusions(livePrisma, persistedPackage.id, packageRow);
+      await recordPackagePriceHistory(livePrisma, persistedPackage.id, packageRow);
 
       upserted += 1;
     }
 
     if (scrapeRun) {
-      await prisma.scrapeRun.update({
+      await livePrisma.scrapeRun.update({
         where: {
           id: scrapeRun.id,
         },
@@ -581,7 +804,7 @@ export async function persistPackages(
     return upserted;
   } catch (error) {
     if (scrapeRun) {
-      await prisma.scrapeRun.update({
+      await livePrisma.scrapeRun.update({
         where: {
           id: scrapeRun.id,
         },

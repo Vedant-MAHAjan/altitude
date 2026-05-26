@@ -63,7 +63,9 @@ export default async function TrekComparisonPage(props: PageProps<"/treks/[desti
               {difficultyLabels[comparison.difficulty]}
             </Badge>
             <Badge className="border-border/50 bg-secondary/50 text-muted-foreground" variant="outline">
-              {comparison.region ?? "Maharashtra"}
+              {comparison.region === "maharashtra"
+                ? "Maharashtra"
+                : comparison.region ?? "Maharashtra"}
             </Badge>
           </div>
           <h1 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">

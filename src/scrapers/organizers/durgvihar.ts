@@ -66,27 +66,13 @@ export const durgviharScraper: OrganizerScraper = {
         const links = await collectLinksByPathPatterns(page, source.sourceUrl, {
           includePathPatterns: [/\/trip\/[^/]+$/i],
         });
-        const limitedLinks = context.maxToursPerSource
-          ? links.slice(0, context.maxToursPerSource)
-          : links;
-
-        if (context.maxToursPerSource && links.length > context.maxToursPerSource) {
-          context.logger.warn("Discovery truncated by tour limit", {
-            organizer: "durgvihar",
-            source: source.label,
-            totalAvailable: links.length,
-            limit: context.maxToursPerSource,
-            skipped: links.length - context.maxToursPerSource,
-          });
-        }
-
         context.logger.info("Discovered organizer links", {
           organizer: "durgvihar",
           source: source.label,
-          discovered: limitedLinks.length,
+          discovered: links.length,
         });
 
-        discoveredLinks.push(...limitedLinks);
+        discoveredLinks.push(...links);
       }
 
       const packages: RawScrapedPackage[] = [];
@@ -132,6 +118,14 @@ export const durgviharScraper: OrganizerScraper = {
         }
 
         packages.push(rawPackage);
+
+        if (context.maxToursPerSource && packages.length >= context.maxToursPerSource) {
+          context.logger.info("Reached kept package limit", {
+            organizer: "durgvihar",
+            limit: context.maxToursPerSource,
+          });
+          break;
+        }
       }
 
       context.logger.info("Filtered Durgvihar packages", {

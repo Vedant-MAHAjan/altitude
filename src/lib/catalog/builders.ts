@@ -4,6 +4,7 @@ import {
   buildVariantSignature,
 } from "@/lib/normalization/trek-identity";
 import type {
+  ComparisonDepartureDate,
   ComparisonFilters,
   ComparisonPackage,
   ComparisonSummaryTable,
@@ -115,6 +116,33 @@ function readVariantTags(normalizedSnapshot: unknown): VariantTagCode[] {
   );
 
   return tags.length > 0 ? tags : (["TREK_ONLY"] as VariantTagCode[]);
+}
+
+function readDepartureDates(normalizedSnapshot: unknown): ComparisonDepartureDate[] {
+  const snapshot = isRecord(normalizedSnapshot) ? normalizedSnapshot : null;
+
+  if (!Array.isArray(snapshot?.departureDates)) {
+    return [];
+  }
+
+  return snapshot.departureDates
+    .map((item) => {
+      if (!isRecord(item)) {
+        return null;
+      }
+
+      const label = readString(item.label);
+
+      if (!label) {
+        return null;
+      }
+
+      return {
+        label,
+        isoDate: readString(item.isoDate),
+      };
+    })
+    .filter((item): item is ComparisonDepartureDate => item !== null);
 }
 
 function cityToRouteSegment(city: DepartureCityCode) {
@@ -444,6 +472,7 @@ export function toComparisonPackage(record: PackageProjection): ComparisonPackag
     variantSignature,
     variantLabel,
     nextDepartureAt: record.nextDepartureAt ? record.nextDepartureAt.toISOString() : null,
+    departureDates: readDepartureDates(record.normalizedSnapshot),
     mealsSummary: derivedDetails.mealsSummary,
     staySummary: derivedDetails.staySummary,
     inclusionHighlights: derivedDetails.inclusionHighlights,
@@ -494,6 +523,7 @@ export function buildPendingPlaceholderRow(
     variantSignature: "TREK_ONLY",
     variantLabel: "Trek Only",
     nextDepartureAt: null,
+    departureDates: [],
     mealsSummary: null,
     staySummary: null,
     inclusionHighlights: [],

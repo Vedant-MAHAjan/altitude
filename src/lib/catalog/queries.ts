@@ -1,5 +1,6 @@
 import { Prisma, type PrismaClient } from "@prisma/client";
 
+import { TREK_REGION_MAHARASHTRA } from "@/lib/maharashtra-destinations";
 import type { TrekSearchEntry } from "@/lib/types";
 import type { PackageProjection as CatalogPackageProjection } from "@/lib/catalog/builders";
 
@@ -90,6 +91,9 @@ export async function readAllActivePackageProjections(prisma: PrismaClient) {
     where: {
       status: "ACTIVE",
       needsReview: false,
+      trek: {
+        region: TREK_REGION_MAHARASHTRA,
+      },
     },
     select: activePackageSelect,
   });
@@ -104,6 +108,7 @@ export async function readActivePackagesForTrek(prisma: PrismaClient, slug: stri
       needsReview: false,
       trek: {
         slug,
+        region: TREK_REGION_MAHARASHTRA,
       },
     },
     select: activePackageSelect,
@@ -117,6 +122,9 @@ export async function readActivePackagesForOrganizer(prisma: PrismaClient, slug:
     where: {
       status: "ACTIVE",
       needsReview: false,
+      trek: {
+        region: TREK_REGION_MAHARASHTRA,
+      },
       organizer: {
         slug,
       },
@@ -130,9 +138,11 @@ export async function readActivePackagesForOrganizer(prisma: PrismaClient, slug:
 export async function readTrekSearchEntries(prisma: PrismaClient): Promise<TrekSearchEntry[]> {
   const treks = await prisma.trek.findMany({
     where: {
+      region: TREK_REGION_MAHARASHTRA,
       trekPackages: {
         some: {
           status: "ACTIVE",
+          needsReview: false,
         },
       },
     },
@@ -176,30 +186,15 @@ export async function readPendingOrganizersForTrek(
   prisma: PrismaClient,
   trekSlug: string,
 ): Promise<PendingOrganizerForTrek[]> {
-  // Organizers with at least one needsReview package for this trek
-  const organizersWithReviewPackages = await prisma.trekPackage.findMany({
-    where: {
-      status: "ACTIVE",
-      needsReview: true,
-      trek: { slug: trekSlug },
-    },
-    select: {
-      organizer: {
-        select: { name: true, slug: true, websiteUrl: true },
-      },
-      trek: {
-        select: { name: true, slug: true },
-      },
-    },
-    distinct: ["organizerId"],
-  });
-
   // Filter out organizers that also have valid (non-review) packages
   const organizersWithValidPackages = await prisma.trekPackage.findMany({
     where: {
       status: "ACTIVE",
       needsReview: false,
-      trek: { slug: trekSlug },
+      trek: {
+        slug: trekSlug,
+        region: TREK_REGION_MAHARASHTRA,
+      },
     },
     select: { organizerId: true },
     distinct: ["organizerId"],
@@ -214,7 +209,10 @@ export async function readPendingOrganizersForTrek(
     where: {
       status: "ACTIVE",
       needsReview: true,
-      trek: { slug: trekSlug },
+      trek: {
+        slug: trekSlug,
+        region: TREK_REGION_MAHARASHTRA,
+      },
     },
     select: {
       organizerId: true,
@@ -252,6 +250,9 @@ export async function readAllPendingOrganizerTrekPairs(
     where: {
       status: "ACTIVE",
       needsReview: true,
+      trek: {
+        region: TREK_REGION_MAHARASHTRA,
+      },
     },
   });
 
@@ -260,6 +261,9 @@ export async function readAllPendingOrganizerTrekPairs(
     where: {
       status: "ACTIVE",
       needsReview: false,
+      trek: {
+        region: TREK_REGION_MAHARASHTRA,
+      },
     },
   });
 
@@ -285,6 +289,9 @@ export async function readAllPendingOrganizerTrekPairs(
         trekId: key.trekId,
         status: "ACTIVE",
         needsReview: true,
+        trek: {
+          region: TREK_REGION_MAHARASHTRA,
+        },
       },
       select: {
         organizer: { select: { name: true, slug: true, websiteUrl: true } },

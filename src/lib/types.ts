@@ -102,6 +102,11 @@ export type VariantGroupSummary = {
   priceMax: number | null;
 };
 
+export type ComparisonDepartureDate = {
+  label: string;
+  isoDate: string | null;
+};
+
 export type ComparisonPackage = {
   id: string;
   title: string;
@@ -121,6 +126,7 @@ export type ComparisonPackage = {
   variantSignature: string;
   variantLabel: string;
   nextDepartureAt: string | null;
+  departureDates: ComparisonDepartureDate[];
   mealsSummary: string | null;
   staySummary: string | null;
   inclusionHighlights: string[];

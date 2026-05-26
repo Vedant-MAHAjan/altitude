@@ -1,9 +1,14 @@
 import { generateStaticCatalogData } from "../../lib/catalog/generator";
+import { getPrismaClient } from "../../lib/prisma";
 import { createLogger } from "./logger";
 import { normalizeScrapedPackage } from "./normalizer";
 import { persistPackages } from "./persist";
-import { reconcileTrekCatalog } from "./reconcile";
 import { withRetry } from "./retry";
+import {
+  createEmptyTrekAliasCache,
+  loadTrekAliasCache,
+  type TrekAliasCache,
+} from "./trek-alias-resolver";
 import type {
   OrganizerScraper,
   ScraperRunOptions,
@@ -28,6 +33,7 @@ function resolveTourLimit(explicitLimit: number | null) {
 async function executeScraper(
   scraper: OrganizerScraper,
   options: ScraperRunOptions,
+  trekAliasCache: TrekAliasCache,
 ): Promise<ScraperRunResult> {
   const startedAt = Date.now();
   const logger = createLogger(`scrape:${scraper.organizer.slug}`);
@@ -62,6 +68,7 @@ async function executeScraper(
       normalizedPackages,
       options.dryRun,
       logger,
+      trekAliasCache,
     );
 
     logger.info("Finished organizer scrape", {
@@ -126,6 +133,11 @@ export async function runScrapers(
     limit: options.limit,
   });
 
+  const prisma = getPrismaClient();
+  const trekAliasCache = prisma
+    ? await loadTrekAliasCache(prisma)
+    : createEmptyTrekAliasCache();
+
   await Promise.all(
     Array.from({ length: Math.min(concurrency, pending.length) }, async () => {
       while (pending.length > 0) {
@@ -135,14 +147,13 @@ export async function runScrapers(
           break;
         }
 
-        const result = await executeScraper(scraper, options);
+        const result = await executeScraper(scraper, options, trekAliasCache);
         results.push(result);
       }
     }),
   );
 
   if (!options.dryRun && results.some((result) => result.status === "success")) {
-    await reconcileTrekCatalog(logger.child("reconcile"));
     await generateStaticCatalogData(logger.child("snapshots"));
   }
 

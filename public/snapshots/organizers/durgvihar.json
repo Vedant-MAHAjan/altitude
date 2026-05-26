@@ -3,8 +3,8 @@
   "slug": "durgvihar",
   "websiteUrl": "https://durgvihar.in",
   "description": "Durgvihar runs a custom trip platform with trek detail pages under /trip/.",
-  "packageCount": 7,
-  "activeTreks": 7,
+  "packageCount": 3,
+  "activeTreks": 3,
   "priceMin": null,
   "priceMax": null,
   "pickupLocations": [
@@ -12,19 +12,11 @@
     "Nashik",
     "Sion"
   ],
-  "updatedAt": "2026-05-25T10:22:39.937Z",
+  "updatedAt": "2026-05-21T13:44:22.355Z",
   "treks": [
     {
       "name": "Vasota Jungle",
       "slug": "vasota-jungle"
-    },
-    {
-      "name": "Harishchandragad",
-      "slug": "harishchandragad"
-    },
-    {
-      "name": "Alang Madan Kulang",
-      "slug": "alang-madan-kulang"
     },
     {
       "name": "Bhairavgad Climbing & Rappelling",
@@ -33,14 +25,6 @@
     {
       "name": "Ratangad",
       "slug": "ratangad"
-    },
-    {
-      "name": "Harihar Fort",
-      "slug": "harihar-fort"
-    },
-    {
-      "name": "Sandhan Valley",
-      "slug": "sandhan-valley"
     }
   ],
   "packages": [
@@ -65,6 +49,40 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "1 Meals",
+          "isoDate": null
+        },
+        {
+          "label": "2 Meals",
+          "isoDate": null
+        },
+        {
+          "label": "2 Days",
+          "isoDate": null
+        },
+        {
+          "label": "2 Nights",
+          "isoDate": null
+        },
+        {
+          "label": "21 May",
+          "isoDate": null
+        },
+        {
+          "label": "11 Days",
+          "isoDate": null
+        },
+        {
+          "label": "10 Days",
+          "isoDate": null
+        },
+        {
+          "label": "1 Days",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -78,69 +96,6 @@
       "lastUpdatedAt": "2026-05-21T13:44:21.241Z",
       "updatedAtMs": 1779371061241,
       "searchText": "durgvihar vasota jungle trek & sajjangad fort vasota jungle trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay dadar nashik"
-    },
-    {
-      "id": "cmpfjl4dc0024v2nhllv1hiji",
-      "title": "Harishchandra Gad Trek",
-      "organizerName": "Durgvihar",
-      "organizerSlug": "durgvihar",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://durgvihar.in/trip/harishchandra-gad-trek",
-      "priceInr": null,
-      "priceText": "rs 5",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:19.296Z",
-      "updatedAtMs": 1779371059296,
-      "searchText": "durgvihar harishchandra gad trek harishchandragad trek mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpfjl3cd001cv2nhmo4yg1uk",
-      "title": "Alang Madan Kulang",
-      "organizerName": "Durgvihar",
-      "organizerSlug": "durgvihar",
-      "trekName": "Alang Madan Kulang",
-      "trekSlug": "alang-madan-kulang",
-      "trekSummary": null,
-      "sourceUrl": "https://durgvihar.in/trip/alang-madan-kulang",
-      "priceInr": null,
-      "priceText": "rs 5",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch, Dinner",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Dinner",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:44:17.965Z",
-      "updatedAtMs": 1779371057965,
-      "searchText": "durgvihar alang madan kulang alang madan kulang trek mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
       "id": "cmpfjl560002pv2nha9xnd3ad",
@@ -163,6 +118,28 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "1 Days",
+          "isoDate": null
+        },
+        {
+          "label": "1 Nights",
+          "isoDate": null
+        },
+        {
+          "label": "21 May",
+          "isoDate": null
+        },
+        {
+          "label": "11 Days",
+          "isoDate": null
+        },
+        {
+          "label": "10 Days",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -197,6 +174,28 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "1 Days",
+          "isoDate": null
+        },
+        {
+          "label": "1 Nights",
+          "isoDate": null
+        },
+        {
+          "label": "21 May",
+          "isoDate": null
+        },
+        {
+          "label": "11 Days",
+          "isoDate": null
+        },
+        {
+          "label": "10 Days",
+          "isoDate": null
+        }
+      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -210,69 +209,6 @@
       "lastUpdatedAt": "2026-05-21T13:44:22.355Z",
       "updatedAtMs": 1779371062355,
       "searchText": "durgvihar ratangad fort ratangad trek mumbai breakfast, lunch breakfast, lunch dadar sion nashik"
-    },
-    {
-      "id": "cmpe6nany0027z5nh2abkzygb",
-      "title": "Harihar fort",
-      "organizerName": "Durgvihar",
-      "organizerSlug": "durgvihar",
-      "trekName": "Harihar Fort",
-      "trekSlug": "harihar-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://durgvihar.in/trip/harihar-fort",
-      "priceInr": null,
-      "priceText": "rs 5",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:22:39.937Z",
-      "updatedAtMs": 1779704559937,
-      "searchText": "durgvihar harihar fort harihar fort trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
-    },
-    {
-      "id": "cmpe6n8jf001hz5nh2w7i93af",
-      "title": "Sandhan Valley Rappelling Trek",
-      "organizerName": "Durgvihar",
-      "organizerSlug": "durgvihar",
-      "trekName": "Sandhan Valley",
-      "trekSlug": "sandhan-valley",
-      "trekSummary": null,
-      "sourceUrl": "https://durgvihar.in/trip/sandhan-valley-rappelling-trek",
-      "priceInr": null,
-      "priceText": "rs 5",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:22:38.555Z",
-      "updatedAtMs": 1779704558555,
-      "searchText": "durgvihar sandhan valley rappelling trek sandhan valley trek mumbai breakfast, lunch breakfast, lunch"
     }
   ]
 }

@@ -67,6 +67,7 @@ export type RawScrapedPackage = {
 export type NormalizedScrapedPackage = {
   title: string;
   sourceUrl: string;
+  sourceTrekName: string;
   trekName: string;
   trekSlug: string;
   variantTags: VariantTagCode[];

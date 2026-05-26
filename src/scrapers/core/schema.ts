@@ -10,6 +10,7 @@ const departureDateSchema = z.object({
 export const normalizedScrapedPackageSchema = z.object({
   title: z.string().min(1),
   sourceUrl: z.string().url(),
+  sourceTrekName: z.string().min(1),
   trekName: z.string().min(1),
   trekSlug: z.string().min(1),
   variantTags: z.array(
