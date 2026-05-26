@@ -4,10 +4,10 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/pawna-lake/mumbai",
   "summary": null,
-  "packageCount": 2,
+  "packageCount": 4,
   "organizerCount": 2,
-  "startingPrice": 999,
-  "priceMin": 999,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1000,
   "nextDepartureAt": null,
   "availableVariants": [
@@ -16,13 +16,14 @@
   ],
   "filters": {
     "transportTypes": [
+      "NON_AC_BUS",
       "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "MUMBAI"
     ],
     "variantTags": [
       "CAMPING",
@@ -40,10 +41,10 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 999,
+    "lowestPrice": 699,
     "cheapestOrganizerName": "Treks and Trails India",
     "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Pawna Lake Camping | Rs 999 | Watersports",
+    "cheapestPackageTitle": "Pawna Lake Camping | Watersports Lakeside Tents Bonfire Music",
     "mealsSummary": [
       "Breakfast",
       "Dinner",
@@ -60,8 +61,8 @@
       "tags": [
         "CAMPING"
       ],
-      "packageCount": 1,
-      "priceMin": 999,
+      "packageCount": 3,
+      "priceMin": 699,
       "priceMax": 999
     },
     {
@@ -77,6 +78,146 @@
   ],
   "packages": [
     {
+      "id": "cmpe5rsma01ca8knhyrsjo281",
+      "title": "Pawna Lake Camping | Watersports Lakeside Tents Bonfire Music",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/pawna-lake-camping-with-watersports",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "26 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
+          "isoDate": "2026-05-26T15:00:00"
+        },
+        {
+          "label": "BOOK",
+          "isoDate": "2026-05-26T15:00:00"
+        },
+        {
+          "label": "26 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
+          "isoDate": "2026-05-26T15:00:00"
+        },
+        {
+          "label": "27 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
+          "isoDate": "2026-05-27T15:00:00"
+        },
+        {
+          "label": "BOOK",
+          "isoDate": "2026-05-27T15:00:00"
+        },
+        {
+          "label": "27 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
+          "isoDate": "2026-05-27T15:00:00"
+        },
+        {
+          "label": "28 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
+          "isoDate": "2026-05-28T15:00:00"
+        },
+        {
+          "label": "BOOK",
+          "isoDate": "2026-05-28T15:00:00"
+        },
+        {
+          "label": "28 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
+          "isoDate": "2026-05-28T15:00:00"
+        },
+        {
+          "label": "29 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
+          "isoDate": "2026-05-29T15:00:00"
+        },
+        {
+          "label": "BOOK",
+          "isoDate": "2026-05-29T15:00:00"
+        },
+        {
+          "label": "29 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
+          "isoDate": "2026-05-29T15:00:00"
+        },
+        {
+          "label": "30 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
+          "isoDate": "2026-05-30T15:00:00"
+        },
+        {
+          "label": "BOOK",
+          "isoDate": "2026-05-30T15:00:00"
+        },
+        {
+          "label": "30 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
+          "isoDate": "2026-05-30T15:00:00"
+        }
+      ],
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T05:23:10.900Z",
+      "updatedAtMs": 1779686590900,
+      "searchText": "treks and trails india pawna lake camping | watersports lakeside tents bonfire music pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpl310fq019q1pnhmucyl21d",
+      "title": "Holi Bash Pawna Lakeside Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/holi-bash-pawna-lakeside-camping-123471",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "1 Night",
+          "isoDate": null
+        },
+        {
+          "label": "2 Days",
+          "isoDate": null
+        },
+        {
+          "label": "Available on request",
+          "isoDate": null
+        }
+      ],
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-25T10:47:24.278Z",
+      "updatedAtMs": 1779706044278,
+      "searchText": "bhatakna holi bash pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
       "id": "cmpe5rpp401aq8knhg0n5hbti",
       "title": "Pawna Lake Camping | Rs 999 | Watersports",
       "organizerName": "Treks and Trails India",
@@ -90,7 +231,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "CAMPING"
       ],
@@ -132,7 +273,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-25T05:23:06.692Z",
       "updatedAtMs": 1779686586692,
-      "searchText": "treks and trails india pawna lake camping | rs 999 | watersports pawna lake camping mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "searchText": "treks and trails india pawna lake camping | rs 999 | watersports pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpfjn3i401x0v2nhe78oth1e",
@@ -148,7 +289,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "TREK_ONLY"
       ],
@@ -182,8 +323,8 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:45:51.484Z",
       "updatedAtMs": 1779371151484,
-      "searchText": "bhatakna pawna lakeside camping pawna lake trek mixed breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
+      "searchText": "bhatakna pawna lakeside camping pawna lake trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     }
   ],
-  "updatedAt": "2026-05-25T05:23:06.692Z"
+  "updatedAt": "2026-05-25T10:47:24.278Z"
 }

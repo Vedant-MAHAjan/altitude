@@ -4,14 +4,13 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/vasota-jungle/mumbai",
   "summary": null,
-  "packageCount": 3,
-  "organizerCount": 3,
-  "startingPrice": 1799,
-  "priceMin": 1799,
-  "priceMax": 1899,
+  "packageCount": 1,
+  "organizerCount": 1,
+  "startingPrice": null,
+  "priceMin": null,
+  "priceMax": null,
   "nextDepartureAt": null,
   "availableVariants": [
-    "CAMPING",
     "TREK_ONLY"
   ],
   "filters": {
@@ -22,53 +21,33 @@
       "INCLUDED"
     ],
     "cities": [
-      "MIXED",
       "MUMBAI"
     ],
     "variantTags": [
-      "CAMPING",
       "TREK_ONLY"
     ],
     "organizers": [
       {
-        "name": "Bhatakna",
-        "slug": "bhatakna"
-      },
-      {
         "name": "Durgvihar",
         "slug": "durgvihar"
-      },
-      {
-        "name": "Trekhievers",
-        "slug": "trekhievers"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1799,
-    "cheapestOrganizerName": "Trekhievers",
-    "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Vasota Jungle Trek With Camping | Pune",
+    "lowestPrice": null,
+    "cheapestOrganizerName": null,
+    "cheapestOrganizerSlug": null,
+    "cheapestPackageTitle": null,
     "mealsSummary": [
       "Breakfast",
       "Lunch",
-      "Tea and snacks",
-      "Dinner"
+      "Dinner",
+      "Tea and snacks"
     ],
-    "organizerCount": 3,
-    "variantCount": 2
+    "organizerCount": 1,
+    "variantCount": 1
   },
   "variantGroups": [
-    {
-      "signature": "CAMPING",
-      "label": "Camping",
-      "tags": [
-        "CAMPING"
-      ],
-      "packageCount": 2,
-      "priceMin": 1799,
-      "priceMax": 1899
-    },
     {
       "signature": "TREK_ONLY",
       "label": "Trek",
@@ -81,121 +60,6 @@
     }
   ],
   "packages": [
-    {
-      "id": "cmpe5rjd701188knhxl1wb2po",
-      "title": "Vasota Jungle Trek With Camping | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Vasota Jungle",
-      "trekSlug": "vasota-jungle",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/vasota-jungle-trek-89798",
-      "priceInr": 1799,
-      "priceText": "₹1,799 per person",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "CAMPING"
-      ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "26 November",
-          "isoDate": null
-        },
-        {
-          "label": "30 December",
-          "isoDate": null
-        },
-        {
-          "label": "28 January",
-          "isoDate": null
-        },
-        {
-          "label": "25 February",
-          "isoDate": null
-        },
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "29 Event",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "Every Saturday",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:22:52.783Z",
-      "updatedAtMs": 1779686572783,
-      "searchText": "trekhievers vasota jungle trek with camping | pune vasota jungle camping mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpe5sd2e01ir8knhed3zep44",
-      "title": "Vasota Jungle Trek With camping pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Vasota Jungle",
-      "trekSlug": "vasota-jungle",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/vasota-jungle-trek",
-      "priceInr": 1899,
-      "priceText": "₹1,899",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "CAMPING"
-      ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:24.981Z",
-      "updatedAtMs": 1779686604981,
-      "searchText": "bhatakna vasota jungle trek with camping pune vasota jungle camping mixed breakfast, lunch tent stay breakfast, lunch tent stay"
-    },
     {
       "id": "cmpfjl5vd0038v2nhyta72pv1",
       "title": "Vasota Jungle Trek & SajjanGad fort",
@@ -266,5 +130,5 @@
       "searchText": "durgvihar vasota jungle trek & sajjangad fort vasota jungle trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay dadar nashik"
     }
   ],
-  "updatedAt": "2026-05-25T05:23:24.981Z"
+  "updatedAt": "2026-05-21T13:44:21.241Z"
 }

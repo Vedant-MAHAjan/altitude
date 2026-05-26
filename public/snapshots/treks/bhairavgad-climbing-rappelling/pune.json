@@ -4,10 +4,10 @@
   "departureCity": "PUNE",
   "routePath": "/treks/bhairavgad-climbing-rappelling/pune",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1199,
-  "priceMin": 1199,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1199,
   "nextDepartureAt": null,
   "availableVariants": [
@@ -15,13 +15,14 @@
   ],
   "filters": {
     "transportTypes": [
+      "NON_AC_BUS",
       "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "PUNE"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -30,20 +31,24 @@
       {
         "name": "Sahyadri Treks and Tours",
         "slug": "sahyadri-treks-and-tours"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1199,
-    "cheapestOrganizerName": "Sahyadri Treks and Tours",
-    "cheapestOrganizerSlug": "sahyadri-treks-and-tours",
-    "cheapestPackageTitle": "Bhairavgad Climbing & Rappelling 2025",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Bhairavgad Fort Trek Shripunje | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -53,12 +58,72 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 1199,
+      "packageCount": 2,
+      "priceMin": 699,
       "priceMax": 1199
     }
   ],
   "packages": [
+    {
+      "id": "cmpmb9pcm00gzrvnh5c2ym9f8",
+      "title": "Bhairavgad Fort Trek Shripunje | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhairavgad Climbing & Rappelling",
+      "trekSlug": "bhairavgad-climbing-rappelling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhairavgad-fort-trek-shripunje-pune-129635",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "30 October",
+          "isoDate": null
+        },
+        {
+          "label": "28 Important",
+          "isoDate": null
+        },
+        {
+          "label": "1 Night",
+          "isoDate": null
+        },
+        {
+          "label": "1 Day",
+          "isoDate": null
+        },
+        {
+          "label": "12 Hours",
+          "isoDate": null
+        },
+        {
+          "label": "Available on request",
+          "isoDate": null
+        }
+      ],
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-05-26T07:25:52.918Z",
+      "updatedAtMs": 1779780352918,
+      "searchText": "trekhievers bhairavgad fort trek shripunje | pune bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
     {
       "id": "cmpe6pndd001f4nnh95vanc36",
       "title": "Bhairavgad Climbing & Rappelling 2025",
@@ -73,7 +138,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
+      "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
       ],
@@ -122,8 +187,8 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-26T06:24:15.102Z",
       "updatedAtMs": 1779776655102,
-      "searchText": "sahyadri treks and tours bhairavgad climbing & rappelling 2025 bhairavgad climbing & rappelling trek mixed breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "searchText": "sahyadri treks and tours bhairavgad climbing & rappelling 2025 bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     }
   ],
-  "updatedAt": "2026-05-26T06:24:15.102Z"
+  "updatedAt": "2026-05-26T07:25:52.918Z"
 }

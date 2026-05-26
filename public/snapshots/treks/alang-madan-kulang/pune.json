@@ -4,11 +4,11 @@
   "departureCity": "PUNE",
   "routePath": "/treks/alang-madan-kulang/pune",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
+  "packageCount": 1,
+  "organizerCount": 1,
   "startingPrice": 2000,
   "priceMin": 2000,
-  "priceMax": 2600,
+  "priceMax": 2000,
   "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
@@ -21,7 +21,7 @@
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "PUNE"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -30,10 +30,6 @@
       {
         "name": "Sahyadri Treks and Tours",
         "slug": "sahyadri-treks-and-tours"
-      },
-      {
-        "name": "Trekhievers",
-        "slug": "trekhievers"
       }
     ]
   },
@@ -45,10 +41,9 @@
     "mealsSummary": [
       "Breakfast",
       "Dinner",
-      "Tea and snacks",
-      "Lunch"
+      "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 1,
     "variantCount": 1
   },
   "variantGroups": [
@@ -58,9 +53,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 2,
+      "packageCount": 1,
       "priceMin": 2000,
-      "priceMax": 2600
+      "priceMax": 2000
     }
   ],
   "packages": [
@@ -78,7 +73,7 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
+      "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
       ],
@@ -128,60 +123,7 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-26T06:24:17.743Z",
       "updatedAtMs": 1779776657743,
-      "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang trek mixed breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpl25c1q001dfpnhe7t9p77j",
-      "title": "AMK (Alang-Madan-Kulang)",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Alang Madan Kulang",
-      "trekSlug": "alang-madan-kulang",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/amk-alang-madan-kulang-100909",
-      "priceInr": 2600,
-      "priceText": "₹2,600 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "2 Breakfast",
-          "isoDate": null
-        },
-        {
-          "label": "2 Lunch",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T06:20:16.210Z",
-      "updatedAtMs": 1779776416210,
-      "searchText": "trekhievers amk (alang-madan-kulang) alang madan kulang trek mixed breakfast, lunch breakfast, lunch"
+      "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang trek pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "pending:durgvihar:alang-madan-kulang",
@@ -209,8 +151,8 @@
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T06:34:57.566Z",
-      "updatedAtMs": 1779777297566,
+      "lastUpdatedAt": "2026-05-26T07:29:14.348Z",
+      "updatedAtMs": 1779780554348,
       "searchText": "durgvihar alang madan kulang",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"

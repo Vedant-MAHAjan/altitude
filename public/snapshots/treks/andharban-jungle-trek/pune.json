@@ -4,11 +4,11 @@
   "departureCity": "PUNE",
   "routePath": "/treks/andharban-jungle-trek/pune",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 999,
   "priceMin": 999,
-  "priceMax": 999,
+  "priceMax": 1449,
   "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
@@ -21,7 +21,7 @@
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "PUNE"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -30,6 +30,10 @@
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
       }
     ]
   },
@@ -43,7 +47,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -53,9 +57,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
+      "packageCount": 2,
       "priceMin": 999,
-      "priceMax": 999
+      "priceMax": 1449
     }
   ],
   "packages": [
@@ -73,7 +77,7 @@
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MIXED",
+      "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
       ],
@@ -99,8 +103,70 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-25T10:45:56.974Z",
       "updatedAtMs": 1779705956974,
-      "searchText": "bhatakna andharban jungle trek pune 2025 andharban jungle trek trek mixed breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+      "searchText": "bhatakna andharban jungle trek pune 2025 andharban jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+    },
+    {
+      "id": "cmpmb9ihl00aurvnhz6sznsym",
+      "title": "Andharban Jungle Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Andharban Jungle Trek",
+      "trekSlug": "andharban-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/andharban",
+      "priceInr": 1449,
+      "priceText": "₹1,449",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "nextDepartureAt": null,
+      "departureDates": [
+        {
+          "label": "29 July",
+          "isoDate": null
+        },
+        {
+          "label": "27 August",
+          "isoDate": null
+        },
+        {
+          "label": "31 September",
+          "isoDate": null
+        },
+        {
+          "label": "28 October",
+          "isoDate": null
+        },
+        {
+          "label": "26 Important",
+          "isoDate": null
+        },
+        {
+          "label": "1 Day",
+          "isoDate": null
+        },
+        {
+          "label": "Available on request",
+          "isoDate": null
+        }
+      ],
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-05-26T07:25:44.025Z",
+      "updatedAtMs": 1779780344025,
+      "searchText": "trekhievers andharban jungle trek | pune andharban jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     }
   ],
-  "updatedAt": "2026-05-25T10:45:56.974Z"
+  "updatedAt": "2026-05-26T07:25:44.025Z"
 }
