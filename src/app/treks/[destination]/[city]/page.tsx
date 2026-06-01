@@ -188,37 +188,6 @@ export default async function DestinationCityPage({
         </div>
       </section>
 
-      {/* Variant groups */}
-      {comparison.variantGroups.length > 1 && (
-        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {comparison.variantGroups.map((group) => (
-            <div
-              key={group.signature}
-              className="rounded-2xl border border-border/30 bg-secondary/50 p-5 backdrop-blur-sm"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <Badge variant="secondary" className="rounded-full text-[11px]">
-                  {group.label}
-                </Badge>
-                <span className="text-xs text-muted-foreground">
-                  {group.packageCount} pkgs
-                </span>
-              </div>
-              <div className="mt-3 flex gap-4 text-sm">
-                <div>
-                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Floor</div>
-                  <div className="font-semibold">{formatCurrency(group.priceMin)}</div>
-                </div>
-                <div>
-                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Ceiling</div>
-                  <div className="font-semibold">{formatCurrency(group.priceMax)}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
-      )}
-
       {/* Comparison table */}
       <section className="space-y-4">
         <div>

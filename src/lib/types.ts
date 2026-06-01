@@ -65,7 +65,6 @@ export type DestinationCityComparison = {
   availableVariants: VariantTagCode[];
   filters: ComparisonFilters;
   summaryTable: ComparisonSummaryTable;
-  variantGroups: VariantGroupSummary[];
   packages: ComparisonPackage[];
   updatedAt: string | null;
 };
@@ -89,15 +88,6 @@ export type ComparisonSummaryTable = {
   mealsSummary: string[];
   organizerCount: number;
   variantCount: number;
-};
-
-export type VariantGroupSummary = {
-  signature: string;
-  label: string;
-  tags: VariantTagCode[];
-  packageCount: number;
-  priceMin: number | null;
-  priceMax: number | null;
 };
 
 export type ComparisonPackage = {

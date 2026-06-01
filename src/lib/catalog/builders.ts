@@ -26,7 +26,6 @@ import type {
   TrekComparison,
   TrekSearchEntry,
   TrekSummary,
-  VariantGroupSummary,
   VariantTagCode,
 } from "@/lib/types";
 
@@ -128,46 +127,6 @@ function matchesDepartureCity(listingCity: ListingCity, city: DepartureCityCode)
   return city === "MUMBAI"
     ? listingCity === "MUMBAI" || listingCity === "MIXED"
     : listingCity === "PUNE" || listingCity === "MIXED";
-}
-
-function buildVariantGroupSummary(packages: ComparisonPackage[]): VariantGroupSummary[] {
-  const groups = new Map<string, VariantGroupSummary & { packageIds: string[] }>();
-
-  for (const item of packages) {
-    const existing = groups.get(item.variantSignature);
-
-    if (existing) {
-      existing.packageCount += 1;
-      existing.packageIds.push(item.id);
-      existing.priceMin =
-        existing.priceMin === null
-          ? item.priceInr
-          : item.priceInr === null
-            ? existing.priceMin
-            : Math.min(existing.priceMin, item.priceInr);
-      existing.priceMax =
-        existing.priceMax === null
-          ? item.priceInr
-          : item.priceInr === null
-            ? existing.priceMax
-            : Math.max(existing.priceMax, item.priceInr);
-      continue;
-    }
-
-    groups.set(item.variantSignature, {
-      signature: item.variantSignature,
-      label: item.variantLabel,
-      tags: item.variantTags,
-      packageCount: 1,
-      priceMin: item.priceInr,
-      priceMax: item.priceInr,
-      packageIds: [item.id],
-    });
-  }
-
-  return [...groups.values()]
-    .map(({ packageIds, ...summary }) => summary)
-    .sort((left, right) => (left.priceMin ?? Number.MAX_SAFE_INTEGER) - (right.priceMin ?? Number.MAX_SAFE_INTEGER) || left.label.localeCompare(right.label));
 }
 
 function buildCityDestinationGroups(packages: ComparisonPackage[]) {
@@ -635,7 +594,6 @@ export function buildDestinationCityComparison(
     }),
     filters: buildComparisonFilters(packages),
     summaryTable: buildComparisonSummaryTable(packages),
-    variantGroups: buildVariantGroupSummary(packages),
     packages,
     updatedAt: maxUpdatedAt(packages.map((item) => item.lastUpdatedAt)),
   };
