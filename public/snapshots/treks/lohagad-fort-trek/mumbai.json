@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/lohagad-fort-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 999,
-  "priceMin": 999,
-  "priceMax": 999,
-  "nextDepartureAt": null,
+  "packageCount": 3,
+  "organizerCount": 2,
+  "startingPrice": 699,
+  "priceMin": 699,
+  "priceMax": 1299,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -28,21 +27,26 @@
     ],
     "organizers": [
       {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 999,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Lohagad Fort Monsoon Trek",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Lohagad Fort Trek",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -52,12 +56,42 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 999,
-      "priceMax": 999
+      "packageCount": 3,
+      "priceMin": 699,
+      "priceMax": 1299
     }
   ],
   "packages": [
+    {
+      "id": "cmpv4fmnx02lqg328qgduio38",
+      "title": "Lohagad Fort Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Lohagad Fort Trek",
+      "trekSlug": "lohagad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/lohagad",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:24:27.645Z",
+      "updatedAtMs": 1780313067645,
+      "searchText": "trekhievers lohagad fort trek lohagad fort trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
     {
       "id": "cmpfjqhak02mfv2nh5f7y88e6",
       "title": "Lohagad Fort Monsoon Trek",
@@ -78,33 +112,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "30 Time",
-          "isoDate": null
-        },
-        {
-          "label": "30 October",
-          "isoDate": null
-        },
-        {
-          "label": "29 Trek",
-          "isoDate": null
-        },
-        {
-          "label": "1 Train",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -114,7 +121,37 @@
       "lastUpdatedAt": "2026-05-21T13:53:58.696Z",
       "updatedAtMs": 1779371638696,
       "searchText": "treks and trails india lohagad fort monsoon trek lohagad fort trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpv5pjl90a08g328egp2eeq9",
+      "title": "Lohagad Fort Trek - One Day Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Lohagad Fort Trek",
+      "trekSlug": "lohagad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/lohagad-fort-one-day-trek-2025",
+      "priceInr": 1299,
+      "priceText": "Rs. 1299/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:00:09.837Z",
+      "updatedAtMs": 1780315209837,
+      "searchText": "treks and trails india lohagad fort trek - one day trek lohagad fort trek trek mumbai breakfast, lunch breakfast, lunch"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:58.696Z"
+  "updatedAt": "2026-06-01T12:00:09.837Z"
 }

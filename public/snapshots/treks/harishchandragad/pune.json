@@ -4,15 +4,15 @@
   "departureCity": "PUNE",
   "routePath": "/treks/harishchandragad/pune",
   "summary": null,
-  "packageCount": 5,
+  "packageCount": 6,
   "organizerCount": 3,
   "startingPrice": 699,
   "priceMin": 699,
   "priceMax": 2299,
-  "nextDepartureAt": null,
   "availableVariants": [
     "SUNRISE",
     "FIREFLIES",
+    "CAMPING",
     "TREK_ONLY"
   ],
   "filters": {
@@ -28,9 +28,10 @@
       "MIXED"
     ],
     "variantTags": [
-      "FIREFLIES",
       "SUNRISE",
-      "TREK_ONLY"
+      "FIREFLIES",
+      "TREK_ONLY",
+      "CAMPING"
     ],
     "organizers": [
       {
@@ -51,7 +52,7 @@
     "lowestPrice": 699,
     "cheapestOrganizerName": "Bhatakna",
     "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
+    "cheapestPackageTitle": "Harishchandragad Sunrise Trek | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -59,7 +60,7 @@
       "Dinner"
     ],
     "organizerCount": 3,
-    "variantCount": 3
+    "variantCount": 4
   },
   "variantGroups": [
     {
@@ -88,60 +89,22 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 3,
+      "packageCount": 2,
       "priceMin": 1399,
+      "priceMax": 1449
+    },
+    {
+      "signature": "CAMPING",
+      "label": "Camping",
+      "tags": [
+        "CAMPING"
+      ],
+      "packageCount": 2,
+      "priceMin": 2299,
       "priceMax": 2299
     }
   ],
   "packages": [
-    {
-      "id": "cmpl30t1i014q1pnh8fffszwn",
-      "title": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-fireflies-clouds-formation-trek-pune",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES",
-      "variantLabel": "Fireflies",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [
-        "Nashik",
-        "Nashik Phata"
-      ],
-      "lastUpdatedAt": "2026-05-25T10:47:14.694Z",
-      "updatedAtMs": 1779706034694,
-      "searchText": "bhatakna harishchandragad fireflies & clouds formation trek | pune harishchandragad fireflies pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
-    },
     {
       "id": "cmpfjn24e01vwv2nh9vi1jf3g",
       "title": "Harishchandragad Sunrise Trek | Pune",
@@ -162,21 +125,6 @@
       ],
       "variantSignature": "SUNRISE",
       "variantLabel": "Sunrise",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -186,9 +134,42 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-25T10:47:17.633Z",
-      "updatedAtMs": 1779706037633,
+      "lastUpdatedAt": "2026-06-01T11:43:35.539Z",
+      "updatedAtMs": 1780314215539,
       "searchText": "bhatakna harishchandragad sunrise trek | pune harishchandragad sunrise pune breakfast, lunch breakfast, lunch nashik nashik phata"
+    },
+    {
+      "id": "cmpl30t1i014q1pnh8fffszwn",
+      "title": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-fireflies-clouds-formation-trek-pune",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:43:28.787Z",
+      "updatedAtMs": 1780314208787,
+      "searchText": "bhatakna harishchandragad fireflies & clouds formation trek | pune harishchandragad fireflies pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
       "id": "cmpe5rfjn00m68knhdncw3gg9",
@@ -210,69 +191,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "28 April",
-          "isoDate": null
-        },
-        {
-          "label": "25 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 June",
-          "isoDate": null
-        },
-        {
-          "label": "27 July",
-          "isoDate": null
-        },
-        {
-          "label": "31 August",
-          "isoDate": null
-        },
-        {
-          "label": "29 September",
-          "isoDate": null
-        },
-        {
-          "label": "26 October",
-          "isoDate": null
-        },
-        {
-          "label": "31 November",
-          "isoDate": null
-        },
-        {
-          "label": "28 Important",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "29 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        },
-        {
-          "label": "05 Jun",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -282,8 +200,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-26T07:29:08.665Z",
-      "updatedAtMs": 1779780548665,
+      "lastUpdatedAt": "2026-06-01T11:21:33.040Z",
+      "updatedAtMs": 1780312893040,
       "searchText": "trekhievers harishchandragad cloud formation trek | pune harishchandragad trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
@@ -306,58 +224,46 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "30 May, 9:00 PM Available",
-          "isoDate": "2026-05-30T21:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T21:00:00"
-        },
-        {
-          "label": "06 Jun, 9:00 PM Available",
-          "isoDate": "2026-06-06T21:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-06T21:00:00"
-        },
-        {
-          "label": "13 Jun, 9:00 PM Available",
-          "isoDate": "2026-06-13T21:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-13T21:00:00"
-        },
-        {
-          "label": "20 Jun, 9:00 PM Available",
-          "isoDate": "2026-06-20T21:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-20T21:00:00"
-        },
-        {
-          "label": "27 Jun, 9:00 PM Available",
-          "isoDate": "2026-06-27T21:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-27T21:00:00"
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:22:55.735Z",
-      "updatedAtMs": 1779686575735,
+      "lastUpdatedAt": "2026-06-01T11:56:03.093Z",
+      "updatedAtMs": 1780314963093,
       "searchText": "treks and trails india harishchandragad trek from pune 2026 harishchandragad trek pune breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpv4bzpj01djg328x5sygbia",
+      "title": "Harishchandragad Trek & Camping | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/harishchandragad-trek-camping-pune-132009",
+      "priceInr": 2299,
+      "priceText": "₹2,299 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:21:37.927Z",
+      "updatedAtMs": 1780312897927,
+      "searchText": "trekhievers harishchandragad trek & camping | pune harishchandragad camping pune breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
       "id": "cmpfjy4df00s7uonhr0qro9j3",
@@ -375,33 +281,10 @@
       "forestFeeStatus": "UNKNOWN",
       "listingCity": "MIXED",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "23 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        },
-        {
-          "label": "1 Mineral",
-          "isoDate": null
-        }
-      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
       "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
       "staySummary": "Tent stay, Hotel stay",
       "inclusionHighlights": [
@@ -409,9 +292,9 @@
         "Tent stay, Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:25.827Z",
-      "updatedAtMs": 1779371665827,
-      "searchText": "treks and trails india harishchandragad trek and camping 2025 | mumbai and pune harishchandragad trek mixed breakfast, lunch, dinner, tea and snacks tent stay, hotel stay breakfast, lunch, dinner, tea and snacks tent stay, hotel stay"
+      "lastUpdatedAt": "2026-06-01T11:56:05.351Z",
+      "updatedAtMs": 1780314965351,
+      "searchText": "treks and trails india harishchandragad trek and camping 2025 | mumbai and pune harishchandragad camping mixed breakfast, lunch, dinner, tea and snacks tent stay, hotel stay breakfast, lunch, dinner, tea and snacks tent stay, hotel stay"
     },
     {
       "id": "pending:durgvihar:harishchandragad",
@@ -433,18 +316,16 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek Only",
-      "nextDepartureAt": null,
-      "departureDates": [],
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:29:14.347Z",
-      "updatedAtMs": 1779780554347,
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
       "searchText": "durgvihar harishchandragad",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-26T07:29:08.665Z"
+  "updatedAt": "2026-06-01T11:56:05.351Z"
 }

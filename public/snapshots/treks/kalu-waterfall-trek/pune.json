@@ -4,45 +4,49 @@
   "departureCity": "PUNE",
   "routePath": "/treks/kalu-waterfall-trek/pune",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 899,
-  "priceMin": 899,
-  "priceMax": 899,
-  "nextDepartureAt": null,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 1399,
+  "priceMin": 1399,
+  "priceMax": 1399,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN"
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MIXED"
+      "PUNE"
     ],
     "variantTags": [
       "TREK_ONLY"
     ],
     "organizers": [
       {
-        "name": "Treks and Trails India",
-        "slug": "treks-and-trails-india"
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 899,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Kalu Waterfall Trek 2026 | Mumbai Pune",
+    "lowestPrice": 1399,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Kalu Waterfall Trek Pune 2025",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -52,105 +56,80 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 899,
-      "priceMax": 899
+      "packageCount": 2,
+      "priceMin": 1399,
+      "priceMax": 1399
     }
   ],
   "packages": [
     {
-      "id": "cmpfjyi8a010juonhv9uaw536",
-      "title": "Kalu Waterfall Trek 2026 | Mumbai Pune",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
+      "id": "cmpv55k2u05s1g328mhz91f3t",
+      "title": "Kalu Waterfall Trek Pune 2025",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
       "trekName": "Kalu Waterfall Trek",
       "trekSlug": "kalu-waterfall-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/kalu-waterfall-trek-2026",
-      "priceInr": 899,
-      "priceText": "₹899",
-      "transportType": "TRAIN",
+      "sourceUrl": "https://www.bhatakna.com/tours/kalu-waterfall-pune",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MIXED",
+      "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "13 Jun, 10:30 PM Mumbai to Mumbai Available",
-          "isoDate": "2026-06-13T22:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-13T22:30:00"
-        },
-        {
-          "label": "13 Jun, 10:30 PM Pune to Pune Available",
-          "isoDate": "2026-06-13T22:30:00"
-        },
-        {
-          "label": "19 Jun, 10:30 PM Mumbai to Mumbai Available",
-          "isoDate": "2026-06-19T22:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-19T22:30:00"
-        },
-        {
-          "label": "19 Jun, 10:30 PM Pune to Pune Available",
-          "isoDate": "2026-06-19T22:30:00"
-        },
-        {
-          "label": "20 Jun, 10:30 PM Mumbai to Mumbai Available",
-          "isoDate": "2026-06-20T22:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-20T22:30:00"
-        },
-        {
-          "label": "20 Jun, 10:30 PM Pune to Pune Available",
-          "isoDate": "2026-06-20T22:30:00"
-        },
-        {
-          "label": "26 Jun, 10:30 PM Mumbai to Mumbai Available",
-          "isoDate": "2026-06-26T22:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-26T22:30:00"
-        },
-        {
-          "label": "26 Jun, 10:30 PM Pune to Pune Available",
-          "isoDate": "2026-06-26T22:30:00"
-        },
-        {
-          "label": "27 Jun, 10:30 PM Mumbai to Mumbai Available",
-          "isoDate": "2026-06-27T22:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-27T22:30:00"
-        },
-        {
-          "label": "27 Jun, 10:30 PM Pune to Pune Available",
-          "isoDate": "2026-06-27T22:30:00"
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch"
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:43.786Z",
-      "updatedAtMs": 1779371683786,
-      "searchText": "treks and trails india kalu waterfall trek 2026 | mumbai pune kalu waterfall trek trek mixed breakfast, lunch breakfast, lunch"
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:44:37.350Z",
+      "updatedAtMs": 1780314277350,
+      "searchText": "bhatakna kalu waterfall trek pune 2025 kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
+    },
+    {
+      "id": "cmpv4dtco01zhg328z8inxvin",
+      "title": "Kalu Waterfall Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalu Waterfall Trek",
+      "trekSlug": "kalu-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalu-waterfall-pune",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:23:03.000Z",
+      "updatedAtMs": 1780312983000,
+      "searchText": "trekhievers kalu waterfall trek | pune kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
     }
   ],
-  "updatedAt": "2026-05-21T13:54:43.786Z"
+  "updatedAt": "2026-06-01T11:44:37.350Z"
 }

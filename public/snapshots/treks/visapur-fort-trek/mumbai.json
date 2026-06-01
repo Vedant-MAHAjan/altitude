@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/visapur-fort-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1099,
-  "priceMin": 1099,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1099,
-  "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -28,21 +27,25 @@
     ],
     "organizers": [
       {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1099,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Visapur Fort Trek 2026",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "One Day Special Visapur Fort Trek 2025",
     "mealsSummary": [
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -52,12 +55,42 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 1099,
+      "packageCount": 2,
+      "priceMin": 699,
       "priceMax": 1099
     }
   ],
   "packages": [
+    {
+      "id": "cmpv57pt106hkg328n2q99r5h",
+      "title": "One Day Special Visapur Fort Trek 2025",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Visapur Fort Trek",
+      "trekSlug": "visapur-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/corporate-special-visapur-monsoon-trek",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:46:18.085Z",
+      "updatedAtMs": 1780314378085,
+      "searchText": "bhatakna one day special visapur fort trek 2025 visapur fort trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpfjqfvl02ltv2nhpnbyqf18",
       "title": "Visapur Fort Trek 2026",
@@ -78,37 +111,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "4 March",
-          "isoDate": null
-        },
-        {
-          "label": "9 Hills",
-          "isoDate": null
-        },
-        {
-          "label": "10 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "30 Total",
-          "isoDate": null
-        },
-        {
-          "label": "1 Train",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
@@ -120,5 +122,5 @@
       "searchText": "treks and trails india visapur fort trek 2026 visapur fort trek trek mumbai breakfast, lunch breakfast, lunch"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:57.574Z"
+  "updatedAt": "2026-06-01T11:46:18.085Z"
 }

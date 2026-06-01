@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/tikona-fort-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1399,
-  "priceMin": 1399,
+  "packageCount": 3,
+  "organizerCount": 2,
+  "startingPrice": 699,
+  "priceMin": 699,
   "priceMax": 1399,
-  "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -21,6 +20,7 @@
       "INCLUDED"
     ],
     "cities": [
+      "MUMBAI",
       "MIXED"
     ],
     "variantTags": [
@@ -28,22 +28,26 @@
     ],
     "organizers": [
       {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1399,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Tikona Fort Trek | Monsoon Trek Mumbai Pune",
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Tikona Fort Trek",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -53,12 +57,42 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 1399,
+      "packageCount": 3,
+      "priceMin": 699,
       "priceMax": 1399
     }
   ],
   "packages": [
+    {
+      "id": "cmpv4kq4i04blg328b55jtn50",
+      "title": "Tikona Fort Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Tikona Fort Trek",
+      "trekSlug": "tikona-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/tikona",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:28:25.410Z",
+      "updatedAtMs": 1780313305410,
+      "searchText": "trekhievers tikona fort trek tikona fort trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
     {
       "id": "cmpfjqidd02n1v2nh0egcurqa",
       "title": "Tikona Fort Trek | Monsoon Trek Mumbai Pune",
@@ -79,21 +113,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "30 Best",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": "Tent stay, Homestay",
       "inclusionHighlights": [
@@ -104,7 +123,38 @@
       "lastUpdatedAt": "2026-05-21T13:53:59.684Z",
       "updatedAtMs": 1779371639684,
       "searchText": "treks and trails india tikona fort trek | monsoon trek mumbai pune tikona fort trek trek mixed breakfast, lunch, tea and snacks tent stay, homestay breakfast, lunch, tea and snacks tent stay, homestay"
+    },
+    {
+      "id": "cmpv600ve0c9dg328ow9zszqf",
+      "title": "Tikona Fort Trek | Monsoon Trek Mumbai Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Tikona Fort Trek",
+      "trekSlug": "tikona-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/tikona-fort-trek-2025",
+      "priceInr": 1399,
+      "priceText": "Rs. 1399/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:08:18.794Z",
+      "updatedAtMs": 1780315698794,
+      "searchText": "treks and trails india tikona fort trek | monsoon trek mumbai pune tikona fort trek trek mixed breakfast, lunch tent stay, homestay breakfast, lunch tent stay, homestay"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:59.684Z"
+  "updatedAt": "2026-06-01T12:08:18.794Z"
 }

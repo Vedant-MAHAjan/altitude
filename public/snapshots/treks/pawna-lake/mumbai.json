@@ -4,20 +4,19 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/pawna-lake/mumbai",
   "summary": null,
-  "packageCount": 4,
-  "organizerCount": 2,
-  "startingPrice": 699,
-  "priceMin": 699,
-  "priceMax": 1000,
-  "nextDepartureAt": null,
+  "packageCount": 10,
+  "organizerCount": 3,
+  "startingPrice": 799,
+  "priceMin": 799,
+  "priceMax": 2499,
   "availableVariants": [
     "CAMPING",
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS",
-      "TRAIN"
+      "TRAIN",
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -26,13 +25,17 @@
       "MUMBAI"
     ],
     "variantTags": [
-      "CAMPING",
-      "TREK_ONLY"
+      "TREK_ONLY",
+      "CAMPING"
     ],
     "organizers": [
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
       },
       {
         "name": "Treks and Trails India",
@@ -41,30 +44,20 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 699,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Pawna Lake Camping | Watersports Lakeside Tents Bonfire Music",
+    "lowestPrice": 799,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Holi at Pawna Lake",
     "mealsSummary": [
       "Breakfast",
+      "Lunch",
       "Dinner",
-      "Tea and snacks",
-      "Lunch"
+      "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 3,
     "variantCount": 2
   },
   "variantGroups": [
-    {
-      "signature": "CAMPING",
-      "label": "Camping",
-      "tags": [
-        "CAMPING"
-      ],
-      "packageCount": 3,
-      "priceMin": 699,
-      "priceMax": 999
-    },
     {
       "signature": "TREK_ONLY",
       "label": "Trek",
@@ -72,22 +65,63 @@
         "TREK_ONLY"
       ],
       "packageCount": 1,
-      "priceMin": 1000,
-      "priceMax": 1000
+      "priceMin": 799,
+      "priceMax": 799
+    },
+    {
+      "signature": "CAMPING",
+      "label": "Camping",
+      "tags": [
+        "CAMPING"
+      ],
+      "packageCount": 9,
+      "priceMin": 995,
+      "priceMax": 2499
     }
   ],
   "packages": [
     {
-      "id": "cmpe5rsma01ca8knhyrsjo281",
-      "title": "Pawna Lake Camping | Watersports Lakeside Tents Bonfire Music",
+      "id": "cmpv4cduu01hqg328x2y54c2p",
+      "title": "Holi at Pawna Lake",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/holi-special-pawna-lakeside-camping-123611",
+      "priceInr": 799,
+      "priceText": "₹799 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:21:56.262Z",
+      "updatedAtMs": 1780312916262,
+      "searchText": "trekhievers holi at pawna lake pawna lake trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5rqrz0aftg3289nze8251",
+      "title": "Moonstone Hammock Glamping Pawna",
       "organizerName": "Treks and Trails India",
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Pawna Lake",
       "trekSlug": "pawna-lake",
       "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/pawna-lake-camping-with-watersports",
-      "priceInr": 699,
-      "priceText": "₹699",
+      "sourceUrl": "https://www.treksandtrails.org/tours/moonstone-hammock-glamping-pawna",
+      "priceInr": 995,
+      "priceText": "₹995",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
@@ -97,115 +131,39 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "26 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
-          "isoDate": "2026-05-26T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-26T15:00:00"
-        },
-        {
-          "label": "26 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
-          "isoDate": "2026-05-26T15:00:00"
-        },
-        {
-          "label": "27 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
-          "isoDate": "2026-05-27T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-27T15:00:00"
-        },
-        {
-          "label": "27 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
-          "isoDate": "2026-05-27T15:00:00"
-        },
-        {
-          "label": "28 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
-          "isoDate": "2026-05-28T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-28T15:00:00"
-        },
-        {
-          "label": "28 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
-          "isoDate": "2026-05-28T15:00:00"
-        },
-        {
-          "label": "29 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
-          "isoDate": "2026-05-29T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-29T15:00:00"
-        },
-        {
-          "label": "29 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
-          "isoDate": "2026-05-29T15:00:00"
-        },
-        {
-          "label": "30 May, 3:00 PM Normal Tent - Without Transport Without Transport - Reaching Directly at the Campsite Available",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "30 May, 3:00 PM Normal Tent - With Transport With Transport - Lonavala to Lonavala Available",
-          "isoDate": "2026-05-30T15:00:00"
-        }
-      ],
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
       "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
+        "Breakfast"
       ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:10.900Z",
-      "updatedAtMs": 1779686590900,
-      "searchText": "treks and trails india pawna lake camping | watersports lakeside tents bonfire music pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "pickupLocations": [
+        "Sion",
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-01T12:01:52.463Z",
+      "updatedAtMs": 1780315312463,
+      "searchText": "treks and trails india moonstone hammock glamping pawna pawna lake camping mumbai breakfast breakfast sion lonavala"
     },
     {
-      "id": "cmpl310fq019q1pnhmucyl21d",
-      "title": "Holi Bash Pawna Lakeside Camping",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
+      "id": "cmpv5uiir0b10g328x6n8b85o",
+      "title": "Pawna Island Camping",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
       "trekName": "Pawna Lake",
       "trekSlug": "pawna-lake",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/holi-bash-pawna-lakeside-camping-123471",
+      "sourceUrl": "https://www.treksandtrails.org/tours/pawna-island-camping",
       "priceInr": 999,
-      "priceText": "₹999",
-      "transportType": "NON_AC_BUS",
+      "priceText": "Rs. 999/-",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
       "listingCity": "MUMBAI",
       "variantTags": [
         "CAMPING"
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -213,9 +171,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:47:24.278Z",
-      "updatedAtMs": 1779706044278,
-      "searchText": "bhatakna holi bash pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T12:04:01.732Z",
+      "updatedAtMs": 1780315441732,
+      "searchText": "treks and trails india pawna island camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpe5rpp401aq8knhg0n5hbti",
@@ -237,33 +195,6 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "30 Silent",
-          "isoDate": null
-        },
-        {
-          "label": "25 May",
-          "isoDate": null
-        },
-        {
-          "label": "26 May",
-          "isoDate": null
-        },
-        {
-          "label": "27 May",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "5 Benefits",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -271,8 +202,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:06.692Z",
-      "updatedAtMs": 1779686586692,
+      "lastUpdatedAt": "2026-06-01T12:04:03.962Z",
+      "updatedAtMs": 1780315443962,
       "searchText": "treks and trails india pawna lake camping | rs 999 | watersports pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -291,40 +222,180 @@
       "forestFeeStatus": "UNKNOWN",
       "listingCity": "MUMBAI",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "23 - 24 May Available",
-          "isoDate": "2026-05-23T00:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-23T00:00:00"
-        },
-        {
-          "label": "30 - 31 May Available",
-          "isoDate": "2026-05-30T00:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T00:00:00"
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Breakfast, Dinner, Tea and snacks",
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:51.484Z",
-      "updatedAtMs": 1779371151484,
-      "searchText": "bhatakna pawna lakeside camping pawna lake trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T11:46:25.036Z",
+      "updatedAtMs": 1780314385036,
+      "searchText": "bhatakna pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv59wuk071mg328k6gu99ne",
+      "title": "Valentines Day Special Pawna Lakeside Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/valentines-day-special-pawna-lakeside-camping",
+      "priceInr": 1200,
+      "priceText": "₹1,200",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:48:00.524Z",
+      "updatedAtMs": 1780314480524,
+      "searchText": "bhatakna valentines day special pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5tegb0asyg328eebpjd1z",
+      "title": "New Year Camping at Pawna Lake | Rs 2199 per head",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/new-year-camping-at-pawna-lake",
+      "priceInr": 2199,
+      "priceText": "Rs 2199",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:03:09.803Z",
+      "updatedAtMs": 1780315389803,
+      "searchText": "treks and trails india new year camping at pawna lake | rs 2199 per head pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5unvw0b29g328ae7cnwiy",
+      "title": "Pawna Lake New Year Camping | Rs 2299 per person",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/pawna-lake-new-year-camping",
+      "priceInr": 2299,
+      "priceText": "Rs 2299 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:04:08.684Z",
+      "updatedAtMs": 1780315448684,
+      "searchText": "treks and trails india pawna lake new year camping | rs 2299 per person pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv4as6r00zag32802hc5kdv",
+      "title": "Ghangad Trek with Pawna lake camping",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/ghangad-trek-with-pawna-lake-camping-89316",
+      "priceInr": 2499,
+      "priceText": "₹2,499 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:20:41.523Z",
+      "updatedAtMs": 1780312841523,
+      "searchText": "trekhievers ghangad trek with pawna lake camping pawna lake camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay lonavala"
+    },
+    {
+      "id": "cmpv4f6x602gng3284cr6545n",
+      "title": "Korigad Trek with Pawna lake camping",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Pawna Lake",
+      "trekSlug": "pawna-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/korigad-trek-with-pawna-lake-camping-89314",
+      "priceInr": 2499,
+      "priceText": "₹2,499 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:24:07.242Z",
+      "updatedAtMs": 1780313047242,
+      "searchText": "trekhievers korigad trek with pawna lake camping pawna lake camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay lonavala"
     }
   ],
-  "updatedAt": "2026-05-25T10:47:24.278Z"
+  "updatedAt": "2026-06-01T12:04:08.684Z"
 }

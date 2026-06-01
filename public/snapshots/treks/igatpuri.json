@@ -6,15 +6,14 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 7,
-  "organizerCount": 2,
+  "packageCount": 12,
+  "organizerCount": 3,
   "priceMin": 599,
-  "priceMax": 2499,
-  "updatedAt": "2026-05-25T10:47:30.083Z",
+  "priceMax": 1799,
+  "updatedAt": "2026-06-01T12:07:08.416Z",
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "NON_AC_BUS"
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED",
@@ -34,6 +33,10 @@
         "slug": "bhatakna"
       },
       {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
@@ -50,7 +53,7 @@
       "Dinner",
       "Lunch"
     ],
-    "organizerCount": 2,
+    "organizerCount": 3,
     "variantCount": 4
   },
   "packages": [
@@ -74,25 +77,14 @@
       ],
       "variantSignature": "FIREFLIES",
       "variantLabel": "Fireflies",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:46:57.194Z",
-      "updatedAtMs": 1779706017194,
+      "lastUpdatedAt": "2026-06-01T11:42:55.027Z",
+      "updatedAtMs": 1780314175027,
       "searchText": "bhatakna fireflies igatpuri roadtrip igatpuri fireflies mumbai breakfast, tea and snacks breakfast, tea and snacks"
     },
     {
@@ -116,25 +108,6 @@
       ],
       "variantSignature": "FIREFLIES__CAMPING",
       "variantLabel": "Fireflies + Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Saturday",
-          "isoDate": null
-        },
-        {
-          "label": "2 Sunday",
-          "isoDate": null
-        },
-        {
-          "label": "8 Years",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay, Dormitory stay, Homestay",
       "inclusionHighlights": [
@@ -142,8 +115,8 @@
         "Tent stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:47:28.065Z",
-      "updatedAtMs": 1779706048065,
+      "lastUpdatedAt": "2026-06-01T11:43:55.776Z",
+      "updatedAtMs": 1780314235776,
       "searchText": "bhatakna igatpuri fireflies secret camping igatpuri fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay, dormitory stay, homestay breakfast, dinner, tea and snacks tent stay, dormitory stay, homestay"
     },
     {
@@ -166,21 +139,6 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -188,9 +146,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:47:29.152Z",
-      "updatedAtMs": 1779706049152,
+      "lastUpdatedAt": "2026-06-01T11:43:58.025Z",
+      "updatedAtMs": 1780314238025,
       "searchText": "bhatakna igatpuri secret lakeside camping igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv4i50703gdg328ac9o32wc",
+      "title": "New Year's Eve Igatpuri Water Sports & Camping",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Igatpuri",
+      "trekSlug": "igatpuri",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/nyeigatpuri",
+      "priceInr": 1199,
+      "priceText": "₹1199",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:26:24.727Z",
+      "updatedAtMs": 1780313184727,
+      "searchText": "trekhievers new year's eve igatpuri water sports & camping igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpfjxocv00ituonhy2xyvo4e",
@@ -206,63 +195,12 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
+      "listingCity": "OTHER",
       "variantTags": [
         "CAMPING"
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "30 May, 3:00 PM Plan A (Own Transport) Igatpuri Camping Itinerary - Plan A (Own Transport) Available",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "30 May, 3:00 PM Plan B (Kasara to Kasara) Igatpuri Camping Itinerary – Plan B (Kasara to Kasara) Available",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "06 Jun, 3:00 PM Plan A (Own Transport) Igatpuri Camping Itinerary - Plan A (Own Transport) Available",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "06 Jun, 3:00 PM Plan B (Kasara to Kasara) Igatpuri Camping Itinerary – Plan B (Kasara to Kasara) Available",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "13 Jun, 3:00 PM Plan A (Own Transport) Igatpuri Camping Itinerary - Plan A (Own Transport) Available",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "13 Jun, 3:00 PM Plan B (Kasara to Kasara) Igatpuri Camping Itinerary – Plan B (Kasara to Kasara) Available",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "20 Jun, 3:00 PM Plan A (Own Transport) Igatpuri Camping Itinerary - Plan A (Own Transport) Available",
-          "isoDate": "2026-06-20T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-20T15:00:00"
-        },
-        {
-          "label": "20 Jun, 3:00 PM Plan B (Kasara to Kasara) Igatpuri Camping Itinerary – Plan B (Kasara to Kasara) Available",
-          "isoDate": "2026-06-20T15:00:00"
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -270,9 +208,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-23T08:20:39.028Z",
-      "updatedAtMs": 1779524439028,
-      "searchText": "treks and trails india igatpuri camping | rs 1299 per head igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T11:56:59.920Z",
+      "updatedAtMs": 1780315019920,
+      "searchText": "treks and trails india igatpuri camping | rs 1299 per head igatpuri camping other breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5suis0anog328dxxwkc0d",
+      "title": "Navratri Special at Igatpuri Camping",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Igatpuri",
+      "trekSlug": "igatpuri",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/navratri-special-at-igatpuri-camping",
+      "priceInr": 1300,
+      "priceText": "Rs 1300",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:02:43.972Z",
+      "updatedAtMs": 1780315363972,
+      "searchText": "treks and trails india navratri special at igatpuri camping igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpl314wz01ch1pnhfko342ze",
@@ -294,21 +263,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "1 Lunch",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Lunch, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -316,8 +270,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:47:30.083Z",
-      "updatedAtMs": 1779706050083,
+      "lastUpdatedAt": "2026-06-01T11:44:00.272Z",
+      "updatedAtMs": 1780314240272,
       "searchText": "bhatakna igatpuri waterfall trek and watersports igatpuri trek mumbai lunch, tea and snacks tent stay lunch, tea and snacks tent stay"
     },
     {
@@ -334,75 +288,13 @@
       "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
+      "listingCity": "OTHER",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING",
+        "FIREFLIES"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "23 May, 3:00 PM Without Transport Coming by your own vehicle Available",
-          "isoDate": "2026-05-23T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-23T15:00:00"
-        },
-        {
-          "label": "23 May, 3:00 PM With Transport Kasara to Kasara Available",
-          "isoDate": "2026-05-23T15:00:00"
-        },
-        {
-          "label": "30 May, 3:00 PM Without Transport Coming by your own vehicle Available",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "30 May, 3:00 PM With Transport Kasara to Kasara Available",
-          "isoDate": "2026-05-30T15:00:00"
-        },
-        {
-          "label": "06 Jun, 3:00 PM Without Transport Coming by your own vehicle Available",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "06 Jun, 3:00 PM With Transport Kasara to Kasara Available",
-          "isoDate": "2026-06-06T15:00:00"
-        },
-        {
-          "label": "13 Jun, 3:00 PM Without Transport Coming by your own vehicle Available",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "13 Jun, 3:00 PM With Transport Kasara to Kasara Available",
-          "isoDate": "2026-06-13T15:00:00"
-        },
-        {
-          "label": "20 Jun, 3:00 PM Without Transport Coming by your own vehicle Available",
-          "isoDate": "2026-06-20T15:00:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-20T15:00:00"
-        },
-        {
-          "label": "20 Jun, 3:00 PM With Transport Kasara to Kasara Available",
-          "isoDate": "2026-06-20T15:00:00"
-        }
-      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -410,22 +302,52 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:30.880Z",
-      "updatedAtMs": 1779371670880,
-      "searchText": "treks and trails india igatpuri fireflies camping | fireflies festival camping 2025 | rs 1399 per head igatpuri trek mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T11:57:02.159Z",
+      "updatedAtMs": 1780315022159,
+      "searchText": "treks and trails india igatpuri fireflies camping | fireflies festival camping 2025 | rs 1399 per head igatpuri fireflies + camping other breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
-      "id": "cmpe5rv3a01de8knhn7dvtn5c",
-      "title": "Igatpuri Glamping & Watersports | Rs 2499 per person",
+      "id": "cmpv5lq0s098ug328ko36j9fe",
+      "title": "Igatpuri Waterfall Trek and Watersports",
       "organizerName": "Treks and Trails India",
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Igatpuri",
       "trekSlug": "igatpuri",
       "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/igatpuri-glamping",
-      "priceInr": 2499,
-      "priceText": "Rs. 2499 /-",
-      "transportType": "NON_AC_BUS",
+      "sourceUrl": "https://www.treksandtrails.org/tours/igatpuri-waterfall-trek-and-watersports",
+      "priceInr": 1399,
+      "priceText": "Rs. 1399/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "PARTIAL",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:57:11.548Z",
+      "updatedAtMs": 1780315031548,
+      "searchText": "treks and trails india igatpuri waterfall trek and watersports igatpuri trek mumbai lunch, tea and snacks lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv5t7210aqwg328wn76auox",
+      "title": "New Year Camping at Igatpuri | Rs 1599 per head",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Igatpuri",
+      "trekSlug": "igatpuri",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/new-year-camping-at-igatpuri",
+      "priceInr": 1599,
+      "priceText": "Rs 1599",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
       "listingCity": "MUMBAI",
@@ -434,41 +356,78 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "25 May",
-          "isoDate": null
-        },
-        {
-          "label": "26 May",
-          "isoDate": null
-        },
-        {
-          "label": "27 May",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
         "Breakfast, Dinner, Tea and snacks",
         "Tent stay"
       ],
-      "pickupLocations": [
-        "Sion"
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:03:00.217Z",
+      "updatedAtMs": 1780315380217,
+      "searchText": "treks and trails india new year camping at igatpuri | rs 1599 per head igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5perr09z8g328v494wz9f",
+      "title": "Let’s Photograph The Milky Way at Igatpuri",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Igatpuri",
+      "trekSlug": "igatpuri",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/lets-photograph-milky-way-at-igatpuri",
+      "priceInr": 1600,
+      "priceText": "₹1,600",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
       ],
-      "lastUpdatedAt": "2026-05-25T05:23:13.121Z",
-      "updatedAtMs": 1779686593121,
-      "searchText": "treks and trails india igatpuri glamping & watersports | rs 2499 per person igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay sion"
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:00:03.591Z",
+      "updatedAtMs": 1780315203591,
+      "searchText": "treks and trails india let’s photograph the milky way at igatpuri igatpuri trek mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5yikg0bxag328l3gt6nv1",
+      "title": "Stargazing Igatpuri and Camping 2025",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Igatpuri",
+      "trekSlug": "igatpuri",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/stargazing-igatpuri-and-camping-2025",
+      "priceInr": 1799,
+      "priceText": "₹1,799",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:07:08.416Z",
+      "updatedAtMs": 1780315628416,
+      "searchText": "treks and trails india stargazing igatpuri and camping 2025 igatpuri camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
     }
   ]
 }

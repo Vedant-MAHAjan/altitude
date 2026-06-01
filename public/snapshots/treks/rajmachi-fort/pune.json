@@ -9,18 +9,16 @@
   "startingPrice": 1300,
   "priceMin": 1300,
   "priceMax": 1599,
-  "nextDepartureAt": null,
   "availableVariants": [
     "FIREFLIES",
-    "TREK_ONLY"
+    "CAMPING"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
-      "NOT_INCLUDED",
       "INCLUDED"
     ],
     "cities": [
@@ -28,8 +26,8 @@
       "MIXED"
     ],
     "variantTags": [
-      "TREK_ONLY",
-      "FIREFLIES"
+      "FIREFLIES",
+      "CAMPING"
     ],
     "organizers": [
       {
@@ -53,6 +51,7 @@
     "cheapestPackageTitle": "Rajmachi Fireflies Trek | Pune",
     "mealsSummary": [
       "Breakfast",
+      "Tea and snacks",
       "Dinner"
     ],
     "organizerCount": 3,
@@ -60,24 +59,25 @@
   },
   "variantGroups": [
     {
-      "signature": "TREK_ONLY",
-      "label": "Trek",
-      "tags": [
-        "TREK_ONLY"
-      ],
-      "packageCount": 2,
-      "priceMin": 1300,
-      "priceMax": 1599
-    },
-    {
       "signature": "FIREFLIES",
       "label": "Fireflies",
       "tags": [
         "FIREFLIES"
       ],
-      "packageCount": 1,
-      "priceMin": 1399,
+      "packageCount": 2,
+      "priceMin": 1300,
       "priceMax": 1399
+    },
+    {
+      "signature": "FIREFLIES__CAMPING",
+      "label": "Fireflies + Camping",
+      "tags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "packageCount": 1,
+      "priceMin": 1599,
+      "priceMax": 1599
     }
   ],
   "packages": [
@@ -92,63 +92,27 @@
       "sourceUrl": "https://www.trekhievers.com/tours/rajmachi-fireflies-pune",
       "priceInr": 1300,
       "priceText": "₹1,300",
-      "transportType": "TRAIN",
-      "mealPlan": "NOT_INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
       "listingCity": "PUNE",
       "variantTags": [
-        "TREK_ONLY"
+        "FIREFLIES"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "30 June",
-          "isoDate": null
-        },
-        {
-          "label": "27 Important",
-          "isoDate": null
-        },
-        {
-          "label": "3 Men",
-          "isoDate": null
-        },
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "22 May",
-          "isoDate": null
-        },
-        {
-          "label": "23 May",
-          "isoDate": null
-        },
-        {
-          "label": "29 May",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": null,
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Tea and snacks",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
+        "Breakfast, Tea and snacks",
         "Tent stay"
       ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:00.876Z",
-      "updatedAtMs": 1779371100876,
-      "searchText": "trekhievers rajmachi fireflies trek | pune rajmachi fort trek pune tent stay tent stay"
+      "pickupLocations": [
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:27:23.119Z",
+      "updatedAtMs": 1780313243119,
+      "searchText": "trekhievers rajmachi fireflies trek | pune rajmachi fort fireflies pune breakfast, tea and snacks tent stay breakfast, tea and snacks tent stay lonavala"
     },
     {
       "id": "cmpl3p4r9000sq0nhg0708mmy",
@@ -161,70 +125,25 @@
       "sourceUrl": "https://www.bhatakna.com/tours/rajmachi-fireflies-trek-2026",
       "priceInr": 1399,
       "priceText": "₹1,399",
-      "transportType": "AC_BUS",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
       "listingCity": "MIXED",
       "variantTags": [
         "FIREFLIES"
       ],
       "variantSignature": "FIREFLIES",
       "variantLabel": "Fireflies",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Lonavala",
-          "isoDate": null
-        },
-        {
-          "label": "2 Mumbai",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "29 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        },
-        {
-          "label": "05 Jun",
-          "isoDate": null
-        },
-        {
-          "label": "1 Dinner",
-          "isoDate": null
-        },
-        {
-          "label": "1 Breakfast",
-          "isoDate": null
-        },
-        {
-          "label": "3 Men",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Dinner",
       "staySummary": "Homestay",
       "inclusionHighlights": [
         "Breakfast, Dinner",
         "Homestay"
       ],
-      "pickupLocations": [
-        "Lonavala"
-      ],
-      "lastUpdatedAt": "2026-05-25T11:06:09.621Z",
-      "updatedAtMs": 1779707169621,
-      "searchText": "bhatakna rajmachi fireflies trek 2026 | fireflies near mumbai pune rajmachi fort fireflies mixed breakfast, dinner homestay breakfast, dinner homestay lonavala"
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:46:43.224Z",
+      "updatedAtMs": 1780314403224,
+      "searchText": "bhatakna rajmachi fireflies trek 2026 | fireflies near mumbai pune rajmachi fort fireflies mixed breakfast, dinner homestay breakfast, dinner homestay"
     },
     {
       "id": "cmpfjyahw00vpuonh9y8ikn7a",
@@ -242,29 +161,11 @@
       "forestFeeStatus": "UNKNOWN",
       "listingCity": "MIXED",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING",
+        "FIREFLIES"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "23 May",
-          "isoDate": null
-        },
-        {
-          "label": "1 Veg",
-          "isoDate": null
-        },
-        {
-          "label": "2 Day",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        }
-      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
       "mealsSummary": "Breakfast, Dinner",
       "staySummary": "Tent stay, Homestay",
       "inclusionHighlights": [
@@ -272,10 +173,10 @@
         "Tent stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:33.764Z",
-      "updatedAtMs": 1779371673764,
-      "searchText": "treks and trails india rajmachi fireflies camping trek 2026 | fireflies near mumbai pune rajmachi fort trek mixed breakfast, dinner tent stay, homestay breakfast, dinner tent stay, homestay"
+      "lastUpdatedAt": "2026-06-01T12:04:56.400Z",
+      "updatedAtMs": 1780315496400,
+      "searchText": "treks and trails india rajmachi fireflies camping trek 2026 | fireflies near mumbai pune rajmachi fort fireflies + camping mixed breakfast, dinner tent stay, homestay breakfast, dinner tent stay, homestay"
     }
   ],
-  "updatedAt": "2026-05-25T11:06:09.621Z"
+  "updatedAt": "2026-06-01T12:04:56.400Z"
 }

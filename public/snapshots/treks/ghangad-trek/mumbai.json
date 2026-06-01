@@ -1,0 +1,131 @@
+{
+  "destinationName": "Ghangad Trek",
+  "destinationSlug": "ghangad-trek",
+  "departureCity": "MUMBAI",
+  "routePath": "/treks/ghangad-trek/mumbai",
+  "summary": null,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 699,
+  "priceMin": 699,
+  "priceMax": 800,
+  "availableVariants": [
+    "TREK_ONLY"
+  ],
+  "filters": {
+    "transportTypes": [
+      "TRAIN",
+      "NON_AC_BUS"
+    ],
+    "mealPlans": [
+      "INCLUDED"
+    ],
+    "cities": [
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
+    "organizers": [
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 699,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Ghangad Trek",
+    "mealsSummary": [
+      "Breakfast",
+      "Lunch",
+      "Tea and snacks"
+    ],
+    "organizerCount": 2,
+    "variantCount": 1
+  },
+  "variantGroups": [
+    {
+      "signature": "TREK_ONLY",
+      "label": "Trek",
+      "tags": [
+        "TREK_ONLY"
+      ],
+      "packageCount": 2,
+      "priceMin": 699,
+      "priceMax": 800
+    }
+  ],
+  "packages": [
+    {
+      "id": "cmpv4aqae00yqg328ct8y0ppk",
+      "title": "Ghangad Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Ghangad Trek",
+      "trekSlug": "ghangad-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/ghangad",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:20:39.062Z",
+      "updatedAtMs": 1780312839062,
+      "searchText": "trekhievers ghangad trek ghangad trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv5jcan08qng328rv2rkbsn",
+      "title": "Ghangad Fort Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Ghangad Trek",
+      "trekSlug": "ghangad-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/ghangad-fort-trek-86637",
+      "priceInr": 800,
+      "priceText": "₹800",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Lunch"
+      ],
+      "pickupLocations": [
+        "Sion",
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:55:20.447Z",
+      "updatedAtMs": 1780314920447,
+      "searchText": "treks and trails india ghangad fort trek ghangad trek trek mumbai lunch lunch sion lonavala"
+    }
+  ],
+  "updatedAt": "2026-06-01T11:55:20.447Z"
+}

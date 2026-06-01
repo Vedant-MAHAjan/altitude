@@ -4,19 +4,17 @@
   "departureCity": "PUNE",
   "routePath": "/treks/bhairavgad-climbing-rappelling/pune",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
+  "packageCount": 1,
+  "organizerCount": 1,
   "startingPrice": 699,
   "priceMin": 699,
-  "priceMax": 1199,
-  "nextDepartureAt": null,
+  "priceMax": 699,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS",
-      "TRAIN"
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -28,10 +26,6 @@
       "TREK_ONLY"
     ],
     "organizers": [
-      {
-        "name": "Sahyadri Treks and Tours",
-        "slug": "sahyadri-treks-and-tours"
-      },
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
@@ -48,7 +42,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 1,
     "variantCount": 1
   },
   "variantGroups": [
@@ -58,9 +52,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 2,
+      "packageCount": 1,
       "priceMin": 699,
-      "priceMax": 1199
+      "priceMax": 699
     }
   ],
   "packages": [
@@ -84,33 +78,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "30 October",
-          "isoDate": null
-        },
-        {
-          "label": "28 Important",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -120,75 +87,40 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-26T07:25:52.918Z",
-      "updatedAtMs": 1779780352918,
+      "lastUpdatedAt": "2026-06-01T11:19:23.898Z",
+      "updatedAtMs": 1780312763898,
       "searchText": "trekhievers bhairavgad fort trek shripunje | pune bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
-      "id": "cmpe6pndd001f4nnh95vanc36",
-      "title": "Bhairavgad Climbing & Rappelling 2025",
-      "organizerName": "Sahyadri Treks and Tours",
-      "organizerSlug": "sahyadri-treks-and-tours",
+      "id": "pending:durgvihar:bhairavgad-climbing-rappelling",
+      "title": "Data under review",
+      "organizerName": "Durgvihar",
+      "organizerSlug": "durgvihar",
       "trekName": "Bhairavgad Climbing & Rappelling",
       "trekSlug": "bhairavgad-climbing-rappelling",
       "trekSummary": null,
-      "sourceUrl": "https://sahyadritreksandtours.com/trek/bhairavgad-climbing-rappelling-2025",
-      "priceInr": 1199,
-      "priceText": "₹1199",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
+      "sourceUrl": "https://durgvihar.in",
+      "priceInr": null,
+      "priceText": null,
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "UNKNOWN",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "PUNE",
+      "listingCity": "OTHER",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "2 Mumbai",
-          "isoDate": null
-        },
-        {
-          "label": "7 Pune",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "13 Detailed",
-          "isoDate": null
-        },
-        {
-          "label": "1 Tea",
-          "isoDate": null
-        },
-        {
-          "label": "1 Breakfast",
-          "isoDate": null
-        },
-        {
-          "label": "1 Lunch",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "variantLabel": "Trek Only",
+      "mealsSummary": null,
       "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
+      "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T06:24:15.102Z",
-      "updatedAtMs": 1779776655102,
-      "searchText": "sahyadri treks and tours bhairavgad climbing & rappelling 2025 bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "lastUpdatedAt": "2026-06-01T12:11:05.405Z",
+      "updatedAtMs": 1780315865405,
+      "searchText": "durgvihar bhairavgad climbing & rappelling",
+      "isPending": true,
+      "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-26T07:25:52.918Z"
+  "updatedAt": "2026-06-01T11:19:23.898Z"
 }

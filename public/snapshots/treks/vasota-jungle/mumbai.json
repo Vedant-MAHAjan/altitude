@@ -6,10 +6,9 @@
   "summary": null,
   "packageCount": 1,
   "organizerCount": 1,
-  "startingPrice": null,
-  "priceMin": null,
-  "priceMax": null,
-  "nextDepartureAt": null,
+  "startingPrice": 1699,
+  "priceMin": 1699,
+  "priceMax": 1699,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -28,21 +27,19 @@
     ],
     "organizers": [
       {
-        "name": "Durgvihar",
-        "slug": "durgvihar"
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": null,
-    "cheapestOrganizerName": null,
-    "cheapestOrganizerSlug": null,
-    "cheapestPackageTitle": null,
+    "lowestPrice": 1699,
+    "cheapestOrganizerName": "Treks and Trails India",
+    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "cheapestPackageTitle": "Vasota Fort Trek Pune Satara",
     "mealsSummary": [
       "Breakfast",
-      "Lunch",
-      "Dinner",
-      "Tea and snacks"
+      "Lunch"
     ],
     "organizerCount": 1,
     "variantCount": 1
@@ -55,80 +52,75 @@
         "TREK_ONLY"
       ],
       "packageCount": 1,
-      "priceMin": null,
-      "priceMax": null
+      "priceMin": 1699,
+      "priceMax": 1699
     }
   ],
   "packages": [
     {
-      "id": "cmpfjl5vd0038v2nhyta72pv1",
-      "title": "Vasota Jungle Trek & SajjanGad fort",
-      "organizerName": "Durgvihar",
-      "organizerSlug": "durgvihar",
+      "id": "cmpv61mim0ck1g328qsdkktsd",
+      "title": "Vasota Fort Trek Pune Satara",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
       "trekName": "Vasota Jungle",
       "trekSlug": "vasota-jungle",
       "trekSummary": null,
-      "sourceUrl": "https://durgvihar.in/trip/vasota-jungle-trek-sajjangad-fort",
-      "priceInr": null,
-      "priceText": "rs 5",
+      "sourceUrl": "https://www.treksandtrails.org/tours/vasota-trek-and-camping",
+      "priceInr": 1699,
+      "priceText": "₹1,699",
       "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
       "listingCity": "MUMBAI",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Meals",
-          "isoDate": null
-        },
-        {
-          "label": "2 Meals",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "2 Nights",
-          "isoDate": null
-        },
-        {
-          "label": "21 May",
-          "isoDate": null
-        },
-        {
-          "label": "11 Days",
-          "isoDate": null
-        },
-        {
-          "label": "10 Days",
-          "isoDate": null
-        },
-        {
-          "label": "1 Days",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Breakfast, Lunch",
         "Tent stay"
       ],
       "pickupLocations": [
         "Dadar",
-        "Nashik"
+        "Sion"
       ],
-      "lastUpdatedAt": "2026-05-21T13:44:21.241Z",
-      "updatedAtMs": 1779371061241,
-      "searchText": "durgvihar vasota jungle trek & sajjangad fort vasota jungle trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay dadar nashik"
+      "lastUpdatedAt": "2026-06-01T12:09:33.502Z",
+      "updatedAtMs": 1780315773502,
+      "searchText": "treks and trails india vasota fort trek pune satara vasota jungle trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay dadar sion"
+    },
+    {
+      "id": "pending:durgvihar:vasota-jungle",
+      "title": "Data under review",
+      "organizerName": "Durgvihar",
+      "organizerSlug": "durgvihar",
+      "trekName": "Vasota Jungle",
+      "trekSlug": "vasota-jungle",
+      "trekSummary": null,
+      "sourceUrl": "https://durgvihar.in",
+      "priceInr": null,
+      "priceText": null,
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "UNKNOWN",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek Only",
+      "mealsSummary": null,
+      "staySummary": null,
+      "inclusionHighlights": [],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
+      "searchText": "durgvihar vasota jungle",
+      "isPending": true,
+      "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-21T13:44:21.241Z"
+  "updatedAt": "2026-06-01T12:09:33.502Z"
 }

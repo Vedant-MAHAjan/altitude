@@ -1,0 +1,175 @@
+{
+  "destinationName": "Malshej Ghat",
+  "destinationSlug": "malshej-ghat",
+  "departureCity": "MUMBAI",
+  "routePath": "/treks/malshej-ghat/mumbai",
+  "summary": null,
+  "packageCount": 3,
+  "organizerCount": 1,
+  "startingPrice": 1499,
+  "priceMin": 1499,
+  "priceMax": 1599,
+  "availableVariants": [
+    "FIREFLIES",
+    "CAMPING",
+    "TREK_ONLY"
+  ],
+  "filters": {
+    "transportTypes": [
+      "TRAIN",
+      "NON_AC_BUS"
+    ],
+    "mealPlans": [
+      "INCLUDED"
+    ],
+    "cities": [
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY",
+      "CAMPING",
+      "FIREFLIES"
+    ],
+    "organizers": [
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 1499,
+    "cheapestOrganizerName": "Treks and Trails India",
+    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "cheapestPackageTitle": "Malshej Ghat Trek",
+    "mealsSummary": [
+      "Breakfast",
+      "Lunch",
+      "Dinner",
+      "Tea and snacks"
+    ],
+    "organizerCount": 1,
+    "variantCount": 2
+  },
+  "variantGroups": [
+    {
+      "signature": "TREK_ONLY",
+      "label": "Trek",
+      "tags": [
+        "TREK_ONLY"
+      ],
+      "packageCount": 1,
+      "priceMin": 1499,
+      "priceMax": 1499
+    },
+    {
+      "signature": "FIREFLIES__CAMPING",
+      "label": "Fireflies + Camping",
+      "tags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "packageCount": 2,
+      "priceMin": 1599,
+      "priceMax": 1599
+    }
+  ],
+  "packages": [
+    {
+      "id": "cmpv5qzf20aa1g3288u99z9e6",
+      "title": "Malshej Ghat Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Malshej Ghat",
+      "trekSlug": "malshej-ghat",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/malshej-ghat-trek",
+      "priceInr": 1499,
+      "priceText": "Rs. 1499/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:01:17.006Z",
+      "updatedAtMs": 1780315277006,
+      "searchText": "treks and trails india malshej ghat trek malshej ghat trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "cmpv5qvyo0a97g328cndgyvkg",
+      "title": "Malshej Ghat Fireflies Camping | Rs 1599 per person",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Malshej Ghat",
+      "trekSlug": "malshej-ghat",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/malshej-ghat-lakeside-camping",
+      "priceInr": 1599,
+      "priceText": "Rs 1599 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay, Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:01:12.528Z",
+      "updatedAtMs": 1780315272528,
+      "searchText": "treks and trails india malshej ghat fireflies camping | rs 1599 per person malshej ghat fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay, hotel stay breakfast, dinner, tea and snacks tent stay, hotel stay"
+    },
+    {
+      "id": "cmpv5qxox0a9mg328qjgvxd8e",
+      "title": "Malshej Ghat Fireflies Camping | Rs 1599 per person",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Malshej Ghat",
+      "trekSlug": "malshej-ghat",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/malshej-ghat-fireflies-camping",
+      "priceInr": 1599,
+      "priceText": "Rs 1599 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:01:14.769Z",
+      "updatedAtMs": 1780315274769,
+      "searchText": "treks and trails india malshej ghat fireflies camping | rs 1599 per person malshej ghat fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    }
+  ],
+  "updatedAt": "2026-06-01T12:01:17.006Z"
+}

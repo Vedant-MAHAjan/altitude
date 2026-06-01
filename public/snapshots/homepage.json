@@ -1,6 +1,22 @@
 {
   "featuredDestinations": [
     {
+      "destinationName": "Bhandardara Lake",
+      "destinationSlug": "bhandardara-lake",
+      "departureCity": "MUMBAI",
+      "routePath": "/treks/bhandardara-lake/mumbai",
+      "availableVariants": [
+        "FIREFLIES",
+        "CAMPING",
+        "TREK_ONLY"
+      ],
+      "startingPrice": 999,
+      "organizerCount": 3,
+      "packageCount": 13,
+      "updatedAt": "2026-06-01T12:06:59.031Z",
+      "summary": null
+    },
+    {
       "destinationName": "Harishchandragad",
       "destinationSlug": "harishchandragad",
       "departureCity": "MUMBAI",
@@ -13,50 +29,31 @@
       ],
       "startingPrice": 699,
       "organizerCount": 3,
-      "nextDepartureAt": null,
-      "packageCount": 9,
-      "updatedAt": "2026-05-26T07:29:06.634Z",
+      "packageCount": 12,
+      "updatedAt": "2026-06-01T11:56:09.838Z",
       "summary": null
     },
     {
-      "destinationName": "Rajmachi Fort",
-      "destinationSlug": "rajmachi-fort",
+      "destinationName": "Kalsubai",
+      "destinationSlug": "kalsubai",
       "departureCity": "MUMBAI",
-      "routePath": "/treks/rajmachi-fort/mumbai",
+      "routePath": "/treks/kalsubai/mumbai",
       "availableVariants": [
-        "SUNRISE",
+        "NIGHT_TREK",
         "FIREFLIES",
         "CAMPING",
         "TREK_ONLY"
       ],
-      "startingPrice": 699,
+      "startingPrice": 499,
       "organizerCount": 3,
-      "nextDepartureAt": null,
-      "packageCount": 9,
-      "updatedAt": "2026-05-25T11:06:10.962Z",
-      "summary": null
-    },
-    {
-      "destinationName": "Igatpuri",
-      "destinationSlug": "igatpuri",
-      "departureCity": "MUMBAI",
-      "routePath": "/treks/igatpuri/mumbai",
-      "availableVariants": [
-        "FIREFLIES",
-        "CAMPING",
-        "TREK_ONLY"
-      ],
-      "startingPrice": 599,
-      "organizerCount": 2,
-      "nextDepartureAt": null,
-      "packageCount": 7,
-      "updatedAt": "2026-05-25T10:47:30.083Z",
+      "packageCount": 12,
+      "updatedAt": "2026-06-01T12:03:17.176Z",
       "summary": null
     }
   ],
-  "routeCount": 71,
-  "organizerCount": 5,
-  "packageCount": 146,
-  "priceFloor": 300,
-  "lastUpdatedAt": "2026-05-26T07:29:08.665Z"
+  "routeCount": 152,
+  "organizerCount": 4,
+  "packageCount": 328,
+  "priceFloor": 200,
+  "lastUpdatedAt": "2026-06-01T12:09:52.044Z"
 }

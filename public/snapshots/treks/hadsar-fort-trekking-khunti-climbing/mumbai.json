@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/hadsar-fort-trekking-khunti-climbing/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 999,
   "priceMin": 999,
-  "priceMax": 999,
-  "nextDepartureAt": null,
+  "priceMax": 1300,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -30,6 +29,10 @@
       {
         "name": "Sahyadri Treks and Tours",
         "slug": "sahyadri-treks-and-tours"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -43,7 +46,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -53,9 +56,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
+      "packageCount": 2,
       "priceMin": 999,
-      "priceMax": 999
+      "priceMax": 1300
     }
   ],
   "packages": [
@@ -79,29 +82,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "2 Mumbai",
-          "isoDate": null
-        },
-        {
-          "label": "7 Pune",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "12 Detailed",
-          "isoDate": null
-        },
-        {
-          "label": "3 Litres",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
@@ -115,9 +95,39 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-05-26T06:24:16.403Z",
-      "updatedAtMs": 1779776656403,
+      "lastUpdatedAt": "2026-06-01T11:50:06.518Z",
+      "updatedAtMs": 1780314606518,
       "searchText": "sahyadri treks and tours hadsar fort trekking & khunti climbing 2026 hadsar fort trekking & khunti climbing trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks dadar thane kalyan sion nashik nashik phata"
+    },
+    {
+      "id": "cmpv5jst808tyg328dwj7c7zd",
+      "title": "Hadsar Fort Trek | Self Operated Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Hadsar Fort Trekking & Khunti Climbing",
+      "trekSlug": "hadsar-fort-trekking-khunti-climbing",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/hadsar-fort-trek",
+      "priceInr": 1300,
+      "priceText": "₹1,300",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:55:41.852Z",
+      "updatedAtMs": 1780314941852,
+      "searchText": "treks and trails india hadsar fort trek | self operated trek hadsar fort trekking & khunti climbing trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "pending:durgvihar:hadsar-fort-trekking-khunti-climbing",
@@ -139,18 +149,16 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek Only",
-      "nextDepartureAt": null,
-      "departureDates": [],
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:29:14.347Z",
-      "updatedAtMs": 1779780554347,
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
       "searchText": "durgvihar hadsar fort trekking & khunti climbing",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-26T06:24:16.403Z"
+  "updatedAt": "2026-06-01T11:55:41.852Z"
 }

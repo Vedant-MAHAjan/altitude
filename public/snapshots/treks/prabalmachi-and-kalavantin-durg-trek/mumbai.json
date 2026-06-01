@@ -4,14 +4,13 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/prabalmachi-and-kalavantin-durg-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1299,
-  "priceMin": 1299,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 899,
+  "priceMin": 899,
   "priceMax": 1299,
-  "nextDepartureAt": null,
   "availableVariants": [
-    "TREK_ONLY"
+    "CAMPING"
   ],
   "filters": {
     "transportTypes": [
@@ -24,9 +23,13 @@
       "MUMBAI"
     ],
     "variantTags": [
-      "TREK_ONLY"
+      "CAMPING"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -34,31 +37,61 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1299,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "lowestPrice": 899,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
     "cheapestPackageTitle": "Prabalmachi Camping and Kalavantin Durg Trek",
     "mealsSummary": [
       "Breakfast",
-      "Dinner",
-      "Tea and snacks"
+      "Dinner"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
     {
-      "signature": "TREK_ONLY",
-      "label": "Trek",
+      "signature": "CAMPING",
+      "label": "Camping",
       "tags": [
-        "TREK_ONLY"
+        "CAMPING"
       ],
-      "packageCount": 1,
-      "priceMin": 1299,
+      "packageCount": 2,
+      "priceMin": 899,
       "priceMax": 1299
     }
   ],
   "packages": [
+    {
+      "id": "cmpv57yn006jog328lsdaj3su",
+      "title": "Prabalmachi Camping and Kalavantin Durg Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Prabalmachi And Kalavantin Durg Trek",
+      "trekSlug": "prabalmachi-and-kalavantin-durg-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/prabalmachi-camping",
+      "priceInr": 899,
+      "priceText": "₹899",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:46:29.532Z",
+      "updatedAtMs": 1780314389532,
+      "searchText": "bhatakna prabalmachi camping and kalavantin durg trek prabalmachi and kalavantin durg trek camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+    },
     {
       "id": "cmpfjpwa702aov2nhb2godhc7",
       "title": "Prabalmachi Camping and Kalavantin Durg Trek",
@@ -75,40 +108,21 @@
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "21 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "1 Veg",
-          "isoDate": null
-        },
-        {
-          "label": "every weekend",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
+        "Breakfast, Dinner",
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:53:37.838Z",
-      "updatedAtMs": 1779371617838,
-      "searchText": "treks and trails india prabalmachi camping and kalavantin durg trek prabalmachi and kalavantin durg trek trek mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T12:04:23.839Z",
+      "updatedAtMs": 1780315463839,
+      "searchText": "treks and trails india prabalmachi camping and kalavantin durg trek prabalmachi and kalavantin durg trek camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:37.838Z"
+  "updatedAt": "2026-06-01T12:04:23.839Z"
 }

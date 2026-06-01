@@ -4,14 +4,14 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/kalavantin-durg/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 890,
-  "priceMin": 890,
-  "priceMax": 890,
-  "nextDepartureAt": null,
+  "packageCount": 5,
+  "organizerCount": 3,
+  "startingPrice": 399,
+  "priceMin": 399,
+  "priceMax": 999,
   "availableVariants": [
-    "NIGHT_TREK"
+    "NIGHT_TREK",
+    "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
@@ -24,39 +24,150 @@
       "MUMBAI"
     ],
     "variantTags": [
+      "TREK_ONLY",
       "NIGHT_TREK"
     ],
     "organizers": [
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 890,
+    "lowestPrice": 399,
     "cheapestOrganizerName": "Bhatakna",
     "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Kalavantin Durg Night Trek",
+    "cheapestPackageTitle": "Kalavantin Durg One Day Trek",
     "mealsSummary": [
-      "Breakfast"
+      "Lunch",
+      "Breakfast",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
-    "variantCount": 1
+    "organizerCount": 3,
+    "variantCount": 2
   },
   "variantGroups": [
+    {
+      "signature": "TREK_ONLY",
+      "label": "Trek",
+      "tags": [
+        "TREK_ONLY"
+      ],
+      "packageCount": 2,
+      "priceMin": 399,
+      "priceMax": 999
+    },
     {
       "signature": "NIGHT_TREK",
       "label": "Night trek",
       "tags": [
         "NIGHT_TREK"
       ],
-      "packageCount": 1,
-      "priceMin": 890,
+      "packageCount": 3,
+      "priceMin": 699,
       "priceMax": 890
     }
   ],
   "packages": [
+    {
+      "id": "cmpl31a8a01fi1pnh3yrga1vu",
+      "title": "Kalavantin Durg One Day Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalavantin-durg-one-day-trek",
+      "priceInr": 399,
+      "priceText": "₹399",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:44:13.954Z",
+      "updatedAtMs": 1780314253954,
+      "searchText": "bhatakna kalavantin durg one day trek kalavantin durg trek mumbai lunch lunch"
+    },
+    {
+      "id": "cmpv4d95o01sug328f18m3dsl",
+      "title": "Kalavantin Durg Night Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalavantin-durg-night-trek-mumbai-132303",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:22:36.828Z",
+      "updatedAtMs": 1780312956828,
+      "searchText": "trekhievers kalavantin durg night trek | mumbai kalavantin durg night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv5mi2g09dog328kmdcjl5l",
+      "title": "Kalavantin Durg Night Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalavantin-durg-night-trek",
+      "priceInr": 799,
+      "priceText": "Rs. 799/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:57:47.896Z",
+      "updatedAtMs": 1780315067896,
+      "searchText": "treks and trails india kalavantin durg night trek kalavantin durg night trek mumbai breakfast breakfast"
+    },
     {
       "id": "cmpl319g501f21pnh9688bt50",
       "title": "Kalavantin Durg Night Trek",
@@ -77,35 +188,46 @@
       ],
       "variantSignature": "NIGHT_TREK",
       "variantLabel": "Night trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "10 Minimum",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T10:47:35.957Z",
-      "updatedAtMs": 1779706055957,
+      "lastUpdatedAt": "2026-06-01T11:44:11.702Z",
+      "updatedAtMs": 1780314251702,
       "searchText": "bhatakna kalavantin durg night trek kalavantin durg night trek mumbai breakfast breakfast"
+    },
+    {
+      "id": "cmpv5mjsj09e2g328cp2112q1",
+      "title": "Kalavantin Durg Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalavantin-durg",
+      "priceInr": 999,
+      "priceText": "Rs. 999/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:57:50.131Z",
+      "updatedAtMs": 1780315070131,
+      "searchText": "treks and trails india kalavantin durg trek kalavantin durg trek mumbai breakfast breakfast"
     }
   ],
-  "updatedAt": "2026-05-25T10:47:35.957Z"
+  "updatedAt": "2026-06-01T11:57:50.131Z"
 }

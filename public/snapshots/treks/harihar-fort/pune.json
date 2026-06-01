@@ -4,22 +4,21 @@
   "departureCity": "PUNE",
   "routePath": "/treks/harihar-fort/pune",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
+  "packageCount": 3,
+  "organizerCount": 3,
   "startingPrice": 699,
   "priceMin": 699,
-  "priceMax": 799,
-  "nextDepartureAt": null,
+  "priceMax": 1699,
   "availableVariants": [
     "NIGHT_TREK",
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
-      "NOT_INCLUDED",
       "INCLUDED"
     ],
     "cities": [
@@ -37,6 +36,10 @@
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -47,9 +50,10 @@
     "cheapestPackageTitle": "Harihar Fort Trek | Pune",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 3,
     "variantCount": 2
   },
   "variantGroups": [
@@ -59,9 +63,9 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
+      "packageCount": 2,
       "priceMin": 699,
-      "priceMax": 699
+      "priceMax": 1699
     },
     {
       "signature": "NIGHT_TREK",
@@ -87,7 +91,7 @@
       "priceInr": 699,
       "priceText": "₹699",
       "transportType": "NON_AC_BUS",
-      "mealPlan": "NOT_INCLUDED",
+      "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
       "listingCity": "PUNE",
       "variantTags": [
@@ -95,73 +99,20 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "28 April",
-          "isoDate": null
-        },
-        {
-          "label": "25 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 June",
-          "isoDate": null
-        },
-        {
-          "label": "27 July",
-          "isoDate": null
-        },
-        {
-          "label": "31 August",
-          "isoDate": null
-        },
-        {
-          "label": "29 September",
-          "isoDate": null
-        },
-        {
-          "label": "26 October",
-          "isoDate": null
-        },
-        {
-          "label": "31 November",
-          "isoDate": null
-        },
-        {
-          "label": "28 Important",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
-      "mealsSummary": null,
-      "staySummary": null,
-      "inclusionHighlights": [],
       "pickupLocations": [
-        "Sion",
         "Nashik",
         "Nashik Phata",
         "Nirgudpada"
       ],
-      "lastUpdatedAt": "2026-05-21T13:44:59.318Z",
-      "updatedAtMs": 1779371099318,
-      "searchText": "trekhievers harihar fort trek | pune harihar fort trek pune sion nashik nashik phata nirgudpada"
+      "lastUpdatedAt": "2026-06-01T11:21:28.559Z",
+      "updatedAtMs": 1780312888559,
+      "searchText": "trekhievers harihar fort trek | pune harihar fort trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata nirgudpada"
     },
     {
       "id": "cmpl30sbn014a1pnh7lwplkbd",
@@ -183,21 +134,6 @@
       ],
       "variantSignature": "NIGHT_TREK",
       "variantLabel": "Night trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Hotel stay",
       "inclusionHighlights": [
@@ -209,9 +145,40 @@
         "Nashik Phata",
         "Nirgudpada"
       ],
-      "lastUpdatedAt": "2026-05-25T10:47:13.763Z",
-      "updatedAtMs": 1779706033763,
+      "lastUpdatedAt": "2026-06-01T11:43:26.539Z",
+      "updatedAtMs": 1780314206539,
       "searchText": "bhatakna harihar fort night trek | pune harihar fort night trek pune breakfast, lunch hotel stay breakfast, lunch hotel stay nashik nashik phata nirgudpada"
+    },
+    {
+      "id": "cmpv5k1xo08wmg328qy0yoq2t",
+      "title": "Harihar Fort Trek from Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Harihar Fort",
+      "trekSlug": "harihar-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/harihar-fort-trek-from-pune",
+      "priceInr": 1699,
+      "priceText": "Rs. 1699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:55:53.676Z",
+      "updatedAtMs": 1780314953676,
+      "searchText": "treks and trails india harihar fort trek from pune harihar fort trek pune breakfast, lunch tent stay, homestay breakfast, lunch tent stay, homestay"
     },
     {
       "id": "pending:durgvihar:harihar-fort",
@@ -233,18 +200,16 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek Only",
-      "nextDepartureAt": null,
-      "departureDates": [],
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:29:14.347Z",
-      "updatedAtMs": 1779780554347,
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
       "searchText": "durgvihar harihar fort",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-25T10:47:13.763Z"
+  "updatedAt": "2026-06-01T11:55:53.676Z"
 }

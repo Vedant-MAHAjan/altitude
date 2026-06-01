@@ -6,30 +6,34 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 5,
-  "organizerCount": 2,
-  "priceMin": 1799,
+  "packageCount": 16,
+  "organizerCount": 3,
+  "priceMin": 999,
   "priceMax": 2999,
-  "updatedAt": "2026-05-25T05:23:01.028Z",
+  "updatedAt": "2026-06-01T12:06:24.508Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS",
       "TRAIN"
     ],
     "mealPlans": [
-      "NOT_INCLUDED",
       "INCLUDED"
     ],
     "cities": [
       "PUNE",
-      "MIXED",
-      "MUMBAI"
+      "MUMBAI",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY",
-      "CAMPING"
+      "CAMPING",
+      "FIREFLIES"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
@@ -41,20 +45,180 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1799,
-    "cheapestOrganizerName": "Trekhievers",
-    "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Sandhan Valley Trek & Rappelling | Pune",
+    "lowestPrice": 999,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Sandhan Valley Trek with Rappelling | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
       "Dinner",
       "Tea and snacks"
     ],
-    "organizerCount": 2,
-    "variantCount": 2
+    "organizerCount": 3,
+    "variantCount": 3
   },
   "packages": [
+    {
+      "id": "cmpv58yuu06t4g328e9ddjhz9",
+      "title": "Sandhan Valley Trek with Rappelling | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-pune",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:16.470Z",
+      "updatedAtMs": 1780314436470,
+      "searchText": "bhatakna sandhan valley trek with rappelling | pune sandhan valley trek pune breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "cmpv4jsqp03zgg328d6aoybl1",
+      "title": "Sandhan Valley Fireflies Trek, Camping And Rappelling",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/sandhan-valley",
+      "priceInr": 1199,
+      "priceText": "₹1,199",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:27:42.145Z",
+      "updatedAtMs": 1780313262145,
+      "searchText": "trekhievers sandhan valley fireflies trek, camping and rappelling sandhan valley fireflies + camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+    },
+    {
+      "id": "cmpv4jun7040mg328uo14lmgb",
+      "title": "Sandhan Valley Trek & Camping | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/sandhan-camp-pune",
+      "priceInr": 1299,
+      "priceText": "₹1,299 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:27:44.611Z",
+      "updatedAtMs": 1780313264611,
+      "searchText": "trekhievers sandhan valley trek & camping | pune sandhan valley camping pune breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay nashik nashik phata"
+    },
+    {
+      "id": "cmpv58pi106qhg328xel4lexq",
+      "title": "Sandhan Valley Fireflies Trek and Camping 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley-fireflies-trek-and-camping-2026",
+      "priceInr": 1499,
+      "priceText": "₹1,499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:04.345Z",
+      "updatedAtMs": 1780314424345,
+      "searchText": "bhatakna sandhan valley fireflies trek and camping 2026 sandhan valley fireflies + camping mumbai breakfast, lunch, dinner, tea and snacks tent stay, homestay breakfast, lunch, dinner, tea and snacks tent stay, homestay"
+    },
+    {
+      "id": "cmpv58wya06smg328e4th97e5",
+      "title": "Sandhan Valley Trek & Camping Rappelling",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley",
+      "priceInr": 1799,
+      "priceText": "₹1,799",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:14.003Z",
+      "updatedAtMs": 1780314434003,
+      "searchText": "bhatakna sandhan valley trek & camping rappelling sandhan valley camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+    },
     {
       "id": "cmpfjly3a01gov2nhirajihuk",
       "title": "Sandhan Valley Trek & Rappelling | Pune",
@@ -67,66 +231,23 @@
       "priceInr": 1799,
       "priceText": "₹1,799 per person",
       "transportType": "NON_AC_BUS",
-      "mealPlan": "NOT_INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
       "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "26 November",
-          "isoDate": null
-        },
-        {
-          "label": "30 December",
-          "isoDate": null
-        },
-        {
-          "label": "28 January",
-          "isoDate": null
-        },
-        {
-          "label": "25 February",
-          "isoDate": null
-        },
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "29 Event",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": null,
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
-      "inclusionHighlights": [],
-      "pickupLocations": [
-        "Sion"
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
       ],
-      "lastUpdatedAt": "2026-05-21T13:44:57.814Z",
-      "updatedAtMs": 1779371097814,
-      "searchText": "trekhievers sandhan valley trek & rappelling | pune sandhan valley trek pune sion"
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:27:46.848Z",
+      "updatedAtMs": 1780313266848,
+      "searchText": "trekhievers sandhan valley trek & rappelling | pune sandhan valley trek pune breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpfjyekr00yduonh0jz9ty4u",
@@ -148,29 +269,14 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "23 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:39.051Z",
-      "updatedAtMs": 1779371679051,
+      "lastUpdatedAt": "2026-06-01T12:06:20.046Z",
+      "updatedAtMs": 1780315580046,
       "searchText": "treks and trails india sandhan valley rappelling and half trek | from mumbai and pune sandhan valley trek mixed breakfast, lunch breakfast, lunch"
     },
     {
@@ -193,37 +299,14 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "23 May",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        },
-        {
-          "label": "06 Jun",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:35.648Z",
-      "updatedAtMs": 1779371675648,
+      "lastUpdatedAt": "2026-06-01T12:06:24.508Z",
+      "updatedAtMs": 1780315584508,
       "searchText": "treks and trails india sandhan valley trek from pune | half trek and rappelling sandhan valley trek pune breakfast, lunch breakfast, lunch"
     },
     {
@@ -246,49 +329,6 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "26 November",
-          "isoDate": null
-        },
-        {
-          "label": "30 December",
-          "isoDate": null
-        },
-        {
-          "label": "28 January",
-          "isoDate": null
-        },
-        {
-          "label": "25 February",
-          "isoDate": null
-        },
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "29 Event",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Dinner",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -296,9 +336,201 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:22:44.459Z",
-      "updatedAtMs": 1779686564459,
+      "lastUpdatedAt": "2026-06-01T11:27:49.086Z",
+      "updatedAtMs": 1780313269086,
       "searchText": "trekhievers sandhan valley trek, rappelling & camping | mumbai sandhan valley camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+    },
+    {
+      "id": "cmpv5xfit0bogg32867nw3pzd",
+      "title": "Sandhan Valley Fireflies Camping 2025",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/sandhan-valley-fireflies-camping-2025",
+      "priceInr": 1999,
+      "priceText": "Rs. 1999/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:06:17.813Z",
+      "updatedAtMs": 1780315577813,
+      "searchText": "treks and trails india sandhan valley fireflies camping 2025 sandhan valley fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5e6x507nyg328v2ytxcws",
+      "title": "Bhandardara Camping and Sandhan Valley Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhandardara-camping-and-sandhan-valley-trek",
+      "priceInr": 2000,
+      "priceText": "₹2,000",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner, Tea and snacks",
+        "Tent stay, Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:51:20.202Z",
+      "updatedAtMs": 1780314680202,
+      "searchText": "treks and trails india bhandardara camping and sandhan valley trek sandhan valley camping mumbai breakfast, lunch, dinner, tea and snacks tent stay, hotel stay breakfast, lunch, dinner, tea and snacks tent stay, hotel stay"
+    },
+    {
+      "id": "cmpv58nlg06q2g328v4yfbypo",
+      "title": "Sandhan Valley Fireflies Trek Camping Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley-trek-pune",
+      "priceInr": 2099,
+      "priceText": "₹2,099",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [
+        "Sion",
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-06-01T11:47:01.876Z",
+      "updatedAtMs": 1780314421876,
+      "searchText": "bhatakna sandhan valley fireflies trek camping pune sandhan valley fireflies + camping pune breakfast, lunch, dinner tent stay, homestay breakfast, lunch, dinner tent stay, homestay sion nashik nashik phata"
+    },
+    {
+      "id": "cmpv58ren06qzg328hm9334al",
+      "title": "Sandhan Valley Milkyway Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley-milkyway-camping",
+      "priceInr": 2699,
+      "priceText": "Rs. 2699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Lunch, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:06.815Z",
+      "updatedAtMs": 1780314426815,
+      "searchText": "bhatakna sandhan valley milkyway camping sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv58tb806rjg328d4ssb9w0",
+      "title": "Sandhan Valley Stargazing Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley-stargazing-camping-165889",
+      "priceInr": 2699,
+      "priceText": "Rs. 2699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Lunch, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:09.284Z",
+      "updatedAtMs": 1780314429284,
+      "searchText": "bhatakna sandhan valley stargazing camping sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv58v1p06s2g328uzbimecs",
+      "title": "Sandhan Valley Stargazing Camping & Trekking",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Sandhan Valley",
+      "trekSlug": "sandhan-valley",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/sandhan-valley-stargazing-camping-trekking",
+      "priceInr": 2699,
+      "priceText": "Rs. 2699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Lunch, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Lunch, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:47:11.533Z",
+      "updatedAtMs": 1780314431533,
+      "searchText": "bhatakna sandhan valley stargazing camping & trekking sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpe5rmwy018w8knhk20zagwk",
@@ -320,29 +552,6 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "2 Nights",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "2 Day",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "Every Saturday",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
       "staySummary": "Tent stay, Hotel stay, Dormitory stay, Homestay",
       "inclusionHighlights": [
@@ -350,8 +559,8 @@
         "Tent stay, Hotel stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:01.028Z",
-      "updatedAtMs": 1779686581028,
+      "lastUpdatedAt": "2026-06-01T12:06:22.277Z",
+      "updatedAtMs": 1780315582277,
       "searchText": "treks and trails india sandhan valley trek and camping sandhan valley camping mumbai breakfast, lunch, dinner, tea and snacks tent stay, hotel stay, dormitory stay, homestay breakfast, lunch, dinner, tea and snacks tent stay, hotel stay, dormitory stay, homestay"
     },
     {
@@ -374,14 +583,12 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek Only",
-      "nextDepartureAt": null,
-      "departureDates": [],
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:29:14.347Z",
-      "updatedAtMs": 1779780554347,
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
       "searchText": "durgvihar sandhan valley",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"

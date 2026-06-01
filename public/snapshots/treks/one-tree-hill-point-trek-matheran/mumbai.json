@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/one-tree-hill-point-trek-matheran/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1399,
-  "priceMin": 1399,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 799,
+  "priceMin": 799,
   "priceMax": 1399,
-  "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -28,20 +27,25 @@
     ],
     "organizers": [
       {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1399,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "lowestPrice": 799,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
     "cheapestPackageTitle": "One Tree Hill Point Trek Matheran",
     "mealsSummary": [
-      "Breakfast"
+      "Breakfast",
+      "Lunch"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
@@ -51,12 +55,42 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 1,
-      "priceMin": 1399,
+      "packageCount": 2,
+      "priceMin": 799,
       "priceMax": 1399
     }
   ],
   "packages": [
+    {
+      "id": "cmpv57rjc06hvg328lq2o9b0x",
+      "title": "One Tree Hill Point Trek Matheran",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "One Tree Hill Point Trek Matheran",
+      "trekSlug": "one-tree-hill-point-trek-matheran",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/one-tree-hill-point-trek-matheran",
+      "priceInr": 799,
+      "priceText": "Rs. 799/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:46:20.328Z",
+      "updatedAtMs": 1780314380328,
+      "searchText": "bhatakna one tree hill point trek matheran one tree hill point trek matheran trek mumbai breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpfjq3uc02esv2nhy670tlev",
       "title": "One Tree Hill Point Trek Matheran",
@@ -77,27 +111,16 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:53:44.954Z",
-      "updatedAtMs": 1779371624954,
+      "lastUpdatedAt": "2026-06-01T12:03:43.007Z",
+      "updatedAtMs": 1780315423007,
       "searchText": "treks and trails india one tree hill point trek matheran one tree hill point trek matheran trek mumbai breakfast breakfast"
     }
   ],
-  "updatedAt": "2026-05-21T13:53:44.954Z"
+  "updatedAt": "2026-06-01T12:03:43.007Z"
 }

@@ -5,12 +5,12 @@
   "routePath": "/treks/sondai-fort/mumbai",
   "summary": null,
   "packageCount": 4,
-  "organizerCount": 2,
+  "organizerCount": 3,
   "startingPrice": 499,
   "priceMin": 499,
-  "priceMax": 999,
-  "nextDepartureAt": null,
+  "priceMax": 1299,
   "availableVariants": [
+    "NIGHT_TREK",
     "TREK_ONLY"
   ],
   "filters": {
@@ -25,12 +25,17 @@
       "MUMBAI"
     ],
     "variantTags": [
+      "NIGHT_TREK",
       "TREK_ONLY"
     ],
     "organizers": [
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
       },
       {
         "name": "Treks and Trails India",
@@ -48,19 +53,29 @@
       "Tea and snacks",
       "Lunch"
     ],
-    "organizerCount": 2,
-    "variantCount": 1
+    "organizerCount": 3,
+    "variantCount": 2
   },
   "variantGroups": [
+    {
+      "signature": "NIGHT_TREK",
+      "label": "Night trek",
+      "tags": [
+        "NIGHT_TREK"
+      ],
+      "packageCount": 1,
+      "priceMin": 499,
+      "priceMax": 499
+    },
     {
       "signature": "TREK_ONLY",
       "label": "Trek",
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 4,
-      "priceMin": 499,
-      "priceMax": 999
+      "packageCount": 3,
+      "priceMin": 699,
+      "priceMax": 1299
     }
   ],
   "packages": [
@@ -80,30 +95,19 @@
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
       "variantTags": [
-        "TREK_ONLY"
+        "NIGHT_TREK"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "4 Cisterns",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
       "mealsSummary": "Breakfast, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:45:59.795Z",
-      "updatedAtMs": 1779371159795,
-      "searchText": "bhatakna sondai night trek sondai fort trek mumbai breakfast, tea and snacks breakfast, tea and snacks"
+      "lastUpdatedAt": "2026-06-01T11:47:25.452Z",
+      "updatedAtMs": 1780314445452,
+      "searchText": "bhatakna sondai night trek sondai fort night trek mumbai breakfast, tea and snacks breakfast, tea and snacks"
     },
     {
       "id": "cmpfjxlp200gtuonhw2vhc9kg",
@@ -125,21 +129,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast",
       "staySummary": null,
       "inclusionHighlights": [
@@ -148,55 +137,6 @@
       "pickupLocations": [],
       "lastUpdatedAt": "2026-05-21T13:54:01.622Z",
       "updatedAtMs": 1779371641622,
-      "searchText": "treks and trails india sondai fort trek 2026 sondai fort trek mumbai breakfast breakfast"
-    },
-    {
-      "id": "cmpe5rnqy019h8knh75l3s8fz",
-      "title": "Sondai Fort Trek 2026",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Sondai Fort",
-      "trekSlug": "sondai-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/sondai-fort-trek-2026",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "12 Hours",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "5 Benefits",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:02.061Z",
-      "updatedAtMs": 1779686582061,
       "searchText": "treks and trails india sondai fort trek 2026 sondai fort trek mumbai breakfast breakfast"
     },
     {
@@ -219,17 +159,6 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Veg",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": "Hotel stay",
       "inclusionHighlights": [
@@ -241,10 +170,40 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-05-25T10:46:38.840Z",
-      "updatedAtMs": 1779705998840,
+      "lastUpdatedAt": "2026-06-01T11:42:26.392Z",
+      "updatedAtMs": 1780314146392,
       "searchText": "bhatakna corporate special sondai monsoon trek sondai fort trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay borivali chembur sion"
+    },
+    {
+      "id": "cmpv4kcaf046tg3282jtuw06f",
+      "title": "Sondai Fort Monsoon Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Sondai Fort",
+      "trekSlug": "sondai-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/sondai",
+      "priceInr": 1299,
+      "priceText": "₹1,299",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:28:07.479Z",
+      "updatedAtMs": 1780313287479,
+      "searchText": "trekhievers sondai fort monsoon trek sondai fort trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     }
   ],
-  "updatedAt": "2026-05-25T10:46:38.840Z"
+  "updatedAt": "2026-06-01T11:47:25.452Z"
 }

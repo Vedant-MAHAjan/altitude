@@ -4,14 +4,14 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/prabalmachi/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "startingPrice": 1699,
-  "priceMin": 1699,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "startingPrice": 999,
+  "priceMin": 999,
   "priceMax": 1699,
-  "nextDepartureAt": null,
   "availableVariants": [
-    "TREK_ONLY"
+    "FIREFLIES",
+    "CAMPING"
   ],
   "filters": {
     "transportTypes": [
@@ -24,9 +24,14 @@
       "MUMBAI"
     ],
     "variantTags": [
-      "TREK_ONLY"
+      "CAMPING",
+      "FIREFLIES"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -34,30 +39,63 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1699,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "lowestPrice": 999,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
     "cheapestPackageTitle": "Prabalmachi Fireflies Camping 2026",
     "mealsSummary": [
       "Breakfast",
       "Dinner"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "variantGroups": [
     {
-      "signature": "TREK_ONLY",
-      "label": "Trek",
+      "signature": "FIREFLIES__CAMPING",
+      "label": "Fireflies + Camping",
       "tags": [
-        "TREK_ONLY"
+        "CAMPING",
+        "FIREFLIES"
       ],
-      "packageCount": 1,
-      "priceMin": 1699,
+      "packageCount": 2,
+      "priceMin": 999,
       "priceMax": 1699
     }
   ],
   "packages": [
+    {
+      "id": "cmpv580d806k0g328m3bvjuj6",
+      "title": "Prabalmachi Fireflies Camping 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Prabalmachi",
+      "trekSlug": "prabalmachi",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/prabalmachi-fireflies-camping-2026",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:46:31.772Z",
+      "updatedAtMs": 1780314391772,
+      "searchText": "bhatakna prabalmachi fireflies camping 2026 prabalmachi fireflies + camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+    },
     {
       "id": "cmpfjy57a00suuonhumt5wqv8",
       "title": "Prabalmachi Fireflies Camping 2026",
@@ -74,73 +112,11 @@
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING",
+        "FIREFLIES"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "23 May, 2:30 PM Without Transport Coming directly at base village by own vehicle Available",
-          "isoDate": "2026-05-23T14:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-23T14:30:00"
-        },
-        {
-          "label": "23 May, 2:30 PM With Transport Panvel to Panvel travel by local vehicle Available",
-          "isoDate": "2026-05-23T14:30:00"
-        },
-        {
-          "label": "30 May, 2:30 PM Without Transport Coming directly at base village by own vehicle Available",
-          "isoDate": "2026-05-30T14:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-05-30T14:30:00"
-        },
-        {
-          "label": "30 May, 2:30 PM With Transport Panvel to Panvel travel by local vehicle Available",
-          "isoDate": "2026-05-30T14:30:00"
-        },
-        {
-          "label": "06 Jun, 2:30 PM Without Transport Coming directly at base village by own vehicle Available",
-          "isoDate": "2026-06-06T14:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-06T14:30:00"
-        },
-        {
-          "label": "06 Jun, 2:30 PM With Transport Panvel to Panvel travel by local vehicle Available",
-          "isoDate": "2026-06-06T14:30:00"
-        },
-        {
-          "label": "13 Jun, 2:30 PM Without Transport Coming directly at base village by own vehicle Available",
-          "isoDate": "2026-06-13T14:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-13T14:30:00"
-        },
-        {
-          "label": "13 Jun, 2:30 PM With Transport Panvel to Panvel travel by local vehicle Available",
-          "isoDate": "2026-06-13T14:30:00"
-        },
-        {
-          "label": "20 Jun, 2:30 PM Without Transport Coming directly at base village by own vehicle Available",
-          "isoDate": "2026-06-20T14:30:00"
-        },
-        {
-          "label": "BOOK",
-          "isoDate": "2026-06-20T14:30:00"
-        },
-        {
-          "label": "20 Jun, 2:30 PM With Transport Panvel to Panvel travel by local vehicle Available",
-          "isoDate": "2026-06-20T14:30:00"
-        }
-      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
       "mealsSummary": "Breakfast, Dinner",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -148,10 +124,10 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:54:26.902Z",
-      "updatedAtMs": 1779371666902,
-      "searchText": "treks and trails india prabalmachi fireflies camping 2026 prabalmachi trek mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+      "lastUpdatedAt": "2026-06-01T12:04:26.073Z",
+      "updatedAtMs": 1780315466073,
+      "searchText": "treks and trails india prabalmachi fireflies camping 2026 prabalmachi fireflies + camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
     }
   ],
-  "updatedAt": "2026-05-21T13:54:26.902Z"
+  "updatedAt": "2026-06-01T12:04:26.073Z"
 }

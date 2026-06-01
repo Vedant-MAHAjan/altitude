@@ -9,10 +9,8 @@
   "startingPrice": 1799,
   "priceMin": 1799,
   "priceMax": 1899,
-  "nextDepartureAt": null,
   "availableVariants": [
-    "CAMPING",
-    "TREK_ONLY"
+    "CAMPING"
   ],
   "filters": {
     "transportTypes": [
@@ -26,8 +24,7 @@
       "PUNE"
     ],
     "variantTags": [
-      "CAMPING",
-      "TREK_ONLY"
+      "CAMPING"
     ],
     "organizers": [
       {
@@ -55,7 +52,7 @@
       "Tea and snacks"
     ],
     "organizerCount": 3,
-    "variantCount": 2
+    "variantCount": 1
   },
   "variantGroups": [
     {
@@ -64,19 +61,9 @@
       "tags": [
         "CAMPING"
       ],
-      "packageCount": 2,
+      "packageCount": 3,
       "priceMin": 1799,
       "priceMax": 1899
-    },
-    {
-      "signature": "TREK_ONLY",
-      "label": "Trek",
-      "tags": [
-        "TREK_ONLY"
-      ],
-      "packageCount": 1,
-      "priceMin": 1799,
-      "priceMax": 1799
     }
   ],
   "packages": [
@@ -100,53 +87,14 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "26 November",
-          "isoDate": null
-        },
-        {
-          "label": "30 December",
-          "isoDate": null
-        },
-        {
-          "label": "28 January",
-          "isoDate": null
-        },
-        {
-          "label": "25 February",
-          "isoDate": null
-        },
-        {
-          "label": "28 March",
-          "isoDate": null
-        },
-        {
-          "label": "29 Event",
-          "isoDate": null
-        },
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "Every Saturday",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:22:52.783Z",
-      "updatedAtMs": 1779686572783,
+      "lastUpdatedAt": "2026-06-01T11:28:50.502Z",
+      "updatedAtMs": 1780313330502,
       "searchText": "trekhievers vasota jungle trek with camping | pune vasota jungle camping pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -165,35 +113,20 @@
       "forestFeeStatus": "NOT_INCLUDED",
       "listingCity": "PUNE",
       "variantTags": [
-        "TREK_ONLY"
+        "CAMPING"
       ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
+        "Breakfast, Lunch",
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-21T13:53:40.306Z",
-      "updatedAtMs": 1779371620306,
-      "searchText": "treks and trails india vasota trek and camping from pune vasota jungle trek pune breakfast, lunch, tea and snacks tent stay breakfast, lunch, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-06-01T12:09:35.734Z",
+      "updatedAtMs": 1780315775734,
+      "searchText": "treks and trails india vasota trek and camping from pune vasota jungle camping pune breakfast, lunch tent stay breakfast, lunch tent stay"
     },
     {
       "id": "cmpe5sd2e01ir8knhed3zep44",
@@ -215,21 +148,6 @@
       ],
       "variantSignature": "CAMPING",
       "variantLabel": "Camping",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "30 May",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": "Tent stay",
       "inclusionHighlights": [
@@ -237,10 +155,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-25T05:23:24.981Z",
-      "updatedAtMs": 1779686604981,
+      "lastUpdatedAt": "2026-06-01T11:48:02.768Z",
+      "updatedAtMs": 1780314482768,
       "searchText": "bhatakna vasota jungle trek with camping pune vasota jungle camping pune breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "pending:durgvihar:vasota-jungle",
+      "title": "Data under review",
+      "organizerName": "Durgvihar",
+      "organizerSlug": "durgvihar",
+      "trekName": "Vasota Jungle",
+      "trekSlug": "vasota-jungle",
+      "trekSummary": null,
+      "sourceUrl": "https://durgvihar.in",
+      "priceInr": null,
+      "priceText": null,
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "UNKNOWN",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek Only",
+      "mealsSummary": null,
+      "staySummary": null,
+      "inclusionHighlights": [],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:11:05.406Z",
+      "updatedAtMs": 1780315865406,
+      "searchText": "durgvihar vasota jungle",
+      "isPending": true,
+      "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-25T05:23:24.981Z"
+  "updatedAt": "2026-06-01T12:09:35.734Z"
 }

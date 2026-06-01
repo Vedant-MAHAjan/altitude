@@ -1,0 +1,93 @@
+{
+  "destinationName": "Konkan Guided",
+  "destinationSlug": "konkan-guided",
+  "departureCity": "MUMBAI",
+  "routePath": "/treks/konkan-guided/mumbai",
+  "summary": null,
+  "packageCount": 1,
+  "organizerCount": 1,
+  "startingPrice": 30000,
+  "priceMin": 30000,
+  "priceMax": 30000,
+  "availableVariants": [
+    "TREK_ONLY"
+  ],
+  "filters": {
+    "transportTypes": [
+      "NON_AC_BUS"
+    ],
+    "mealPlans": [
+      "INCLUDED"
+    ],
+    "cities": [
+      "MUMBAI"
+    ],
+    "variantTags": [
+      "TREK_ONLY"
+    ],
+    "organizers": [
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
+      }
+    ]
+  },
+  "summaryTable": {
+    "lowestPrice": 30000,
+    "cheapestOrganizerName": "Treks and Trails India",
+    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "cheapestPackageTitle": "Konkan Trip - Guided Tour",
+    "mealsSummary": [
+      "Breakfast",
+      "Dinner"
+    ],
+    "organizerCount": 1,
+    "variantCount": 1
+  },
+  "variantGroups": [
+    {
+      "signature": "TREK_ONLY",
+      "label": "Trek",
+      "tags": [
+        "TREK_ONLY"
+      ],
+      "packageCount": 1,
+      "priceMin": 30000,
+      "priceMax": 30000
+    }
+  ],
+  "packages": [
+    {
+      "id": "cmpv5oqi209ukg328xxxou7bd",
+      "title": "Konkan Trip - Guided Tour",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Konkan Guided",
+      "trekSlug": "konkan-guided",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/konkan-trip-guided-tour",
+      "priceInr": 30000,
+      "priceText": "₹30,000",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:59:32.138Z",
+      "updatedAtMs": 1780315172138,
+      "searchText": "treks and trails india konkan trip - guided tour konkan guided trek mumbai breakfast, dinner homestay breakfast, dinner homestay"
+    }
+  ],
+  "updatedAt": "2026-06-01T11:59:32.138Z"
+}

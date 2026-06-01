@@ -8,12 +8,12 @@
   "summary": null,
   "packageCount": 1,
   "organizerCount": 1,
-  "priceMin": 699,
-  "priceMax": 699,
-  "updatedAt": "2026-05-25T10:45:58.026Z",
+  "priceMin": 799,
+  "priceMax": 799,
+  "updatedAt": "2026-06-01T11:50:46.060Z",
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -26,16 +26,16 @@
     ],
     "organizers": [
       {
-        "name": "Bhatakna",
-        "slug": "bhatakna"
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 699,
-    "cheapestOrganizerName": "Bhatakna",
-    "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Asherigad Fort Monsoon Trek from Mumbai 2023",
+    "lowestPrice": 799,
+    "cheapestOrganizerName": "Treks and Trails India",
+    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "cheapestPackageTitle": "Asherigad Fort Trek 2026",
     "mealsSummary": [
       "Breakfast",
       "Lunch"
@@ -45,89 +45,64 @@
   },
   "packages": [
     {
-      "id": "cmpl2z5vu006t1pnhnu6sj8w0",
-      "title": "Asherigad Fort Monsoon Trek from Mumbai 2023",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
+      "id": "cmpv5dgks07ibg3282bbgpgdi",
+      "title": "Asherigad Fort Trek 2026",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
       "trekName": "Asherigad Fort Trek",
       "trekSlug": "asherigad-fort-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/asherigad-fort-monsoon-trek-from-mumbai-2023-126704",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "NON_AC_BUS",
+      "sourceUrl": "https://www.treksandtrails.org/tours/asherigad-fort-trek-2026",
+      "priceInr": 799,
+      "priceText": "Rs. 799/- per person",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
       "listingCity": "MUMBAI",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "55 Meeting",
-          "isoDate": null
-        },
-        {
-          "label": "00 Leave",
-          "isoDate": null
-        },
-        {
-          "label": "30 Pick",
-          "isoDate": null
-        },
-        {
-          "label": "45 Pick",
-          "isoDate": null
-        },
-        {
-          "label": "00 Pick",
-          "isoDate": null
-        },
-        {
-          "label": "30 Reach",
-          "isoDate": null
-        },
-        {
-          "label": "45 Start",
-          "isoDate": null
-        },
-        {
-          "label": "00 Reach",
-          "isoDate": null
-        },
-        {
-          "label": "00 Start",
-          "isoDate": null
-        },
-        {
-          "label": "00 Approx",
-          "isoDate": null
-        },
-        {
-          "label": "1 Day",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
-      "staySummary": "Hotel stay",
+      "staySummary": null,
       "inclusionHighlights": [
-        "Breakfast, Lunch",
-        "Hotel stay"
+        "Breakfast, Lunch"
       ],
-      "pickupLocations": [
-        "Borivali",
-        "Dadar"
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:50:46.060Z",
+      "updatedAtMs": 1780314646060,
+      "searchText": "treks and trails india asherigad fort trek 2026 asherigad fort trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "pending:bhatakna:asherigad-fort-trek",
+      "title": "Data under review",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Asherigad Fort Trek",
+      "trekSlug": "asherigad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com",
+      "priceInr": null,
+      "priceText": null,
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "UNKNOWN",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "OTHER",
+      "variantTags": [
+        "TREK_ONLY"
       ],
-      "lastUpdatedAt": "2026-05-25T10:45:58.026Z",
-      "updatedAtMs": 1779705958026,
-      "searchText": "bhatakna asherigad fort monsoon trek from mumbai 2023 asherigad fort trek trek mumbai breakfast, lunch hotel stay breakfast, lunch hotel stay borivali dadar"
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek Only",
+      "mealsSummary": null,
+      "staySummary": null,
+      "inclusionHighlights": [],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:11:05.404Z",
+      "updatedAtMs": 1780315865404,
+      "searchText": "bhatakna asherigad fort trek",
+      "isPending": true,
+      "organizerWebsiteUrl": "https://www.bhatakna.com"
     }
   ]
 }

@@ -4,12 +4,11 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/alang-madan-kulang/mumbai",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
-  "startingPrice": 2600,
-  "priceMin": 2600,
+  "packageCount": 5,
+  "organizerCount": 4,
+  "startingPrice": 2000,
+  "priceMin": 2000,
   "priceMax": 2600,
-  "nextDepartureAt": null,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -21,7 +20,8 @@
       "INCLUDED"
     ],
     "cities": [
-      "MUMBAI"
+      "MUMBAI",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -32,23 +32,31 @@
         "slug": "bhatakna"
       },
       {
+        "name": "Sahyadri Treks and Tours",
+        "slug": "sahyadri-treks-and-tours"
+      },
+      {
         "name": "Trekhievers",
         "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 2600,
-    "cheapestOrganizerName": "Bhatakna",
-    "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "AMK - Alang Madan Kulang Trek",
+    "lowestPrice": 2000,
+    "cheapestOrganizerName": "Sahyadri Treks and Tours",
+    "cheapestOrganizerSlug": "sahyadri-treks-and-tours",
+    "cheapestPackageTitle": "Alang-Madan-Kulang (AMK) Trek 2026",
     "mealsSummary": [
       "Breakfast",
-      "Lunch",
       "Dinner",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Lunch"
     ],
-    "organizerCount": 2,
+    "organizerCount": 4,
     "variantCount": 1
   },
   "variantGroups": [
@@ -58,12 +66,104 @@
       "tags": [
         "TREK_ONLY"
       ],
-      "packageCount": 2,
-      "priceMin": 2600,
+      "packageCount": 5,
+      "priceMin": 2000,
       "priceMax": 2600
     }
   ],
   "packages": [
+    {
+      "id": "cmpe6pp65002n4nnhf25vnrwa",
+      "title": "Alang-Madan-Kulang (AMK) Trek 2026",
+      "organizerName": "Sahyadri Treks and Tours",
+      "organizerSlug": "sahyadri-treks-and-tours",
+      "trekName": "Alang Madan Kulang",
+      "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
+      "sourceUrl": "https://sahyadritreksandtours.com/trek/alang-madan-kulang-trek-2025",
+      "priceInr": 2000,
+      "priceText": "₹2000",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:50:08.763Z",
+      "updatedAtMs": 1780314608763,
+      "searchText": "sahyadri treks and tours alang-madan-kulang (amk) trek 2026 alang madan kulang trek mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpv5clce07a2g328z4z0rft4",
+      "title": "Alang Madan Kulang Trek | AMK Trek from Mumbai Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Alang Madan Kulang",
+      "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/alang-madan-kulang-the-toughest-trek-in-the-sahyadri",
+      "priceInr": 2299,
+      "priceText": "₹2,299",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T11:50:05.582Z",
+      "updatedAtMs": 1780314605582,
+      "searchText": "treks and trails india alang madan kulang trek | amk trek from mumbai pune alang madan kulang trek mixed breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+    },
+    {
+      "id": "cmpv60c8j0cbfg328g7r7jejq",
+      "title": "Trek to Alang Madan Kulang",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Alang Madan Kulang",
+      "trekSlug": "alang-madan-kulang",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/trek-to-alang-madan-kulang",
+      "priceInr": 2500,
+      "priceText": "₹2,500",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T12:08:33.523Z",
+      "updatedAtMs": 1780315713523,
+      "searchText": "treks and trails india trek to alang madan kulang alang madan kulang trek mumbai breakfast, lunch, dinner, tea and snacks breakfast, lunch, dinner, tea and snacks"
+    },
     {
       "id": "cmpl1kpcv00631wnhw65jmvat",
       "title": "AMK - Alang Madan Kulang Trek",
@@ -84,69 +184,14 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "05 Dadar",
-          "isoDate": null
-        },
-        {
-          "label": "13 Kurla",
-          "isoDate": null
-        },
-        {
-          "label": "18 Ghatkopar",
-          "isoDate": null
-        },
-        {
-          "label": "34 Thane",
-          "isoDate": null
-        },
-        {
-          "label": "57 Dombivali",
-          "isoDate": null
-        },
-        {
-          "label": "07 Kalyan",
-          "isoDate": null
-        },
-        {
-          "label": "18 Kasara",
-          "isoDate": null
-        },
-        {
-          "label": "2 Nights",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "1 Lunch",
-          "isoDate": null
-        },
-        {
-          "label": "1 Dinner",
-          "isoDate": null
-        },
-        {
-          "label": "3 Litres",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch, Dinner, Tea and snacks",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch, Dinner, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T06:22:21.313Z",
-      "updatedAtMs": 1779776541313,
+      "lastUpdatedAt": "2026-06-01T11:41:27.419Z",
+      "updatedAtMs": 1780314087419,
       "searchText": "bhatakna amk - alang madan kulang trek alang madan kulang trek mumbai breakfast, lunch, dinner, tea and snacks breakfast, lunch, dinner, tea and snacks"
     },
     {
@@ -169,37 +214,14 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
-      "nextDepartureAt": null,
-      "departureDates": [
-        {
-          "label": "1 Night",
-          "isoDate": null
-        },
-        {
-          "label": "2 Days",
-          "isoDate": null
-        },
-        {
-          "label": "2 Breakfast",
-          "isoDate": null
-        },
-        {
-          "label": "2 Lunch",
-          "isoDate": null
-        },
-        {
-          "label": "Available on request",
-          "isoDate": null
-        }
-      ],
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:25:25.549Z",
-      "updatedAtMs": 1779780325549,
+      "lastUpdatedAt": "2026-06-01T11:18:38.120Z",
+      "updatedAtMs": 1780312718120,
       "searchText": "trekhievers amk (alang-madan-kulang) alang madan kulang trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -222,18 +244,16 @@
       ],
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek Only",
-      "nextDepartureAt": null,
-      "departureDates": [],
       "mealsSummary": null,
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-05-26T07:29:14.348Z",
-      "updatedAtMs": 1779780554348,
+      "lastUpdatedAt": "2026-06-01T12:11:05.407Z",
+      "updatedAtMs": 1780315865407,
       "searchText": "durgvihar alang madan kulang",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-05-26T07:25:25.549Z"
+  "updatedAt": "2026-06-01T12:08:33.523Z"
 }
