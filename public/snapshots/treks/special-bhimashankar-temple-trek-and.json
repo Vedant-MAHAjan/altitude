@@ -6,22 +6,25 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "priceMin": 1499,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "priceMin": 1399,
   "priceMax": 1499,
-  "updatedAt": "2026-06-01T11:43:01.774Z",
+  "updatedAt": "2026-06-01T19:11:29.104Z",
   "filters": {
     "transportTypes": [
+      "TRAIN",
       "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
+      "MUMBAI",
       "PUNE"
     ],
     "variantTags": [
+      "TREK_ONLY",
       "CAMPING",
       "FIREFLIES"
     ],
@@ -29,23 +32,57 @@
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1499,
-    "cheapestOrganizerName": "Bhatakna",
-    "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Fireflies special Bhimashankar temple trek and camping ( From Pune)",
+    "lowestPrice": 1399,
+    "cheapestOrganizerName": "Treks and Trails India",
+    "cheapestOrganizerSlug": "treks-and-trails-india",
+    "cheapestPackageTitle": "Bhimashankar Trek via Ganesh Ghat",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
-    "variantCount": 1
+    "organizerCount": 2,
+    "variantCount": 2
   },
   "packages": [
+    {
+      "id": "cmpvl485s06zjey28wqrm169l",
+      "title": "Bhimashankar Trek via Ganesh Ghat",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Special Bhimashankar Temple Trek And",
+      "trekSlug": "special-bhimashankar-temple-trek-and",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhimashankar-trek-via-ganesh-ghat",
+      "priceInr": 1399,
+      "priceText": "Rs. 1399/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-01T19:11:29.104Z",
+      "updatedAtMs": 1780341089104,
+      "searchText": "treks and trails india bhimashankar trek via ganesh ghat special bhimashankar temple trek and trek mumbai breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpl30hvz00x91pnh8o6cl87h",
       "title": "Fireflies special Bhimashankar temple trek and camping ( From Pune)",
@@ -74,8 +111,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-01T11:43:01.774Z",
-      "updatedAtMs": 1780314181774,
+      "lastUpdatedAt": "2026-06-01T19:07:34.479Z",
+      "updatedAtMs": 1780340854479,
       "searchText": "bhatakna fireflies special bhimashankar temple trek and camping ( from pune) special bhimashankar temple trek and fireflies + camping pune breakfast, lunch, tea and snacks tent stay breakfast, lunch, tea and snacks tent stay"
     }
   ]
