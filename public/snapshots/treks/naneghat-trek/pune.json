@@ -4,23 +4,25 @@
   "departureCity": "PUNE",
   "routePath": "/treks/naneghat-trek/pune",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
+  "packageCount": 3,
+  "organizerCount": 3,
   "startingPrice": 799,
   "priceMin": 799,
-  "priceMax": 1399,
+  "priceMax": 1599,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "PUNE"
+      "PUNE",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -33,6 +35,10 @@
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -46,7 +52,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 3,
     "variantCount": 1
   },
   "packages": [
@@ -77,8 +83,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-07T05:51:46.697Z",
-      "updatedAtMs": 1780811506697,
+      "lastUpdatedAt": "2026-06-08T17:16:56.484Z",
+      "updatedAtMs": 1780939016484,
       "searchText": "bhatakna naneghat monsoon trek pune 2025 naneghat trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
@@ -108,10 +114,40 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-07T05:34:17.605Z",
-      "updatedAtMs": 1780810457605,
+      "lastUpdatedAt": "2026-06-08T16:58:42.890Z",
+      "updatedAtMs": 1780937922890,
       "searchText": "trekhievers naneghat monsoon trek | pune naneghat trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+    },
+    {
+      "id": "cmpv5sl160alpg328tluik52w",
+      "title": "Naneghat Trek 2026 | Reverse Waterfall Monsoon Trek from Mumbai & Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Naneghat Trek",
+      "trekSlug": "naneghat-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/naneghat-trek-2026",
+      "priceInr": 1599,
+      "priceText": "Rs. 1,599/- per person",
+      "transportType": "AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-08T17:35:32.471Z",
+      "updatedAtMs": 1780940132471,
+      "searchText": "treks and trails india naneghat trek 2026 | reverse waterfall monsoon trek from mumbai & pune naneghat trek trek mixed breakfast, lunch breakfast, lunch"
     }
   ],
-  "updatedAt": "2026-06-07T05:51:46.697Z"
+  "updatedAt": "2026-06-08T17:35:32.471Z"
 }
