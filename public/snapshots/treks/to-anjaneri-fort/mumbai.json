@@ -4,14 +4,13 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/to-anjaneri-fort/mumbai",
   "summary": null,
-  "packageCount": 2,
+  "packageCount": 1,
   "organizerCount": 1,
-  "startingPrice": 999,
-  "priceMin": 999,
+  "startingPrice": 1100,
+  "priceMin": 1100,
   "priceMax": 1100,
   "availableVariants": [
-    "NIGHT_TREK",
-    "TREK_ONLY"
+    "NIGHT_TREK"
   ],
   "filters": {
     "transportTypes": [
@@ -24,7 +23,6 @@
       "MUMBAI"
     ],
     "variantTags": [
-      "TREK_ONLY",
       "NIGHT_TREK"
     ],
     "organizers": [
@@ -35,48 +33,17 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 999,
+    "lowestPrice": 1100,
     "cheapestOrganizerName": "Treks and Trails India",
     "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Anjaneri Fort Trek",
+    "cheapestPackageTitle": "Night Trek to Anjaneri Fort",
     "mealsSummary": [
       "Breakfast"
     ],
     "organizerCount": 1,
-    "variantCount": 2
+    "variantCount": 1
   },
   "packages": [
-    {
-      "id": "cmpfjq0nr02d4v2nhhc1q175d",
-      "title": "Anjaneri Fort Trek",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "To Anjaneri Fort",
-      "trekSlug": "to-anjaneri-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/anjaneri-fort-trek",
-      "priceInr": 999,
-      "priceText": "Rs. 999/- per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast",
-      "staySummary": "Homestay",
-      "inclusionHighlights": [
-        "Breakfast",
-        "Homestay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-14T09:12:14.282Z",
-      "updatedAtMs": 1781428334282,
-      "searchText": "treks and trails india anjaneri fort trek to anjaneri fort trek mumbai breakfast homestay breakfast homestay"
-    },
     {
       "id": "cmpv5tugb0awjg328jypiw97p",
       "title": "Night Trek to Anjaneri Fort",
@@ -104,10 +71,10 @@
         "Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-14T09:17:03.213Z",
-      "updatedAtMs": 1781428623213,
+      "lastUpdatedAt": "2026-06-14T19:04:38.555Z",
+      "updatedAtMs": 1781463878555,
       "searchText": "treks and trails india night trek to anjaneri fort to anjaneri fort night trek mumbai breakfast homestay breakfast homestay"
     }
   ],
-  "updatedAt": "2026-06-14T09:17:03.213Z"
+  "updatedAt": "2026-06-14T19:04:38.555Z"
 }
