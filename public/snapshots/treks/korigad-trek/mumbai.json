@@ -1,16 +1,17 @@
 {
-  "name": "Korigad Flower Special Trek",
-  "slug": "korigad-flower-special-trek",
-  "region": "maharashtra",
-  "durationDays": null,
-  "durationNights": null,
-  "difficulty": "UNKNOWN",
+  "destinationName": "Korigad Trek",
+  "destinationSlug": "korigad-trek",
+  "departureCity": "MUMBAI",
+  "routePath": "/treks/korigad-trek/mumbai",
   "summary": null,
   "packageCount": 1,
   "organizerCount": 1,
+  "startingPrice": 1299,
   "priceMin": 1299,
   "priceMax": 1299,
-  "updatedAt": "2026-06-16T06:39:22.187Z",
+  "availableVariants": [
+    "TREK_ONLY"
+  ],
   "filters": {
     "transportTypes": [
       "TRAIN"
@@ -35,7 +36,7 @@
     "lowestPrice": 1299,
     "cheapestOrganizerName": "Trekhievers",
     "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Korigad Flower Special Trek",
+    "cheapestPackageTitle": "Korigad Monsoon Trek",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -47,11 +48,11 @@
   "packages": [
     {
       "id": "cmpv4f50t02g2g328fboj4nnw",
-      "title": "Korigad Flower Special Trek",
+      "title": "Korigad Monsoon Trek",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Korigad Flower Special Trek",
-      "trekSlug": "korigad-flower-special-trek",
+      "trekName": "Korigad Trek",
+      "trekSlug": "korigad-trek",
       "trekSummary": null,
       "sourceUrl": "https://www.trekhievers.com/tours/korigad-fort-trek-pune-138156",
       "priceInr": 1299,
@@ -72,9 +73,10 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-16T06:39:22.187Z",
-      "updatedAtMs": 1781591962187,
-      "searchText": "trekhievers korigad flower special trek korigad flower special trek trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+      "lastUpdatedAt": "2026-06-16T18:08:08.323Z",
+      "updatedAtMs": 1781633288323,
+      "searchText": "trekhievers korigad monsoon trek korigad trek trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     }
-  ]
+  ],
+  "updatedAt": "2026-06-16T18:08:08.323Z"
 }
