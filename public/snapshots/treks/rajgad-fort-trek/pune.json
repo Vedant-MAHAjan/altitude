@@ -4,17 +4,18 @@
   "departureCity": "PUNE",
   "routePath": "/treks/rajgad-fort-trek/pune",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 1299,
   "priceMin": 1299,
-  "priceMax": 1299,
+  "priceMax": 1399,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN"
+      "TRAIN",
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -26,6 +27,10 @@
       "TREK_ONLY"
     ],
     "organizers": [
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -39,9 +44,10 @@
     "cheapestPackageTitle": "Rajgad Fort Trek from Pune",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -72,10 +78,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-17T17:25:27.525Z",
-      "updatedAtMs": 1781717127525,
+      "lastUpdatedAt": "2026-06-18T06:18:35.406Z",
+      "updatedAtMs": 1781763515406,
       "searchText": "treks and trails india rajgad fort trek from pune rajgad fort trek trek pune breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "cmpv4jalm03u6g328sj0g0fka",
+      "title": "Rajgad Fort Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Rajgad Fort Trek",
+      "trekSlug": "rajgad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/rajgad",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-18T05:45:33.540Z",
+      "updatedAtMs": 1781761533540,
+      "searchText": "trekhievers rajgad fort trek | pune rajgad fort trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     }
   ],
-  "updatedAt": "2026-06-17T17:25:27.525Z"
+  "updatedAt": "2026-06-18T06:18:35.406Z"
 }
