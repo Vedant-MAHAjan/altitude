@@ -18,8 +18,8 @@
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS",
-      "TRAIN"
+      "TRAIN",
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -28,8 +28,8 @@
       "PUNE"
     ],
     "variantTags": [
-      "NIGHT_TREK",
       "FIREFLIES",
+      "NIGHT_TREK",
       "SUNRISE",
       "TREK_ONLY",
       "CAMPING"
@@ -53,7 +53,7 @@
     "lowestPrice": 499,
     "cheapestOrganizerName": "Bhatakna",
     "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Kalsubai Night Trek Pune",
+    "cheapestPackageTitle": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -64,6 +64,36 @@
     "variantCount": 5
   },
   "packages": [
+    {
+      "id": "cmpl31b8j01fy1pnhtefvf8cp",
+      "title": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-fireflies-cloud-formation-trek-pune",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-19T06:41:44.811Z",
+      "updatedAtMs": 1781851304811,
+      "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies pune breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpe5sdxp01jb8knhl10igr7g",
       "title": "Kalsubai Night Trek Pune",
@@ -94,39 +124,9 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-06-18T06:01:08.262Z",
-      "updatedAtMs": 1781762468262,
+      "lastUpdatedAt": "2026-06-19T06:41:50.530Z",
+      "updatedAtMs": 1781851310530,
       "searchText": "bhatakna kalsubai night trek pune kalsubai night trek pune breakfast, lunch breakfast, lunch nashik nashik phata bari"
-    },
-    {
-      "id": "cmpl31b8j01fy1pnhtefvf8cp",
-      "title": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-fireflies-cloud-formation-trek-pune",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES",
-      "variantLabel": "Fireflies",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-18T06:01:03.209Z",
-      "updatedAtMs": 1781762463209,
-      "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies pune breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpv55b2405ppg328ajvrdfr2",
@@ -158,8 +158,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-06-18T06:01:09.937Z",
-      "updatedAtMs": 1781762469937,
+      "lastUpdatedAt": "2026-06-19T06:41:52.427Z",
+      "updatedAtMs": 1781851312427,
       "searchText": "bhatakna kalsubai sunrise trek pune kalsubai sunrise pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     },
     {
@@ -193,8 +193,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-06-18T06:01:11.615Z",
-      "updatedAtMs": 1781762471615,
+      "lastUpdatedAt": "2026-06-19T06:41:54.327Z",
+      "updatedAtMs": 1781851314327,
       "searchText": "bhatakna kalsubai trek from pune 2025 kalsubai trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata bari"
     },
     {
@@ -224,8 +224,8 @@
         "Tent stay, Hotel stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-18T06:13:35.329Z",
-      "updatedAtMs": 1781763215329,
+      "lastUpdatedAt": "2026-06-19T06:48:33.048Z",
+      "updatedAtMs": 1781851713048,
       "searchText": "treks and trails india kalsubai trek from pune 2026 | ₹799 | maharashtra's highest peak kalsubai trek pune breakfast, lunch tent stay, hotel stay, dormitory stay, homestay breakfast, lunch tent stay, hotel stay, dormitory stay, homestay"
     },
     {
@@ -255,8 +255,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-06-18T05:42:22.816Z",
-      "updatedAtMs": 1781761342816,
+      "lastUpdatedAt": "2026-06-19T06:22:29.202Z",
+      "updatedAtMs": 1781850149202,
       "searchText": "trekhievers kalsubai trek & camping | pune kalsubai camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -289,10 +289,10 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-06-18T05:42:17.787Z",
-      "updatedAtMs": 1781761337787,
+      "lastUpdatedAt": "2026-06-19T06:22:23.492Z",
+      "updatedAtMs": 1781850143492,
       "searchText": "trekhievers kalsubai cloud formation trek | pune kalsubai trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     }
   ],
-  "updatedAt": "2026-06-18T06:13:35.329Z"
+  "updatedAt": "2026-06-19T06:48:33.048Z"
 }
