@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
-  "priceMin": 999,
+  "packageCount": 2,
+  "organizerCount": 2,
+  "priceMin": 900,
   "priceMax": 999,
-  "updatedAt": "2026-05-21T13:54:02.434Z",
+  "updatedAt": "2026-06-20T05:22:10.053Z",
   "filters": {
     "transportTypes": [
       "TRAIN"
@@ -26,24 +26,59 @@
     ],
     "organizers": [
       {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
+      {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
       }
     ]
   },
   "summaryTable": {
-    "lowestPrice": 999,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Peb Fort Trek 2026",
+    "lowestPrice": 900,
+    "cheapestOrganizerName": "Trekhievers",
+    "cheapestOrganizerSlug": "trekhievers",
+    "cheapestPackageTitle": "Peb Fort Trek | Vikatgad Monsoon Trek",
     "mealsSummary": [
       "Breakfast",
+      "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
+    {
+      "id": "cmpv4lgqh04lfg328u48jo3jq",
+      "title": "Peb Fort Trek | Vikatgad Monsoon Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Peb Fort Trek",
+      "trekSlug": "peb-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/peb-fort",
+      "priceInr": 900,
+      "priceText": "₹900 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-06-20T05:22:10.053Z",
+      "updatedAtMs": 1781932930053,
+      "searchText": "trekhievers peb fort trek | vikatgad monsoon trek peb fort trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpfjxmbm00hduonh6y8oxlwj",
       "title": "Peb Fort Trek 2026",
