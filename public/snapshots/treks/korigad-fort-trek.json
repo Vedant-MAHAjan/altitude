@@ -10,18 +10,18 @@
   "organizerCount": 1,
   "priceMin": 1499,
   "priceMax": 1499,
-  "updatedAt": "2026-06-21T06:36:03.454Z",
+  "updatedAt": "2026-06-21T15:49:09.958Z",
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MIXED",
-      "MUMBAI"
+      "MUMBAI",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -37,7 +37,7 @@
     "lowestPrice": 1499,
     "cheapestOrganizerName": "Treks and Trails India",
     "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Korigad Fort Trek | Monsoon Trek from Mumbai and Pune",
+    "cheapestPackageTitle": "Korigad Fort Trek from Mumbai & Pune | Lonavala Monsoon Trek",
     "mealsSummary": [
       "Breakfast"
     ],
@@ -45,6 +45,38 @@
     "variantCount": 1
   },
   "packages": [
+    {
+      "id": "cmqf25ic7097bhe0ilvgmu7u9",
+      "title": "Korigad Fort Trek from Mumbai & Pune | Lonavala Monsoon Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Korigad Fort Trek",
+      "trekSlug": "korigad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/korigad-fort-trek-lonavala",
+      "priceInr": 1499,
+      "priceText": "₹1,499 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [
+        "Lonavala"
+      ],
+      "lastUpdatedAt": "2026-06-21T15:49:09.958Z",
+      "updatedAtMs": 1782056949958,
+      "searchText": "treks and trails india korigad fort trek from mumbai & pune | lonavala monsoon trek korigad fort trek trek mumbai breakfast breakfast lonavala"
+    },
     {
       "id": "cmpv5ose809uzg328syiuomw9",
       "title": "Korigad Fort Trek | Monsoon Trek from Mumbai and Pune",
@@ -75,38 +107,6 @@
       "lastUpdatedAt": "2026-06-14T19:01:29.804Z",
       "updatedAtMs": 1781463689804,
       "searchText": "treks and trails india korigad fort trek | monsoon trek from mumbai and pune korigad fort trek trek mixed breakfast homestay breakfast homestay"
-    },
-    {
-      "id": "cmqf25ic7097bhe0ilvgmu7u9",
-      "title": "Korigad Fort Trek from Mumbai & Pune | Lonavala Monsoon Trek",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Korigad Fort Trek",
-      "trekSlug": "korigad-fort-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/korigad-fort-trek-lonavala",
-      "priceInr": 1499,
-      "priceText": "₹1,499 per person",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast"
-      ],
-      "pickupLocations": [
-        "Lonavala"
-      ],
-      "lastUpdatedAt": "2026-06-21T06:36:03.454Z",
-      "updatedAtMs": 1782023763454,
-      "searchText": "treks and trails india korigad fort trek from mumbai & pune | lonavala monsoon trek korigad fort trek trek mumbai breakfast breakfast lonavala"
     }
   ]
 }
