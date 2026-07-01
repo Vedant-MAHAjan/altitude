@@ -4,17 +4,18 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/kalu-waterfall-trek/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 899,
   "priceMin": 899,
-  "priceMax": 899,
+  "priceMax": 1399,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -26,6 +27,10 @@
       "TREK_ONLY"
     ],
     "organizers": [
+      {
+        "name": "Trekhievers",
+        "slug": "trekhievers"
+      },
       {
         "name": "Treks and Trails India",
         "slug": "treks-and-trails-india"
@@ -39,9 +44,10 @@
     "cheapestPackageTitle": "Kalu Waterfall Trek 2026 | God's Valley | Malshej Ghat",
     "mealsSummary": [
       "Breakfast",
-      "Lunch"
+      "Lunch",
+      "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -73,10 +79,45 @@
       "pickupLocations": [
         "Thane"
       ],
-      "lastUpdatedAt": "2026-06-22T18:06:09.044Z",
-      "updatedAtMs": 1782151569044,
+      "lastUpdatedAt": "2026-07-01T05:57:03.774Z",
+      "updatedAtMs": 1782885423774,
       "searchText": "treks and trails india kalu waterfall trek 2026 | god's valley | malshej ghat kalu waterfall trek trek mumbai breakfast, lunch breakfast, lunch thane"
+    },
+    {
+      "id": "cmpv4drga01yqg3289u32x1tv",
+      "title": "Kalu Waterfall Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalu Waterfall Trek",
+      "trekSlug": "kalu-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/malshej-ghat-trek",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Thane",
+        "Kalyan",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-07-01T05:31:10.851Z",
+      "updatedAtMs": 1782883870851,
+      "searchText": "trekhievers kalu waterfall trek | mumbai kalu waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
     }
   ],
-  "updatedAt": "2026-06-22T18:06:09.044Z"
+  "updatedAt": "2026-07-01T05:57:03.774Z"
 }

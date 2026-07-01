@@ -6,14 +6,15 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 3,
+  "packageCount": 4,
   "organizerCount": 3,
   "priceMin": 899,
-  "priceMax": 1399,
-  "updatedAt": "2026-06-22T18:06:09.044Z",
+  "priceMax": 1499,
+  "updatedAt": "2026-07-01T05:57:03.774Z",
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -82,43 +83,9 @@
       "pickupLocations": [
         "Thane"
       ],
-      "lastUpdatedAt": "2026-06-22T18:06:09.044Z",
-      "updatedAtMs": 1782151569044,
+      "lastUpdatedAt": "2026-07-01T05:57:03.774Z",
+      "updatedAtMs": 1782885423774,
       "searchText": "treks and trails india kalu waterfall trek 2026 | god's valley | malshej ghat kalu waterfall trek trek mumbai breakfast, lunch breakfast, lunch thane"
-    },
-    {
-      "id": "cmpv55k2u05s1g328mhz91f3t",
-      "title": "Kalu Waterfall Trek Pune 2025",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kalu Waterfall Trek",
-      "trekSlug": "kalu-waterfall-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kalu-waterfall-pune",
-      "priceInr": 1399,
-      "priceText": "₹1,399",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
-      ],
-      "pickupLocations": [
-        "Nashik",
-        "Nashik Phata"
-      ],
-      "lastUpdatedAt": "2026-06-22T17:59:59.550Z",
-      "updatedAtMs": 1782151199550,
-      "searchText": "bhatakna kalu waterfall trek pune 2025 kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
     },
     {
       "id": "cmpv4dtco01zhg328z8inxvin",
@@ -141,6 +108,74 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-07-01T05:31:13.014Z",
+      "updatedAtMs": 1782883873014,
+      "searchText": "trekhievers kalu waterfall trek | pune kalu waterfall trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpv4drga01yqg3289u32x1tv",
+      "title": "Kalu Waterfall Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalu Waterfall Trek",
+      "trekSlug": "kalu-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/malshej-ghat-trek",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Borivali",
+        "Thane",
+        "Kalyan",
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-07-01T05:31:10.851Z",
+      "updatedAtMs": 1782883870851,
+      "searchText": "trekhievers kalu waterfall trek | mumbai kalu waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
+    },
+    {
+      "id": "cmpv55k2u05s1g328mhz91f3t",
+      "title": "Kalu Waterfall Trek Pune 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalu Waterfall Trek",
+      "trekSlug": "kalu-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalu-waterfall-pune",
+      "priceInr": 1499,
+      "priceText": "₹1,499",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
       "staySummary": "Hotel stay",
       "inclusionHighlights": [
         "Breakfast, Lunch, Tea and snacks",
@@ -150,9 +185,9 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-06-22T17:40:25.939Z",
-      "updatedAtMs": 1782150025939,
-      "searchText": "trekhievers kalu waterfall trek | pune kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
+      "lastUpdatedAt": "2026-07-01T05:49:50.219Z",
+      "updatedAtMs": 1782884990219,
+      "searchText": "bhatakna kalu waterfall trek pune 2026 kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
     }
   ]
 }
