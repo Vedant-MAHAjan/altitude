@@ -4,28 +4,31 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/to-kothaligad/mumbai",
   "summary": null,
-  "packageCount": 2,
+  "packageCount": 3,
   "organizerCount": 2,
   "startingPrice": 699,
   "priceMin": 699,
   "priceMax": 999,
   "availableVariants": [
     "NIGHT_TREK",
-    "FIREFLIES"
+    "FIREFLIES",
+    "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
       "TRAIN"
     ],
     "mealPlans": [
-      "INCLUDED"
+      "INCLUDED",
+      "PARTIAL"
     ],
     "cities": [
       "MUMBAI"
     ],
     "variantTags": [
       "NIGHT_TREK",
-      "FIREFLIES"
+      "FIREFLIES",
+      "TREK_ONLY"
     ],
     "organizers": [
       {
@@ -47,7 +50,7 @@
       "Breakfast"
     ],
     "organizerCount": 2,
-    "variantCount": 1
+    "variantCount": 2
   },
   "packages": [
     {
@@ -77,8 +80,8 @@
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-08T15:39:41.742Z",
-      "updatedAtMs": 1783525181742,
+      "lastUpdatedAt": "2026-07-09T05:14:13.687Z",
+      "updatedAtMs": 1783574053687,
       "searchText": "bhatakna fireflies night trek to kothaligad 2026 to kothaligad night trek + fireflies mumbai breakfast breakfast"
     },
     {
@@ -108,10 +111,40 @@
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-08T15:47:26.649Z",
-      "updatedAtMs": 1783525646649,
+      "lastUpdatedAt": "2026-07-09T05:20:35.091Z",
+      "updatedAtMs": 1783574435091,
       "searchText": "treks and trails india fireflies night trek to kothaligad 2026 to kothaligad night trek + fireflies mumbai breakfast breakfast"
+    },
+    {
+      "id": "cmpv5ovut09vug3280drtvlpd",
+      "title": "Kothaligad Trek - Peth Fort Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "To Kothaligad",
+      "trekSlug": "to-kothaligad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kothaligad-trek-peth-fort-2025",
+      "priceInr": 999,
+      "priceText": "Rs. 999/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "PARTIAL",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-09T05:22:33.317Z",
+      "updatedAtMs": 1783574553317,
+      "searchText": "treks and trails india kothaligad trek - peth fort trek to kothaligad trek mumbai breakfast breakfast"
     }
   ],
-  "updatedAt": "2026-07-08T15:47:26.649Z"
+  "updatedAt": "2026-07-09T05:22:33.317Z"
 }
