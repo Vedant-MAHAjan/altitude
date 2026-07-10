@@ -10,18 +10,18 @@
   "organizerCount": 3,
   "priceMin": 699,
   "priceMax": 1499,
-  "updatedAt": "2026-07-09T16:32:35.949Z",
+  "updatedAt": "2026-07-10T05:22:16.181Z",
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "MUMBAI",
-      "PUNE"
+      "PUNE",
+      "MUMBAI"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -45,7 +45,7 @@
     "lowestPrice": 699,
     "cheapestOrganizerName": "Trekhievers",
     "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Bhairavgad Fort Trek Shripunje | Mumbai",
+    "cheapestPackageTitle": "Bhairavgad Fort Trek Shripunje | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -55,36 +55,6 @@
     "variantCount": 1
   },
   "packages": [
-    {
-      "id": "cmpmb9q5y00hnrvnhsapch3tl",
-      "title": "Bhairavgad Fort Trek Shripunje | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Bhairavgad Climbing & Rappelling",
-      "trekSlug": "bhairavgad-climbing-rappelling",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/bhairavgad-fort-trek-shripunje-mumbai-129631",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-09T16:04:00.534Z",
-      "updatedAtMs": 1783613040534,
-      "searchText": "trekhievers bhairavgad fort trek shripunje | mumbai bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
     {
       "id": "cmpmb9pcm00gzrvnh5c2ym9f8",
       "title": "Bhairavgad Fort Trek Shripunje | Pune",
@@ -114,9 +84,39 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-07-09T16:03:58.417Z",
-      "updatedAtMs": 1783613038417,
+      "lastUpdatedAt": "2026-07-10T04:55:53.428Z",
+      "updatedAtMs": 1783659353428,
       "searchText": "trekhievers bhairavgad fort trek shripunje | pune bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpmb9q5y00hnrvnhsapch3tl",
+      "title": "Bhairavgad Fort Trek Shripunje | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhairavgad Climbing & Rappelling",
+      "trekSlug": "bhairavgad-climbing-rappelling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhairavgad-fort-trek-shripunje-mumbai-129631",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-10T04:55:55.286Z",
+      "updatedAtMs": 1783659355286,
+      "searchText": "trekhievers bhairavgad fort trek shripunje | mumbai bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpmb9qxu00iirvnh2738yx2r",
@@ -144,8 +144,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-09T16:04:02.656Z",
-      "updatedAtMs": 1783613042656,
+      "lastUpdatedAt": "2026-07-10T04:55:57.150Z",
+      "updatedAtMs": 1783659357150,
       "searchText": "trekhievers bhairavgad trek bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -174,8 +174,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-09T16:32:35.949Z",
-      "updatedAtMs": 1783614755949,
+      "lastUpdatedAt": "2026-07-10T05:22:16.181Z",
+      "updatedAtMs": 1783660936181,
       "searchText": "sahyadri treks and tours bhairavgad climbing & rappelling 2025 bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -204,8 +204,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-09T16:26:14.254Z",
-      "updatedAtMs": 1783614374254,
+      "lastUpdatedAt": "2026-07-10T05:20:30.311Z",
+      "updatedAtMs": 1783660830311,
       "searchText": "treks and trails india bhairavgad shirpunje ghanchakkar trek bhairavgad climbing & rappelling trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -232,8 +232,8 @@
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-09T16:44:41.576Z",
-      "updatedAtMs": 1783615481576,
+      "lastUpdatedAt": "2026-07-10T05:36:22.461Z",
+      "updatedAtMs": 1783661782461,
       "searchText": "durgvihar bhairavgad climbing & rappelling",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
