@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 4,
-  "organizerCount": 3,
+  "packageCount": 5,
+  "organizerCount": 4,
   "priceMin": 899,
   "priceMax": 1599,
-  "updatedAt": "2026-07-11T15:05:37.439Z",
+  "updatedAt": "2026-07-13T05:02:35.430Z",
   "filters": {
     "transportTypes": [
       "NON_AC_BUS",
@@ -32,6 +32,10 @@
         "slug": "bhatakna"
       },
       {
+        "name": "Sahyadri Treks and Tours",
+        "slug": "sahyadri-treks-and-tours"
+      },
+      {
         "name": "Trekhievers",
         "slug": "trekhievers"
       },
@@ -43,18 +47,55 @@
   },
   "summaryTable": {
     "lowestPrice": 899,
-    "cheapestOrganizerName": "Treks and Trails India",
-    "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Kalu Waterfall Trek 2026 | God's Valley | Malshej Ghat",
+    "cheapestOrganizerName": "Sahyadri Treks and Tours",
+    "cheapestOrganizerSlug": "sahyadri-treks-and-tours",
+    "cheapestPackageTitle": "Kalu Waterfall – God's Valley Trek (Malshej Ghat)",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 3,
+    "organizerCount": 4,
     "variantCount": 1
   },
   "packages": [
+    {
+      "id": "cmrhbpecd08agh52ckyw4lg4y",
+      "title": "Kalu Waterfall – God's Valley Trek (Malshej Ghat)",
+      "organizerName": "Sahyadri Treks and Tours",
+      "organizerSlug": "sahyadri-treks-and-tours",
+      "trekName": "Kalu Waterfall Trek",
+      "trekSlug": "kalu-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://sahyadritreksandtours.com/trek/kalu-waterfall-trek-malshej-ghat-edition",
+      "priceInr": 899,
+      "priceText": "₹899",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Dadar",
+        "Thane",
+        "Kalyan",
+        "Sion",
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-07-13T05:01:19.949Z",
+      "updatedAtMs": 1783918879949,
+      "searchText": "sahyadri treks and tours kalu waterfall – god's valley trek (malshej ghat) kalu waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks dadar thane kalyan sion nashik nashik phata"
+    },
     {
       "id": "cmpfjyi8a010juonhv9uaw536",
       "title": "Kalu Waterfall Trek 2026 | God's Valley | Malshej Ghat",
@@ -83,8 +124,8 @@
       "pickupLocations": [
         "Thane"
       ],
-      "lastUpdatedAt": "2026-07-11T15:05:37.439Z",
-      "updatedAtMs": 1783782337439,
+      "lastUpdatedAt": "2026-07-13T05:02:35.430Z",
+      "updatedAtMs": 1783918955430,
       "searchText": "treks and trails india kalu waterfall trek 2026 | god's valley | malshej ghat kalu waterfall trek trek mumbai breakfast, lunch breakfast, lunch thane"
     },
     {
@@ -116,8 +157,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-07-11T14:33:38.765Z",
-      "updatedAtMs": 1783780418765,
+      "lastUpdatedAt": "2026-07-13T04:38:49.225Z",
+      "updatedAtMs": 1783917529225,
       "searchText": "trekhievers kalu waterfall trek | pune kalu waterfall trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
@@ -150,8 +191,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-07-11T14:53:33.197Z",
-      "updatedAtMs": 1783781613197,
+      "lastUpdatedAt": "2026-07-13T04:56:39.138Z",
+      "updatedAtMs": 1783918599138,
       "searchText": "bhatakna kalu waterfall trek pune 2026 kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
     },
     {
@@ -185,8 +226,8 @@
         "Kalyan",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-07-11T14:33:36.961Z",
-      "updatedAtMs": 1783780416961,
+      "lastUpdatedAt": "2026-07-13T04:38:47.655Z",
+      "updatedAtMs": 1783917527655,
       "searchText": "trekhievers kalu waterfall trek | mumbai kalu waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
     }
   ]
