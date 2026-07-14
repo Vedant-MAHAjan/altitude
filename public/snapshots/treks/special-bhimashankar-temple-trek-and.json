@@ -6,29 +6,36 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "priceMin": 1499,
   "priceMax": 1499,
-  "updatedAt": "2026-07-13T16:09:18.715Z",
+  "updatedAt": "2026-07-14T15:23:33.617Z",
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
     ],
     "cities": [
-      "PUNE"
+      "PUNE",
+      "MUMBAI"
     ],
     "variantTags": [
       "CAMPING",
-      "FIREFLIES"
+      "FIREFLIES",
+      "TREK_ONLY"
     ],
     "organizers": [
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -42,8 +49,8 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
-    "variantCount": 1
+    "organizerCount": 2,
+    "variantCount": 2
   },
   "packages": [
     {
@@ -74,9 +81,39 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-13T16:09:18.715Z",
-      "updatedAtMs": 1783958958715,
+      "lastUpdatedAt": "2026-07-14T15:17:11.786Z",
+      "updatedAtMs": 1784042231786,
       "searchText": "bhatakna fireflies special bhimashankar temple trek and camping ( from pune) special bhimashankar temple trek and fireflies + camping pune breakfast, lunch, tea and snacks tent stay breakfast, lunch, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpvl485s06zjey28wqrm169l",
+      "title": "Bhimashankar Trek via Ganesh Ghat from Karjat",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Special Bhimashankar Temple Trek And",
+      "trekSlug": "special-bhimashankar-temple-trek-and",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhimashankar-trek-via-ganesh-ghat",
+      "priceInr": 1499,
+      "priceText": "₹1,499 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-14T15:23:33.617Z",
+      "updatedAtMs": 1784042613617,
+      "searchText": "treks and trails india bhimashankar trek via ganesh ghat from karjat special bhimashankar temple trek and trek mumbai breakfast, lunch breakfast, lunch"
     }
   ]
 }
