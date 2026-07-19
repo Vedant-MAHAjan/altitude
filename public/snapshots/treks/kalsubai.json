@@ -10,7 +10,7 @@
   "organizerCount": 3,
   "priceMin": 499,
   "priceMax": 1699,
-  "updatedAt": "2026-07-18T04:28:07.179Z",
+  "updatedAt": "2026-07-19T15:01:55.455Z",
   "filters": {
     "transportTypes": [
       "TRAIN",
@@ -20,12 +20,12 @@
       "INCLUDED"
     ],
     "cities": [
-      "MUMBAI",
-      "PUNE"
+      "PUNE",
+      "MUMBAI"
     ],
     "variantTags": [
-      "NIGHT_TREK",
       "FIREFLIES",
+      "NIGHT_TREK",
       "SUNRISE",
       "TREK_ONLY",
       "CAMPING"
@@ -49,7 +49,7 @@
     "lowestPrice": 499,
     "cheapestOrganizerName": "Bhatakna",
     "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Kalsubai Night Trek",
+    "cheapestPackageTitle": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -60,6 +60,36 @@
     "variantCount": 6
   },
   "packages": [
+    {
+      "id": "cmpl31b8j01fy1pnhtefvf8cp",
+      "title": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-fireflies-cloud-formation-trek-pune",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-19T14:54:06.211Z",
+      "updatedAtMs": 1784472846211,
+      "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies pune breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpe5sabm01gw8knh9i7fy94j",
       "title": "Kalsubai Night Trek",
@@ -86,8 +116,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:20:36.666Z",
-      "updatedAtMs": 1784348436666,
+      "lastUpdatedAt": "2026-07-19T14:54:10.230Z",
+      "updatedAtMs": 1784472850230,
       "searchText": "bhatakna kalsubai night trek kalsubai night trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -117,39 +147,9 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:19:33.477Z",
-      "updatedAtMs": 1784348373477,
+      "lastUpdatedAt": "2026-07-19T14:52:48.515Z",
+      "updatedAtMs": 1784472768515,
       "searchText": "bhatakna fireflies & clouds special kalsubai night trek 2026 kalsubai night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpl31b8j01fy1pnhtefvf8cp",
-      "title": "Kalsubai Fireflies & Cloud Formation Trek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-fireflies-cloud-formation-trek-pune",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES",
-      "variantLabel": "Fireflies",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:20:33.563Z",
-      "updatedAtMs": 1784348433563,
-      "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies pune breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpe5sdxp01jb8knhl10igr7g",
@@ -181,8 +181,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-07-18T04:20:38.216Z",
-      "updatedAtMs": 1784348438216,
+      "lastUpdatedAt": "2026-07-19T14:54:12.238Z",
+      "updatedAtMs": 1784472852238,
       "searchText": "bhatakna kalsubai night trek pune kalsubai night trek pune breakfast, lunch breakfast, lunch nashik nashik phata bari"
     },
     {
@@ -215,8 +215,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-07-18T04:20:39.767Z",
-      "updatedAtMs": 1784348439767,
+      "lastUpdatedAt": "2026-07-19T14:54:14.242Z",
+      "updatedAtMs": 1784472854242,
       "searchText": "bhatakna kalsubai sunrise trek pune kalsubai sunrise pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     },
     {
@@ -254,8 +254,8 @@
         "Bari",
         "Bari Village"
       ],
-      "lastUpdatedAt": "2026-07-18T04:20:35.113Z",
-      "updatedAtMs": 1784348435113,
+      "lastUpdatedAt": "2026-07-19T14:54:08.217Z",
+      "updatedAtMs": 1784472848217,
       "searchText": "bhatakna kalsubai flag hosting trek kalsubai trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion bari bari village"
     },
     {
@@ -289,8 +289,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-07-18T04:20:41.319Z",
-      "updatedAtMs": 1784348441319,
+      "lastUpdatedAt": "2026-07-19T14:54:16.248Z",
+      "updatedAtMs": 1784472856248,
       "searchText": "bhatakna kalsubai trek from pune 2026 kalsubai trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata bari"
     },
     {
@@ -328,8 +328,8 @@
         "Bari",
         "Bari Village"
       ],
-      "lastUpdatedAt": "2026-07-18T04:20:42.874Z",
-      "updatedAtMs": 1784348442874,
+      "lastUpdatedAt": "2026-07-19T14:54:18.252Z",
+      "updatedAtMs": 1784472858252,
       "searchText": "bhatakna kalsubai trek | highest peak of maharashtra kalsubai trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion bari bari village"
     },
     {
@@ -358,8 +358,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:02:01.365Z",
-      "updatedAtMs": 1784347321365,
+      "lastUpdatedAt": "2026-07-19T14:34:27.926Z",
+      "updatedAtMs": 1784471667926,
       "searchText": "trekhievers kalsubai trek | mumbai kalsubai trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -388,9 +388,40 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:01:56.735Z",
-      "updatedAtMs": 1784347316735,
+      "lastUpdatedAt": "2026-07-19T14:34:21.787Z",
+      "updatedAtMs": 1784471661787,
       "searchText": "trekhievers kalsubai fireflies special trek kalsubai fireflies mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpe5rk8b014d8knhu8sg0ny5",
+      "title": "Kalsubai Trek from Pune 2026 | ₹799 | Maharashtra's Highest Peak",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-from-pune",
+      "priceInr": 799,
+      "priceText": "Rs. 799/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay, Hotel stay, Dormitory stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay, Hotel stay, Dormitory stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-19T14:57:20.529Z",
+      "updatedAtMs": 1784473040529,
+      "searchText": "treks and trails india kalsubai trek from pune 2026 | ₹799 | maharashtra's highest peak kalsubai trek pune breakfast, lunch tent stay, hotel stay, dormitory stay, homestay breakfast, lunch tent stay, hotel stay, dormitory stay, homestay"
     },
     {
       "id": "cmpv5msse09g3g3286akkr9qh",
@@ -448,40 +479,9 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:24:38.291Z",
-      "updatedAtMs": 1784348678291,
+      "lastUpdatedAt": "2026-07-19T14:57:18.476Z",
+      "updatedAtMs": 1784473038476,
       "searchText": "treks and trails india kalsubai monsoon trek 2026 kalsubai trek mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpe5rk8b014d8knhu8sg0ny5",
-      "title": "Kalsubai Trek from Pune 2026 | ₹799 | Maharashtra's Highest Peak",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-from-pune",
-      "priceInr": 799,
-      "priceText": "Rs. 799/- per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": "Tent stay, Hotel stay, Dormitory stay, Homestay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch",
-        "Tent stay, Hotel stay, Dormitory stay, Homestay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:24:39.862Z",
-      "updatedAtMs": 1784348679862,
-      "searchText": "treks and trails india kalsubai trek from pune 2026 | ₹799 | maharashtra's highest peak kalsubai trek pune breakfast, lunch tent stay, hotel stay, dormitory stay, homestay breakfast, lunch tent stay, hotel stay, dormitory stay, homestay"
     },
     {
       "id": "cmpe5sc5d01i08knhf8z2qnof",
@@ -510,8 +510,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:20:44.423Z",
-      "updatedAtMs": 1784348444423,
+      "lastUpdatedAt": "2026-07-19T14:54:20.257Z",
+      "updatedAtMs": 1784472860257,
       "searchText": "bhatakna kalsubai trekking & camping kalsubai camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -541,8 +541,8 @@
         "Hotel stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:28:07.179Z",
-      "updatedAtMs": 1784348887179,
+      "lastUpdatedAt": "2026-07-19T15:01:55.455Z",
+      "updatedAtMs": 1784473315455,
       "searchText": "treks and trails india new year kalsubai trek kalsubai trek mumbai breakfast, lunch hotel stay, dormitory stay, homestay breakfast, lunch hotel stay, dormitory stay, homestay"
     },
     {
@@ -572,8 +572,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:01:59.823Z",
-      "updatedAtMs": 1784347319823,
+      "lastUpdatedAt": "2026-07-19T14:34:25.880Z",
+      "updatedAtMs": 1784471665880,
       "searchText": "trekhievers kalsubai trek & camping | pune kalsubai camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -606,9 +606,39 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-07-18T04:02:03.086Z",
-      "updatedAtMs": 1784347323086,
+      "lastUpdatedAt": "2026-07-19T14:34:29.973Z",
+      "updatedAtMs": 1784471669973,
       "searchText": "trekhievers kalsubai trek | pune kalsubai trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
+    },
+    {
+      "id": "cmpe5reyi00j98knh2pz8plhi",
+      "title": "Kalsubai Trek | AC Bus ₹1599 | Kasara Train ₹1199",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-highest-peak-of-maharashtra",
+      "priceInr": 1599,
+      "priceText": "₹1599",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-19T14:57:24.619Z",
+      "updatedAtMs": 1784473044619,
+      "searchText": "treks and trails india kalsubai trek | ac bus ₹1599 | kasara train ₹1199 kalsubai trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpfjyf8m00ywuonh3legdenw",
@@ -637,39 +667,9 @@
         "Tent stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:24:36.706Z",
-      "updatedAtMs": 1784348676706,
+      "lastUpdatedAt": "2026-07-19T14:57:16.409Z",
+      "updatedAtMs": 1784473036409,
       "searchText": "treks and trails india kalsubai camping from kasara kalsubai camping mumbai breakfast, dinner tent stay, homestay breakfast, dinner tent stay, homestay"
-    },
-    {
-      "id": "cmpe5reyi00j98knh2pz8plhi",
-      "title": "Kalsubai Trek | AC Bus ₹1599 | Kasara Train ₹1199",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/kalsubai-trek-highest-peak-of-maharashtra",
-      "priceInr": 1599,
-      "priceText": "₹1599",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:24:43.169Z",
-      "updatedAtMs": 1784348683169,
-      "searchText": "treks and trails india kalsubai trek | ac bus ₹1599 | kasara train ₹1199 kalsubai trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpv4dnnm01xhg328q5t96cg5",
@@ -698,8 +698,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-07-18T04:01:58.281Z",
-      "updatedAtMs": 1784347318281,
+      "lastUpdatedAt": "2026-07-19T14:34:23.835Z",
+      "updatedAtMs": 1784471663835,
       "searchText": "trekhievers kalsubai trek & camping | mumbai kalsubai camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     }
   ]
