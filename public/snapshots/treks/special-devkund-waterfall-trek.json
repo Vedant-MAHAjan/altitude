@@ -6,14 +6,15 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "priceMin": 999,
-  "priceMax": 999,
-  "updatedAt": "2026-07-21T04:49:34.630Z",
+  "priceMax": 1400,
+  "updatedAt": "2026-07-21T15:31:57.679Z",
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -28,6 +29,10 @@
       {
         "name": "Sahyadri Treks and Tours",
         "slug": "sahyadri-treks-and-tours"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -41,7 +46,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -74,9 +79,39 @@
         "Dadar",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-07-21T04:49:34.630Z",
-      "updatedAtMs": 1784609374630,
+      "lastUpdatedAt": "2026-07-21T15:31:08.269Z",
+      "updatedAtMs": 1784647868269,
       "searchText": "sahyadri treks and tours monsoon special devkund waterfall trek special devkund waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks dadar sion"
+    },
+    {
+      "id": "cmpv5htkz08dmg328xred57ec",
+      "title": "Devkund Waterfall Trek - One Day",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Special Devkund Waterfall Trek",
+      "trekSlug": "special-devkund-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/devkund-waterfall-trek-one-day",
+      "priceInr": 1400,
+      "priceText": "Rs 1400/-",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-07-21T15:31:57.679Z",
+      "updatedAtMs": 1784647917679,
+      "searchText": "treks and trails india devkund waterfall trek - one day special devkund waterfall trek trek mumbai breakfast, lunch breakfast, lunch"
     }
   ]
 }
