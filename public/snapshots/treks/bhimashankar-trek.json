@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "priceMin": 699,
-  "priceMax": 699,
-  "updatedAt": "2026-08-17T02:47:42.441Z",
+  "priceMax": 1599,
+  "updatedAt": "2026-08-17T14:05:42.586Z",
   "filters": {
     "transportTypes": [
       "TRAIN"
@@ -28,6 +28,10 @@
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -40,7 +44,7 @@
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -70,9 +74,39 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-08-17T02:47:42.441Z",
-      "updatedAtMs": 1786934862441,
+      "lastUpdatedAt": "2026-08-17T14:05:16.293Z",
+      "updatedAtMs": 1786975516293,
       "searchText": "bhatakna bhimashankar monsoon trek bhimashankar trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpvl485s06zjey28wqrm169l",
+      "title": "Bhimashankar Trek via Ganesh Ghat from Karjat",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Bhimashankar Trek",
+      "trekSlug": "bhimashankar-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhimashankar-trek-via-ganesh-ghat",
+      "priceInr": 1599,
+      "priceText": "₹1,599 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-08-17T14:05:42.586Z",
+      "updatedAtMs": 1786975542586,
+      "searchText": "treks and trails india bhimashankar trek via ganesh ghat from karjat bhimashankar trek trek mumbai breakfast, lunch breakfast, lunch"
     }
   ]
 }
