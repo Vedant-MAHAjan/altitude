@@ -6,14 +6,15 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "priceMin": 1299,
-  "priceMax": 1299,
-  "updatedAt": "2026-09-03T05:54:23.782Z",
+  "priceMax": 1700,
+  "updatedAt": "2026-09-03T17:32:07.449Z",
   "filters": {
     "transportTypes": [
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -28,6 +29,10 @@
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -40,7 +45,7 @@
       "Breakfast",
       "Lunch"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -70,39 +75,40 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-03T05:54:23.782Z",
-      "updatedAtMs": 1788414863782,
+      "lastUpdatedAt": "2026-09-03T17:22:41.738Z",
+      "updatedAtMs": 1788456161738,
       "searchText": "bhatakna torna fort monsoon trek 2023 torna fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
-      "id": "pending:treks-and-trails-india:torna-fort-trek",
-      "title": "Data under review",
+      "id": "cmpfjq29902e1v2nha57t1tet",
+      "title": "Torna Fort Trek",
       "organizerName": "Treks and Trails India",
       "organizerSlug": "treks-and-trails-india",
       "trekName": "Torna Fort Trek",
       "trekSlug": "torna-fort-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org",
-      "priceInr": null,
-      "priceText": null,
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "UNKNOWN",
+      "sourceUrl": "https://www.treksandtrails.org/tours/torna-fort-trek",
+      "priceInr": 1700,
+      "priceText": "Rs. 1700/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
       "forestFeeStatus": "UNKNOWN",
-      "listingCity": "OTHER",
+      "listingCity": "MUMBAI",
       "variantTags": [
         "TREK_ONLY"
       ],
       "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek Only",
-      "mealsSummary": null,
-      "staySummary": null,
-      "inclusionHighlights": [],
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay"
+      ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-03T05:56:51.096Z",
-      "updatedAtMs": 1788415011096,
-      "searchText": "treks and trails india torna fort trek",
-      "isPending": true,
-      "organizerWebsiteUrl": "https://www.treksandtrails.org"
+      "lastUpdatedAt": "2026-09-03T17:32:07.449Z",
+      "updatedAtMs": 1788456727449,
+      "searchText": "treks and trails india torna fort trek torna fort trek trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
     }
   ]
 }
