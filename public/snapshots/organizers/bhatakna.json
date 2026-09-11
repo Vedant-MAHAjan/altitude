@@ -3,8 +3,8 @@
   "slug": "bhatakna",
   "websiteUrl": "https://www.bhatakna.com",
   "description": "Vacation Labs based organizer with trip calendar, fireflies trek collection, and detailed itinerary pages.",
-  "packageCount": 81,
-  "activeTreks": 41,
+  "packageCount": 82,
+  "activeTreks": 42,
   "priceMin": 399,
   "priceMax": 16999,
   "pickupLocations": [
@@ -21,7 +21,7 @@
     "Nirgudpada",
     "Panvel"
   ],
-  "updatedAt": "2026-09-10T17:19:04.179Z",
+  "updatedAt": "2026-09-11T06:01:28.741Z",
   "treks": [
     {
       "name": "Kalavantin Durg",
@@ -30,6 +30,10 @@
     {
       "name": "Irshalgad",
       "slug": "irshalgad"
+    },
+    {
+      "name": "Ratangad",
+      "slug": "ratangad"
     },
     {
       "name": "Sondai Fort",
@@ -44,16 +48,12 @@
       "slug": "harihar-fort"
     },
     {
-      "name": "Ratangad",
-      "slug": "ratangad"
+      "name": "Garbett Plateau Trek",
+      "slug": "garbett-plateau-trek"
     },
     {
       "name": "Kothaligad",
       "slug": "kothaligad"
-    },
-    {
-      "name": "Garbett Plateau Trek",
-      "slug": "garbett-plateau-trek"
     },
     {
       "name": "Igatpuri",
@@ -64,10 +64,6 @@
       "slug": "korigad-fort-trek-by-ac-bus"
     },
     {
-      "name": "Harishchandragad",
-      "slug": "harishchandragad"
-    },
-    {
       "name": "Rajmachi Fort",
       "slug": "rajmachi-fort"
     },
@@ -76,12 +72,20 @@
       "slug": "kohoj-fort-trek"
     },
     {
-      "name": "Kalu Waterfall Trek God Valley Trek",
-      "slug": "kalu-waterfall-trek-god-valley-trek"
+      "name": "Bhimashankar Trek",
+      "slug": "bhimashankar-trek"
+    },
+    {
+      "name": "Harishchandragad",
+      "slug": "harishchandragad"
     },
     {
       "name": "To Kothaligad",
       "slug": "to-kothaligad"
+    },
+    {
+      "name": "Kalu Waterfall Trek God Valley Trek",
+      "slug": "kalu-waterfall-trek-god-valley-trek"
     },
     {
       "name": "Karvi Flowers Special",
@@ -90,10 +94,6 @@
     {
       "name": "Visapur Fort Trek",
       "slug": "visapur-fort-trek"
-    },
-    {
-      "name": "Bhimashankar Trek",
-      "slug": "bhimashankar-trek"
     },
     {
       "name": "Visapur Trek",
@@ -108,6 +108,10 @@
       "slug": "naneghat-trek"
     },
     {
+      "name": "Nanemachi Waterfall Trek",
+      "slug": "nanemachi-waterfall-trek"
+    },
+    {
       "name": "One Tree Hill Point Trek Matheran",
       "slug": "one-tree-hill-point-trek-matheran"
     },
@@ -120,12 +124,12 @@
       "slug": "prabalmachi-and-kalavantin-durg-trek"
     },
     {
-      "name": "Andharban Jungle Trek",
-      "slug": "andharban-jungle-trek"
-    },
-    {
       "name": "Prabalmachi Trek",
       "slug": "prabalmachi-trek"
+    },
+    {
+      "name": "Andharban Jungle Trek",
+      "slug": "andharban-jungle-trek"
     },
     {
       "name": "Kalavantin Trekking",
@@ -215,8 +219,8 @@
         "Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:19.916Z",
-      "updatedAtMs": 1789060579916,
+      "lastUpdatedAt": "2026-09-11T05:58:23.421Z",
+      "updatedAtMs": 1789106303421,
       "searchText": "bhatakna kalavantin durg one day trek kalavantin durg trek mumbai lunch lunch"
     },
     {
@@ -245,9 +249,39 @@
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:10.687Z",
-      "updatedAtMs": 1789060570687,
+      "lastUpdatedAt": "2026-09-11T05:58:13.400Z",
+      "updatedAtMs": 1789106293400,
       "searchText": "bhatakna irshalgad night trek irshalgad night trek mumbai breakfast breakfast"
+    },
+    {
+      "id": "cmpv58gh506nvg328epw4h9xr",
+      "title": "Ratangad Night Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Ratangad",
+      "trekSlug": "ratangad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/ratangad-night-trek-134605",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T06:00:23.958Z",
+      "updatedAtMs": 1789106423958,
+      "searchText": "bhatakna ratangad night trek ratangad night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpfjn9wz022kv2nhb795hjpl",
@@ -275,100 +309,9 @@
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:29.691Z",
-      "updatedAtMs": 1789060709691,
+      "lastUpdatedAt": "2026-09-11T06:00:50.647Z",
+      "updatedAtMs": 1789106450647,
       "searchText": "bhatakna sondai night trek sondai fort night trek mumbai breakfast, tea and snacks breakfast, tea and snacks"
-    },
-    {
-      "id": "cmpl30dof00uw1pnhopl1q75m",
-      "title": "Fireflies & Clouds Special Kalsubai Night Trek 2026",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-kalsubai-night-trek",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "NIGHT_TREK",
-        "FIREFLIES"
-      ],
-      "variantSignature": "NIGHT_TREK__FIREFLIES",
-      "variantLabel": "Night trek + Fireflies",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:20.289Z",
-      "updatedAtMs": 1789060520289,
-      "searchText": "bhatakna fireflies & clouds special kalsubai night trek 2026 kalsubai night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpe5sabm01gw8knh9i7fy94j",
-      "title": "Kalsubai Night Trek",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-night-trek",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK",
-      "variantLabel": "Night trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:24.535Z",
-      "updatedAtMs": 1789060584535,
-      "searchText": "bhatakna kalsubai night trek kalsubai night trek mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpe5sgk701kw8knhhivng5se",
-      "title": "Harihar Fort Night Trek",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harihar Fort",
-      "trekSlug": "harihar-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/hariharfort",
-      "priceInr": 499,
-      "priceText": "₹499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK",
-      "variantLabel": "Night trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:43.434Z",
-      "updatedAtMs": 1789060543434,
-      "searchText": "bhatakna harihar fort night trek harihar fort night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpe5sdxp01jb8knhl10igr7g",
@@ -400,19 +343,50 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:26.074Z",
-      "updatedAtMs": 1789060586074,
+      "lastUpdatedAt": "2026-09-11T05:58:30.093Z",
+      "updatedAtMs": 1789106310093,
       "searchText": "bhatakna kalsubai night trek pune kalsubai night trek pune breakfast, lunch breakfast, lunch nashik nashik phata bari"
     },
     {
-      "id": "cmpv58gh506nvg328epw4h9xr",
-      "title": "Ratangad Night Trek",
+      "id": "cmpl30dof00uw1pnhopl1q75m",
+      "title": "Fireflies & Clouds Special Kalsubai Night Trek 2026",
       "organizerName": "Bhatakna",
       "organizerSlug": "bhatakna",
-      "trekName": "Ratangad",
-      "trekSlug": "ratangad",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/ratangad-night-trek-134605",
+      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-kalsubai-night-trek",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK",
+        "FIREFLIES"
+      ],
+      "variantSignature": "NIGHT_TREK__FIREFLIES",
+      "variantLabel": "Night trek + Fireflies",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:12.201Z",
+      "updatedAtMs": 1789106232201,
+      "searchText": "bhatakna fireflies & clouds special kalsubai night trek 2026 kalsubai night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpe5sgk701kw8knhhivng5se",
+      "title": "Harihar Fort Night Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harihar Fort",
+      "trekSlug": "harihar-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/hariharfort",
       "priceInr": 499,
       "priceText": "₹499",
       "transportType": "TRAIN",
@@ -430,19 +404,19 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:08.004Z",
-      "updatedAtMs": 1789060688004,
-      "searchText": "bhatakna ratangad night trek ratangad night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "lastUpdatedAt": "2026-09-11T05:57:43.301Z",
+      "updatedAtMs": 1789106263301,
+      "searchText": "bhatakna harihar fort night trek harihar fort night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
-      "id": "cmpv5693a0600g328gzqfe797",
-      "title": "Kothaligad Night Trek",
+      "id": "cmpe5sabm01gw8knh9i7fy94j",
+      "title": "Kalsubai Night Trek",
       "organizerName": "Bhatakna",
       "organizerSlug": "bhatakna",
-      "trekName": "Kothaligad",
-      "trekSlug": "kothaligad",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kothaligad-night-trek",
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-night-trek",
       "priceInr": 499,
       "priceText": "₹499",
       "transportType": "TRAIN",
@@ -454,15 +428,15 @@
       ],
       "variantSignature": "NIGHT_TREK",
       "variantLabel": "Night trek",
-      "mealsSummary": "Breakfast",
+      "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
-        "Breakfast"
+        "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:57.737Z",
-      "updatedAtMs": 1789060617737,
-      "searchText": "bhatakna kothaligad night trek kothaligad night trek mumbai breakfast breakfast"
+      "lastUpdatedAt": "2026-09-11T05:58:28.420Z",
+      "updatedAtMs": 1789106308420,
+      "searchText": "bhatakna kalsubai night trek kalsubai night trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpl30kfo00yl1pnhsknmyvtq",
@@ -490,9 +464,39 @@
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:32.634Z",
-      "updatedAtMs": 1789060532634,
+      "lastUpdatedAt": "2026-09-11T05:57:27.201Z",
+      "updatedAtMs": 1789106247201,
       "searchText": "bhatakna garbett plateau trek | garbett point night trek garbett plateau trek night trek mumbai breakfast, tea and snacks breakfast, tea and snacks"
+    },
+    {
+      "id": "cmpv5693a0600g328gzqfe797",
+      "title": "Kothaligad Night Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kothaligad",
+      "trekSlug": "kothaligad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kothaligad-night-trek",
+      "priceInr": 499,
+      "priceText": "₹499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:59:07.454Z",
+      "updatedAtMs": 1789106347454,
+      "searchText": "bhatakna kothaligad night trek kothaligad night trek mumbai breakfast breakfast"
     },
     {
       "id": "cmpl31b8j01fy1pnhtefvf8cp",
@@ -520,8 +524,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:21.453Z",
-      "updatedAtMs": 1789060581453,
+      "lastUpdatedAt": "2026-09-11T05:58:25.083Z",
+      "updatedAtMs": 1789106305083,
       "searchText": "bhatakna kalsubai fireflies & cloud formation trek | pune kalsubai fireflies pune breakfast, lunch breakfast, lunch"
     },
     {
@@ -550,8 +554,8 @@
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:23.368Z",
-      "updatedAtMs": 1789060523368,
+      "lastUpdatedAt": "2026-09-11T05:57:15.564Z",
+      "updatedAtMs": 1789106235564,
       "searchText": "bhatakna fireflies igatpuri roadtrip igatpuri fireflies mumbai breakfast, tea and snacks breakfast, tea and snacks"
     },
     {
@@ -584,8 +588,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:28.097Z",
-      "updatedAtMs": 1789060588097,
+      "lastUpdatedAt": "2026-09-11T05:58:31.757Z",
+      "updatedAtMs": 1789106311757,
       "searchText": "bhatakna kalsubai sunrise trek pune kalsubai sunrise pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     },
     {
@@ -623,39 +627,6 @@
       "searchText": "bhatakna korigad fort monsoon trek by ac bus korigad fort trek by ac bus trek mumbai breakfast, lunch breakfast, lunch borivali chembur sion"
     },
     {
-      "id": "cmpfjn24e01vwv2nh9vi1jf3g",
-      "title": "Harishchandragad Sunrise Trek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-trek-pune-149609",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "SUNRISE"
-      ],
-      "variantSignature": "SUNRISE",
-      "variantLabel": "Sunrise",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [
-        "Nashik",
-        "Nashik Phata"
-      ],
-      "lastUpdatedAt": "2026-09-10T17:15:51.139Z",
-      "updatedAtMs": 1789060551139,
-      "searchText": "bhatakna harishchandragad sunrise trek | pune harishchandragad sunrise pune breakfast, lunch breakfast, lunch nashik nashik phata"
-    },
-    {
       "id": "cmpl3p5si001jq0nh0gc1rqvz",
       "title": "Rajmachi Monsoon Trek",
       "organizerName": "Bhatakna",
@@ -685,6 +656,193 @@
       "lastUpdatedAt": "2026-05-25T11:06:10.962Z",
       "updatedAtMs": 1779707170962,
       "searchText": "bhatakna rajmachi monsoon trek rajmachi fort trek mumbai breakfast, dinner homestay breakfast, dinner homestay"
+    },
+    {
+      "id": "cmpv565a605z8g328gu54b5bp",
+      "title": "Kohoj Fort Trek 2023",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kohoj Fort Trek",
+      "trekSlug": "kohoj-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kohoj-fort-trek-2023-126706",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:59:04.122Z",
+      "updatedAtMs": 1789106344122,
+      "searchText": "bhatakna kohoj fort trek 2023 kohoj fort trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl2zp0p00eh1pnhv076mmn1",
+      "title": "Bhimashankar Monsoon Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Bhimashankar Trek",
+      "trekSlug": "bhimashankar-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/bhimashankar-trek",
+      "priceInr": 699,
+      "priceText": "Rs. 699/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:56:36.588Z",
+      "updatedAtMs": 1789106196588,
+      "searchText": "bhatakna bhimashankar monsoon trek bhimashankar trek trek mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpl30t1i014q1pnh8fffszwn",
+      "title": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-fireflies-clouds-formation-trek-pune",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-09-11T05:57:46.659Z",
+      "updatedAtMs": 1789106266659,
+      "searchText": "bhatakna harishchandragad fireflies & clouds formation trek | pune harishchandragad fireflies pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpl30tr9015a1pnhcye2qgbt",
+      "title": "Harishchandragad Flowers Trek 2024",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-monsoon-trek-2024",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:48.346Z",
+      "updatedAtMs": 1789106268346,
+      "searchText": "bhatakna harishchandragad flowers trek 2024 harishchandragad trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
+    },
+    {
+      "id": "cmpfjn24e01vwv2nh9vi1jf3g",
+      "title": "Harishchandragad Sunrise Trek | Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-trek-pune-149609",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "SUNRISE"
+      ],
+      "variantSignature": "SUNRISE",
+      "variantLabel": "Sunrise",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-09-11T05:57:52.117Z",
+      "updatedAtMs": 1789106272117,
+      "searchText": "bhatakna harishchandragad sunrise trek | pune harishchandragad sunrise pune breakfast, lunch breakfast, lunch nashik nashik phata"
+    },
+    {
+      "id": "cmpe5sesh01js8knhz3tgpucs",
+      "title": "Harishchandragad Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-trek",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:53.797Z",
+      "updatedAtMs": 1789106273797,
+      "searchText": "bhatakna harishchandragad trek harishchandragad trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpv555o705olg328h6d8qwab",
@@ -721,133 +879,9 @@
         "Bari",
         "Bari Village"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:22.995Z",
-      "updatedAtMs": 1789060582995,
+      "lastUpdatedAt": "2026-09-11T05:58:26.745Z",
+      "updatedAtMs": 1789106306745,
       "searchText": "bhatakna kalsubai flag hosting trek kalsubai trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion bari bari village"
-    },
-    {
-      "id": "cmpl30t1i014q1pnh8fffszwn",
-      "title": "Harishchandragad Fireflies & Clouds Formation Trek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-fireflies-clouds-formation-trek-pune",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES",
-      "variantLabel": "Fireflies",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [
-        "Nashik",
-        "Nashik Phata"
-      ],
-      "lastUpdatedAt": "2026-09-10T17:15:46.518Z",
-      "updatedAtMs": 1789060546518,
-      "searchText": "bhatakna harishchandragad fireflies & clouds formation trek | pune harishchandragad fireflies pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
-    },
-    {
-      "id": "cmpl30tr9015a1pnhcye2qgbt",
-      "title": "Harishchandragad Flowers Trek 2024",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-monsoon-trek-2024",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:48.057Z",
-      "updatedAtMs": 1789060548057,
-      "searchText": "bhatakna harishchandragad flowers trek 2024 harishchandragad trek mumbai breakfast, lunch tent stay breakfast, lunch tent stay"
-    },
-    {
-      "id": "cmpe5sesh01js8knhz3tgpucs",
-      "title": "Harishchandragad Trek",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-trek",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:52.677Z",
-      "updatedAtMs": 1789060552677,
-      "searchText": "bhatakna harishchandragad trek harishchandragad trek mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmpv565a605z8g328gu54b5bp",
-      "title": "Kohoj Fort Trek 2023",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Kohoj Fort Trek",
-      "trekSlug": "kohoj-fort-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kohoj-fort-trek-2023-126706",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:54.326Z",
-      "updatedAtMs": 1789060614326,
-      "searchText": "bhatakna kohoj fort trek 2023 kohoj fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpv55epa05qkg328zzsfmk30",
@@ -884,9 +918,40 @@
         "Bari",
         "Bari Village"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:31.179Z",
-      "updatedAtMs": 1789060591179,
+      "lastUpdatedAt": "2026-09-11T05:58:35.614Z",
+      "updatedAtMs": 1789106315614,
       "searchText": "bhatakna kalsubai trek | highest peak of maharashtra kalsubai trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion bari bari village"
+    },
+    {
+      "id": "cmpl30g9700wd1pnho01z4gtz",
+      "title": "Fireflies Night Trek To Kothaligad 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "To Kothaligad",
+      "trekSlug": "to-kothaligad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-trek-mumbai-kothaligad-fort",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK",
+        "FIREFLIES"
+      ],
+      "variantSignature": "NIGHT_TREK__FIREFLIES",
+      "variantLabel": "Night trek + Fireflies",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:17.243Z",
+      "updatedAtMs": 1789106237243,
+      "searchText": "bhatakna fireflies night trek to kothaligad 2026 to kothaligad night trek + fireflies mumbai breakfast breakfast"
     },
     {
       "id": "cmpv55icg05rkg328wjmuxqio",
@@ -919,8 +984,8 @@
         "Kalyan",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:34.260Z",
-      "updatedAtMs": 1789060594260,
+      "lastUpdatedAt": "2026-09-11T05:58:38.950Z",
+      "updatedAtMs": 1789106318950,
       "searchText": "bhatakna kalu waterfall trek - god valley trek 2026 kalu waterfall trek god valley trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
     },
     {
@@ -953,40 +1018,9 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:55.865Z",
-      "updatedAtMs": 1789060615865,
+      "lastUpdatedAt": "2026-09-11T05:59:05.791Z",
+      "updatedAtMs": 1789106345791,
       "searchText": "bhatakna korigad fort monsoon trek by ac bus korigad fort trek by ac bus trek mumbai breakfast, lunch breakfast, lunch borivali chembur sion"
-    },
-    {
-      "id": "cmpl30g9700wd1pnho01z4gtz",
-      "title": "Fireflies Night Trek To Kothaligad 2026",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "To Kothaligad",
-      "trekSlug": "to-kothaligad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-trek-mumbai-kothaligad-fort",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "NIGHT_TREK",
-        "FIREFLIES"
-      ],
-      "variantSignature": "NIGHT_TREK__FIREFLIES",
-      "variantLabel": "Night trek + Fireflies",
-      "mealsSummary": "Breakfast",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:24.907Z",
-      "updatedAtMs": 1789060524907,
-      "searchText": "bhatakna fireflies night trek to kothaligad 2026 to kothaligad night trek + fireflies mumbai breakfast breakfast"
     },
     {
       "id": "cmpv56egs061ng3282dt17r30",
@@ -1018,8 +1052,8 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:17:02.366Z",
-      "updatedAtMs": 1789060622366,
+      "lastUpdatedAt": "2026-09-11T05:59:12.923Z",
+      "updatedAtMs": 1789106352923,
       "searchText": "bhatakna lonavala karvi flowers special karvi flowers special trek mumbai breakfast, lunch breakfast, lunch borivali chembur sion"
     },
     {
@@ -1078,8 +1112,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:44.052Z",
-      "updatedAtMs": 1789060664052,
+      "lastUpdatedAt": "2026-09-11T05:59:58.444Z",
+      "updatedAtMs": 1789106398444,
       "searchText": "bhatakna one day special visapur fort trek 2026 visapur fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -1115,39 +1149,9 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:18:06.465Z",
-      "updatedAtMs": 1789060686465,
+      "lastUpdatedAt": "2026-09-11T06:00:22.286Z",
+      "updatedAtMs": 1789106422286,
       "searchText": "bhatakna ratangad fort trek 2025 ratangad trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion"
-    },
-    {
-      "id": "cmpl2zp0p00eh1pnhv076mmn1",
-      "title": "Bhimashankar Monsoon Trek",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Bhimashankar Trek",
-      "trekSlug": "bhimashankar-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/bhimashankar-trek",
-      "priceInr": 699,
-      "priceText": "Rs. 699/- per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:14:48.322Z",
-      "updatedAtMs": 1789060488322,
-      "searchText": "bhatakna bhimashankar monsoon trek bhimashankar trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpv5a7y2074hg328eab1cmla",
@@ -1176,8 +1180,8 @@
         "Tent stay, Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:19:04.179Z",
-      "updatedAtMs": 1789060744179,
+      "lastUpdatedAt": "2026-09-11T06:01:28.741Z",
+      "updatedAtMs": 1789106488741,
       "searchText": "bhatakna visapur monsoon trek pune 2026 visapur trek trek pune breakfast, lunch tent stay, hotel stay breakfast, lunch tent stay, hotel stay"
     },
     {
@@ -1211,8 +1215,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:29.641Z",
-      "updatedAtMs": 1789060589641,
+      "lastUpdatedAt": "2026-09-11T05:58:33.422Z",
+      "updatedAtMs": 1789106313422,
       "searchText": "bhatakna kalsubai trek from pune 2026 kalsubai trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata bari"
     },
     {
@@ -1243,40 +1247,42 @@
         "Tent stay, Dormitory stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:06.076Z",
-      "updatedAtMs": 1789060566076,
+      "lastUpdatedAt": "2026-09-11T05:58:08.318Z",
+      "updatedAtMs": 1789106288318,
       "searchText": "bhatakna igatpuri fireflies secret camping igatpuri fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay, dormitory stay, homestay breakfast, dinner, tea and snacks tent stay, dormitory stay, homestay"
     },
     {
-      "id": "cmpl30ehr00ve1pnhcmyeelww",
-      "title": "Fireflies & Clouds special - Harishchandragad Night Trek 2026",
+      "id": "cmpv58cuc06n4g328fhunjc1k",
+      "title": "Ratangad Fort SunriseTrek | Pune",
       "organizerName": "Bhatakna",
       "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
+      "trekName": "Ratangad",
+      "trekSlug": "ratangad",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-harishchandragad-night-trek",
+      "sourceUrl": "https://www.bhatakna.com/tours/ratangad-fort-sunrisetrek-pune-149621",
       "priceInr": 799,
       "priceText": "₹799",
-      "transportType": "TRAIN",
+      "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
       "variantTags": [
-        "NIGHT_TREK",
-        "FIREFLIES"
+        "TREK_ONLY"
       ],
-      "variantSignature": "NIGHT_TREK__FIREFLIES",
-      "variantLabel": "Night trek + Fireflies",
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch",
       "staySummary": null,
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:21.828Z",
-      "updatedAtMs": 1789060521828,
-      "searchText": "bhatakna fireflies & clouds special - harishchandragad night trek 2026 harishchandragad night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
+      "pickupLocations": [
+        "Nashik",
+        "Nashik Phata"
+      ],
+      "lastUpdatedAt": "2026-09-11T06:00:20.620Z",
+      "updatedAtMs": 1789106420620,
+      "searchText": "bhatakna ratangad fort sunrisetrek | pune ratangad trek pune breakfast, lunch breakfast, lunch nashik nashik phata"
     },
     {
       "id": "cmpv5a61e073yg328i6m3b7m1",
@@ -1304,8 +1310,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:19:02.637Z",
-      "updatedAtMs": 1789060742637,
+      "lastUpdatedAt": "2026-09-11T06:01:27.081Z",
+      "updatedAtMs": 1789106487081,
       "searchText": "bhatakna vikatgad peb fort monsoon trek 2023 vikatgad peb fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -1334,9 +1340,70 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:22.423Z",
-      "updatedAtMs": 1789060642423,
+      "lastUpdatedAt": "2026-09-11T05:59:34.956Z",
+      "updatedAtMs": 1789106374956,
       "searchText": "bhatakna naneghat monsoon trek pune 2026 naneghat trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpl30ehr00ve1pnhcmyeelww",
+      "title": "Fireflies & Clouds special - Harishchandragad Night Trek 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/fireflies-clouds-special-harishchandragad-night-trek",
+      "priceInr": 799,
+      "priceText": "₹799",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK",
+        "FIREFLIES"
+      ],
+      "variantSignature": "NIGHT_TREK__FIREFLIES",
+      "variantLabel": "Night trek + Fireflies",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:13.882Z",
+      "updatedAtMs": 1789106233882,
+      "searchText": "bhatakna fireflies & clouds special - harishchandragad night trek 2026 harishchandragad night trek + fireflies mumbai breakfast, lunch breakfast, lunch"
+    },
+    {
+      "id": "cmpv576e106b9g328radls285",
+      "title": "Nanemachi Waterfall Trek Pune 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Nanemachi Waterfall Trek",
+      "trekSlug": "nanemachi-waterfall-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/nanemachi-waterfall-trek-pune",
+      "priceInr": 799,
+      "priceText": "₹799",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:59:39.959Z",
+      "updatedAtMs": 1789106379959,
+      "searchText": "bhatakna nanemachi waterfall trek pune 2026 nanemachi waterfall trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpv57rjc06hvg328lq2o9b0x",
@@ -1364,8 +1431,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:45.590Z",
-      "updatedAtMs": 1789060665590,
+      "lastUpdatedAt": "2026-09-11T06:00:00.109Z",
+      "updatedAtMs": 1789106400109,
       "searchText": "bhatakna one tree hill point trek matheran one tree hill point trek matheran trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -1399,42 +1466,9 @@
         "Nashik Phata",
         "Nirgudpada"
       ],
-      "lastUpdatedAt": "2026-09-10T17:15:44.973Z",
-      "updatedAtMs": 1789060544973,
+      "lastUpdatedAt": "2026-09-11T05:57:44.982Z",
+      "updatedAtMs": 1789106264982,
       "searchText": "bhatakna harihar fort night trek | pune harihar fort night trek pune breakfast, lunch hotel stay breakfast, lunch hotel stay nashik nashik phata nirgudpada"
-    },
-    {
-      "id": "cmpv58cuc06n4g328fhunjc1k",
-      "title": "Ratangad Fort SunriseTrek | Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Ratangad",
-      "trekSlug": "ratangad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/ratangad-fort-sunrisetrek-pune-149621",
-      "priceInr": 799,
-      "priceText": "₹799",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [
-        "Nashik",
-        "Nashik Phata"
-      ],
-      "lastUpdatedAt": "2026-09-10T17:18:04.927Z",
-      "updatedAtMs": 1789060684927,
-      "searchText": "bhatakna ratangad fort sunrisetrek | pune ratangad trek pune breakfast, lunch breakfast, lunch nashik nashik phata"
     },
     {
       "id": "cmpl319g501f21pnh9688bt50",
@@ -1462,8 +1496,8 @@
         "Breakfast"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:18.376Z",
-      "updatedAtMs": 1789060578376,
+      "lastUpdatedAt": "2026-09-11T05:58:21.759Z",
+      "updatedAtMs": 1789106301759,
       "searchText": "bhatakna kalavantin durg night trek kalavantin durg night trek mumbai breakfast breakfast"
     },
     {
@@ -1493,8 +1527,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:07.613Z",
-      "updatedAtMs": 1789060567613,
+      "lastUpdatedAt": "2026-09-11T05:58:09.984Z",
+      "updatedAtMs": 1789106289984,
       "searchText": "bhatakna igatpuri secret lakeside camping igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -1524,9 +1558,39 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:11.037Z",
-      "updatedAtMs": 1789060511037,
+      "lastUpdatedAt": "2026-09-11T05:57:01.785Z",
+      "updatedAtMs": 1789106221785,
       "searchText": "bhatakna devkund waterfall trek from pune 2026 devkund waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+    },
+    {
+      "id": "cmpl30jma00y51pnhjd46ww21",
+      "title": "Garbett Plateau Monsoon Trek 2026",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Garbett Plateau Trek",
+      "trekSlug": "garbett-plateau-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/garbett-plateau-trek",
+      "priceInr": 899,
+      "priceText": "Rs. 899/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:24.025Z",
+      "updatedAtMs": 1789106244025,
+      "searchText": "bhatakna garbett plateau monsoon trek 2026 garbett plateau trek trek mumbai breakfast breakfast"
     },
     {
       "id": "cmpv57yn006jog328lsdaj3su",
@@ -1555,39 +1619,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:51.745Z",
-      "updatedAtMs": 1789060671745,
+      "lastUpdatedAt": "2026-09-11T06:00:06.785Z",
+      "updatedAtMs": 1789106406785,
       "searchText": "bhatakna prabalmachi camping and kalavantin durg trek prabalmachi and kalavantin durg trek camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
-    },
-    {
-      "id": "cmpl30jma00y51pnhjd46ww21",
-      "title": "Garbett Plateau Monsoon Trek 2026",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Garbett Plateau Trek",
-      "trekSlug": "garbett-plateau-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/garbett-plateau-trek",
-      "priceInr": 899,
-      "priceText": "Rs. 899/- per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:31.095Z",
-      "updatedAtMs": 1789060531095,
-      "searchText": "bhatakna garbett plateau monsoon trek 2026 garbett plateau trek trek mumbai breakfast breakfast"
     },
     {
       "id": "cmpv572xh06aeg328gkd0fe5m",
@@ -1623,40 +1657,9 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:17:23.961Z",
-      "updatedAtMs": 1789060643961,
+      "lastUpdatedAt": "2026-09-11T05:59:36.619Z",
+      "updatedAtMs": 1789106376619,
       "searchText": "bhatakna naneghat trek | monsoon trek 2026 naneghat trek trek mumbai breakfast, lunch hotel stay breakfast, lunch hotel stay borivali ghatkopar thane kalyan chembur sion"
-    },
-    {
-      "id": "cmpl2z52m006e1pnhwqa15mtu",
-      "title": "Andharban Jungle Trek Pune 2026",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Andharban Jungle Trek",
-      "trekSlug": "andharban-jungle-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/andharban",
-      "priceInr": 999,
-      "priceText": "₹999",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:14:31.341Z",
-      "updatedAtMs": 1789060471341,
-      "searchText": "bhatakna andharban jungle trek pune 2026 andharban jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
       "id": "cmpv5829u06keg328cptbyfau",
@@ -1689,66 +1692,35 @@
       "searchText": "bhatakna prabalmachi monsoon trek 2024 prabalmachi trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
-      "id": "cmpe5sc5d01i08knhf8z2qnof",
-      "title": "Kalsubai Trekking & Camping",
+      "id": "cmpl2z52m006e1pnhwqa15mtu",
+      "title": "Andharban Jungle Trek Pune 2026",
       "organizerName": "Bhatakna",
       "organizerSlug": "bhatakna",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
+      "trekName": "Andharban Jungle Trek",
+      "trekSlug": "andharban-jungle-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-camping",
+      "sourceUrl": "https://www.bhatakna.com/tours/andharban",
       "priceInr": 999,
       "priceText": "₹999",
-      "transportType": "TRAIN",
+      "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
+      "listingCity": "PUNE",
       "variantTags": [
-        "CAMPING"
+        "TREK_ONLY"
       ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": "Hotel stay",
       "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:32.719Z",
-      "updatedAtMs": 1789060592719,
-      "searchText": "bhatakna kalsubai trekking & camping kalsubai camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpe5sfna01kd8knha6ln4152",
-      "title": "Harishchandragad Kokankada Trek & Camping",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Harishchandragad",
-      "trekSlug": "harishchandragad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-camping",
-      "priceInr": 999,
-      "priceText": "₹999",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "CAMPING"
-      ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:49.601Z",
-      "updatedAtMs": 1789060549601,
-      "searchText": "bhatakna harishchandragad kokankada trek & camping harishchandragad camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+      "lastUpdatedAt": "2026-09-11T05:56:17.688Z",
+      "updatedAtMs": 1789106177688,
+      "searchText": "bhatakna andharban jungle trek pune 2026 andharban jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
       "id": "cmpfjn9730220v2nh90vah61j",
@@ -1777,9 +1749,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:16.836Z",
-      "updatedAtMs": 1789060576836,
+      "lastUpdatedAt": "2026-09-11T05:58:20.096Z",
+      "updatedAtMs": 1789106300096,
       "searchText": "bhatakna kalavantin camping & trekking kalavantin trekking camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+    },
+    {
+      "id": "cmpe5sfna01kd8knha6ln4152",
+      "title": "Harishchandragad Kokankada Trek & Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Harishchandragad",
+      "trekSlug": "harishchandragad",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/harishchandragad-camping",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:57:50.437Z",
+      "updatedAtMs": 1789106270437,
+      "searchText": "bhatakna harishchandragad kokankada trek & camping harishchandragad camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpl301dk00md1pnhv1bq7zol",
@@ -1812,8 +1815,8 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:15:03.856Z",
-      "updatedAtMs": 1789060503856,
+      "lastUpdatedAt": "2026-09-11T05:56:53.901Z",
+      "updatedAtMs": 1789106213901,
       "searchText": "bhatakna corporate special sondai monsoon trek sondai fort trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay borivali chembur sion"
     },
     {
@@ -1844,9 +1847,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:53.284Z",
-      "updatedAtMs": 1789060673284,
+      "lastUpdatedAt": "2026-09-11T06:00:08.449Z",
+      "updatedAtMs": 1789106408449,
       "searchText": "bhatakna prabalmachi fireflies camping 2026 prabalmachi fireflies + camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+    },
+    {
+      "id": "cmpe5sc5d01i08knhf8z2qnof",
+      "title": "Kalsubai Trekking & Camping",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalsubai-camping",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T05:58:37.280Z",
+      "updatedAtMs": 1789106317280,
+      "searchText": "bhatakna kalsubai trekking & camping kalsubai camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpl2zglg00cv1pnhny9qlcgh",
@@ -1876,8 +1910,8 @@
         "Tent stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:14:45.237Z",
-      "updatedAtMs": 1789060485237,
+      "lastUpdatedAt": "2026-09-11T05:56:33.211Z",
+      "updatedAtMs": 1789106193211,
       "searchText": "bhatakna bhandardara lake fireflies festival camping 2026 | fireflies festival mumbai pune bhandardara lake fireflies + camping mixed breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
     },
     {
@@ -1907,8 +1941,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:23.417Z",
-      "updatedAtMs": 1789060703417,
+      "lastUpdatedAt": "2026-09-11T06:00:43.785Z",
+      "updatedAtMs": 1789106443785,
       "searchText": "bhatakna sandhan valley trek with rappelling | pune sandhan valley trek pune breakfast, lunch tent stay breakfast, lunch tent stay"
     },
     {
@@ -1937,8 +1971,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:54.826Z",
-      "updatedAtMs": 1789060674826,
+      "lastUpdatedAt": "2026-09-11T06:00:10.228Z",
+      "updatedAtMs": 1789106410228,
       "searchText": "bhatakna prabalmachi monsoon trek 2024 prabalmachi trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -1998,8 +2032,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:00.138Z",
-      "updatedAtMs": 1789060680138,
+      "lastUpdatedAt": "2026-09-11T06:00:15.560Z",
+      "updatedAtMs": 1789106415560,
       "searchText": "bhatakna rajmachi camping | bhatakna tours & travels rajmachi fort camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -2029,8 +2063,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:48.661Z",
-      "updatedAtMs": 1789060668661,
+      "lastUpdatedAt": "2026-09-11T06:00:03.444Z",
+      "updatedAtMs": 1789106403444,
       "searchText": "bhatakna pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -2060,8 +2094,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:14:56.031Z",
-      "updatedAtMs": 1789060496031,
+      "lastUpdatedAt": "2026-09-11T05:56:45.051Z",
+      "updatedAtMs": 1789106205051,
       "searchText": "bhatakna camping behind waterfall and harishchandragad trek harishchandragad camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -2091,39 +2125,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:54.882Z",
-      "updatedAtMs": 1789060734882,
+      "lastUpdatedAt": "2026-09-11T06:01:18.636Z",
+      "updatedAtMs": 1789106478636,
       "searchText": "bhatakna valentines day special pawna lakeside camping pawna lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpv59jbl06yfg328n5jzqwgv",
-      "title": "Torna Fort Monsoon Trek 2023",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Torna Fort Trek",
-      "trekSlug": "torna-fort-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/torna-fort-monsoon-trek-2023-126699",
-      "priceInr": 1299,
-      "priceText": "₹1,299",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:41.506Z",
-      "updatedAtMs": 1789060721506,
-      "searchText": "bhatakna torna fort monsoon trek 2023 torna fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpl2zfmo00cd1pnhw8qb4hwy",
@@ -2155,9 +2159,39 @@
       "pickupLocations": [
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:14:43.690Z",
-      "updatedAtMs": 1789060483690,
+      "lastUpdatedAt": "2026-09-11T05:56:31.515Z",
+      "updatedAtMs": 1789106191515,
       "searchText": "bhatakna bhandardara lake fireflies festival camping 2024 | fireflies festival from pune bhandardara lake fireflies + camping pune breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay sion"
+    },
+    {
+      "id": "cmpv59jbl06yfg328n5jzqwgv",
+      "title": "Torna Fort Monsoon Trek 2023",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Torna Fort Trek",
+      "trekSlug": "torna-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/torna-fort-monsoon-trek-2023-126699",
+      "priceInr": 1299,
+      "priceText": "₹1,299",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-11T06:01:03.733Z",
+      "updatedAtMs": 1789106463733,
+      "searchText": "bhatakna torna fort monsoon trek 2023 torna fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpl1kql0007f1wnhnt5kex68",
@@ -2192,8 +2226,8 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:14:26.632Z",
-      "updatedAtMs": 1789060466632,
+      "lastUpdatedAt": "2026-09-11T05:56:12.602Z",
+      "updatedAtMs": 1789106172602,
       "searchText": "bhatakna aadrai jungle trek corporate special aadrai jungle trek trek mumbai breakfast, lunch breakfast, lunch borivali ghatkopar thane kalyan chembur sion"
     },
     {
@@ -2223,8 +2257,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:09.147Z",
-      "updatedAtMs": 1789060569147,
+      "lastUpdatedAt": "2026-09-11T05:58:11.658Z",
+      "updatedAtMs": 1789106291658,
       "searchText": "bhatakna igatpuri waterfall trek and watersports igatpuri trek mumbai lunch, tea and snacks tent stay lunch, tea and snacks tent stay"
     },
     {
@@ -2254,8 +2288,8 @@
         "Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:01.848Z",
-      "updatedAtMs": 1789060681848,
+      "lastUpdatedAt": "2026-09-11T06:00:17.228Z",
+      "updatedAtMs": 1789106417228,
       "searchText": "bhatakna rajmachi fireflies trek 2026 | fireflies near mumbai pune rajmachi fort fireflies mixed breakfast, dinner homestay breakfast, dinner homestay"
     },
     {
@@ -2287,8 +2321,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-10T17:15:54.217Z",
-      "updatedAtMs": 1789060554217,
+      "lastUpdatedAt": "2026-09-11T05:57:55.472Z",
+      "updatedAtMs": 1789106275472,
       "searchText": "bhatakna harishchandragad trek from pune 2026 harishchandragad trek pune breakfast, lunch breakfast, lunch nashik nashik phata"
     },
     {
@@ -2319,8 +2353,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:15:27.986Z",
-      "updatedAtMs": 1789060527986,
+      "lastUpdatedAt": "2026-09-11T05:57:20.666Z",
+      "updatedAtMs": 1789106240666,
       "searchText": "bhatakna fireflies special bhimashankar temple trek and camping ( from pune) special bhimashankar temple trek and fireflies + camping pune breakfast, lunch, tea and snacks tent stay breakfast, lunch, tea and snacks tent stay"
     },
     {
@@ -2353,8 +2387,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-10T17:16:35.804Z",
-      "updatedAtMs": 1789060595804,
+      "lastUpdatedAt": "2026-09-11T05:58:40.632Z",
+      "updatedAtMs": 1789106320632,
       "searchText": "bhatakna kalu waterfall trek pune 2026 kalu waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata"
     },
     {
@@ -2385,8 +2419,8 @@
         "Tent stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:15.716Z",
-      "updatedAtMs": 1789060695716,
+      "lastUpdatedAt": "2026-09-11T06:00:35.430Z",
+      "updatedAtMs": 1789106435430,
       "searchText": "bhatakna sandhan valley fireflies trek and camping 2026 sandhan valley fireflies + camping mumbai breakfast, lunch, dinner, tea and snacks tent stay, homestay breakfast, lunch, dinner, tea and snacks tent stay, homestay"
     },
     {
@@ -2421,8 +2455,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-10T17:17:57.909Z",
-      "updatedAtMs": 1789060677909,
+      "lastUpdatedAt": "2026-09-11T06:00:13.893Z",
+      "updatedAtMs": 1789106413893,
       "searchText": "bhatakna rajgad fort trek rajgad fort trek trek mumbai breakfast, lunch breakfast, lunch borivali chembur sion nashik nashik phata"
     },
     {
@@ -2452,8 +2486,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:21.877Z",
-      "updatedAtMs": 1789060701877,
+      "lastUpdatedAt": "2026-09-11T06:00:42.114Z",
+      "updatedAtMs": 1789106442114,
       "searchText": "bhatakna sandhan valley trek & camping rappelling sandhan valley camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -2483,8 +2517,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:58.015Z",
-      "updatedAtMs": 1789060738015,
+      "lastUpdatedAt": "2026-09-11T06:01:22.095Z",
+      "updatedAtMs": 1789106482095,
       "searchText": "bhatakna velas turtle festival -1n/1d pune velas turtle festival 1n 1d trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
@@ -2514,8 +2548,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:56.476Z",
-      "updatedAtMs": 1789060736476,
+      "lastUpdatedAt": "2026-09-11T06:01:20.382Z",
+      "updatedAtMs": 1789106480382,
       "searchText": "bhatakna vasota jungle trek with camping pune vasota jungle camping pune breakfast, lunch tent stay breakfast, lunch tent stay"
     },
     {
@@ -2545,8 +2579,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:17:31.705Z",
-      "updatedAtMs": 1789060651705,
+      "lastUpdatedAt": "2026-09-11T05:59:45.000Z",
+      "updatedAtMs": 1789106385000,
       "searchText": "bhatakna new year eve bhandardara lakeside camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -2581,8 +2615,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-10T17:18:14.180Z",
-      "updatedAtMs": 1789060694180,
+      "lastUpdatedAt": "2026-09-11T06:00:33.580Z",
+      "updatedAtMs": 1789106433580,
       "searchText": "bhatakna sandhan valley fireflies trek camping pune sandhan valley fireflies + camping pune breakfast, lunch, dinner tent stay, homestay breakfast, lunch, dinner tent stay, homestay sion nashik nashik phata"
     },
     {
@@ -2611,8 +2645,8 @@
         "Breakfast, Lunch, Dinner, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:14:25.092Z",
-      "updatedAtMs": 1789060465092,
+      "lastUpdatedAt": "2026-09-11T05:56:10.904Z",
+      "updatedAtMs": 1789106170904,
       "searchText": "bhatakna amk - alang madan kulang trek alang madan kulang trek mumbai breakfast, lunch, dinner, tea and snacks breakfast, lunch, dinner, tea and snacks"
     },
     {
@@ -2642,8 +2676,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:17.253Z",
-      "updatedAtMs": 1789060697253,
+      "lastUpdatedAt": "2026-09-11T06:00:37.100Z",
+      "updatedAtMs": 1789106437100,
       "searchText": "bhatakna sandhan valley milkyway camping sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -2673,8 +2707,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:18.793Z",
-      "updatedAtMs": 1789060698793,
+      "lastUpdatedAt": "2026-09-11T06:00:38.770Z",
+      "updatedAtMs": 1789106438770,
       "searchText": "bhatakna sandhan valley stargazing camping sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -2704,8 +2738,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:18:20.334Z",
-      "updatedAtMs": 1789060700334,
+      "lastUpdatedAt": "2026-09-11T06:00:40.441Z",
+      "updatedAtMs": 1789106440441,
       "searchText": "bhatakna sandhan valley stargazing camping & trekking sandhan valley camping mumbai lunch, dinner, tea and snacks tent stay lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -2740,8 +2774,8 @@
         "Chembur",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-10T17:18:59.555Z",
-      "updatedAtMs": 1789060739555,
+      "lastUpdatedAt": "2026-09-11T06:01:23.753Z",
+      "updatedAtMs": 1789106483753,
       "searchText": "bhatakna velas turtle festival 2026 from mumbai & pune velas turtle festival trek mixed breakfast, lunch, dinner dormitory stay, homestay breakfast, lunch, dinner dormitory stay, homestay borivali panvel chembur sion"
     },
     {
@@ -2768,8 +2802,8 @@
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-10T17:16:49.694Z",
-      "updatedAtMs": 1789060609694,
+      "lastUpdatedAt": "2026-09-11T05:58:58.871Z",
+      "updatedAtMs": 1789106338871,
       "searchText": "bhatakna kedarnath chopta tungnath rishikesh kedarnath tungnath rishikesh trek mumbai"
     }
   ]
