@@ -14,8 +14,8 @@
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN",
-      "NON_AC_BUS"
+      "NON_AC_BUS",
+      "TRAIN"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -41,7 +41,7 @@
     "lowestPrice": 799,
     "cheapestOrganizerName": "Treks and Trails India",
     "cheapestOrganizerSlug": "treks-and-trails-india",
-    "cheapestPackageTitle": "Aadrai Jungle Trek Pune",
+    "cheapestPackageTitle": "Aadrai Jungle Trek from Pune | Unexplored Sahyadri Rainforest Trek",
     "mealsSummary": [
       "Breakfast",
       "Lunch",
@@ -51,6 +51,36 @@
     "variantCount": 1
   },
   "packages": [
+    {
+      "id": "cmq9ygr2v06q8gw0iigx835ty",
+      "title": "Aadrai Jungle Trek from Pune | Unexplored Sahyadri Rainforest Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Aadrai Jungle Trek",
+      "trekSlug": "aadrai-jungle-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/aadrai-jungle-trek-from-pune",
+      "priceInr": 799,
+      "priceText": "₹799 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T06:05:01.574Z",
+      "updatedAtMs": 1789365901574,
+      "searchText": "treks and trails india aadrai jungle trek from pune | unexplored sahyadri rainforest trek aadrai jungle trek trek pune breakfast, lunch breakfast, lunch"
+    },
     {
       "id": "cmpfjyknf011muonhspw329ab",
       "title": "Aadrai Jungle Trek Pune",
@@ -107,39 +137,9 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-13T17:18:46.706Z",
-      "updatedAtMs": 1789319926706,
+      "lastUpdatedAt": "2026-09-14T06:04:59.543Z",
+      "updatedAtMs": 1789365899543,
       "searchText": "treks and trails india aadrai jungle one day trek from pune | morning departure, same-day return aadrai jungle trek trek pune breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmq9ygr2v06q8gw0iigx835ty",
-      "title": "Aadrai Jungle Trek from Pune | Unexplored Sahyadri Rainforest Trek",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Aadrai Jungle Trek",
-      "trekSlug": "aadrai-jungle-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/aadrai-jungle-trek-from-pune",
-      "priceInr": 799,
-      "priceText": "₹799 per person",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-13T17:18:48.735Z",
-      "updatedAtMs": 1789319928735,
-      "searchText": "treks and trails india aadrai jungle trek from pune | unexplored sahyadri rainforest trek aadrai jungle trek trek pune breakfast, lunch breakfast, lunch"
     },
     {
       "id": "cmpl25e1g0034fpnh99mi7kso",
@@ -168,10 +168,10 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-13T16:55:32.570Z",
-      "updatedAtMs": 1789318532570,
+      "lastUpdatedAt": "2026-09-14T05:45:43.911Z",
+      "updatedAtMs": 1789364743911,
       "searchText": "trekhievers aadrai jungle trek | pune aadrai jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     }
   ],
-  "updatedAt": "2026-09-13T17:18:48.735Z"
+  "updatedAt": "2026-09-14T06:05:01.574Z"
 }
