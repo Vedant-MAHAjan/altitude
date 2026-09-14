@@ -3,8 +3,8 @@
   "slug": "trekhievers",
   "websiteUrl": "https://www.trekhievers.com",
   "description": "Vacation Labs based trek organizer with city-specific trek collections and detailed cost plus inclusion sections.",
-  "packageCount": 81,
-  "activeTreks": 48,
+  "packageCount": 77,
+  "activeTreks": 46,
   "priceMin": 699,
   "priceMax": 10000,
   "pickupLocations": [
@@ -19,11 +19,23 @@
     "Thane",
     "Kalyan"
   ],
-  "updatedAt": "2026-09-14T05:53:30.575Z",
+  "updatedAt": "2026-09-14T18:37:13.588Z",
   "treks": [
+    {
+      "name": "Kothaligad Trek Peth Fort",
+      "slug": "kothaligad-trek-peth-fort"
+    },
+    {
+      "name": "Kalavantin Durg",
+      "slug": "kalavantin-durg"
+    },
     {
       "name": "Bhairavgad Climbing & Rappelling",
       "slug": "bhairavgad-climbing-rappelling"
+    },
+    {
+      "name": "Lohagad Fort Trek",
+      "slug": "lohagad-fort-trek"
     },
     {
       "name": "Ghangad Trek",
@@ -34,24 +46,12 @@
       "slug": "harihar-fort"
     },
     {
-      "name": "Kalavantin Durg",
-      "slug": "kalavantin-durg"
+      "name": "Irshalgad Trek",
+      "slug": "irshalgad-trek"
     },
     {
       "name": "Kalsubai",
       "slug": "kalsubai"
-    },
-    {
-      "name": "Kothaligad Trek Peth Fort",
-      "slug": "kothaligad-trek-peth-fort"
-    },
-    {
-      "name": "Lohagad Fort Trek",
-      "slug": "lohagad-fort-trek"
-    },
-    {
-      "name": "Irshalgad Trek",
-      "slug": "irshalgad-trek"
     },
     {
       "name": "Harishchandragad",
@@ -114,32 +114,28 @@
       "slug": "visapur-fort-trek"
     },
     {
-      "name": "Bhimashankar To Bhorgiri Trek",
-      "slug": "bhimashankar-to-bhorgiri-trek"
-    },
-    {
-      "name": "Gavraiban Jungle Trek",
-      "slug": "gavraiban-jungle-trek"
+      "name": "Korigad Trek",
+      "slug": "korigad-trek"
     },
     {
       "name": "Savlya Ghat Trek",
       "slug": "savlya-ghat-trek"
     },
     {
-      "name": "Korigad Trek",
-      "slug": "korigad-trek"
+      "name": "Bhimashankar To Bhorgiri Trek",
+      "slug": "bhimashankar-to-bhorgiri-trek"
     },
     {
       "name": "Aadrai Jungle Trek",
       "slug": "aadrai-jungle-trek"
     },
     {
-      "name": "Naneghat Trek",
-      "slug": "naneghat-trek"
-    },
-    {
       "name": "Devkund Waterfall Trek",
       "slug": "devkund-waterfall-trek"
+    },
+    {
+      "name": "Naneghat Trek",
+      "slug": "naneghat-trek"
     },
     {
       "name": "Rajgad Fort Flowering Special Trek",
@@ -152,10 +148,6 @@
     {
       "name": "Kalu Waterfall Trek",
       "slug": "kalu-waterfall-trek"
-    },
-    {
-      "name": "Nanemachi Waterfall Trek",
-      "slug": "nanemachi-waterfall-trek"
     },
     {
       "name": "Kusur Plateau Trek",
@@ -194,12 +186,12 @@
       "slug": "alang-madan-kulang"
     },
     {
-      "name": "Udaipur Jawai Ex Indore",
-      "slug": "udaipur-jawai-ex-indore"
-    },
-    {
       "name": "Udaipur Jawai",
       "slug": "udaipur-jawai"
+    },
+    {
+      "name": "Udaipur Jawai Ex Indore",
+      "slug": "udaipur-jawai-ex-indore"
     },
     {
       "name": "Bhimashankar Trimbakeshwar Grishneshwar",
@@ -215,6 +207,66 @@
     }
   ],
   "packages": [
+    {
+      "id": "cmpv4f8tj02hcg32832hzb3u2",
+      "title": "Kothaligad - Monsoon Trek Peth Fort",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kothaligad Trek Peth Fort",
+      "trekSlug": "kothaligad-trek-peth-fort",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kothaligad",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:32:41.080Z",
+      "updatedAtMs": 1789410761080,
+      "searchText": "trekhievers kothaligad - monsoon trek peth fort kothaligad trek peth fort trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv4dcya01tzg328pq5iv336",
+      "title": "Kalavantin- Durg Night trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalavantin-durg-night-trek-pune-132289",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:31:15.571Z",
+      "updatedAtMs": 1789410675571,
+      "searchText": "trekhievers kalavantin- durg night trek | pune kalavantin durg night trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
     {
       "id": "cmpmb9pcm00gzrvnh5c2ym9f8",
       "title": "Bhairavgad Fort Trek Shripunje | Pune",
@@ -244,9 +296,69 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-14T05:46:16.032Z",
-      "updatedAtMs": 1789364776032,
+      "lastUpdatedAt": "2026-09-14T18:28:01.277Z",
+      "updatedAtMs": 1789410481277,
       "searchText": "trekhievers bhairavgad fort trek shripunje | pune bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpmb9q5y00hnrvnhsapch3tl",
+      "title": "Bhairavgad Fort Trek Shripunje | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhairavgad Climbing & Rappelling",
+      "trekSlug": "bhairavgad-climbing-rappelling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhairavgad-fort-trek-shripunje-mumbai-129631",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:28:03.333Z",
+      "updatedAtMs": 1789410483333,
+      "searchText": "trekhievers bhairavgad fort trek shripunje | mumbai bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv4fmnx02lqg328qgduio38",
+      "title": "Lohagad Fort Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Lohagad Fort Trek",
+      "trekSlug": "lohagad-fort-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/lohagad",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:32:59.656Z",
+      "updatedAtMs": 1789410779656,
+      "searchText": "trekhievers lohagad fort trek lohagad fort trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpv4aqae00yqg328ct8y0ppk",
@@ -274,8 +386,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:13.460Z",
-      "updatedAtMs": 1789364833460,
+      "lastUpdatedAt": "2026-09-14T18:29:14.205Z",
+      "updatedAtMs": 1789410554205,
       "searchText": "trekhievers ghangad trek ghangad trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -304,9 +416,69 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:45.587Z",
-      "updatedAtMs": 1789364865587,
+      "lastUpdatedAt": "2026-09-14T18:29:54.895Z",
+      "updatedAtMs": 1789410594895,
       "searchText": "trekhievers harihar fireflies trek harihar fort fireflies mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv4chne01ikg328dujt3c7m",
+      "title": "Irshalgad Monsoon Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Irshalgad Trek",
+      "trekSlug": "irshalgad-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/irshalgad",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:30:27.907Z",
+      "updatedAtMs": 1789410627907,
+      "searchText": "trekhievers irshalgad monsoon trek irshalgad trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv4dlra01wzg328m6bfgkt4",
+      "title": "Kalsubai Fireflies Special Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-fireflies-special-night-trek-125259",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES",
+      "variantLabel": "Fireflies",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:31:21.709Z",
+      "updatedAtMs": 1789410681709,
+      "searchText": "trekhievers kalsubai fireflies special trek kalsubai fireflies mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpfjlz9201kfv2nhe8kjt38o",
@@ -339,8 +511,8 @@
         "Nashik Phata",
         "Nirgudpada"
       ],
-      "lastUpdatedAt": "2026-09-14T05:47:47.192Z",
-      "updatedAtMs": 1789364867192,
+      "lastUpdatedAt": "2026-09-14T18:29:56.946Z",
+      "updatedAtMs": 1789410596946,
       "searchText": "trekhievers harihar fort flower trek | pune harihar fort trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay nashik nashik phata nirgudpada"
     },
     {
@@ -369,249 +541,9 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:48.803Z",
-      "updatedAtMs": 1789364868803,
+      "lastUpdatedAt": "2026-09-14T18:29:59.000Z",
+      "updatedAtMs": 1789410599000,
       "searchText": "trekhievers harihar fort trek | mumbai harihar fort trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4d95o01sug328f18m3dsl",
-      "title": "Kalavantin Durg Night Trek | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kalavantin Durg",
-      "trekSlug": "kalavantin-durg",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kalavantin-durg-night-trek-mumbai-132303",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK",
-      "variantLabel": "Night trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:44.949Z",
-      "updatedAtMs": 1789364924949,
-      "searchText": "trekhievers kalavantin durg night trek | mumbai kalavantin durg night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4dcya01tzg328pq5iv336",
-      "title": "Kalavantin- Durg Night trek | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kalavantin Durg",
-      "trekSlug": "kalavantin-durg",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kalavantin-durg-night-trek-pune-132289",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK",
-      "variantLabel": "Night trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:48.150Z",
-      "updatedAtMs": 1789364928150,
-      "searchText": "trekhievers kalavantin- durg night trek | pune kalavantin durg night trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpe5r48f00088knh8ijwsq5t",
-      "title": "Kalsubai Flower Trek | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-trek",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:54.568Z",
-      "updatedAtMs": 1789364934568,
-      "searchText": "trekhievers kalsubai flower trek | mumbai kalsubai trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4f8tj02hcg32832hzb3u2",
-      "title": "Kothaligad - Monsoon Trek Peth Fort",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kothaligad Trek Peth Fort",
-      "trekSlug": "kothaligad-trek-peth-fort",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kothaligad",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:49:53.082Z",
-      "updatedAtMs": 1789364993082,
-      "searchText": "trekhievers kothaligad - monsoon trek peth fort kothaligad trek peth fort trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4fmnx02lqg328qgduio38",
-      "title": "Lohagad Fort Trek",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Lohagad Fort Trek",
-      "trekSlug": "lohagad-fort-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/lohagad",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:50:07.797Z",
-      "updatedAtMs": 1789365007797,
-      "searchText": "trekhievers lohagad fort trek lohagad fort trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpmb9q5y00hnrvnhsapch3tl",
-      "title": "Bhairavgad Fort Trek Shripunje | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Bhairavgad Climbing & Rappelling",
-      "trekSlug": "bhairavgad-climbing-rappelling",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/bhairavgad-fort-trek-shripunje-mumbai-129631",
-      "priceInr": 699,
-      "priceText": "₹699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:17.641Z",
-      "updatedAtMs": 1789364777641,
-      "searchText": "trekhievers bhairavgad fort trek shripunje | mumbai bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4chne01ikg328dujt3c7m",
-      "title": "Irshalgad Monsoon Trek",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Irshalgad Trek",
-      "trekSlug": "irshalgad-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/irshalgad",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:11.365Z",
-      "updatedAtMs": 1789364891365,
-      "searchText": "trekhievers irshalgad monsoon trek irshalgad trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4dlra01wzg328m6bfgkt4",
-      "title": "Kalsubai Fireflies Special Trek",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-fireflies-special-night-trek-125259",
-      "priceInr": 699,
-      "priceText": "₹699 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES",
-      "variantLabel": "Fireflies",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:52.955Z",
-      "updatedAtMs": 1789364932955,
-      "searchText": "trekhievers kalsubai fireflies special trek kalsubai fireflies mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpe5r6a4004b8knhezr4sbmd",
@@ -639,9 +571,69 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:50.421Z",
-      "updatedAtMs": 1789364870421,
+      "lastUpdatedAt": "2026-09-14T18:30:01.053Z",
+      "updatedAtMs": 1789410601053,
       "searchText": "trekhievers harishchandragad flower trek | mumbai harishchandragad trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpv4d95o01sug328f18m3dsl",
+      "title": "Kalavantin Durg Night Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalavantin Durg",
+      "trekSlug": "kalavantin-durg",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalavantin-durg-night-trek-mumbai-132303",
+      "priceInr": 699,
+      "priceText": "₹699 per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK",
+      "variantLabel": "Night trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:31:11.486Z",
+      "updatedAtMs": 1789410671486,
+      "searchText": "trekhievers kalavantin durg night trek | mumbai kalavantin durg night trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+    },
+    {
+      "id": "cmpe5r48f00088knh8ijwsq5t",
+      "title": "Kalsubai Flower Trek | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-trek",
+      "priceInr": 699,
+      "priceText": "₹699",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:31:23.758Z",
+      "updatedAtMs": 1789410683758,
+      "searchText": "trekhievers kalsubai flower trek | mumbai kalsubai trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpv4kq4i04blg328b55jtn50",
@@ -669,8 +661,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:03.096Z",
-      "updatedAtMs": 1789365183096,
+      "lastUpdatedAt": "2026-09-14T18:36:38.738Z",
+      "updatedAtMs": 1789410998738,
       "searchText": "trekhievers tikona fort trek tikona fort trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -702,8 +694,8 @@
         "Borivali",
         "Dadar"
       ],
-      "lastUpdatedAt": "2026-09-14T05:47:25.821Z",
-      "updatedAtMs": 1789364845821,
+      "lastUpdatedAt": "2026-09-14T18:29:30.219Z",
+      "updatedAtMs": 1789410570219,
       "searchText": "trekhievers gorakhgad trek gorakhgad trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali dadar"
     },
     {
@@ -732,8 +724,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:02.592Z",
-      "updatedAtMs": 1789365122592,
+      "lastUpdatedAt": "2026-09-14T18:35:22.418Z",
+      "updatedAtMs": 1789410922418,
       "searchText": "trekhievers peb fort trek | vikatgad monsoon trek peb fort trek trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -763,8 +755,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:08.164Z",
-      "updatedAtMs": 1789364888164,
+      "lastUpdatedAt": "2026-09-14T18:30:23.815Z",
+      "updatedAtMs": 1789410623815,
       "searchText": "trekhievers holi at pawna lake pawna lake trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -796,8 +788,8 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-14T05:52:20.401Z",
-      "updatedAtMs": 1789365140401,
+      "lastUpdatedAt": "2026-09-14T18:35:44.956Z",
+      "updatedAtMs": 1789410944956,
       "searchText": "trekhievers ratangad flower trek | pune ratangad trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
@@ -827,8 +819,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:51:32.083Z",
-      "updatedAtMs": 1789365092083,
+      "lastUpdatedAt": "2026-09-14T18:34:43.075Z",
+      "updatedAtMs": 1789410883075,
       "searchText": "trekhievers new year's eve bhandardara lake camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -857,8 +849,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:19.252Z",
-      "updatedAtMs": 1789364779252,
+      "lastUpdatedAt": "2026-09-14T18:28:05.392Z",
+      "updatedAtMs": 1789410485392,
       "searchText": "trekhievers bhairavgad trek bhairavgad climbing & rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -919,8 +911,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:51:33.676Z",
-      "updatedAtMs": 1789365093676,
+      "lastUpdatedAt": "2026-09-14T18:34:45.469Z",
+      "updatedAtMs": 1789410885469,
       "searchText": "trekhievers new year's eve igatpuri water sports & camping igatpuri camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -950,8 +942,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:01.727Z",
-      "updatedAtMs": 1789364881727,
+      "lastUpdatedAt": "2026-09-14T18:30:15.603Z",
+      "updatedAtMs": 1789410615603,
       "searchText": "trekhievers holi special 2024 alibag beach camping holi special alibag beach camping mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -981,8 +973,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:46.549Z",
-      "updatedAtMs": 1789364926549,
+      "lastUpdatedAt": "2026-09-14T18:31:13.529Z",
+      "updatedAtMs": 1789410673529,
       "searchText": "trekhievers kalavantin durg trek & camping kalavantin durg trek camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -1013,106 +1005,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:28.771Z",
-      "updatedAtMs": 1789365148771,
+      "lastUpdatedAt": "2026-09-14T18:35:55.249Z",
+      "updatedAtMs": 1789410955249,
       "searchText": "trekhievers sandhan valley fireflies trek, camping and rappelling sandhan valley fireflies + camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
-    },
-    {
-      "id": "cmpmb9rpw00j6rvnh5upttu61",
-      "title": "Bhandardara Fireflies Camping | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Bhandardara Lake",
-      "trekSlug": "bhandardara-lake",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/bhandardara-lake-fireflies-festival-with-camping",
-      "priceInr": 1299,
-      "priceText": "₹1,299",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "CAMPING",
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES__CAMPING",
-      "variantLabel": "Fireflies + Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:20.862Z",
-      "updatedAtMs": 1789364780862,
-      "searchText": "trekhievers bhandardara fireflies camping | mumbai bhandardara lake fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpv4dpjy01y4g328lqfqfexb",
-      "title": "Kalsubai Trek & Camping | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kalsubai",
-      "trekSlug": "kalsubai",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-trek-camping-pune-132047",
-      "priceInr": 1299,
-      "priceText": "₹1,299 per person",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "CAMPING"
-      ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:59.394Z",
-      "updatedAtMs": 1789364939394,
-      "searchText": "trekhievers kalsubai trek & camping | pune kalsubai camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpmb9sqg00k7rvnhzohbu3jc",
-      "title": "Bhandardara Fireflies Camping | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Bhandardara Lake",
-      "trekSlug": "bhandardara-lake",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/bhandardara-fireflies-pune",
-      "priceInr": 1299,
-      "priceText": "₹1,299",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "CAMPING",
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES__CAMPING",
-      "variantLabel": "Fireflies + Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay"
-      ],
-      "pickupLocations": [
-        "Sion"
-      ],
-      "lastUpdatedAt": "2026-09-14T05:46:22.478Z",
-      "updatedAtMs": 1789364782478,
-      "searchText": "trekhievers bhandardara fireflies camping | pune bhandardara lake fireflies + camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay sion"
     },
     {
       "id": "cmpv4jun7040mg328uo14lmgb",
@@ -1144,9 +1039,106 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-14T05:52:30.374Z",
-      "updatedAtMs": 1789365150374,
+      "lastUpdatedAt": "2026-09-14T18:35:57.301Z",
+      "updatedAtMs": 1789410957301,
       "searchText": "trekhievers sandhan valley trek & camping | pune sandhan valley camping pune breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay nashik nashik phata"
+    },
+    {
+      "id": "cmpmb9rpw00j6rvnh5upttu61",
+      "title": "Bhandardara Fireflies Camping | Mumbai",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhandardara Lake",
+      "trekSlug": "bhandardara-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhandardara-lake-fireflies-festival-with-camping",
+      "priceInr": 1299,
+      "priceText": "₹1,299",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:28:07.446Z",
+      "updatedAtMs": 1789410487446,
+      "searchText": "trekhievers bhandardara fireflies camping | mumbai bhandardara lake fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
+    },
+    {
+      "id": "cmpmb9sqg00k7rvnhzohbu3jc",
+      "title": "Bhandardara Fireflies Camping | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhandardara Lake",
+      "trekSlug": "bhandardara-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhandardara-fireflies-pune",
+      "priceInr": 1299,
+      "priceText": "₹1,299",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [
+        "Sion"
+      ],
+      "lastUpdatedAt": "2026-09-14T18:28:09.514Z",
+      "updatedAtMs": 1789410489514,
+      "searchText": "trekhievers bhandardara fireflies camping | pune bhandardara lake fireflies + camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay sion"
+    },
+    {
+      "id": "cmpv4dpjy01y4g328lqfqfexb",
+      "title": "Kalsubai Trek & Camping | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Kalsubai",
+      "trekSlug": "kalsubai",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/kalsubai-trek-camping-pune-132047",
+      "priceInr": 1299,
+      "priceText": "₹1,299 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:31:29.906Z",
+      "updatedAtMs": 1789410689906,
+      "searchText": "trekhievers kalsubai trek & camping | pune kalsubai camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
       "id": "cmpfjm0gc01mpv2nhq9vz5ra4",
@@ -1177,8 +1169,8 @@
       "pickupLocations": [
         "Lonavala"
       ],
-      "lastUpdatedAt": "2026-09-14T05:52:15.599Z",
-      "updatedAtMs": 1789365135599,
+      "lastUpdatedAt": "2026-09-14T18:35:38.801Z",
+      "updatedAtMs": 1789410938801,
       "searchText": "trekhievers rajmachi fireflies trek | pune rajmachi fort fireflies pune breakfast, tea and snacks tent stay breakfast, tea and snacks tent stay lonavala"
     },
     {
@@ -1207,8 +1199,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:04.705Z",
-      "updatedAtMs": 1789365184705,
+      "lastUpdatedAt": "2026-09-14T18:36:40.779Z",
+      "updatedAtMs": 1789411000779,
       "searchText": "trekhievers torna fort flower trek |pune torna fort flower trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -1238,22 +1230,22 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:30.575Z",
-      "updatedAtMs": 1789365210575,
+      "lastUpdatedAt": "2026-09-14T18:37:13.588Z",
+      "updatedAtMs": 1789411033588,
       "searchText": "trekhievers visapur fort monsoon trek | pune visapur fort trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
-      "id": "cmpmb9vwe00mmrvnhydg5drb0",
-      "title": "Bhimashankar to Bhorgiri Monsoon Trek",
+      "id": "cmpv4f50t02g2g328fboj4nnw",
+      "title": "Korigad Fort Trek | Monsoon Trek",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Bhimashankar To Bhorgiri Trek",
-      "trekSlug": "bhimashankar-to-bhorgiri-trek",
+      "trekName": "Korigad Trek",
+      "trekSlug": "korigad-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/bhimashankar",
+      "sourceUrl": "https://www.trekhievers.com/tours/korigad-fort-trek-pune-138156",
       "priceInr": 1399,
       "priceText": "₹1,399 per person",
-      "transportType": "NON_AC_BUS",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
@@ -1263,24 +1255,25 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
+      "staySummary": "Hotel stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:27.304Z",
-      "updatedAtMs": 1789364787304,
-      "searchText": "trekhievers bhimashankar to bhorgiri monsoon trek bhimashankar to bhorgiri trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "lastUpdatedAt": "2026-09-14T18:32:36.987Z",
+      "updatedAtMs": 1789410756987,
+      "searchText": "trekhievers korigad fort trek | monsoon trek korigad trek trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
-      "id": "cms9vfjfc00z3ff4szto8c83f",
-      "title": "Gavraiban Jungle Trek | Pune",
+      "id": "cmsxakfjt041ehd6h18slf1ts",
+      "title": "Savlya Ghat Trek | Pune",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Gavraiban Jungle Trek",
-      "trekSlug": "gavraiban-jungle-trek",
+      "trekName": "Savlya Ghat Trek",
+      "trekSlug": "savlya-ghat-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/gavraiban-jungle-trek-pune",
+      "sourceUrl": "https://www.trekhievers.com/tours/savlyaghat-trek-pune",
       "priceInr": 1399,
       "priceText": "₹1,399",
       "transportType": "NON_AC_BUS",
@@ -1293,46 +1286,15 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
+      "staySummary": "Hotel stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:11.468Z",
-      "updatedAtMs": 1789364831468,
-      "searchText": "trekhievers gavraiban jungle trek | pune gavraiban jungle trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cmpv4jn8203xwg32826ur1iga",
-      "title": "Ratangad Night Trek & Camping | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Ratangad",
-      "trekSlug": "ratangad",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/ratangad-fort-night-trek-with-camping-mumbai-132304",
-      "priceInr": 1399,
-      "priceText": "₹1,399 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "CAMPING",
-        "NIGHT_TREK"
-      ],
-      "variantSignature": "NIGHT_TREK__CAMPING",
-      "variantLabel": "Night trek + Camping",
-      "mealsSummary": "Breakfast, Lunch, Dinner",
-      "staySummary": "Tent stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Dinner",
-        "Tent stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:23.586Z",
-      "updatedAtMs": 1789365143586,
-      "searchText": "trekhievers ratangad night trek & camping | mumbai ratangad night trek + camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+      "lastUpdatedAt": "2026-09-14T18:36:07.545Z",
+      "updatedAtMs": 1789410967545,
+      "searchText": "trekhievers savlya ghat trek | pune savlya ghat trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
       "id": "cmpe5rfjn00m68knhdncw3gg9",
@@ -1363,53 +1325,54 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-14T05:47:52.068Z",
-      "updatedAtMs": 1789364872068,
+      "lastUpdatedAt": "2026-09-14T18:30:03.105Z",
+      "updatedAtMs": 1789410603105,
       "searchText": "trekhievers harishchandragad flower trek | pune harishchandragad trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
-      "id": "cmsxakfjt041ehd6h18slf1ts",
-      "title": "Savlya Ghat Trek | Pune",
+      "id": "cmpv4jn8203xwg32826ur1iga",
+      "title": "Ratangad Night Trek & Camping | Mumbai",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Savlya Ghat Trek",
-      "trekSlug": "savlya-ghat-trek",
+      "trekName": "Ratangad",
+      "trekSlug": "ratangad",
       "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/savlyaghat-trek-pune",
-      "priceInr": 1399,
-      "priceText": "₹1,399",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:38.547Z",
-      "updatedAtMs": 1789365158547,
-      "searchText": "trekhievers savlya ghat trek | pune savlya ghat trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
-    },
-    {
-      "id": "cmpv4f50t02g2g328fboj4nnw",
-      "title": "Korigad Fort Trek | Monsoon Trek",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Korigad Trek",
-      "trekSlug": "korigad-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/korigad-fort-trek-pune-138156",
+      "sourceUrl": "https://www.trekhievers.com/tours/ratangad-fort-night-trek-with-camping-mumbai-132304",
       "priceInr": 1399,
       "priceText": "₹1,399 per person",
       "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING",
+        "NIGHT_TREK"
+      ],
+      "variantSignature": "NIGHT_TREK__CAMPING",
+      "variantLabel": "Night trek + Camping",
+      "mealsSummary": "Breakfast, Lunch, Dinner",
+      "staySummary": "Tent stay",
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Dinner",
+        "Tent stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:35:49.115Z",
+      "updatedAtMs": 1789410949115,
+      "searchText": "trekhievers ratangad night trek & camping | mumbai ratangad night trek + camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
+    },
+    {
+      "id": "cmpmb9vwe00mmrvnhydg5drb0",
+      "title": "Bhimashankar to Bhorgiri Monsoon Trek",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Bhimashankar To Bhorgiri Trek",
+      "trekSlug": "bhimashankar-to-bhorgiri-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/bhimashankar",
+      "priceInr": 1399,
+      "priceText": "₹1,399 per person",
+      "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
@@ -1419,15 +1382,14 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
+      "staySummary": null,
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
+        "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:49:49.888Z",
-      "updatedAtMs": 1789364989888,
-      "searchText": "trekhievers korigad fort trek | monsoon trek korigad trek trek mumbai breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+      "lastUpdatedAt": "2026-09-14T18:28:15.681Z",
+      "updatedAtMs": 1789410495681,
+      "searchText": "trekhievers bhimashankar to bhorgiri monsoon trek bhimashankar to bhorgiri trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpl25e1g0034fpnh99mi7kso",
@@ -1456,39 +1418,9 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:45:43.911Z",
-      "updatedAtMs": 1789364743911,
+      "lastUpdatedAt": "2026-09-14T18:27:20.007Z",
+      "updatedAtMs": 1789410440007,
       "searchText": "trekhievers aadrai jungle trek | pune aadrai jungle trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
-    },
-    {
-      "id": "cmpv4hpa303bwg328ijm1bswa",
-      "title": "Naneghat Monsoon Trek | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Naneghat Trek",
-      "trekSlug": "naneghat-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/naneghat-trek-pune",
-      "priceInr": 1399,
-      "priceText": "₹1,399",
-      "transportType": "NON_AC_BUS",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:51:15.170Z",
-      "updatedAtMs": 1789365075170,
-      "searchText": "trekhievers naneghat monsoon trek | pune naneghat trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpv4ae0j00uig328fonyx0bu",
@@ -1517,9 +1449,39 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:58.393Z",
-      "updatedAtMs": 1789364818393,
+      "lastUpdatedAt": "2026-09-14T18:28:55.434Z",
+      "updatedAtMs": 1789410535434,
       "searchText": "trekhievers devkund waterfall trek | pune devkund waterfall trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
+    },
+    {
+      "id": "cmpv4hpa303bwg328ijm1bswa",
+      "title": "Naneghat Monsoon Trek | Pune",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Naneghat Trek",
+      "trekSlug": "naneghat-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/naneghat-trek-pune",
+      "priceInr": 1399,
+      "priceText": "₹1,399",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "PUNE",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch, Tea and snacks"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:34:25.121Z",
+      "updatedAtMs": 1789410865121,
+      "searchText": "trekhievers naneghat monsoon trek | pune naneghat trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpv4jalm03u6g328sj0g0fka",
@@ -1547,8 +1509,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:12.179Z",
-      "updatedAtMs": 1789365132179,
+      "lastUpdatedAt": "2026-09-14T18:35:34.703Z",
+      "updatedAtMs": 1789410934703,
       "searchText": "trekhievers rajgad fort flower trek | pune rajgad fort flowering special trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -1581,8 +1543,8 @@
         "Nashik Phata",
         "Bari"
       ],
-      "lastUpdatedAt": "2026-09-14T05:48:56.180Z",
-      "updatedAtMs": 1789364936180,
+      "lastUpdatedAt": "2026-09-14T18:31:25.807Z",
+      "updatedAtMs": 1789410685807,
       "searchText": "trekhievers kalsubai flower trek | pune kalsubai trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata bari"
     },
     {
@@ -1642,8 +1604,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:18.801Z",
-      "updatedAtMs": 1789365138801,
+      "lastUpdatedAt": "2026-09-14T18:35:42.912Z",
+      "updatedAtMs": 1789410942912,
       "searchText": "trekhievers ratangad flower trek | mumbai ratangad trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -1673,8 +1635,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:21.994Z",
-      "updatedAtMs": 1789365141994,
+      "lastUpdatedAt": "2026-09-14T18:35:47.073Z",
+      "updatedAtMs": 1789410947073,
       "searchText": "trekhievers ratangad fort trek & camping | pune ratangad camping pune breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -1703,8 +1665,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:50:50.465Z",
-      "updatedAtMs": 1789365050465,
+      "lastUpdatedAt": "2026-09-14T18:33:54.303Z",
+      "updatedAtMs": 1789410834303,
       "searchText": "trekhievers matheran jungle trek matheran jungle trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -1736,24 +1698,24 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-09-14T05:49:02.594Z",
-      "updatedAtMs": 1789364942594,
+      "lastUpdatedAt": "2026-09-14T18:31:34.511Z",
+      "updatedAtMs": 1789410694511,
       "searchText": "trekhievers kalu waterfall trek | pune kalu waterfall trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
     },
     {
-      "id": "cmpv4hswp03ddg328cfkr30uj",
-      "title": "Nanemachi Waterfall Trek | Pune",
+      "id": "cmsxagtzj02hwhd6h1m3kha5v",
+      "title": "Kusur Plateau Trek | Pune",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Nanemachi Waterfall Trek",
-      "trekSlug": "nanemachi-waterfall-trek",
+      "trekName": "Kusur Plateau Trek",
+      "trekSlug": "kusur-plateau-trek",
       "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/nanemachi-waterfall-pune",
+      "sourceUrl": "https://www.trekhievers.com/tours/kusur-plateau-trek-pune",
       "priceInr": 1499,
-      "priceText": "₹1,499",
-      "transportType": "NON_AC_BUS",
+      "priceText": "₹1,499 per person",
+      "transportType": "TRAIN",
       "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
+      "forestFeeStatus": "INCLUDED",
       "listingCity": "PUNE",
       "variantTags": [
         "TREK_ONLY"
@@ -1761,14 +1723,15 @@
       "variantSignature": "TREK_ONLY",
       "variantLabel": "Trek",
       "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
+      "staySummary": "Hotel stay",
       "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
+        "Breakfast, Lunch, Tea and snacks",
+        "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:51:20.360Z",
-      "updatedAtMs": 1789365080360,
-      "searchText": "trekhievers nanemachi waterfall trek | pune nanemachi waterfall trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
+      "lastUpdatedAt": "2026-09-14T18:32:45.170Z",
+      "updatedAtMs": 1789410765170,
+      "searchText": "trekhievers kusur plateau trek | pune kusur plateau trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
       "id": "cmpe5riay00td8knh8ppjkeka",
@@ -1798,8 +1761,8 @@
         "Tent stay, Homestay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:10.578Z",
-      "updatedAtMs": 1789365130578,
+      "lastUpdatedAt": "2026-09-14T18:35:32.650Z",
+      "updatedAtMs": 1789410932650,
       "searchText": "trekhievers rajamchi fireflies trek & camping | lonavala rajmachi fort fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
     },
     {
@@ -1833,40 +1796,9 @@
         "Kalyan",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-14T05:45:42.103Z",
-      "updatedAtMs": 1789364742103,
+      "lastUpdatedAt": "2026-09-14T18:27:17.475Z",
+      "updatedAtMs": 1789410437475,
       "searchText": "trekhievers aadrai jungle trek | mumbai aadrai jungle trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
-    },
-    {
-      "id": "cmsxagtzj02hwhd6h1m3kha5v",
-      "title": "Kusur Plateau Trek | Pune",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Kusur Plateau Trek",
-      "trekSlug": "kusur-plateau-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/kusur-plateau-trek-pune",
-      "priceInr": 1499,
-      "priceText": "₹1,499 per person",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "PUNE",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks",
-        "Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:49:56.277Z",
-      "updatedAtMs": 1789364996277,
-      "searchText": "trekhievers kusur plateau trek | pune kusur plateau trek trek pune breakfast, lunch, tea and snacks hotel stay breakfast, lunch, tea and snacks hotel stay"
     },
     {
       "id": "cmpfjlnhy00qev2nhn4sphuf7",
@@ -1894,8 +1826,8 @@
         "Breakfast, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:13.789Z",
-      "updatedAtMs": 1789365133789,
+      "lastUpdatedAt": "2026-09-14T18:35:36.742Z",
+      "updatedAtMs": 1789410936742,
       "searchText": "trekhievers rajmachi fireflies trek | mumbai rajmachi fort fireflies mumbai breakfast, tea and snacks breakfast, tea and snacks"
     },
     {
@@ -1929,8 +1861,8 @@
         "Kalyan",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-14T05:51:16.985Z",
-      "updatedAtMs": 1789365076985,
+      "lastUpdatedAt": "2026-09-14T18:34:27.166Z",
+      "updatedAtMs": 1789410867166,
       "searchText": "trekhievers naneghat trek from mumbai | reverse waterfall naneghat trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
     },
     {
@@ -1992,8 +1924,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:07.377Z",
-      "updatedAtMs": 1789365127377,
+      "lastUpdatedAt": "2026-09-14T18:35:28.553Z",
+      "updatedAtMs": 1789410928553,
       "searchText": "trekhievers prabalmachi fireflies trek and camping prabalmachi trek and fireflies + camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
     },
     {
@@ -2022,8 +1954,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:55.175Z",
-      "updatedAtMs": 1789364815175,
+      "lastUpdatedAt": "2026-09-14T18:28:51.324Z",
+      "updatedAtMs": 1789410531324,
       "searchText": "trekhievers devkund waterfall rappelling devkund waterfall rappelling trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -2057,8 +1989,8 @@
         "Kalyan",
         "Sion"
       ],
-      "lastUpdatedAt": "2026-09-14T05:49:00.993Z",
-      "updatedAtMs": 1789364940993,
+      "lastUpdatedAt": "2026-09-14T18:31:31.957Z",
+      "updatedAtMs": 1789410691957,
       "searchText": "trekhievers kalu waterfall trek | mumbai kalu waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks borivali thane kalyan sion"
     },
     {
@@ -2087,8 +2019,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:04.089Z",
-      "updatedAtMs": 1789364764089,
+      "lastUpdatedAt": "2026-09-14T18:27:46.722Z",
+      "updatedAtMs": 1789410466722,
       "searchText": "trekhievers andharban jungle trek | pune andharban jungle trek trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -2117,8 +2049,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:56.781Z",
-      "updatedAtMs": 1789364816781,
+      "lastUpdatedAt": "2026-09-14T18:28:53.375Z",
+      "updatedAtMs": 1789410533375,
       "searchText": "trekhievers devkund waterfall trek | mumbai devkund waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -2148,69 +2080,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:48:57.790Z",
-      "updatedAtMs": 1789364937790,
+      "lastUpdatedAt": "2026-09-14T18:31:27.857Z",
+      "updatedAtMs": 1789410687857,
       "searchText": "trekhievers kalsubai trek & camping | mumbai kalsubai camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpv4hr0703cmg32873fasc2o",
-      "title": "Nanemachi Waterfall Trek | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Nanemachi Waterfall Trek",
-      "trekSlug": "nanemachi-waterfall-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/nanemachi-waterfall",
-      "priceInr": 1699,
-      "priceText": "₹1,699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:51:18.580Z",
-      "updatedAtMs": 1789365078580,
-      "searchText": "trekhievers nanemachi waterfall trek | mumbai nanemachi waterfall trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
-    },
-    {
-      "id": "cms9vfl7700ztff4srcc832ro",
-      "title": "Gavraiban Jungle Trek | Mumbai",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Gavraiban Jungle Trek",
-      "trekSlug": "gavraiban-jungle-trek",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/gavraiban-jungle-trek-mumbai",
-      "priceInr": 1699,
-      "priceText": "₹1,699",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Lunch, Tea and snacks",
-      "staySummary": null,
-      "inclusionHighlights": [
-        "Breakfast, Lunch, Tea and snacks"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:09.679Z",
-      "updatedAtMs": 1789364829679,
-      "searchText": "trekhievers gavraiban jungle trek | mumbai gavraiban jungle trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
       "id": "cmpe5rjd701188knhxl1wb2po",
@@ -2238,8 +2110,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:24.176Z",
-      "updatedAtMs": 1789365204176,
+      "lastUpdatedAt": "2026-09-14T18:37:05.402Z",
+      "updatedAtMs": 1789411025402,
       "searchText": "trekhievers vasota jungle trek with camping | pune vasota jungle camping pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -2268,8 +2140,8 @@
         "Breakfast, Lunch, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:02.477Z",
-      "updatedAtMs": 1789364762477,
+      "lastUpdatedAt": "2026-09-14T18:27:44.663Z",
+      "updatedAtMs": 1789410464663,
       "searchText": "trekhievers andharban jungle trek | mumbai andharban jungle trek trek mumbai breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks"
     },
     {
@@ -2299,8 +2171,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:53.681Z",
-      "updatedAtMs": 1789364873681,
+      "lastUpdatedAt": "2026-09-14T18:30:05.159Z",
+      "updatedAtMs": 1789410605159,
       "searchText": "trekhievers harishchandragad trek & camping | mumbai harishchandragad camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -2329,8 +2201,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:31.972Z",
-      "updatedAtMs": 1789365151972,
+      "lastUpdatedAt": "2026-09-14T18:35:59.344Z",
+      "updatedAtMs": 1789410959344,
       "searchText": "trekhievers sandhan valley trek & rappelling | pune sandhan valley trek pune breakfast, lunch breakfast, lunch"
     },
     {
@@ -2360,8 +2232,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:33.569Z",
-      "updatedAtMs": 1789365153569,
+      "lastUpdatedAt": "2026-09-14T18:36:01.388Z",
+      "updatedAtMs": 1789410961388,
       "searchText": "trekhievers sandhan valley trek, rappelling & camping | mumbai sandhan valley camping mumbai breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -2391,8 +2263,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:50:12.051Z",
-      "updatedAtMs": 1789365012051,
+      "lastUpdatedAt": "2026-09-14T18:33:05.115Z",
+      "updatedAtMs": 1789410785115,
       "searchText": "trekhievers madurai rameshwaram kanyakumari trivandrum madurai rameshwaram kanyakumari trivandrum trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     },
     {
@@ -2422,8 +2294,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:50:10.455Z",
-      "updatedAtMs": 1789365010455,
+      "lastUpdatedAt": "2026-09-14T18:33:03.071Z",
+      "updatedAtMs": 1789410783071,
       "searchText": "trekhievers madurai rameshwaram kanyakumari madurai rameshwaram kanyakumari trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     },
     {
@@ -2453,8 +2325,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:52:27.178Z",
-      "updatedAtMs": 1789365147178,
+      "lastUpdatedAt": "2026-09-14T18:35:53.204Z",
+      "updatedAtMs": 1789410953204,
       "searchText": "trekhievers salher - salota trek salher salota trek trek mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -2484,8 +2356,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:47:55.289Z",
-      "updatedAtMs": 1789364875289,
+      "lastUpdatedAt": "2026-09-14T18:30:07.212Z",
+      "updatedAtMs": 1789410607212,
       "searchText": "trekhievers harishchandragad trek & camping | pune harishchandragad camping pune breakfast, lunch, dinner tent stay breakfast, lunch, dinner tent stay"
     },
     {
@@ -2517,8 +2389,8 @@
       "pickupLocations": [
         "Lonavala"
       ],
-      "lastUpdatedAt": "2026-09-14T05:49:51.490Z",
-      "updatedAtMs": 1789364991490,
+      "lastUpdatedAt": "2026-09-14T18:32:39.037Z",
+      "updatedAtMs": 1789410759037,
       "searchText": "trekhievers korigad trek with pawna lake camping pawna lake camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay lonavala"
     },
     {
@@ -2550,8 +2422,8 @@
       "pickupLocations": [
         "Lonavala"
       ],
-      "lastUpdatedAt": "2026-09-14T05:47:15.061Z",
-      "updatedAtMs": 1789364835061,
+      "lastUpdatedAt": "2026-09-14T18:29:16.250Z",
+      "updatedAtMs": 1789410556250,
       "searchText": "trekhievers ghangad trek with pawna lake camping pawna lake camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay lonavala"
     },
     {
@@ -2580,40 +2452,9 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:45:39.347Z",
-      "updatedAtMs": 1789364739347,
+      "lastUpdatedAt": "2026-09-14T18:27:14.223Z",
+      "updatedAtMs": 1789410434223,
       "searchText": "trekhievers amk (alang-madan-kulang) alang madan kulang trek mumbai breakfast, lunch breakfast, lunch"
-    },
-    {
-      "id": "cmtkcx2ez04hqfn2bv059mulo",
-      "title": "Udaipur Jawai Ex Indore",
-      "organizerName": "Trekhievers",
-      "organizerSlug": "trekhievers",
-      "trekName": "Udaipur Jawai Ex Indore",
-      "trekSlug": "udaipur-jawai-ex-indore",
-      "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/udaipur-jawai-ex-indore",
-      "priceInr": 5000,
-      "priceText": "Rs. 5000/-",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "NOT_INCLUDED",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "TREK_ONLY"
-      ],
-      "variantSignature": "TREK_ONLY",
-      "variantLabel": "Trek",
-      "mealsSummary": "Breakfast, Dinner",
-      "staySummary": "Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner",
-        "Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:11.151Z",
-      "updatedAtMs": 1789365191151,
-      "searchText": "trekhievers udaipur jawai ex indore udaipur jawai ex indore trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     },
     {
       "id": "cmtkcx0hs04h2fn2bdeou7v7j",
@@ -2642,9 +2483,40 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:53:09.542Z",
-      "updatedAtMs": 1789365189542,
+      "lastUpdatedAt": "2026-09-14T18:36:46.959Z",
+      "updatedAtMs": 1789411006959,
       "searchText": "trekhievers udaipur jawai udaipur jawai trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
+    },
+    {
+      "id": "cmtkcx2ez04hqfn2bv059mulo",
+      "title": "Udaipur Jawai Ex Indore",
+      "organizerName": "Trekhievers",
+      "organizerSlug": "trekhievers",
+      "trekName": "Udaipur Jawai Ex Indore",
+      "trekSlug": "udaipur-jawai-ex-indore",
+      "trekSummary": null,
+      "sourceUrl": "https://www.trekhievers.com/tours/udaipur-jawai-ex-indore",
+      "priceInr": 5000,
+      "priceText": "Rs. 5000/-",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Dinner",
+      "staySummary": "Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner",
+        "Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-09-14T18:36:49.007Z",
+      "updatedAtMs": 1789411009007,
+      "searchText": "trekhievers udaipur jawai ex indore udaipur jawai ex indore trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     },
     {
       "id": "cmpmb9uo300lrrvnh6p80o3r6",
@@ -2673,8 +2545,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:46:25.695Z",
-      "updatedAtMs": 1789364785695,
+      "lastUpdatedAt": "2026-09-14T18:28:13.630Z",
+      "updatedAtMs": 1789410493630,
       "searchText": "trekhievers bhimashankar trimbakeshwar grishneshwar bhimashankar trimbakeshwar grishneshwar trek other breakfast, lunch hotel stay breakfast, lunch hotel stay"
     },
     {
@@ -2704,8 +2576,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:49:35.474Z",
-      "updatedAtMs": 1789364975474,
+      "lastUpdatedAt": "2026-09-14T18:32:18.056Z",
+      "updatedAtMs": 1789410738056,
       "searchText": "trekhievers kedarnath tungnath badrinath kedarnath tungnath badrinath trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     },
     {
@@ -2735,8 +2607,8 @@
         "Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-09-14T05:49:37.083Z",
-      "updatedAtMs": 1789364977083,
+      "lastUpdatedAt": "2026-09-14T18:32:20.113Z",
+      "updatedAtMs": 1789410740113,
       "searchText": "trekhievers kedarnath tungnath rishikesh kedarnath tungnath rishikesh trek mumbai breakfast, dinner hotel stay breakfast, dinner hotel stay"
     }
   ]
