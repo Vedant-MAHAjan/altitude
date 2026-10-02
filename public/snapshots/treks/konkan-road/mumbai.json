@@ -1,20 +1,20 @@
 {
-  "destinationName": "Peb Fort Trek",
-  "destinationSlug": "peb-fort-trek",
+  "destinationName": "Konkan Road",
+  "destinationSlug": "konkan-road",
   "departureCity": "MUMBAI",
-  "routePath": "/treks/peb-fort-trek/mumbai",
+  "routePath": "/treks/konkan-road/mumbai",
   "summary": null,
   "packageCount": 1,
   "organizerCount": 1,
-  "startingPrice": 799,
-  "priceMin": 799,
-  "priceMax": 799,
+  "startingPrice": 5499,
+  "priceMin": 5499,
+  "priceMax": 5499,
   "availableVariants": [
     "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
-      "TRAIN"
+      "NON_AC_BUS"
     ],
     "mealPlans": [
       "INCLUDED"
@@ -33,10 +33,10 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 799,
+    "lowestPrice": 5499,
     "cheapestOrganizerName": "Trekhievers",
     "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Peb Fort Trek | Vikatgad Monsoon Trek",
+    "cheapestPackageTitle": "Konkan Road Trip",
     "mealsSummary": [
       "Breakfast",
       "Lunch"
@@ -46,17 +46,17 @@
   },
   "packages": [
     {
-      "id": "cmpv4lgqh04lfg328u48jo3jq",
-      "title": "Peb Fort Trek | Vikatgad Monsoon Trek",
+      "id": "cmurakeg902i6b91o8e2ndp2d",
+      "title": "Konkan Road Trip",
       "organizerName": "Trekhievers",
       "organizerSlug": "trekhievers",
-      "trekName": "Peb Fort Trek",
-      "trekSlug": "peb-fort-trek",
+      "trekName": "Konkan Road",
+      "trekSlug": "konkan-road",
       "trekSummary": null,
-      "sourceUrl": "https://www.trekhievers.com/tours/peb-fort",
-      "priceInr": 799,
-      "priceText": "₹799",
-      "transportType": "TRAIN",
+      "sourceUrl": "https://www.trekhievers.com/tours/konkan-trip",
+      "priceInr": 5499,
+      "priceText": "₹5499/- per person",
+      "transportType": "NON_AC_BUS",
       "mealPlan": "INCLUDED",
       "forestFeeStatus": "INCLUDED",
       "listingCity": "MUMBAI",
@@ -70,11 +70,14 @@
       "inclusionHighlights": [
         "Breakfast, Lunch"
       ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-02T18:26:11.335Z",
-      "updatedAtMs": 1790965571335,
-      "searchText": "trekhievers peb fort trek | vikatgad monsoon trek peb fort trek trek mumbai breakfast, lunch breakfast, lunch"
+      "pickupLocations": [
+        "Dadar",
+        "Thane"
+      ],
+      "lastUpdatedAt": "2026-10-02T18:23:34.953Z",
+      "updatedAtMs": 1790965414953,
+      "searchText": "trekhievers konkan road trip konkan road trek mumbai breakfast, lunch breakfast, lunch dadar thane"
     }
   ],
-  "updatedAt": "2026-10-02T18:26:11.335Z"
+  "updatedAt": "2026-10-02T18:23:34.953Z"
 }
