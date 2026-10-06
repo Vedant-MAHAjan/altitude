@@ -4,11 +4,11 @@
   "departureCity": "PUNE",
   "routePath": "/treks/bhairavgad-climbing-rappelling/pune",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 699,
   "priceMin": 699,
-  "priceMax": 699,
+  "priceMax": 1200,
   "availableVariants": [
     "TREK_ONLY"
   ],
@@ -20,7 +20,8 @@
       "INCLUDED"
     ],
     "cities": [
-      "PUNE"
+      "PUNE",
+      "MIXED"
     ],
     "variantTags": [
       "TREK_ONLY"
@@ -29,6 +30,10 @@
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -42,7 +47,7 @@
       "Lunch",
       "Tea and snacks"
     ],
-    "organizerCount": 1,
+    "organizerCount": 2,
     "variantCount": 1
   },
   "packages": [
@@ -75,9 +80,41 @@
         "Nashik",
         "Nashik Phata"
       ],
-      "lastUpdatedAt": "2026-10-06T07:12:05.072Z",
-      "updatedAtMs": 1791270725072,
+      "lastUpdatedAt": "2026-10-06T18:54:39.948Z",
+      "updatedAtMs": 1791312879948,
       "searchText": "trekhievers bhairavgad fort trek shripunje | pune bhairavgad climbing & rappelling trek pune breakfast, lunch, tea and snacks breakfast, lunch, tea and snacks nashik nashik phata"
+    },
+    {
+      "id": "cmpv5dzc807m5g328tscpgi9w",
+      "title": "Bhairavgad Moroshi Fort Trek From Mumbai Pune",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Bhairavgad Climbing & Rappelling",
+      "trekSlug": "bhairavgad-climbing-rappelling",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhairavgad-fort-trek",
+      "priceInr": 1200,
+      "priceText": "₹1,200 per person",
+      "transportType": "NON_AC_BUS",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "NOT_INCLUDED",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [
+        "Kalyan"
+      ],
+      "lastUpdatedAt": "2026-10-06T19:12:06.057Z",
+      "updatedAtMs": 1791313926057,
+      "searchText": "treks and trails india bhairavgad moroshi fort trek from mumbai pune bhairavgad climbing & rappelling trek mixed breakfast, lunch breakfast, lunch kalyan"
     },
     {
       "id": "pending:durgvihar:bhairavgad-climbing-rappelling",
@@ -103,12 +140,12 @@
       "staySummary": null,
       "inclusionHighlights": [],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-06T07:44:48.363Z",
-      "updatedAtMs": 1791272688363,
+      "lastUpdatedAt": "2026-10-06T19:26:13.616Z",
+      "updatedAtMs": 1791314773616,
       "searchText": "durgvihar bhairavgad climbing & rappelling",
       "isPending": true,
       "organizerWebsiteUrl": "https://durgvihar.in"
     }
   ],
-  "updatedAt": "2026-10-06T07:12:05.072Z"
+  "updatedAt": "2026-10-06T19:12:06.057Z"
 }
