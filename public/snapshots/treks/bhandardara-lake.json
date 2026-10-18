@@ -10,7 +10,7 @@
   "organizerCount": 3,
   "priceMin": 999,
   "priceMax": 2799,
-  "updatedAt": "2026-10-18T06:01:47.813Z",
+  "updatedAt": "2026-10-18T16:58:28.937Z",
   "filters": {
     "transportTypes": [
       "TRAIN",
@@ -21,14 +21,14 @@
       "PARTIAL"
     ],
     "cities": [
-      "MUMBAI",
       "MIXED",
+      "MUMBAI",
       "PUNE"
     ],
     "variantTags": [
-      "TREK_ONLY",
       "CAMPING",
-      "FIREFLIES"
+      "FIREFLIES",
+      "TREK_ONLY"
     ],
     "organizers": [
       {
@@ -49,17 +49,49 @@
     "lowestPrice": 999,
     "cheapestOrganizerName": "Bhatakna",
     "cheapestOrganizerSlug": "bhatakna",
-    "cheapestPackageTitle": "Bhandardara Roadtrip",
+    "cheapestPackageTitle": "Bhandardara Lake Fireflies Festival Camping 2026 | Fireflies Festival Mumbai Pune",
     "mealsSummary": [
       "Breakfast",
-      "Lunch",
       "Dinner",
-      "Tea and snacks"
+      "Tea and snacks",
+      "Lunch"
     ],
     "organizerCount": 3,
     "variantCount": 3
   },
   "packages": [
+    {
+      "id": "cmpl2zglg00cv1pnhny9qlcgh",
+      "title": "Bhandardara Lake Fireflies Festival Camping 2026 | Fireflies Festival Mumbai Pune",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Bhandardara Lake",
+      "trekSlug": "bhandardara-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/bhandardara-fireflies-festival-camping-2026-mumbai-pune",
+      "priceInr": 999,
+      "priceText": "₹999",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MIXED",
+      "variantTags": [
+        "CAMPING",
+        "FIREFLIES"
+      ],
+      "variantSignature": "FIREFLIES__CAMPING",
+      "variantLabel": "Fireflies + Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Homestay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay, Homestay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-10-18T16:47:50.742Z",
+      "updatedAtMs": 1792342070742,
+      "searchText": "bhatakna bhandardara lake fireflies festival camping 2026 | fireflies festival mumbai pune bhandardara lake fireflies + camping mixed breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
+    },
     {
       "id": "cmpl2zo5400e41pnh5i59s6yh",
       "title": "Bhandardara Roadtrip",
@@ -91,38 +123,6 @@
       "searchText": "bhatakna bhandardara roadtrip bhandardara lake trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
-      "id": "cmpl2zglg00cv1pnhny9qlcgh",
-      "title": "Bhandardara Lake Fireflies Festival Camping 2026 | Fireflies Festival Mumbai Pune",
-      "organizerName": "Bhatakna",
-      "organizerSlug": "bhatakna",
-      "trekName": "Bhandardara Lake",
-      "trekSlug": "bhandardara-lake",
-      "trekSummary": null,
-      "sourceUrl": "https://www.bhatakna.com/tours/bhandardara-fireflies-festival-camping-2026-mumbai-pune",
-      "priceInr": 999,
-      "priceText": "₹999",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MIXED",
-      "variantTags": [
-        "CAMPING",
-        "FIREFLIES"
-      ],
-      "variantSignature": "FIREFLIES__CAMPING",
-      "variantLabel": "Fireflies + Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay, Homestay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay, Homestay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:46.540Z",
-      "updatedAtMs": 1792302646540,
-      "searchText": "bhatakna bhandardara lake fireflies festival camping 2026 | fireflies festival mumbai pune bhandardara lake fireflies + camping mixed breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay"
-    },
-    {
       "id": "cmpv4i33803fyg328yvleuldt",
       "title": "New Year's Eve Bhandardara lake camping",
       "organizerName": "Trekhievers",
@@ -149,8 +149,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:35:29.111Z",
-      "updatedAtMs": 1792301729111,
+      "lastUpdatedAt": "2026-10-18T16:32:39.637Z",
+      "updatedAtMs": 1792341159637,
       "searchText": "trekhievers new year's eve bhandardara lake camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -180,8 +180,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:14.961Z",
-      "updatedAtMs": 1792302614961,
+      "lastUpdatedAt": "2026-10-18T16:46:24.970Z",
+      "updatedAtMs": 1792341984970,
       "searchText": "treks and trails india bhandardara lake rooms camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -214,8 +214,8 @@
       "pickupLocations": [
         "Sion"
       ],
-      "lastUpdatedAt": "2026-10-18T05:50:44.882Z",
-      "updatedAtMs": 1792302644882,
+      "lastUpdatedAt": "2026-10-18T16:47:48.969Z",
+      "updatedAtMs": 1792342068969,
       "searchText": "bhatakna bhandardara lake fireflies festival camping 2024 | fireflies festival from pune bhandardara lake fireflies + camping pune breakfast, dinner, tea and snacks tent stay, homestay breakfast, dinner, tea and snacks tent stay, homestay sion"
     },
     {
@@ -248,8 +248,8 @@
       "pickupLocations": [
         "Sion"
       ],
-      "lastUpdatedAt": "2026-10-18T05:30:05.930Z",
-      "updatedAtMs": 1792301405930,
+      "lastUpdatedAt": "2026-10-18T16:26:53.604Z",
+      "updatedAtMs": 1792340813604,
       "searchText": "trekhievers bhandardara fireflies camping | pune bhandardara lake fireflies + camping pune breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay sion"
     },
     {
@@ -280,40 +280,9 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:30:04.278Z",
-      "updatedAtMs": 1792301404278,
+      "lastUpdatedAt": "2026-10-18T16:26:51.805Z",
+      "updatedAtMs": 1792340811805,
       "searchText": "trekhievers bhandardara fireflies camping | mumbai bhandardara lake fireflies + camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
-    },
-    {
-      "id": "cmpe5rvx301dy8knhjqphpv1k",
-      "title": "Bhandardara Lake Camping",
-      "organizerName": "Treks and Trails India",
-      "organizerSlug": "treks-and-trails-india",
-      "trekName": "Bhandardara Lake",
-      "trekSlug": "bhandardara-lake",
-      "trekSummary": null,
-      "sourceUrl": "https://www.treksandtrails.org/tours/bhandardara-lake-camping",
-      "priceInr": 1499,
-      "priceText": "₹1,499",
-      "transportType": "TRAIN",
-      "mealPlan": "INCLUDED",
-      "forestFeeStatus": "UNKNOWN",
-      "listingCity": "MUMBAI",
-      "variantTags": [
-        "CAMPING"
-      ],
-      "variantSignature": "CAMPING",
-      "variantLabel": "Camping",
-      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
-      "staySummary": "Tent stay, Hotel stay",
-      "inclusionHighlights": [
-        "Breakfast, Dinner, Tea and snacks",
-        "Tent stay, Hotel stay"
-      ],
-      "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:12.920Z",
-      "updatedAtMs": 1792302612920,
-      "searchText": "treks and trails india bhandardara lake camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay, hotel stay breakfast, dinner, tea and snacks tent stay, hotel stay"
     },
     {
       "id": "cmpv5eec007qjg328trd77s0t",
@@ -342,9 +311,40 @@
         "Breakfast, Dinner, Tea and snacks"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:11.087Z",
-      "updatedAtMs": 1792302611087,
+      "lastUpdatedAt": "2026-10-18T16:46:21.003Z",
+      "updatedAtMs": 1792341981003,
       "searchText": "treks and trails india bhandardara fireflies camping | rs 1499 per person bhandardara lake fireflies + camping mumbai breakfast, dinner, tea and snacks breakfast, dinner, tea and snacks"
+    },
+    {
+      "id": "cmpe5rvx301dy8knhjqphpv1k",
+      "title": "Bhandardara Lake Camping",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Bhandardara Lake",
+      "trekSlug": "bhandardara-lake",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/bhandardara-lake-camping",
+      "priceInr": 1499,
+      "priceText": "₹1,499",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "UNKNOWN",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "CAMPING"
+      ],
+      "variantSignature": "CAMPING",
+      "variantLabel": "Camping",
+      "mealsSummary": "Breakfast, Dinner, Tea and snacks",
+      "staySummary": "Tent stay, Hotel stay",
+      "inclusionHighlights": [
+        "Breakfast, Dinner, Tea and snacks",
+        "Tent stay, Hotel stay"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-10-18T16:46:22.985Z",
+      "updatedAtMs": 1792341982985,
+      "searchText": "treks and trails india bhandardara lake camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay, hotel stay breakfast, dinner, tea and snacks tent stay, hotel stay"
     },
     {
       "id": "cmpv5enmr07swg328yzbf61r4",
@@ -373,8 +373,8 @@
         "Tent stay, Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:20.279Z",
-      "updatedAtMs": 1792302620279,
+      "lastUpdatedAt": "2026-10-18T16:46:30.718Z",
+      "updatedAtMs": 1792341990718,
       "searchText": "treks and trails india bhandardara secret new year camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay, hotel stay breakfast, dinner, tea and snacks tent stay, hotel stay"
     },
     {
@@ -404,8 +404,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:18.636Z",
-      "updatedAtMs": 1792302618636,
+      "lastUpdatedAt": "2026-10-18T16:46:28.940Z",
+      "updatedAtMs": 1792341988940,
       "searchText": "treks and trails india bhandardara new year camping | rs 1695 | three cliffs camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -435,8 +435,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T06:01:47.813Z",
-      "updatedAtMs": 1792303307813,
+      "lastUpdatedAt": "2026-10-18T16:58:28.937Z",
+      "updatedAtMs": 1792342708937,
       "searchText": "treks and trails india stargazing bhandardara camp near mumbai & pune bhandardara lake camping pune breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     },
     {
@@ -465,8 +465,8 @@
         "Breakfast, Lunch"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:22.115Z",
-      "updatedAtMs": 1792302622115,
+      "lastUpdatedAt": "2026-10-18T16:46:32.701Z",
+      "updatedAtMs": 1792341992701,
       "searchText": "treks and trails india bhandardara waterfall tour from mumbai & pune | ₹1,799 bhandardara lake trek mumbai breakfast, lunch breakfast, lunch"
     },
     {
@@ -496,8 +496,8 @@
         "Tent stay, Hotel stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:50:16.793Z",
-      "updatedAtMs": 1792302616793,
+      "lastUpdatedAt": "2026-10-18T16:46:26.951Z",
+      "updatedAtMs": 1792341986951,
       "searchText": "treks and trails india bhandardara new year camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay, hotel stay breakfast, dinner, tea and snacks tent stay, hotel stay"
     },
     {
@@ -527,8 +527,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:53:45.137Z",
-      "updatedAtMs": 1792302825137,
+      "lastUpdatedAt": "2026-10-18T16:50:59.020Z",
+      "updatedAtMs": 1792342259020,
       "searchText": "bhatakna new year eve bhandardara lakeside camping bhandardara lake camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -558,8 +558,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-18T05:59:23.221Z",
-      "updatedAtMs": 1792303163221,
+      "lastUpdatedAt": "2026-10-18T16:55:57.021Z",
+      "updatedAtMs": 1792342557021,
       "searchText": "treks and trails india omg - ohmygirls - bhandardara camping and adventure activities - only for women (women's special) bhandardara lake camping mumbai breakfast, lunch, dinner, tea and snacks tent stay breakfast, lunch, dinner, tea and snacks tent stay"
     }
   ]
