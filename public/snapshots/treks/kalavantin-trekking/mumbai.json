@@ -4,13 +4,14 @@
   "departureCity": "MUMBAI",
   "routePath": "/treks/kalavantin-trekking/mumbai",
   "summary": null,
-  "packageCount": 1,
-  "organizerCount": 1,
+  "packageCount": 2,
+  "organizerCount": 2,
   "startingPrice": 999,
   "priceMin": 999,
   "priceMax": 999,
   "availableVariants": [
-    "CAMPING"
+    "CAMPING",
+    "TREK_ONLY"
   ],
   "filters": {
     "transportTypes": [
@@ -23,12 +24,17 @@
       "MUMBAI"
     ],
     "variantTags": [
-      "CAMPING"
+      "CAMPING",
+      "TREK_ONLY"
     ],
     "organizers": [
       {
         "name": "Bhatakna",
         "slug": "bhatakna"
+      },
+      {
+        "name": "Treks and Trails India",
+        "slug": "treks-and-trails-india"
       }
     ]
   },
@@ -39,10 +45,11 @@
     "cheapestPackageTitle": "Kalavantin Camping & Trekking",
     "mealsSummary": [
       "Breakfast",
-      "Dinner"
+      "Dinner",
+      "Lunch"
     ],
-    "organizerCount": 1,
-    "variantCount": 1
+    "organizerCount": 2,
+    "variantCount": 2
   },
   "packages": [
     {
@@ -72,10 +79,40 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-22T06:11:44.423Z",
-      "updatedAtMs": 1792649504423,
+      "lastUpdatedAt": "2026-10-22T18:30:49.329Z",
+      "updatedAtMs": 1792693849329,
       "searchText": "bhatakna kalavantin camping & trekking kalavantin trekking camping mumbai breakfast, dinner tent stay breakfast, dinner tent stay"
+    },
+    {
+      "id": "cmpv5mjsj09e2g328cp2112q1",
+      "title": "Kalavantin Durg Trek",
+      "organizerName": "Treks and Trails India",
+      "organizerSlug": "treks-and-trails-india",
+      "trekName": "Kalavantin Trekking",
+      "trekSlug": "kalavantin-trekking",
+      "trekSummary": null,
+      "sourceUrl": "https://www.treksandtrails.org/tours/kalavantin-durg",
+      "priceInr": 999,
+      "priceText": "Rs. 999/- per person",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Breakfast, Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Breakfast, Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-10-22T18:30:50.543Z",
+      "updatedAtMs": 1792693850543,
+      "searchText": "treks and trails india kalavantin durg trek kalavantin trekking trek mumbai breakfast, lunch breakfast, lunch"
     }
   ],
-  "updatedAt": "2026-10-22T06:11:44.423Z"
+  "updatedAt": "2026-10-22T18:30:50.543Z"
 }

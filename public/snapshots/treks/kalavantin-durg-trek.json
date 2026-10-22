@@ -6,11 +6,11 @@
   "durationNights": null,
   "difficulty": "UNKNOWN",
   "summary": null,
-  "packageCount": 2,
-  "organizerCount": 2,
-  "priceMin": 1199,
+  "packageCount": 3,
+  "organizerCount": 3,
+  "priceMin": 399,
   "priceMax": 1249,
-  "updatedAt": "2026-10-22T06:13:16.878Z",
+  "updatedAt": "2026-10-22T18:30:52.414Z",
   "filters": {
     "transportTypes": [
       "TRAIN"
@@ -23,10 +23,14 @@
       "PUNE"
     ],
     "variantTags": [
-      "CAMPING",
-      "TREK_ONLY"
+      "TREK_ONLY",
+      "CAMPING"
     ],
     "organizers": [
+      {
+        "name": "Bhatakna",
+        "slug": "bhatakna"
+      },
       {
         "name": "Trekhievers",
         "slug": "trekhievers"
@@ -38,19 +42,50 @@
     ]
   },
   "summaryTable": {
-    "lowestPrice": 1199,
-    "cheapestOrganizerName": "Trekhievers",
-    "cheapestOrganizerSlug": "trekhievers",
-    "cheapestPackageTitle": "Kalavantin Durg Trek & Camping",
+    "lowestPrice": 399,
+    "cheapestOrganizerName": "Bhatakna",
+    "cheapestOrganizerSlug": "bhatakna",
+    "cheapestPackageTitle": "Kalavantin Durg One Day Trek",
     "mealsSummary": [
+      "Lunch",
       "Breakfast",
       "Dinner",
       "Tea and snacks"
     ],
-    "organizerCount": 2,
+    "organizerCount": 3,
     "variantCount": 2
   },
   "packages": [
+    {
+      "id": "cmpl31a8a01fi1pnh3yrga1vu",
+      "title": "Kalavantin Durg One Day Trek",
+      "organizerName": "Bhatakna",
+      "organizerSlug": "bhatakna",
+      "trekName": "Kalavantin Durg Trek",
+      "trekSlug": "kalavantin-durg-trek",
+      "trekSummary": null,
+      "sourceUrl": "https://www.bhatakna.com/tours/kalavantin-durg-one-day-trek",
+      "priceInr": 399,
+      "priceText": "₹399",
+      "transportType": "TRAIN",
+      "mealPlan": "INCLUDED",
+      "forestFeeStatus": "INCLUDED",
+      "listingCity": "MUMBAI",
+      "variantTags": [
+        "TREK_ONLY"
+      ],
+      "variantSignature": "TREK_ONLY",
+      "variantLabel": "Trek",
+      "mealsSummary": "Lunch",
+      "staySummary": null,
+      "inclusionHighlights": [
+        "Lunch"
+      ],
+      "pickupLocations": [],
+      "lastUpdatedAt": "2026-10-22T18:30:52.414Z",
+      "updatedAtMs": 1792693852414,
+      "searchText": "bhatakna kalavantin durg one day trek kalavantin durg trek trek mumbai lunch lunch"
+    },
     {
       "id": "cmpv4db1y01tdg32862xevq9k",
       "title": "Kalavantin Durg Trek & Camping",
@@ -78,8 +113,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-22T05:51:53.503Z",
-      "updatedAtMs": 1792648313503,
+      "lastUpdatedAt": "2026-10-22T18:11:06.308Z",
+      "updatedAtMs": 1792692666308,
       "searchText": "trekhievers kalavantin durg trek & camping kalavantin durg trek camping mumbai breakfast, dinner, tea and snacks tent stay breakfast, dinner, tea and snacks tent stay"
     },
     {
@@ -109,8 +144,8 @@
         "Tent stay"
       ],
       "pickupLocations": [],
-      "lastUpdatedAt": "2026-10-22T06:13:16.878Z",
-      "updatedAtMs": 1792649596878,
+      "lastUpdatedAt": "2026-10-22T18:30:52.095Z",
+      "updatedAtMs": 1792693852095,
       "searchText": "treks and trails india kalavantin durg trek from pune kalavantin durg trek trek pune breakfast tent stay breakfast tent stay"
     }
   ]
